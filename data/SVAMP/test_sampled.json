@@ -1,0 +1,1002 @@
+[
+    {
+        "problem": "Each pack of dvds costs 76 dollars. If there is a discount of 25 dollars on each pack. How much do you have to pay to buy each pack?",
+        "solution": 51.0,
+        "id": 0
+    },
+    {
+        "problem": "Dan had $ 3 left with him after he bought a candy bar. If he had $ 4 at the start. How much did the candy bar cost?",
+        "solution": 1.0,
+        "id": 1
+    },
+    {
+        "problem": "Paco had 26 salty cookies and 17 sweet cookies. He ate 14 sweet cookies and 9 salty cookies. How many salty cookies did Paco have left?",
+        "solution": 17.0,
+        "id": 2
+    },
+    {
+        "problem": "43 children were riding on the bus. At the bus stop some children got off the bus. Then there were 21 children left on the bus. How many children got off the bus at the bus stop?",
+        "solution": 22.0,
+        "id": 3
+    },
+    {
+        "problem": "28 children were riding on the bus. At the bus stop 82 children got on the bus while some got off the bus. Then there were 30 children altogether on the bus. How many more children got on the bus than those that got off?",
+        "solution": 2.0,
+        "id": 4
+    },
+    {
+        "problem": "There were 3 dollars in Olivia's wallet. She collected 49 more dollars from an atm. After she visited a supermarket there were 49 dollars left. How much more money did she collect at the atm than she spent at the supermarket?",
+        "solution": 46.0,
+        "id": 5
+    },
+    {
+        "problem": "Jerry had some action figures on a shelf in his room. Later he added 7 more action figures to the shelf. If there are a total of 10 action figures on his shelf now How many action figures did he have initially on the shelf?",
+        "solution": 3.0,
+        "id": 6
+    },
+    {
+        "problem": "Paco had 41 cookies. He gave 9 cookies to his friend and ate 18 cookies. How many more cookies did he eat than those he gave to his friend?",
+        "solution": 9.0,
+        "id": 7
+    },
+    {
+        "problem": "Mary is baking a cake. The recipe calls for 3 cups of sugar 10 cups of flour and 15 cups of salt. She already put in 6 cups of flour. How many more cups of flour does she need to add?",
+        "solution": 4.0,
+        "id": 8
+    },
+    {
+        "problem": "A waiter had some customers. After 9 customers left he still had 12 customers. How many customers did he have at the start?",
+        "solution": 21.0,
+        "id": 9
+    },
+    {
+        "problem": "3 birds were sitting on the fence. 6 more storks and 2 more birds came to join them. How many more storks than birds are sitting on the fence?",
+        "solution": 1.0,
+        "id": 10
+    },
+    {
+        "problem": "They decided to hold the party in their backyard. If they have 11 sets of tables and each set has 13 chairs How many chairs do they have in the backyard?",
+        "solution": 143.0,
+        "id": 11
+    },
+    {
+        "problem": "In a school there are 458 more girls than boys. If there are 692 girls How many pupils are there in that school?",
+        "solution": 926.0,
+        "id": 12
+    },
+    {
+        "problem": "After resting they decided to go for a swim. The depth of the water is 15 times Dean's height. Dean is 4 feet taller than Ron. If Ron stands at 13 feet How deep was the water?",
+        "solution": 255.0,
+        "id": 13
+    },
+    {
+        "problem": "6 birds were sitting on the fence. 4 more birds and 8 more storks came to join them. How many birds are sitting on the fence?",
+        "solution": 10.0,
+        "id": 14
+    },
+    {
+        "problem": "Marco and his dad went strawberry picking. Together they collected strawberries that weighed 36 pounds. On the way back Marco ' dad lost 8 pounds of strawberries. Marco's strawberries now weighed 12 pounds. How much did his dad's strawberries weigh now?",
+        "solution": 16.0,
+        "id": 15
+    },
+    {
+        "problem": "In a school there are 697 girls and the rest are boys. If there are 228 more girls than boys How many boys are there in that school?",
+        "solution": 469.0,
+        "id": 16
+    },
+    {
+        "problem": "In a school there are 732 girls and 761 boys. 682 more girls and 8 more boys joined the school. How many girls are there in the school now?",
+        "solution": 1414.0,
+        "id": 17
+    },
+    {
+        "problem": "Danny collects bottle caps and wrappers. He found 22 bottle caps and 30 wrappers at the park. Now he has 17 bottle caps and 57 wrappers in his collection. How many wrappers did danny have at first?",
+        "solution": 27.0,
+        "id": 18
+    },
+    {
+        "problem": "Paul got a box of 457 erasers and 617 crayons for his birthday. At the end of the school year he only had 523 crayons left while not having lost a single eraser. How many more crayons than erasers did he have left?",
+        "solution": 66.0,
+        "id": 19
+    },
+    {
+        "problem": "Baker made 121 cakes. He sold 105 of them and bought 170 new cakes. How many cakes does baker still have?",
+        "solution": 186.0,
+        "id": 20
+    },
+    {
+        "problem": "An industrial machine worked for 5 minutes. It can make 4 shirts a minute. How many shirts did machine make?",
+        "solution": 20.0,
+        "id": 21
+    },
+    {
+        "problem": "The bananas in Philip's collection are organized into groups of size 18. If there are a total of 180 bananas in Philip's banana collection How many groups are there?",
+        "solution": 10.0,
+        "id": 22
+    },
+    {
+        "problem": "There were some birds sitting on the fence. 4 more birds came to join them. If there are a total of 5 birds on the fence now How many birds had been sitting on the fence at the start?",
+        "solution": 1.0,
+        "id": 23
+    },
+    {
+        "problem": "Jerry had 3 action figures on a shelf in his room. Later he added 4 more action figures to the shelf and removed some of the old ones. If there are 6 action figures on his shelf now How many action figures did he remove from the shelf?",
+        "solution": 1.0,
+        "id": 24
+    },
+    {
+        "problem": "Danny collects bottle caps and wrappers. He found 65 wrappers and 5 bottle caps at the park. Now he has 31 bottle caps and 9 wrappers in his collection. How many more wrappers than bottle caps did danny find at the park?",
+        "solution": 60.0,
+        "id": 25
+    },
+    {
+        "problem": "Because of the decision Sofia asked the students to suggest specific types of food from a total of 66 choices. If 450 students suggested adding mashed potatoes 38 suggested adding bacon to the menu and the rest did not participate How many students participated in the suggestion of new food items?",
+        "solution": 488.0,
+        "id": 26
+    },
+    {
+        "problem": "Matthew gave equal numbers of crackers and cakes to his 28 friends. If he had 13 crackers and 15 cakes initially How many crackers and cakes did each person eat?",
+        "solution": 1.0,
+        "id": 27
+    },
+    {
+        "problem": "A grocery store had 49 bottles of regular soda, 40 bottles of diet soda and 6 bottles of lite soda. How many bottles of regular soda and diet soda did they have altogether?",
+        "solution": 89.0,
+        "id": 28
+    },
+    {
+        "problem": "Dan has $ 3. He bought 2 candy bar for $ 4, each one costing the same amount of money. How much did each candy bar cost?",
+        "solution": 2.0,
+        "id": 29
+    },
+    {
+        "problem": "Tiffany was collecting cans for recycling. On monday she had 7 bags of cans. The next day she found 12 more bags worth of cans. How many more bags did she find on the next day than she had on monday?",
+        "solution": 5.0,
+        "id": 30
+    },
+    {
+        "problem": "There were 15 roses and 62 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 17 roses and 96 orchids in the vase. How many roses did she cut?",
+        "solution": 2.0,
+        "id": 31
+    },
+    {
+        "problem": "There are some baskets of peaches. Each basket has 4 red peaches and 3 green peaches. If there are a total of 7 peaches in all baskets How many baskets of peaches are there?",
+        "solution": 1.0,
+        "id": 32
+    },
+    {
+        "problem": "There were 78 dollars in Olivia's wallet. She spent 15 dollars at a supermarket. How much money does she have left?",
+        "solution": 63.0,
+        "id": 33
+    },
+    {
+        "problem": "Jack received 6 emails in the morning, 3 emails in the afternoon and some more in the evening. If he received a total of 10 emails in the day How many emails did Jack receive in the afternoon?",
+        "solution": 1.0,
+        "id": 34
+    },
+    {
+        "problem": "Dan has $ 4. He bought a candy bar for $ 8. Then his friend have him $ 5 How much money is left?",
+        "solution": 1.0,
+        "id": 35
+    },
+    {
+        "problem": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 703 visitors came to the Buckingham palace on the previous day. If there were 246 visitors on that day How many visited the Buckingham palace within 25 days?",
+        "solution": 949.0,
+        "id": 36
+    },
+    {
+        "problem": "For Gwen's birthday she received 5 dollars from her dad. Her mom gave her 7 more dollars. If she spent 4 dollars. How much more money did she receive from her mom than she did from her dad?",
+        "solution": 2.0,
+        "id": 37
+    },
+    {
+        "problem": "There are 142 bananas and 356 oranges in Philip's collection. If the bananas are organized into 47 groups and oranges are organized into 178 groups How big is each group of oranges?",
+        "solution": 2.0,
+        "id": 38
+    },
+    {
+        "problem": "There are 8 different books and 5 different movies in the ' crazy silly school ' series. If you read 19 of the movies and watched 16 of the books How many more movies than books have you read?",
+        "solution": 3.0,
+        "id": 39
+    },
+    {
+        "problem": "Mary is baking a cake. The recipe calls for 12 cups of flour and 5 cups of sugar. She already put in some cups of flour. If she still needs 2 more cups of flour How many cups of flour did she put in?",
+        "solution": 10.0,
+        "id": 40
+    },
+    {
+        "problem": "Danny collects bottle caps and wrappers. He found 46 wrappers and 50 bottle caps at the park. Now he has 21 bottle caps and 52 wrappers in his collection. How many more bottle caps than wrappers did danny find at the park?",
+        "solution": 4.0,
+        "id": 41
+    },
+    {
+        "problem": "Luke played 177 rounds of a trivia game. If he gained 46 points in each round How many points did he score in the game?",
+        "solution": 8142.0,
+        "id": 42
+    },
+    {
+        "problem": "3 birds and 4 storks were sitting on the fence. 2 more birds came to join them. How many more birds than storks are sitting on the fence?",
+        "solution": 1.0,
+        "id": 43
+    },
+    {
+        "problem": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 9 inches. The mouse jumped 3 inches lesser than the frog who jumped 33 inches farther than the grasshopper. How far did the mouse jump?",
+        "solution": 39.0,
+        "id": 44
+    },
+    {
+        "problem": "Zachary did 35 push-ups and 3 crunches in gym class today. David did 58 more push-ups but 87 less crunches than zachary. How many more push-ups than crunches did Zachary do?",
+        "solution": 32.0,
+        "id": 45
+    },
+    {
+        "problem": "Jack received 4 emails in the morning, 5 emails in the afternoon and 8 emails in the evening. How many emails did Jack receive in the afternoon and evening?",
+        "solution": 13.0,
+        "id": 46
+    },
+    {
+        "problem": "Jerry had 7 action figures on a shelf in his room. Later he added some more action figures to the shelf and removed 10 of the old ones. If there are 8 action figures on his shelf now How many action figures did he add to the shelf?",
+        "solution": 11.0,
+        "id": 47
+    },
+    {
+        "problem": "Julia played tag with 12 kids on monday. She played tag with 14 kids on tuesday. She spent a total of 34 hours to play tag on both days. How many kids did she play with altogether?",
+        "solution": 26.0,
+        "id": 48
+    },
+    {
+        "problem": "Nell collects cards. She had 309 baseball cards and 356 Ace cards. She gave some of her cards to Jeff and now has 415 baseball cards and Ace cards left. How many more baseball cards than Ace cards does Nell have?",
+        "solution": 266.0,
+        "id": 49
+    },
+    {
+        "problem": "At the zoo, a cage had 93 snakes and 97 alligators. If 40 alligators were hiding How many alligators were not hiding?",
+        "solution": 57.0,
+        "id": 50
+    },
+    {
+        "problem": "You have read 8 books from the ' crazy silly school ' series. If there are a total of 14 different books in the ' crazy silly school ' series How many more do you still have to read?",
+        "solution": 6.0,
+        "id": 51
+    },
+    {
+        "problem": "Emily is making bead necklaces for her 43 friends. She had 20 beads and she was able to make 5 necklaces. How many beads did each necklace need?",
+        "solution": 4.0,
+        "id": 52
+    },
+    {
+        "problem": "Frank put 11 pieces of candy in each bag. If he had 22 pieces of candy How many bags would he have?",
+        "solution": 2.0,
+        "id": 53
+    },
+    {
+        "problem": "A waiter had 12 customers. After some left he still had 14 customers. Then he got 10 new customers How many customers does he have now?",
+        "solution": 24.0,
+        "id": 54
+    },
+    {
+        "problem": "A farmer had 90 tomatoes in his garden. If he picked 154 of them yesterday and 50 today. How many tomatoes did he pick in all?",
+        "solution": 204.0,
+        "id": 55
+    },
+    {
+        "problem": "5 red peaches, 14 yellow peaches and 6 green peaches are in the basket. How many green and yellow peaches are in the basket?",
+        "solution": 20.0,
+        "id": 56
+    },
+    {
+        "problem": "Winter is almost here and most animals are migrating to warmer countries. There were 89 bird families living near the mountain. If 60 bird families flew away for winter How many more bird families flew away for the winter than those that stayed behind?",
+        "solution": 31.0,
+        "id": 57
+    },
+    {
+        "problem": "There were 9 roses and 6 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 13 orchids and 3 roses in the vase. How many more orchids than roses are there in the vase now?",
+        "solution": 10.0,
+        "id": 58
+    },
+    {
+        "problem": "After eating a hearty meal they went to see the Buckingham palace. There were 39 paintings in the Buckingham palace. There, Rachel learned that 661 visitors came to the Buckingham palace that day. If there were 600 visitors the previous day How many more visitors visited the Buckingham palace on that day than on the previous day?",
+        "solution": 61.0,
+        "id": 59
+    },
+    {
+        "problem": "A waiter had 12 customers. While 15 customers left he got 14 new customers. How many customers does he still have?",
+        "solution": 11.0,
+        "id": 60
+    },
+    {
+        "problem": "Emily is making bead necklaces for her 72 friends. She has 6 beads and each necklace takes 3 beads. How many necklaces can Emily make?",
+        "solution": 2.0,
+        "id": 61
+    },
+    {
+        "problem": "He also had 26 aquariums for saltwater animals. The aquarium had 52 saltwater animals in total and every aquarium had the same number of animals. How many saltwater animals does each aquarium have?",
+        "solution": 2.0,
+        "id": 62
+    },
+    {
+        "problem": "Mary is baking a cake. The recipe calls for 11 cups of flour and 7 cups of sugar. She already put in some cups of flour. If she still needs 2 more cups of flour than sugar How many cups of flour did she put in?",
+        "solution": 2.0,
+        "id": 63
+    },
+    {
+        "problem": "Baker made 149 cakes and 91 pastries. If he sold 10 cakes and 90 pastries How many cakes would baker still have?",
+        "solution": 139.0,
+        "id": 64
+    },
+    {
+        "problem": "Dave had 24 files and 13 apps on his phone. After deleting some apps and files he had 17 apps and 21 files left. How many files did he delete?",
+        "solution": 3.0,
+        "id": 65
+    },
+    {
+        "problem": "An industrial machine made 9 shirts yesterday and 8 shirts today. It can make 2 shirts a minute. How many minutes did the machine work today?",
+        "solution": 4.0,
+        "id": 66
+    },
+    {
+        "problem": "Rebecca wants to split a collection of eggs into 3 groups. Rebecca has 4 marbles and 15 eggs. How many eggs will each group have?",
+        "solution": 5.0,
+        "id": 67
+    },
+    {
+        "problem": "Matthew had some crackers. If Matthew gave 2 crackers to each of his 11 friends How many crackers did Matthew have?",
+        "solution": 22.0,
+        "id": 68
+    },
+    {
+        "problem": "Olivia spent 78 dollars at a supermarket. If she has 33 dollars left with her How much money did she have initially?",
+        "solution": 111.0,
+        "id": 69
+    },
+    {
+        "problem": "If Lewis earns $ 1357 every week during the 223 weeks of a harvest season. How much money will he earn if he works for 73 harvest seasons?",
+        "solution": 22090603.0,
+        "id": 70
+    },
+    {
+        "problem": "Because of the decision Sofia asked 310 students to suggest specific types of food. 185 students suggested adding mashed potatoes while others suggested adding bacon to the menu. How many students suggested bacon?",
+        "solution": 125.0,
+        "id": 71
+    },
+    {
+        "problem": "Jack received 3 emails and 64 letters in the morning. He then received 5 emails and 54 letters in the afternoon. How many emails did jack receive in the day?",
+        "solution": 8.0,
+        "id": 72
+    },
+    {
+        "problem": "Paco had 40 cookies. He ate 2 of them. Then he bought 37 more cookies How many cookies did Paco have left?",
+        "solution": 75.0,
+        "id": 73
+    },
+    {
+        "problem": "Because of the decision Sofia asked the students to suggest specific types of food. If 218 students suggested adding mashed potatoes as well as bacon while 351 suggested adding only bacon to the menu How many students suggested adding bacon?",
+        "solution": 569.0,
+        "id": 74
+    },
+    {
+        "problem": "If each bag has 41 cookies and you had 53 bags of cookies How many cookies would you have?",
+        "solution": 2173.0,
+        "id": 75
+    },
+    {
+        "problem": "Rachel had to complete 2 pages of reading homework and 4 pages of math homework. How many more pages of math homework than reading homework did she have?",
+        "solution": 2.0,
+        "id": 76
+    },
+    {
+        "problem": "Allan brought 5 balloons and Jake brought 4 balloons to the park. Allan then bought 3 more balloons at the park. How many balloons did Allan bring to the park?",
+        "solution": 8.0,
+        "id": 77
+    },
+    {
+        "problem": "Julia played tag with 8 kids on monday, 11 kids on tuesday and 9 kids on wednesday. How many more kids did she play with on tuesday than on wednesday?",
+        "solution": 2.0,
+        "id": 78
+    },
+    {
+        "problem": "The Razorback shop makes $ 5 dollars off each jersey and $ 215 off each t-shirt. During the Arkansas and Texas tech game they sold 20 t-shirts and 64 jerseys. How much money did they make from selling the t-shirts?",
+        "solution": 4300.0,
+        "id": 79
+    },
+    {
+        "problem": "36 children were riding on the bus. At the bus stop 68 children got off the bus while some more got on the bus. Then there were 12 children altogether on the bus. How many more children got off the bus than those that got on?",
+        "solution": 24.0,
+        "id": 80
+    },
+    {
+        "problem": "Brenda's mother made 14 cookies for 2 guests. If each of them had the same number of cookies How many did each of them have?",
+        "solution": 7.0,
+        "id": 81
+    },
+    {
+        "problem": "Tiffany was collecting cans for recycling. On monday she had 4 bags of cans. The next day she found some more bags worth of cans. If she had a total of 6 bags altogether How many bags did she find on the next day?",
+        "solution": 2.0,
+        "id": 82
+    },
+    {
+        "problem": "In a school there are 632 girls and 410 boys. 465 more girls joined the school. How many more girls than boys does the school have?",
+        "solution": 687.0,
+        "id": 83
+    },
+    {
+        "problem": "Emily is making bead necklaces for her friends where each necklace takes 5 beads. She made 4 necklaces. How many beads did Emily have?",
+        "solution": 20.0,
+        "id": 84
+    },
+    {
+        "problem": "Randy has 95 blocks. He uses 20 blocks to build a house and 50 blocks to build a tower. How many more blocks did he use to build the tower than he did to build the house?",
+        "solution": 30.0,
+        "id": 85
+    },
+    {
+        "problem": "2 birds and 6 storks were sitting on the fence. 3 more birds came to join them. How many more storks than birds are sitting on the fence?",
+        "solution": 1.0,
+        "id": 86
+    },
+    {
+        "problem": "The Razorback t-shirt shop made $ 51 dollars from selling 3 t-shirt during the Arkansas and Texas tech game they. What is the cost of each t-shirt?",
+        "solution": 17.0,
+        "id": 87
+    },
+    {
+        "problem": "Paco had 12 cookies. He ate 16 cookies and gave 21 of them to his friend. How many more cookies did he give to his friend than those he ate?",
+        "solution": 5.0,
+        "id": 88
+    },
+    {
+        "problem": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 317 visitors came to the Buckingham palace that day. If there were 295 visitors the previous day How many more visitors visited the Buckingham palace on that day than on the previous day?",
+        "solution": 22.0,
+        "id": 89
+    },
+    {
+        "problem": "Josh had 3 marbles in his collection. He found 6 marbles while he lost 5 marbles. How many more marbles did he find than those he lost?",
+        "solution": 1.0,
+        "id": 90
+    },
+    {
+        "problem": "Because of the decision Sofia asked the students to suggest specific types of food. If 408 students suggested adding mashed potatoes while 42 suggested adding bacon to the menu How many more students suggested mashed potatoes than those that suggested bacon?",
+        "solution": 366.0,
+        "id": 91
+    },
+    {
+        "problem": "Paco had 40 cookies. He ate 5 cookies and gave 13 of them to his friend. How many cookies did paco have left?",
+        "solution": 22.0,
+        "id": 92
+    },
+    {
+        "problem": "Paco had 17 cookies. He ate 14 cookies and gave 13 of them to his friend. How many more cookies did he eat than those he gave to his friend?",
+        "solution": 1.0,
+        "id": 93
+    },
+    {
+        "problem": "Julia played tag with 19 kids on monday. She played tag with 18 kids on tuesday. She spent a total of 38 hours to play tag on both days. How many more kids did she play with on monday than on tuesday?",
+        "solution": 1.0,
+        "id": 94
+    },
+    {
+        "problem": "Dan has $ 5. He bought a candy bar for $ 2 and a chocolate for $ 3. How much money did he spend to buy chocolate than he did to buy candy bar?",
+        "solution": 1.0,
+        "id": 95
+    },
+    {
+        "problem": "Ed had 29 more marbles than Doug. Ed lost 17 of his marbles at the playground. How many more marbles did Ed have than Doug then?",
+        "solution": 12.0,
+        "id": 96
+    },
+    {
+        "problem": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 19 inches. The frog jumped 10 inches farther than the grasshopper and the mouse jumped 20 inches farther than the frog. How much farther did the mouse jump than the grasshopper?",
+        "solution": 30.0,
+        "id": 97
+    },
+    {
+        "problem": "Frank was reading through his favorite book. It took him 16 days to finish the book. If the book had 112 pages How many pages did he read per day?",
+        "solution": 7.0,
+        "id": 98
+    },
+    {
+        "problem": "There are 20 different books in the ' crazy silly school ' series. If you are yet to read 5 of the books How many books have you already read?",
+        "solution": 15.0,
+        "id": 99
+    },
+    {
+        "problem": "Allan brought 3 balloons and Jake brought 5 balloons to the park. Allan then bought 2 more balloons at the park. How many balloons did Allan and Jake have in the park?",
+        "solution": 10.0,
+        "id": 100
+    },
+    {
+        "problem": "Josh lost 11 marbles. If he had 19 marbles in his collection earlier How many marbles does he have now?",
+        "solution": 8.0,
+        "id": 101
+    },
+    {
+        "problem": "Allan brought 6 balloons and Jake brought 3 balloons to the park. Jake then bought 4 more balloons at the park. How many more balloons did Jake have than Allan in the park?",
+        "solution": 1.0,
+        "id": 102
+    },
+    {
+        "problem": "Faye was placing her pencils into 14 rows with 11 pencils in each row. How many pencils does she have?",
+        "solution": 154.0,
+        "id": 103
+    },
+    {
+        "problem": "A grocery store had 22 bottles of regular soda and 61 bottles of diet soda. How many more bottles of diet soda than regular soda did they have?",
+        "solution": 39.0,
+        "id": 104
+    },
+    {
+        "problem": "There are 6 baskets of peaches. Each basket has 16 red peaches and 18 green peaches. How many red peaches are in the baskets altogether?",
+        "solution": 96.0,
+        "id": 105
+    },
+    {
+        "problem": "During summer break 800059 kids from Lawrence county go to camp and the rest stay home. Lawrence county has 828521 kids in all. About how many kids stayed home?",
+        "solution": 28462.0,
+        "id": 106
+    },
+    {
+        "problem": "There are 141 pots. Each pot has 71 flowers and 91 sticks in it. How many flowers are there in all?",
+        "solution": 10011.0,
+        "id": 107
+    },
+    {
+        "problem": "Allan brought 2 balloons and Jake brought 4 balloons to the park. Allan then bought 3 more balloons at the park. How many more balloons did Allan have than Jake in the park?",
+        "solution": 1.0,
+        "id": 108
+    },
+    {
+        "problem": "A chef had 58 apples. After making some pies, he had used 35. How many apples remained?",
+        "solution": 23.0,
+        "id": 109
+    },
+    {
+        "problem": "You had 26 bags with equal number of cookies. If you had 15 candies and 52 cookies in total How many cookies does each bag have?",
+        "solution": 2.0,
+        "id": 110
+    },
+    {
+        "problem": "He then went to see the oranges being harvested. He found out that they harvest 38 sacks per day and that each sack containes 42 oranges. How many sacks of oranges will they have after 49 days of harvest?",
+        "solution": 1862.0,
+        "id": 111
+    },
+    {
+        "problem": "There were 16 roses and 3 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 7 orchids and 13 roses in the vase. How many orchids did she cut?",
+        "solution": 4.0,
+        "id": 112
+    },
+    {
+        "problem": "Jack received 10 emails in the morning, 5 emails in the afternoon and 4 emails in the evening. How many more emails did Jack receive in the afternoon than in the evening?",
+        "solution": 1.0,
+        "id": 113
+    },
+    {
+        "problem": "Faye was placing her pencils into rows with 22 pencils in each row. She had 6 packs of pencils each one having 14 pencils. How many pencils does she have?",
+        "solution": 84.0,
+        "id": 114
+    },
+    {
+        "problem": "A farmer had 160 tomatoes in his garden. If he picked 56 of them yesterday and 41 today. How many did he have left after yesterday's picking?",
+        "solution": 104.0,
+        "id": 115
+    },
+    {
+        "problem": "Each pot has 40 flowers in it. There are 400 flowers in total. How many pots are there in all?",
+        "solution": 10.0,
+        "id": 116
+    },
+    {
+        "problem": "15 campers went rowing in the morning. Some more campers went rowing in the afternoon. If a total of 32 campers went rowing that day How many campers went rowing in the afternoon?",
+        "solution": 17.0,
+        "id": 117
+    },
+    {
+        "problem": "Because of the decision Sofia asked the students to suggest specific types of food. If 479 students suggested adding mashed potatoes while 489 suggested adding bacon to the menu How many more students suggested bacon than those that suggested mashed potatoes?",
+        "solution": 10.0,
+        "id": 118
+    },
+    {
+        "problem": "Ed had 5 more marbles than Doug. Doug lost 3 of his marbles at the playground. If Ed had 27 marbles How many marbles did Doug have initially?",
+        "solution": 22.0,
+        "id": 119
+    },
+    {
+        "problem": "Rachel had to complete 7 pages of math homework. If she had to complete 4 more pages of math homework than reading homework How many pages of reading homework did she have to complete?",
+        "solution": 3.0,
+        "id": 120
+    },
+    {
+        "problem": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 19 chocolate chip cookies yesterday and 231 raisin cookies and 237 chocolate chip cookies this morning. How many more chocolate chip cookies than raisin cakes did Helen bake?",
+        "solution": 25.0,
+        "id": 121
+    },
+    {
+        "problem": "Tiffany was collecting cans for recycling. On monday she had some bags of cans. The next day she found 4 more bags worth of cans. If she had a total of 8 bags altogether How many bags did she have on monday?",
+        "solution": 4.0,
+        "id": 122
+    },
+    {
+        "problem": "Danny collects bottle caps. He found 30 bottle caps at the park while he threw away 63 old ones. Now he has 42 bottle caps in his collection. How many more bottle caps did danny throw away than those he found at the park?",
+        "solution": 33.0,
+        "id": 123
+    },
+    {
+        "problem": "Mary is baking a cake. The recipe calls for 12 cups of sugar and 14 cups of flour. She already put in 10 cups of sugar. How many more cups of flour than cups of sugar does she need to add now?",
+        "solution": 12.0,
+        "id": 124
+    },
+    {
+        "problem": "Kelly has 22 nintendo games. How many does she need to buy so that she will have 140 games left?",
+        "solution": 118.0,
+        "id": 125
+    },
+    {
+        "problem": "Mom buys 70 white t - shirts in total. If white t - shirts can be purchased in packages and mom buys 14 packages How many white t - shirts does each package have?",
+        "solution": 5.0,
+        "id": 126
+    },
+    {
+        "problem": "A farmer had 171 tomatoes in his garden. If he picked 134 of them yesterday and 30 today. How many will he have left after today?",
+        "solution": 7.0,
+        "id": 127
+    },
+    {
+        "problem": "Last week Fred had 47 dollars and Jason had 99 dollars. Over the weekend Fred delivered newspapers earning 111 dollars and washed cars earning 34 dollars. How much money does Fred have now?",
+        "solution": 192.0,
+        "id": 128
+    },
+    {
+        "problem": "Mary is baking a cake. The recipe calls for 6 cups of sugar and 14 cups of flour. She already put in 7 cups of flour and 60 cups of sugar. How many more cups of flour does she need to add?",
+        "solution": 7.0,
+        "id": 129
+    },
+    {
+        "problem": "There were 7 roses and 12 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 11 roses and 20 orchids in the vase. How many more orchids than roses are there in the vase now?",
+        "solution": 9.0,
+        "id": 130
+    },
+    {
+        "problem": "After Jessie started to go jogging everyday she lost 35 kilograms. She weighed 69 kilograms before beginning jogging. How much does she weigh now?",
+        "solution": 34.0,
+        "id": 131
+    },
+    {
+        "problem": "22 children were riding on the bus. At the bus stop 40 children got on the bus while some got off the bus. Then there were 2 children altogether on the bus. How many children got off the bus at the bus stop?",
+        "solution": 60.0,
+        "id": 132
+    },
+    {
+        "problem": "There are 10 different books and 11 different movies in the ' crazy silly school ' series. If you read 13 of the books and watched 12 of the movies How many more books than movies have you read?",
+        "solution": 1.0,
+        "id": 133
+    },
+    {
+        "problem": "Emily is making bead necklaces for her friends. She made 11 necklaces and each necklace takes 28 beads. How many beads did Emily have?",
+        "solution": 308.0,
+        "id": 134
+    },
+    {
+        "problem": "A farmer had 175 tomatoes and 77 potatoes in his garden. If he picked 172 potatoes How many tomatoes and potatoes does he have left?",
+        "solution": 80.0,
+        "id": 135
+    },
+    {
+        "problem": "Last week Fred had 111 dollars and Jason had 40 dollars. Fred washed cars over the weekend and now has 115 dollars. Jason delivered newspapers and now has 44 dollars. How much money did they earn by washing cars?",
+        "solution": 4.0,
+        "id": 136
+    },
+    {
+        "problem": "A mailman has to give 9 pieces of junk mail to each house in each block. If there are 20 houses on a block How many pieces of junk mail should he give in each block?",
+        "solution": 180.0,
+        "id": 137
+    },
+    {
+        "problem": "Matthew gave equal numbers of crackers and cakes to his 4 friends. If he had 10 crackers and 8 cakes initially How many cakes did each person eat?",
+        "solution": 2.0,
+        "id": 138
+    },
+    {
+        "problem": "Jessica cut some roses from her flower garden to put in her vase. There are now 19 roses in the vase. If there were 3 roses in the vase initially How many roses did she cut?",
+        "solution": 16.0,
+        "id": 139
+    },
+    {
+        "problem": "23 children were riding on the bus. At the bus stop 24 children got on the bus while some got off the bus. Then there were 8 children altogether on the bus. How many more children got off the bus than those that got on?",
+        "solution": 15.0,
+        "id": 140
+    },
+    {
+        "problem": "A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long. How many pages does the book have altogether?",
+        "solution": 125.0,
+        "id": 141
+    },
+    {
+        "problem": "7 red peaches, 15 yellow peaches and 8 green peaches are in the basket. How many peaches are in the basket?",
+        "solution": 30.0,
+        "id": 142
+    },
+    {
+        "problem": "Paige was helping her mom plant flowers and they put 10 seeds in each flower bed. If they planted 60 seeds altogther How many flower beds did they have?",
+        "solution": 6.0,
+        "id": 143
+    },
+    {
+        "problem": "Because of the decision Sofia asked the students to suggest specific types of food. If 257 students suggested adding mashed potatoes 120 suggested adding bacon to the menu and 97 suggested adding tomatoes How many more students suggested mashed potatoes than those that suggested bacon?",
+        "solution": 137.0,
+        "id": 144
+    },
+    {
+        "problem": "In a school there are 135 girls and 214 boys. 496 more girls and 910 more boys joined the school. How many boys are there in the school now?",
+        "solution": 1124.0,
+        "id": 145
+    },
+    {
+        "problem": "After resting they decided to go for a swim. If the depth of the water is 10 times Dean's height and he stands at 9 feet How much deeper is the water than Dean's height?",
+        "solution": 81.0,
+        "id": 146
+    },
+    {
+        "problem": "Next on his checklist is wax to stick the feathers together. He needs 159 g of wax more. If the feathers require a total of 628 g of wax How many grams of wax does he already have?",
+        "solution": 469.0,
+        "id": 147
+    },
+    {
+        "problem": "Frank was reading through his favorite book. He read 8 pages per day. If the book had 576 pages How many days did he take to finish the book?",
+        "solution": 72.0,
+        "id": 148
+    },
+    {
+        "problem": "There are a total of 16 peaches in a basket. If there are 13 red peaches and some more green peaches in the basket. How many green peaches are in the basket?",
+        "solution": 3.0,
+        "id": 149
+    },
+    {
+        "problem": "After resting they decided to go for a swim. The depth of the water is 2 times Dean's height. Dean is 8 feet shorter than Ron. If Ron stands at 14 feet How deep was the water?",
+        "solution": 12.0,
+        "id": 150
+    },
+    {
+        "problem": "There are 544 pots in each of the 10 gardens. Each pot has 32 flowers in it. How many flowers are there in all?",
+        "solution": 174080.0,
+        "id": 151
+    },
+    {
+        "problem": "Paige was helping her mom plant flowers and together they planted some seeds. They put 10 seeds in each flower bed. If there are 45 flowerbeds How many seeds did they plant?",
+        "solution": 450.0,
+        "id": 152
+    },
+    {
+        "problem": "Marco and his dad went strawberry picking. Together their strawberries weighed 4 pounds. Marco's strawberries weighed 19 pounds. How much more did his strawberries weigh than his dad's?",
+        "solution": 34.0,
+        "id": 153
+    },
+    {
+        "problem": "Julia played tag with 4 kids on wednesday. She had played with 6 kids on monday and 17 kids on tuesday. How many more kids did she play with on monday than on wednesday?",
+        "solution": 2.0,
+        "id": 154
+    },
+    {
+        "problem": "Carol was sending out birthday invitations to 10 friends. If each package of invitations she bought had 2 invitations in it How many packs does she need so that no friend gets left out?",
+        "solution": 5.0,
+        "id": 155
+    },
+    {
+        "problem": "A grocery store had 36 apples, 80 bottles of regular soda and 54 bottles of diet soda. How many more bottles than apple did they have?",
+        "solution": 98.0,
+        "id": 156
+    },
+    {
+        "problem": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 14 inches. The mouse jumped 16 inches lesser than the frog who jumped 37 inches farther than the grasshopper. How much farther did the mouse jump than the grasshopper?",
+        "solution": 21.0,
+        "id": 157
+    },
+    {
+        "problem": "Faye was placing her pencils and crayons into 11 rows with 31 pencils and 27 crayons in each row. How many pencils and crayons does she have altogether?",
+        "solution": 638.0,
+        "id": 158
+    },
+    {
+        "problem": "The school is planning a field trip. The school has 87 classrooms. There are 58 students in the school with each classroom having the same number of students. If there are 2 seats on each school bus. How many buses are needed to take the trip?",
+        "solution": 29.0,
+        "id": 159
+    },
+    {
+        "problem": "Emily is making bead necklaces for her friends. She had 2 beads and she was able to make 32 necklaces. How many beads did each necklace need?",
+        "solution": 16.0,
+        "id": 160
+    },
+    {
+        "problem": "Paige raised 7 goldfish and 12 catfish in the pond but stray cats loved eating them. Now she has 15 left. How many fishes disappeared?",
+        "solution": 4.0,
+        "id": 161
+    },
+    {
+        "problem": "Paco had 40 sweet cookies and 25 salty cookies. He ate 28 salty cookies and 15 sweet cookies. How many more salty cookies than sweet cookies did he eat?",
+        "solution": 13.0,
+        "id": 162
+    },
+    {
+        "problem": "Steven has 14 peaches. Jake has 6 fewer peaches than Steven and 3 more peaches than Jill. How many peaches does Jill have?",
+        "solution": 5.0,
+        "id": 163
+    },
+    {
+        "problem": "Paul had 115 books. He sold 78 books in a garage sale. How many books does he have left with him?",
+        "solution": 37.0,
+        "id": 164
+    },
+    {
+        "problem": "An industrial machine made 13 shirts yesterday and 3 shirts today. It can make 8 shirts a minute. How many minutes did the machine work in all?",
+        "solution": 2.0,
+        "id": 165
+    },
+    {
+        "problem": "Carol was sending out birthday invitations to her friends. Each package of invitations she bought had 14 invitations in it and she bought 6 packs. Then she bought 11 extra invitations. How many friends can she invite?",
+        "solution": 95.0,
+        "id": 166
+    },
+    {
+        "problem": "An industrial machine can make 3 shirts per minute. It made 6 shirts in all. How many minutes was the machine working?",
+        "solution": 2.0,
+        "id": 167
+    },
+    {
+        "problem": "Danny collects bottle caps. He found 63 bottle caps at the park while he threw away 51 old ones. Now he has 33 bottle caps in his collection. How many bottle caps did danny have at first?",
+        "solution": 21.0,
+        "id": 168
+    },
+    {
+        "problem": "A grocery store had 67 bottles of regular soda and 9 bottles of diet soda. How many more bottles of regular soda than diet soda did they have?",
+        "solution": 58.0,
+        "id": 169
+    },
+    {
+        "problem": "During summer break 644997 kids from Lawrence county stayed home and the other 893835 kids went to camp. An additional 78 kids from outside the county attended the camp. How many kids are in Lawrence county?",
+        "solution": 1538832.0,
+        "id": 170
+    },
+    {
+        "problem": "Faye was placing 30 pencils into rows with 5 pencils in each row. How many rows could she make?",
+        "solution": 6.0,
+        "id": 171
+    },
+    {
+        "problem": "Frank had some pieces of candy. If he put them into 26 bags with 33 pieces in each bag How many pieces of candy did he have?",
+        "solution": 858.0,
+        "id": 172
+    },
+    {
+        "problem": "A grocery store had a total of 17 bottles of which 9 were bottles of regular soda and the rest were bottles of diet soda. They also had 29 apple. How many bottles of diet soda did they have?",
+        "solution": 8.0,
+        "id": 173
+    },
+    {
+        "problem": "Jake has 3 fewer peaches than Steven who has 8 more peaches than Jill. Steven has 5 peaches. How many more peaches does Jake have than Jill?",
+        "solution": 5.0,
+        "id": 174
+    },
+    {
+        "problem": "Josh had 20 marbles in his collection. He gave 2 marbles to Jack. How many marbles does Josh have now?",
+        "solution": 18.0,
+        "id": 175
+    },
+    {
+        "problem": "Steven has 12 peaches. Jake has 4 fewer peaches than Steven who has 67 more peaches than Jill. How many peaches does Jake have?",
+        "solution": 8.0,
+        "id": 176
+    },
+    {
+        "problem": "The Razorback t-shirt shop makes $ 98 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 163 t-shirts. If they sold 89 t-shirts during the Arkansas game How much money did they make from selling the t-shirts during the arkansas game?",
+        "solution": 8722.0,
+        "id": 177
+    },
+    {
+        "problem": "Jack received 6 emails in the morning, 3 emails in the afternoon and 5 emails in the evening. How many emails did Jack receive in the day?",
+        "solution": 14.0,
+        "id": 178
+    },
+    {
+        "problem": "Jake has 5 fewer peaches than Steven. Steven has 18 more peaches than Jill. If Jill has 87 peaches How many more peaches does Jake have than Jill?",
+        "solution": 13.0,
+        "id": 179
+    },
+    {
+        "problem": "For the walls of the house he would use 13 large planks of wood. If each plank of wood needs 17 pieces of nails to be secured and in addition 8 nails are needed for some smaller planks. How many nails does John need for the house wall?",
+        "solution": 229.0,
+        "id": 180
+    },
+    {
+        "problem": "A grocery store had 54 bottles of diet soda, 83 bottles of regular soda and 12 apples. How many more bottles of regular soda than diet soda did they have?",
+        "solution": 29.0,
+        "id": 181
+    },
+    {
+        "problem": "Because of the decision Sofia asked the students to suggest specific types of food. If 269 students suggested adding bacon 330 suggested adding mashed potatoes to the menu and 76 suggested adding tomatoes How many more students suggested mashed potatoes than those that suggested bacon?",
+        "solution": 61.0,
+        "id": 182
+    },
+    {
+        "problem": "Brenda's mother made cookies for 14. If each of them had 30 cookies How many cookies did she prepare?",
+        "solution": 420.0,
+        "id": 183
+    },
+    {
+        "problem": "Dave had 15 apps on his phone. He added 71 new apps. After deleting some he had 14 left. How many more apps did he delete than he added?",
+        "solution": 1.0,
+        "id": 184
+    },
+    {
+        "problem": "Kelly has 106 nintendo games. How many will she have left if she gives away 64 games?",
+        "solution": 42.0,
+        "id": 185
+    },
+    {
+        "problem": "Matthew had 15 crackers. If Matthew gave equal numbers of crackers to his 5 friends and still had 10 crackers left How many crackers did each friend eat?",
+        "solution": 1.0,
+        "id": 186
+    },
+    {
+        "problem": "Last week Fred had 114 dollars and Jason had 22 dollars. They washed cars over the weekend and now Fred has 21 dollars and Jason has 78 dollars. How much money did Jason make over the weekend?",
+        "solution": 56.0,
+        "id": 187
+    },
+    {
+        "problem": "Frank had 42 pieces of candy. If he put them equally into 2 bags How many pieces of candy are in each bag?",
+        "solution": 21.0,
+        "id": 188
+    },
+    {
+        "problem": "Jack received 6 emails in the morning and 2 emails in the afternoon. How many more emails did Jack receive in the morning than in the afternoon?",
+        "solution": 4.0,
+        "id": 189
+    },
+    {
+        "problem": "Baker made 43 cakes and 114 pastries. If he sold 154 pastries and 78 cakes How many more pastries than cakes did baker sell?",
+        "solution": 76.0,
+        "id": 190
+    },
+    {
+        "problem": "Haley has 20 marbles. In her class 2 boys love to play marbles. If she distributes her marbles equally How many will each of the boys receive?",
+        "solution": 10.0,
+        "id": 191
+    },
+    {
+        "problem": "They decided to hold the party in their backyard. They have 4 sets of tables and each set has 3 chairs. If a total of 14 people will attend the party How many more chairs will they have to buy?",
+        "solution": 2.0,
+        "id": 192
+    },
+    {
+        "problem": "Last week Fred had 19 dollars and Jason had 16 dollars. They washed cars over the weekend and now Fred has 40 dollars and Jason has 69 dollars. How much money did Fred earn over the weekend?",
+        "solution": 21.0,
+        "id": 193
+    },
+    {
+        "problem": "Paco had 25 cookies. He ate 5 of them. Then he bought 3 more cookies How many more cookies did he eat than those he bought?",
+        "solution": 2.0,
+        "id": 194
+    },
+    {
+        "problem": "Rachel has 4 apple trees. She picked 7 apples from each of her trees. Now the trees have a total 29 apples still on them. How many apples did Rachel pick in all?",
+        "solution": 28.0,
+        "id": 195
+    },
+    {
+        "problem": "Jake has 8 fewer peaches and 10 more apples than Steven. Steven has 11 apples and 18 peaches. How many more peaches than apples does Steven have?",
+        "solution": 7.0,
+        "id": 196
+    },
+    {
+        "problem": "A grocery store had a total of 30 bottles of which 28 were bottles of regular soda and the rest were bottles of diet soda. How many bottles of diet soda did they have?",
+        "solution": 2.0,
+        "id": 197
+    },
+    {
+        "problem": "The Ferris wheel in paradise park has 2 small seats and 23 large seats. Each small seat can hold 14 people and large seat can hold 54 people. How many people can ride the Ferris wheel on small seats?",
+        "solution": 28.0,
+        "id": 198
+    },
+    {
+        "problem": "Debby bought 360 soda bottles and 162 water bottles when they were on sale. If she drank 122 water bottles and 9 soda bottles a day How many days would the soda bottles last?",
+        "solution": 40.0,
+        "id": 199
+    }
+]

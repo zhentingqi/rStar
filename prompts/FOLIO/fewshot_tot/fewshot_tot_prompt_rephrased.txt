@@ -1,0 +1,33 @@
+### Instruction:
+Given a list of conditions, please answer the question. Condition 1: Miroslav Venhoda was a Czech choral conductor who specialized in Renaissance and Baroque music. Condition 2: Any choral conductor is considered a musician. Condition 3: Miroslav Venhoda published a book in 1946 titled "Method of Studying Gregorian Chant". Question: Based on the above information, is the following statement true, false, or uncertain? A Czech published a book in 1946.
+
+### Response:
+Let's think step by step.
+Step 1: Condition 1 states that Miroslav Venhoda is identified as a Czech choral conductor.
+Step 2: Condition 3 confirms he published a book in 1946 named "Method of Studying Gregorian Chant."
+Step 3: Since Venhoda is Czech and he published a book in the specified year, the statement "A Czech published a book in 1946" directly follows from the provided facts.
+Step 4: Therefore, the statement is true without any uncertainty.
+Step 5: The answer is: True.
+
+### Instruction:
+Given a list of conditions, please answer the question. Condition 1: Some students who excel in math are also proficient in chemistry. Condition 2: All students proficient in chemistry enjoy conducting experiments. Condition 3: Students who enjoy conducting experiments are skilled at planning. Condition 4: No student skilled at planning has failed the class. Condition 5: James, a student in the class, either excels in chemistry and failed the class or is not proficient in chemistry and passed the class. Question: Based on the above information, is the following statement true, false, or uncertain? James is good at planning.
+
+### Response:
+Let's think step by step.
+Step 1: If James is good at chemistry, Condition 2 and 3 implies he enjoys experiments and is good at planning.
+Step 2: That James enjoys experiments and is good at planning contradicts failing the class because those good at planning don't fail (Condition 4). 
+Step 3: If he's bad at chemistry, the information doesn't link to his planning skills. 
+Step 4: Therefore, without a clear link to his planning ability in either scenario, we cannot be certain about James's planning skills. 
+Step 5: The answer is: Uncertain.
+
+### Instruction:
+Given a list of conditions, please answer the question. Condition 1: Lana Wilson directed After Tiller, The Departure, and Miss Americana. Condition 2: A person who directs a film is considered a filmmaker. Condition 3: After Tiller is a documentary, which is a type of film. Condition 4: Lana Wilson is from Kirkland, and Kirkland is a US city. Condition 5: A person from a city in a country is from that country. Condition 6: After Tiller was nominated for the Independent Spirit Award for Best Documentary. Question: Based on the above information, is the following statement true, false, or uncertain? Miss Americana is not directed by a filmmaker from Kirkland.
+
+### Response:
+Let's think step by step.
+Step 1: Condition 1 says that Lana Wilson directed After Tiller, The Departure, and Miss Americana.
+Step 2: Since she directed a film, she is considered a filmmaker (Condition 2).
+Step 3: By Condition 4 and 5 we know that Lana Wilson is from Kirkland, which means she is from the US.
+Step 4: If Miss Americana was directed by Lana Wilson, it means the film was directed by a filmmaker from Kirkland. 
+Step 5: Therefore, the statement that Miss Americana is not directed by a filmmaker from Kirkland is false.
+Step 6: The answer is: False.

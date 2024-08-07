@@ -1,0 +1,35 @@
+### Instruction:
+Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music. Any choral conductor is a musician. Some musicians love music. Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant. Based on the above information, is the following statement true, false, or uncertain? A Czech published a book in 1946.
+
+### Response:
+Let's think step by step.
+Step 1: Miroslav Venhoda is identified as a Czech choral conductor.
+Step 2: It is stated that Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant.
+Step 3: Therefore, we can conclude that a Czech (Miroslav Venhoda) published a book in 1946.
+Step 4: The answer is true.
+
+### Instruction:
+Some students in the class who are good at math are also good at chemistry. All students in the class who are good at chemistry enjoy conducting experiments. All students in the class that enjoy conducting experiments are good at planning. None of the students who are good at planning failed the class. James is a student in the class; he is either good at chemistry and failed the class, or bad at chemistry and passed the class. Based on the above information, is the following statement true, false, or uncertain? James is good at planning.
+
+### Response:
+Let's think step by step.
+Step 1: Some students are good at both math and chemistry.
+Step 2: All students who are good at chemistry enjoy conducting experiments.
+Step 3: All students who enjoy conducting experiments are good at planning.
+Step 4: None of the students who are good at planning failed the class.
+Step 5: James either failed the class being good at chemistry, or passed the class being bad at chemistry.
+Step 6: If James was good at chemistry and failed, he cannot be good at planning, because those good at planning do not fail.
+Step 7: If James passed the class and is bad at chemistry, he would not necessarily be good at conducting experiments or planning.
+Step 8: Therefore, we cannot confirm that James is good at planning without knowing more specifics about his success in chemistry and class status.
+Step 9: The answer is uncertain.
+
+### Instruction:
+Lana Wilson directed After Tiller, The Departure, and Miss Americana. If a film is directed by a person, the person is a filmmaker. After Tiller is a documentary. The documentary is a type of film. Lana Wilson is from Kirkland. Kirkland is a US city. If a person is from a city in a country, the person is from the country. After Tiller is nominated for the Independent Spirit Award for Best Documentary. Based on the above information, is the following statement true, false, or uncertain? Miss Americana is not directed by a filmmaker from Kirkland.
+
+### Response:
+Let's think step by step.
+Step 1: Lana Wilson is identified as the director of After Tiller, The Departure, and Miss Americana.
+Step 2: Lana Wilson is from Kirkland, which is a US city, indicating that Lana Wilson is from the US.
+Step 3: Since Lana Wilson directed Miss Americana and she is from Kirkland, it follows that Miss Americana was directed by a filmmaker from Kirkland.
+Step 4: The statement that Miss Americana is not directed by a filmmaker from Kirkland is false. 
+Step 5: The answer is false.

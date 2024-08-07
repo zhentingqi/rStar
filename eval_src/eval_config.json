@@ -1,0 +1,24 @@
+{
+    "extract_pattern": [
+        "####",
+        "The answer is: ",
+        "The answer is"
+    ],
+    "policy": {
+        "GSM8K": {
+            "function": "simple_answer_check",
+            "extract_policy": "flex",
+            "eval_policy": "strict"
+        },
+        "MATH": {
+            "function": "latex_answer_check",
+            "extract_policy": "flex",
+            "eval_policy": "aggressive"
+        },
+        "default": {
+            "function": "simple_answer_check",
+            "extract_policy": "flex",
+            "eval_policy": "strict"
+        }
+    }
+}

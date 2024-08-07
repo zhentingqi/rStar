@@ -1,0 +1,3437 @@
+[
+    {
+        "id": 0,
+        "problem": "Apollo 13: A failed crewed mission to land on the Moon. Was ship that recovered Apollo 13 named after a World War II battle?",
+        "solution": "true"
+    },
+    {
+        "id": 1,
+        "problem": "Tibia: larger of the two bones of the leg below the knee for vertebrates. Is the tibia necessary to win the Stanley Cup?",
+        "solution": "true"
+    },
+    {
+        "id": 2,
+        "problem": "The Powerpuff Girls: American animated television series. Could the Powepuff Girls make the background to the Azerbaijani flag?",
+        "solution": "true"
+    },
+    {
+        "id": 3,
+        "problem": "Eagle: large carnivore bird. Are eagles and young bears both used as labels for skills-training youth groups?",
+        "solution": "true"
+    },
+    {
+        "id": 4,
+        "problem": "Mile: Unit of length. Would an Olympic athlete be tired out after running a mile?",
+        "solution": "false"
+    },
+    {
+        "id": 5,
+        "problem": "Goblin shark: Deep-sea shark. Would a goblin shark eat at Crossroads Kitchen?",
+        "solution": "false"
+    },
+    {
+        "id": 6,
+        "problem": "Islamophobia: Fear, hatred of, or prejudice against the Islamic religion or Muslims generally,. Was  Godfrey of Bouillon an Islamaphobe?",
+        "solution": "true"
+    },
+    {
+        "id": 7,
+        "problem": "J. K. Rowling: English novelist. Did Helen Keller ever read a novel by J. K. Rowling?",
+        "solution": "false"
+    },
+    {
+        "id": 8,
+        "problem": "Guitar Hero: video game series. Is Guitar Hero Beatles inappropriate for a US third grader?",
+        "solution": "false"
+    },
+    {
+        "id": 9,
+        "problem": "Rash: skin condition. Is CAS number 8009-03-8 harmful for a rash?",
+        "solution": "false"
+    },
+    {
+        "id": 10,
+        "problem": "Asian black bear: species of mammal. Is the Asian black bear multicolored?",
+        "solution": "true"
+    },
+    {
+        "id": 11,
+        "problem": "Tom Cruise: American actor and producer. Could Tom Cruise explain mental auditing?",
+        "solution": "true"
+    },
+    {
+        "id": 12,
+        "problem": "Funeral: ceremony for a person who has died. Is it unusual to play Happy hardcore music at a funeral?",
+        "solution": "true"
+    },
+    {
+        "id": 13,
+        "problem": "JPMorgan Chase: American multinational banking and financial services holding company. Could every citizen of Samoa send a letter to a unique JPMorgan Chase employee?",
+        "solution": "true"
+    },
+    {
+        "id": 14,
+        "problem": "United States Army Rangers: Elite military formation of the United States Army. Would Michael J Fox qualify for the Army Rangers?",
+        "solution": "false"
+    },
+    {
+        "id": 15,
+        "problem": "Liberty Bell: bell that serves as a symbol of American independence and liberty. Will a Holstein cow and the Liberty Bell balance out a giant scale?",
+        "solution": "false"
+    },
+    {
+        "id": 16,
+        "problem": "Hyena: family of mammal. Do hyenas appear in a Broadway musical?",
+        "solution": "true"
+    },
+    {
+        "id": 17,
+        "problem": "Santa Claus: Folkloric figure, said to deliver gifts to children on Christmas Eve. Are most mall Santa Claus actors white?",
+        "solution": "true"
+    },
+    {
+        "id": 18,
+        "problem": "Peach: species of fruit tree (for the fruit use Q13411121). Does Princess Peach's dress resemble a peach fruit?",
+        "solution": "false"
+    },
+    {
+        "id": 19,
+        "problem": "Mood disorder: (psychology) Any of various disorders characterised by disturbance in an individual's mood. Do people with mood disorders need permanent institutionalization?",
+        "solution": "false"
+    },
+    {
+        "id": 20,
+        "problem": "Stephen King: American author. Could Stephen King join the NASA Astronaut Corps?",
+        "solution": "false"
+    },
+    {
+        "id": 21,
+        "problem": "DC Comics: U.S. comic book publisher. Would Avengers Comics be out of place in a DC Comics store?",
+        "solution": "true"
+    },
+    {
+        "id": 22,
+        "problem": "Newcastle, New South Wales: City in New South Wales, Australia. Was the MLB World Series held in Newcastle, New South Wales?",
+        "solution": "false"
+    },
+    {
+        "id": 23,
+        "problem": "Euro: European currency. Would someone pay for a coffee in NYC with Euros?",
+        "solution": "false"
+    },
+    {
+        "id": 24,
+        "problem": "Blue: A primary colour between purple and green. Do some home remedies result in your skin color turning blue?",
+        "solution": "true"
+    },
+    {
+        "id": 25,
+        "problem": "Lighthouse of Alexandria: Ancient lighthouse in Egypt. Were Greeks essential to crafting Egyptian Lighthouse of Alexandria?",
+        "solution": "true"
+    },
+    {
+        "id": 26,
+        "problem": "Cancer: group of diseases. Do all cancer patients get disability?",
+        "solution": "false"
+    },
+    {
+        "id": 27,
+        "problem": "Naruto: Japanese manga and anime series. Did Naruto escape the Temple of Doom?",
+        "solution": "false"
+    },
+    {
+        "id": 28,
+        "problem": "Rainbow: meteorological phenomenon. Is lunch on the beach a good activity to spot the full circle of a rainbow?",
+        "solution": "false"
+    },
+    {
+        "id": 29,
+        "problem": "Fairy: mythical being or legendary creature. Is a fairy more prevalent in world myths than a valkyrie?",
+        "solution": "true"
+    },
+    {
+        "id": 30,
+        "problem": "Caracal: Small wild cat. Would a caracal be defeated by Javier Sotomayor in a high jump competition?",
+        "solution": "false"
+    },
+    {
+        "id": 31,
+        "problem": "Curling: Team sport played on ice. Is a curling iron necessary in curling?",
+        "solution": "false"
+    },
+    {
+        "id": 32,
+        "problem": "Fairy: mythical being or legendary creature. Did King James I despise fairy beings?",
+        "solution": "true"
+    },
+    {
+        "id": 33,
+        "problem": "Student: learner, or someone who attends an educational institution. Do Elementary School students typically need graphing calculators?",
+        "solution": "false"
+    },
+    {
+        "id": 34,
+        "problem": "Head coach: Senior coach or manager of a sports team. Do most high school head coaches make as much as the Head Coach at NCSU?",
+        "solution": "false"
+    },
+    {
+        "id": 35,
+        "problem": "Michael: male given name. Is Michael an unpopular name in the United States?",
+        "solution": "false"
+    },
+    {
+        "id": 36,
+        "problem": "Whole genome sequencing: A process that determines the complete DNA sequence of an organism's genome at a single time. Did Rosalind Franklin contribute to work that led to Whole Genome Sequencing?",
+        "solution": "true"
+    },
+    {
+        "id": 37,
+        "problem": "Roman numerals: Numbers in the Roman numeral system. Is MIX a word and a roman numeral?",
+        "solution": "true"
+    },
+    {
+        "id": 38,
+        "problem": "Cooking: Preparing food for consumption with the use of heat. If your electric stove has a glass top, should you use cast iron skillets?",
+        "solution": "false"
+    },
+    {
+        "id": 39,
+        "problem": "Carl Friedrich Gauss: German mathematician and physicist. Could Carl Friedrich Gauss speak to someone 100 miles away?",
+        "solution": "false"
+    },
+    {
+        "id": 40,
+        "problem": "Ringo Starr: British musician, drummer of the Beatles. Would Ringo Starr avoid the pot roast at a restaurant?",
+        "solution": "true"
+    },
+    {
+        "id": 41,
+        "problem": "Samsung Galaxy: series of Android mobile computing devices. Does Iphone have more iterations than Samsung Galaxy?",
+        "solution": "false"
+    },
+    {
+        "id": 42,
+        "problem": "Jason: Greek mythological hero. Does Jason have anything in common with Dr. Disrespect?",
+        "solution": "true"
+    },
+    {
+        "id": 43,
+        "problem": "Surveying: The technique, profession, and science of determining the positions of points and the distances and angles between them. Would you hire someone with dyscalculia to do surveying work?",
+        "solution": "false"
+    },
+    {
+        "id": 44,
+        "problem": "President of India: Ceremonial head of state of India. Is it more expensive to run for President of India than to buy a new iPhone 11?",
+        "solution": "false"
+    },
+    {
+        "id": 45,
+        "problem": "Arnold Schwarzenegger: Austrian-American actor, businessman, bodybuilder and politician. Can Arnold Schwarzenegger deadlift an adult Black rhinoceros?",
+        "solution": "false"
+    },
+    {
+        "id": 46,
+        "problem": "San Antonio: City in Texas, United States. Did any citizen of San Antonio vote for Boris Johnson?",
+        "solution": "false"
+    },
+    {
+        "id": 47,
+        "problem": "Jackson Pollock: American painter. Was Jackson Pollock trained by Leonardo da Vinci?",
+        "solution": "false"
+    },
+    {
+        "id": 48,
+        "problem": "Kurt Cobain: American singer, composer, and musician. Was Kurt Cobain's death indirectly caused by Daniel LeFever?",
+        "solution": "true"
+    },
+    {
+        "id": 49,
+        "problem": "Black Sea: Marginal sea of the Atlantic Ocean between Europe and Asia. Could the moon fit inside the Black Sea?",
+        "solution": "false"
+    },
+    {
+        "id": 50,
+        "problem": "Anorexia nervosa: Eating disorder characterized by refusal to maintain a healthy body weight, and fear of gaining weight due to a distorted self image. Did Jon Brower Minnoch suffer from anorexia nervosa?",
+        "solution": "false"
+    },
+    {
+        "id": 51,
+        "problem": "Portuguese Colonial War: 1961\u20131974 armed conflicts in Africa between Portugal and independence movements. Do all of the African regions that participated in the Portugese Colonial War share an official language?",
+        "solution": "true"
+    },
+    {
+        "id": 52,
+        "problem": "Very Large Telescope: telescope in the Atacama Desert, Chile. Is it possible to get killed walking to the Very Large Telescope?",
+        "solution": "true"
+    },
+    {
+        "id": 53,
+        "problem": "B: letter in the Latin alphabet. Is B's place in alphabet same as Prince Harry's birth order?",
+        "solution": "true"
+    },
+    {
+        "id": 54,
+        "problem": "Gorillaz: British virtual band. Does it seem like the Gorillaz is composed of more members than they have?",
+        "solution": "true"
+    },
+    {
+        "id": 55,
+        "problem": "Spinach: species of plant. Was the amount of spinach Popeye ate unhealthy?",
+        "solution": "true"
+    },
+    {
+        "id": 56,
+        "problem": "Music: form of art using sound and silence. Are deaf people left out of enjoying music?",
+        "solution": "false"
+    },
+    {
+        "id": 57,
+        "problem": "Carnation Revolution: revolution. Was the Carnation Revolution the deadliest revolution in Europe?",
+        "solution": "false"
+    },
+    {
+        "id": 58,
+        "problem": "B\u00f6rek: Stuffed phyllo pastry. Would Recep Tayyip Erdo\u011fan be unfamiliar with b\u00f6rek?",
+        "solution": "false"
+    },
+    {
+        "id": 59,
+        "problem": "Jukebox musical: stage or film musical compiled from pre-existing songs. Is there a jukebox musical about a sweet transvestite from Transexual, Transylvania?",
+        "solution": "false"
+    },
+    {
+        "id": 60,
+        "problem": "Popular science: Interpretation of science intended for a general audience. Is \"A Tale of Two Cities\" a popular science novel?",
+        "solution": "false"
+    },
+    {
+        "id": 61,
+        "problem": "Harlem Renaissance: African-American cultural movement in New York City in the 1920s. Could Al Capone have read works from the Harlem Renaissance?",
+        "solution": "true"
+    },
+    {
+        "id": 62,
+        "problem": "Dr. Seuss: American children's writer and illustrator. Did Dr. Seuss live a tragedy free life?",
+        "solution": "false"
+    },
+    {
+        "id": 63,
+        "problem": "Eid al-Fitr: Islamic holiday that marks the end of Ramadan. Could  jockey win Triple Crown between Eid al-Fitr endpoints?",
+        "solution": "false"
+    },
+    {
+        "id": 64,
+        "problem": "National Hockey League: North American professional ice hockey league. Do American teams in National Hockey League outnumber Canadian teams?",
+        "solution": "true"
+    },
+    {
+        "id": 65,
+        "problem": "Hammer and sickle: Communist symbol. Did the Nazis use the Hammer and sickle flag?",
+        "solution": "false"
+    },
+    {
+        "id": 66,
+        "problem": "Alice's Adventures in Wonderland: book by Lewis Carroll. Is tobacco use made to seem enjoyable in Alice's Adventures in Wonderland?",
+        "solution": "true"
+    },
+    {
+        "id": 67,
+        "problem": "PlayStation 4: Sony's eighth-generation home video game console. Did Tom Bosley enjoy video games on the PlayStation 4?",
+        "solution": "false"
+    },
+    {
+        "id": 68,
+        "problem": "Sesame: species of plant. Would a sesame seed be mistaken for a wood frog egg?",
+        "solution": "false"
+    },
+    {
+        "id": 69,
+        "problem": "2008 Summer Olympics: Games of the XXIX Olympiad, held in Beijing in 2008. Could you drive a Rowe 550 to the 2008 Summer Olympics?",
+        "solution": "true"
+    },
+    {
+        "id": 70,
+        "problem": "Prime Minister of the United Kingdom: Head of UK Government. Does highest US Court have enough seats for every Prime Minister of the United Kingdom since 1952?",
+        "solution": "false"
+    },
+    {
+        "id": 71,
+        "problem": "Quartz: mineral composed of silicon and oxygen atoms in a continuous framework of SiO\u2084 silicon\u2013oxygen tetrahedra, with each oxygen being shared between two tetrahedra, giving an overall chemical formula of SiO\u2082. Could Quartz be useful to humans if plants died off and there was no oxygen?",
+        "solution": "true"
+    },
+    {
+        "id": 72,
+        "problem": "Goofy: Disney cartoon character. If Goofy were a pet, would he need heartworm prevention?",
+        "solution": "true"
+    },
+    {
+        "id": 73,
+        "problem": "Florence: Capital and most populous city of the Italian region of Tuscany. Is there a Harry Potter character named after Florence?",
+        "solution": "true"
+    },
+    {
+        "id": 74,
+        "problem": "University of Pittsburgh: American state-related research university located in Pittsburgh, Pennsylvania. Did University of Pittsburgh founder have great deal in common with Judith Sheindlin?",
+        "solution": "true"
+    },
+    {
+        "id": 75,
+        "problem": "Samsung Galaxy: series of Android mobile computing devices. Would the operating system of a Samsung Galaxy 1 sound edible?",
+        "solution": "true"
+    },
+    {
+        "id": 76,
+        "problem": "Prime number: Integer greater than 1 that has no positive integer divisors other than itself and 1. Are Brian Cranston and Saoirse Ronan's combined Emmy Awards a prime number?",
+        "solution": "false"
+    },
+    {
+        "id": 77,
+        "problem": "Shaggy (musician): Reggae singer and former U.S. Marine. Would Shaggy and Redenbacher popcorn founder both raise hand during first name roll call?",
+        "solution": "true"
+    },
+    {
+        "id": 78,
+        "problem": "Sable: Species of marten. Are sables related to wolverines?",
+        "solution": "true"
+    },
+    {
+        "id": 79,
+        "problem": "Sacrum: Triangular-shaped bone at the bottom of the spine. Do human sacrums have more fused vertebrae than an Alaskan Malamute?",
+        "solution": "true"
+    },
+    {
+        "id": 80,
+        "problem": "Statue of Freedom: 19th-century statue by Thomas Crawford on top of the US Capitol. Can you see the Statue of Freedom from the Statue of Liberty?",
+        "solution": "false"
+    },
+    {
+        "id": 81,
+        "problem": "Aldi: Germany-based supermarket chain. Would you spend less on your food at Aldi than at Whole Foods?",
+        "solution": "true"
+    },
+    {
+        "id": 82,
+        "problem": "Space Race: Competition between the USSR and the USA to explore space. Did the Space Race use relay batons?",
+        "solution": "false"
+    },
+    {
+        "id": 83,
+        "problem": "Traffic collision: occurs when a vehicle collides with another vehicle, pedestrian, animal, road debris, or other stationary obstruction, such as a tree, pole or building or drives off the road. Can a traffic collision make someone a millionaire?",
+        "solution": "true"
+    },
+    {
+        "id": 84,
+        "problem": "Elk: Large antlered species of deer from North America and east Asia. Would a body builder prefer an elk burger over a beef burger?",
+        "solution": "true"
+    },
+    {
+        "id": 85,
+        "problem": "Human overpopulation: The condition where human numbers exceed the short or long-term carrying capacity of the environment. Does Rusev have to worry about human overpopulation in his homeland?",
+        "solution": "false"
+    },
+    {
+        "id": 86,
+        "problem": "Citrus: genus of fruit-bearing plants (source of fruit such as lemons and oranges). Would someone on antidepressants need to be cautious of some citrus fruits?",
+        "solution": "true"
+    },
+    {
+        "id": 87,
+        "problem": "Lettuce: Species of annual plant of the daisy family, most often grown as a leaf vegetable. Can lettuce result in spontaneous abortion?",
+        "solution": "true"
+    },
+    {
+        "id": 88,
+        "problem": "Napoleonic Wars: Series of early 19th century European wars. Did earth complete at least one orbit around the sun during the Napoleonic Wars?",
+        "solution": "true"
+    },
+    {
+        "id": 89,
+        "problem": "Moscow Kremlin: fortified complex in Moscow, Russia. Can the Moscow Kremlin fit inside Disney Land?",
+        "solution": "true"
+    },
+    {
+        "id": 90,
+        "problem": "Snakebite: Injury caused by a bite from a snake. Would a snakebite hypothetically be a threat to T-1000?",
+        "solution": "false"
+    },
+    {
+        "id": 91,
+        "problem": "Salsa (sauce): Sauce. Would the chef at La Grenouille find salsa to be a strange request?",
+        "solution": "true"
+    },
+    {
+        "id": 92,
+        "problem": "Fiat Chrysler Automobiles: Multinational automotive manufacturing conglomerate. Is Fiat Chrysler gaining a new overall corporate identity?",
+        "solution": "true"
+    },
+    {
+        "id": 93,
+        "problem": "Secretary: occupation. Is Tange Sazen hypothetically an ideal choice for a secretary job?",
+        "solution": "false"
+    },
+    {
+        "id": 94,
+        "problem": "Landscape architect: person involved in the planning, design and sometimes direction of a landscape, garden, or distinct space. Would Persephone be a good consultant to a landscape architect?",
+        "solution": "true"
+    },
+    {
+        "id": 95,
+        "problem": "Salmon: Family of fish related to trout. Do salmon mate in the Caspian Sea?",
+        "solution": "false"
+    },
+    {
+        "id": 96,
+        "problem": "Diamond: Allotrope of carbon often used as a gemstone and an abrasive. Is the title of Shirley Bassey's 1971 diamond song a true statement?",
+        "solution": "false"
+    },
+    {
+        "id": 97,
+        "problem": "Silk: fine, lustrous, natural fiber produced by the larvae of various silk moths, especially the species Bombyx mori. Does Bombyx mori have a monopoly over silk production?",
+        "solution": "false"
+    },
+    {
+        "id": 98,
+        "problem": "Metallica: American heavy metal band. Is Metallica protective over their music?",
+        "solution": "true"
+    },
+    {
+        "id": 99,
+        "problem": "Great Depression: 20th-century worldwide economic depression. Can a person be diagnosed with a Great Depression?",
+        "solution": "false"
+    },
+    {
+        "id": 100,
+        "problem": "Beaver: Genus of mammals. Does the land in close proximity to beaver dams suffer?",
+        "solution": "true"
+    },
+    {
+        "id": 101,
+        "problem": "Durian: genus of plants. Could Durian cause someone's stomach to feel unwell?",
+        "solution": "true"
+    },
+    {
+        "id": 102,
+        "problem": "Boat: vessel for transport by water. Does rock star Keith Richards play a captain of a boat in a movie?",
+        "solution": "true"
+    },
+    {
+        "id": 103,
+        "problem": "Game engine: Software-development environment designed for building video games. Does Adobe Suite have video game engine coding?",
+        "solution": "true"
+    },
+    {
+        "id": 104,
+        "problem": "Publishing: Process of production and dissemination of literature, music, or information. Does Buddy The Elf know anyone who works in publishing?",
+        "solution": "true"
+    },
+    {
+        "id": 105,
+        "problem": "Spider-Man: Fictional Marvel superhero. Did Spiderman fight against Falcon in the MCU?",
+        "solution": "true"
+    },
+    {
+        "id": 106,
+        "problem": "United Airlines: Airline in the United States. Is Glycol something United Airlines would buy?",
+        "solution": "true"
+    },
+    {
+        "id": 107,
+        "problem": "Stroke: Medical condition where poor blood flow to the brain causes cell death. Did Dale Jr.'s father crash his car due to a stroke?",
+        "solution": "false"
+    },
+    {
+        "id": 108,
+        "problem": "Suicide: Intentional act of causing one's own death. Would Modafinil be effective in completing a suicide?",
+        "solution": "false"
+    },
+    {
+        "id": 109,
+        "problem": "Constitution of the Philippines: Supreme law of the Republic of the Philippines. Does the Constitution of the Philippines copy text from the British constitution?",
+        "solution": "false"
+    },
+    {
+        "id": 110,
+        "problem": "Super Mario: platform video game series from Nintendo's Mario franchise. Does Super Mario require electricity to play?",
+        "solution": "true"
+    },
+    {
+        "id": 111,
+        "problem": "Los Angeles Memorial Sports Arena: Former arena in California, United States. Was Los Angeles Memorial Sports Arena hypothetically inadequate for hosting Coachella?",
+        "solution": "true"
+    },
+    {
+        "id": 112,
+        "problem": "Psychotherapy: clinically applied psychology for desired behavior modification. Do some psychotherapy patients have no mental illness?",
+        "solution": "true"
+    },
+    {
+        "id": 113,
+        "problem": "Amy Winehouse: English singer and songwriter. Would Amy Winehouse's death have been prevented with Narcan?",
+        "solution": "false"
+    },
+    {
+        "id": 114,
+        "problem": "Louvre: Art museum and Historic site in Paris, France. Is the Louvre's pyramid known for being unbreakable? ",
+        "solution": "false"
+    },
+    {
+        "id": 115,
+        "problem": "Queen Elizabeth The Queen Mother: Queen consort of King George VI, mother of Queen Elizabeth II. Did Queen Elizabeth The Queen Mother and her daughter share name with Tudor queen?",
+        "solution": "true"
+    },
+    {
+        "id": 116,
+        "problem": "Apollo 15: Fourth crewed mission to land on the Moon. Would the crew of Apollo 15 have difficulty riding a unicycle?",
+        "solution": "true"
+    },
+    {
+        "id": 117,
+        "problem": "Bee: Clade of insects. Can Africanized bees be considered multicultural?",
+        "solution": "true"
+    },
+    {
+        "id": 118,
+        "problem": "Futurama: American animated sitcom for the Fox Broadcasting Company and Comedy Central. Has the creator of Futurama lived in multiple centuries?",
+        "solution": "true"
+    },
+    {
+        "id": 119,
+        "problem": "Hulk: Superhero appearing in Marvel Comics publications and related media. Can Hulk's alter ego explain atomic events?",
+        "solution": "true"
+    },
+    {
+        "id": 120,
+        "problem": "Kane (wrestler): American professional wrestler, actor, businessman, and politician. Was Kane (wrestler) banned from WCW  headquarters city?",
+        "solution": "false"
+    },
+    {
+        "id": 121,
+        "problem": "Astronaut: Person who commands, pilots, or serves as a crew member of a spacecraft. Can actress Danica McKellar skip astronaut education requirements?",
+        "solution": "true"
+    },
+    {
+        "id": 122,
+        "problem": "Macaque: genus of Old World monkeys. Could an elephant easily defeat a male macaque?",
+        "solution": "true"
+    },
+    {
+        "id": 123,
+        "problem": "Sugar Ray Robinson: American boxer. Did Sugar Ray Robinson win a fight against Canelo Alvarez?",
+        "solution": "false"
+    },
+    {
+        "id": 124,
+        "problem": "1980 United States presidential election: 49th quadrennial presidential election in the United States. Was the 1980 presidential election won by a member of the Grand Old Party?",
+        "solution": "true"
+    },
+    {
+        "id": 125,
+        "problem": "Bulk carrier: merchant ship specially designed to transport unpackaged bulk cargo. Would eliminating competition in the Japanese bulk carrier market be profitable for a steel company?",
+        "solution": "true"
+    },
+    {
+        "id": 126,
+        "problem": "Telescope: Optical instrument that makes distant objects appear magnified. Would stargazers prefer binoculars over a telescope?",
+        "solution": "false"
+    },
+    {
+        "id": 127,
+        "problem": "Scottish people: ethnic inhabitants of Scotland. Are Scottish people descended from Mary, Queen of Scots part French?",
+        "solution": "true"
+    },
+    {
+        "id": 128,
+        "problem": "ABBA: Swedish pop group. Is calling ABBA the Swedish Beatles a preposterous claim?",
+        "solution": "true"
+    },
+    {
+        "id": 129,
+        "problem": "Supreme Court of the United States: Highest court in the United States. Is Supreme Court of the United States analogous to High Courts of Justice of Spain?",
+        "solution": "false"
+    },
+    {
+        "id": 130,
+        "problem": "Pope John Paul I: 263rd Pope of the Catholic Church. Phileas Fogg's around the world would be difficult to achieve during Pope John Paul I's reign?",
+        "solution": "true"
+    },
+    {
+        "id": 131,
+        "problem": "Al-Farabi: Philosopher in 10th century Central Asia. Would ISIS agree with Al-Farabi's religious sect?",
+        "solution": "false"
+    },
+    {
+        "id": 132,
+        "problem": "Second Coming: Christian and Islamic belief regarding the future (or past) return of Jesus after his ascension. Does Woody Allen await the Second Coming?",
+        "solution": "false"
+    },
+    {
+        "id": 133,
+        "problem": "Scottish independence: political aim for Scotland to be independent from the UK. Is Alistair Darling in favor of Scottish independence?",
+        "solution": "false"
+    },
+    {
+        "id": 134,
+        "problem": "Aldi: Germany-based supermarket chain. Are all United States Aldi locations owned by the same company?",
+        "solution": "false"
+    },
+    {
+        "id": 135,
+        "problem": "Mercury (element): Chemical element with atomic number 80. Does Mercury make for good Slip N Slide material?",
+        "solution": "false"
+    },
+    {
+        "id": 136,
+        "problem": "Alan Rickman: British actor. Do many fans of J.K Rowling know who Alan Rickman is?",
+        "solution": "true"
+    },
+    {
+        "id": 137,
+        "problem": "Chlorophyll: group of chemical compounds. Would human race go extinct without chlorophyll?",
+        "solution": "true"
+    },
+    {
+        "id": 138,
+        "problem": "Elijah Cummings: U.S. Representative from Maryland. Will Elijah Cummings vote for Joe Biden in the next presidential elections?",
+        "solution": "false"
+    },
+    {
+        "id": 139,
+        "problem": "Stone Cold Steve Austin: American professional wrestler. Coud every wife of Stone Cold Steve Austin fit in Audi TT?",
+        "solution": "true"
+    },
+    {
+        "id": 140,
+        "problem": "Reddit: Online news aggregator. Are the majority of Reddit users familiar with the Pledge of Allegiance?",
+        "solution": "true"
+    },
+    {
+        "id": 141,
+        "problem": "Methane: Simplest organic molecule with one carbon atom and four hydrogen. Can methane be seen by the naked eye?",
+        "solution": "false"
+    },
+    {
+        "id": 142,
+        "problem": "Genghis Khan: founder and first Great Khan of the Mongol Empire. Are more people today related to Genghis Khan than Julius Caesar?",
+        "solution": "true"
+    },
+    {
+        "id": 143,
+        "problem": "Oscar Wilde: 19th-century Irish poet, playwright and aesthete. Was Oscar Wilde's treatment under the law be considered fair in the US now?",
+        "solution": "false"
+    },
+    {
+        "id": 144,
+        "problem": "Clouded leopard: species of mammal found from the Himalayan foothills through mainland Southeast Asia into China. Would a clouded leopard encounter an awake pangolin?",
+        "solution": "true"
+    },
+    {
+        "id": 145,
+        "problem": "Great Pyramid of Giza: Largest pyramid in the Giza Necropolis, Egypt. Can 200 men end to end cover Great Pyramid of Giza's base?",
+        "solution": "true"
+    },
+    {
+        "id": 146,
+        "problem": "Silicon: Chemical element with atomic number 14. Is silicon important in California?",
+        "solution": "true"
+    },
+    {
+        "id": 147,
+        "problem": "Johnny Carson: American talk show host and comedian. Did Johnny Carson win enough Emmy's to fill a carton if Emmy's were eggs?",
+        "solution": "false"
+    },
+    {
+        "id": 148,
+        "problem": "Hypothermia: A human body core temperature below 35.0\u00b0C. Would hypothermia be a concern for a human wearing zoot suit on Triton?",
+        "solution": "true"
+    },
+    {
+        "id": 149,
+        "problem": "Hamster: subfamily of mammals. Could a hamster experience two leap years?",
+        "solution": "false"
+    },
+    {
+        "id": 150,
+        "problem": "Ocean sunfish: species of fish. Would it be impossible to keep an ocean sunfish and a goldfish in the same tank?",
+        "solution": "true"
+    },
+    {
+        "id": 151,
+        "problem": "Retail: Sale of goods and services from individuals or businesses to the end-user. Is SnapCap an example of a retail store?",
+        "solution": "false"
+    },
+    {
+        "id": 152,
+        "problem": "Snoopy: cartoon dog. Could Snoopy transmit rabies?",
+        "solution": "false"
+    },
+    {
+        "id": 153,
+        "problem": "Phobos (moon): natural satellite of Mars. Is Phobos part of the Andromeda galaxy?",
+        "solution": "false"
+    },
+    {
+        "id": 154,
+        "problem": "Skull: bony structure that forms the skeleton of head in most vertebrates. Is the skull formed as one whole bone?",
+        "solution": "false"
+    },
+    {
+        "id": 155,
+        "problem": "Advertising: Form of communication for marketing, typically paid for. During the pandemic, is door to door advertising considered inconsiderate?",
+        "solution": "true"
+    },
+    {
+        "id": 156,
+        "problem": "Swallow: family of birds. Can an ostrich fit into the nest of a swallow?",
+        "solution": "false"
+    },
+    {
+        "id": 157,
+        "problem": "Beauty and the Beast: traditional fairy tale. Were Beauty and the Beast adaptations devoid of Kurt Sutter collaborators?",
+        "solution": "false"
+    },
+    {
+        "id": 158,
+        "problem": "Pandora: Mythological figure. Were items released from Pandora's box at least two of the names of Four Horsemen?",
+        "solution": "true"
+    },
+    {
+        "id": 159,
+        "problem": "Ham: Pork from a leg cut that has been preserved by wet or dry curing, with or without smoking. Did Malcolm X avoid eating ham?",
+        "solution": "true"
+    },
+    {
+        "id": 160,
+        "problem": "Internet slang: Slang languages used by different people on the Internet. Did Alfred Hitchcock include internet slang in his films?",
+        "solution": "false"
+    },
+    {
+        "id": 161,
+        "problem": "Bonanza: 1959-1973 American western/cowboy television series. Would Bonanza marathon end before WWE Heat marathon?",
+        "solution": "false"
+    },
+    {
+        "id": 162,
+        "problem": "Arithmetic: Elementary branch of mathematics. Did Neanderthals use arithmetic?",
+        "solution": "false"
+    },
+    {
+        "id": 163,
+        "problem": "Crucifixion: Method of capital punishment in which the victim is tied or nailed to a large wooden beam and left to hang until eventual death. If it socially acceptable to wear an icon depicting crucifixion? ",
+        "solution": "true"
+    },
+    {
+        "id": 164,
+        "problem": "Post Malone: American singer, rapper, songwriter, and record producer. Does Post Malone have a fear of needles?",
+        "solution": "false"
+    },
+    {
+        "id": 165,
+        "problem": "Michael Bloomberg: American billionaire businessman and politician, former mayor of New York City. Can Michael Bloomberg fund the debt of Micronesia for a decade?",
+        "solution": "true"
+    },
+    {
+        "id": 166,
+        "problem": "Euphoria: mental and emotional condition in which a person experiences intense feelings of well-being, elation, happiness and excitement. Did Rumi spend his time in a state of euphoria?",
+        "solution": "true"
+    },
+    {
+        "id": 167,
+        "problem": "Morphine: Pain medication of the opiate family. Could morphine cure HIV?",
+        "solution": "false"
+    },
+    {
+        "id": 168,
+        "problem": "Crustacean: subphylum of arthropods. Can the largest crustacean stretch out completely on a king-sized mattress?",
+        "solution": "false"
+    },
+    {
+        "id": 169,
+        "problem": "Lieutenant: junior commissioned officer in many nations' armed forces. Would Gomer Pyle salute a lieutenant?",
+        "solution": "true"
+    },
+    {
+        "id": 170,
+        "problem": "Hair: protein filament that grows from follicles found in the dermis, or skin. Is it safe to eat hair?",
+        "solution": "true"
+    },
+    {
+        "id": 171,
+        "problem": "Friday: day of the week. Does 2015 have more unlucky Friday's than usual?",
+        "solution": "true"
+    },
+    {
+        "id": 172,
+        "problem": "Spinach: species of plant. For bone growth, is kale more beneficial than spinach?",
+        "solution": "true"
+    },
+    {
+        "id": 173,
+        "problem": "Johns Hopkins University: Private research university in Baltimore, Maryland. Could the endowment of Johns Hopkins University pay off the MBTA debt?",
+        "solution": "false"
+    },
+    {
+        "id": 174,
+        "problem": "Heracles: divine hero in Greek mythology, son of Zeus and Alcmene. Were all of Heracles's children present for his funeral pyre?",
+        "solution": "false"
+    },
+    {
+        "id": 175,
+        "problem": "Mediterranean Sea: Sea connected to the Atlantic Ocean between Europe, Africa and Asia. Did a Mediterranean Sea creature kill Steve Irwin?",
+        "solution": "true"
+    },
+    {
+        "id": 176,
+        "problem": "Myocardial infarction: Interruption of blood supply to a part of the heart. Is myocardial infarction a brain problem?",
+        "solution": "false"
+    },
+    {
+        "id": 177,
+        "problem": "Nine Inch Nails: American industrial rock band. Is Nine Inch Nails's lead singer associated with David Lynch?",
+        "solution": "true"
+    },
+    {
+        "id": 178,
+        "problem": "Toyota Hilux: Series of light commercial vehicles produced by the Japanese car-manufacturer Toyota.. Can a 2019 Toyota Hilux hypothetically support weight of thirty Big John Studd clones?",
+        "solution": "false"
+    },
+    {
+        "id": 179,
+        "problem": "Family Guy: American animated sitcom. Does Family Guy take place on the American West Coast?",
+        "solution": "false"
+    },
+    {
+        "id": 180,
+        "problem": "Monty Python's Flying Circus: British sketch comedy television series. Did Monty Python write the Who's on First sketch?",
+        "solution": "false"
+    },
+    {
+        "id": 181,
+        "problem": "Harvey Milk: American politician who became a martyr in the gay community. Would Harvey Milk have approved of Obama?",
+        "solution": "true"
+    },
+    {
+        "id": 182,
+        "problem": "Lecturer: tenure-track or tenured position at a university or similar institution. Would Quiet from Metal Gear be a poor hypothetical choice for lecturer at Haub?",
+        "solution": "true"
+    },
+    {
+        "id": 183,
+        "problem": "Whole genome sequencing: A process that determines the complete DNA sequence of an organism's genome at a single time. Can whole genome sequencing be used for COVID-19?",
+        "solution": "false"
+    },
+    {
+        "id": 184,
+        "problem": "Binary number: system that represents numeric values using two symbols; 0 and 1. Can binary numbers and standard alphabet satisfy criteria for a strong password?",
+        "solution": "false"
+    },
+    {
+        "id": 185,
+        "problem": "Edward Snowden: American whistleblower and former National Security Agency contractor. Is Edward Snowden in hiding from the United States?",
+        "solution": "false"
+    },
+    {
+        "id": 186,
+        "problem": "Judo: modern martial art, combat and Olympic sport. Does the judo rank system reach the triple digits?",
+        "solution": "false"
+    },
+    {
+        "id": 187,
+        "problem": "Grey seal: species of seal. Would a dog respond to bell before Grey seal?",
+        "solution": "true"
+    },
+    {
+        "id": 188,
+        "problem": "Tony Bennett: American singer. Is Tony Bennett's middle name shared by a former UFC champion?",
+        "solution": "true"
+    },
+    {
+        "id": 189,
+        "problem": "Rice pudding: Dish made from rice mixed with water or milk. Would Cyndi Lauper use milk substitute in her rice pudding?",
+        "solution": "true"
+    },
+    {
+        "id": 190,
+        "problem": "Augustus: First emperor of the Roman Empire. Was Augustus his real name?",
+        "solution": "false"
+    },
+    {
+        "id": 191,
+        "problem": "The Matrix: 1999 science fiction action film directed by the Wachowskis. Is the Matrix a standalone movie?",
+        "solution": "false"
+    },
+    {
+        "id": 192,
+        "problem": "Grapefruit: citrus fruit. Can eating grapefruit kill besides allergies or choking?",
+        "solution": "true"
+    },
+    {
+        "id": 193,
+        "problem": "Charles Manson: American criminal, cult leader. Has Don King killed more people than Charles Manson did with his own hands in 1971?",
+        "solution": "true"
+    },
+    {
+        "id": 194,
+        "problem": "Agnosticism: view that the existence of any deity is unknown or unknowable. Does Billy Graham support agnosticism?",
+        "solution": "false"
+    },
+    {
+        "id": 195,
+        "problem": "Anorexia nervosa: Eating disorder characterized by refusal to maintain a healthy body weight, and fear of gaining weight due to a distorted self image. Would a person with Anorexia nervosa be more likely to break a bone than a regular person?",
+        "solution": "true"
+    },
+    {
+        "id": 196,
+        "problem": "Eurovision Song Contest: Annual song competition held among the member countries of the European Broadcasting Union. Can actress Dafne Keen win the Eurovision Song Contest finals in 2020?",
+        "solution": "false"
+    },
+    {
+        "id": 197,
+        "problem": "RoboCop: 1987 science fiction film directed by Paul Verhoeven. Is RoboCop director from same country as Gaite Jansen?",
+        "solution": "true"
+    },
+    {
+        "id": 198,
+        "problem": "Christopher Columbus: Italian explorer, navigator, and colonizer. Did Christopher Columbus sail representing a different country than his original home?",
+        "solution": "true"
+    },
+    {
+        "id": 199,
+        "problem": "Toronto Star: Newspaper in Toronto, Ontario, Canada. Can someone sell their time through the Toronto Star?",
+        "solution": "true"
+    },
+    {
+        "id": 200,
+        "problem": "Walt Disney: American entrepreneur, animator, voice actor and film producer. Walt Disney dominated his amusement park peers at Academy Awards?",
+        "solution": "true"
+    },
+    {
+        "id": 201,
+        "problem": "Israelis: Ethnic group. Have the Israelis played the Hammerstein Ballroom?",
+        "solution": "false"
+    },
+    {
+        "id": 202,
+        "problem": "Solomon: king of Israel and the son of David. Did Solomon make up bigger percentage of Islamic prophets than Kings of Judah?",
+        "solution": "false"
+    },
+    {
+        "id": 203,
+        "problem": "Louvre: Art museum and Historic site in Paris, France. Can nitric acid break the Louvre?",
+        "solution": "true"
+    },
+    {
+        "id": 204,
+        "problem": "Drummer: percussionist who creates and accompanies music using drums. Do drummers need spare strings?",
+        "solution": "false"
+    },
+    {
+        "id": 205,
+        "problem": "Sweet potato: species of plant. Do Sweet Potatoes prevent other plants from growing in their place?",
+        "solution": "true"
+    },
+    {
+        "id": 206,
+        "problem": "Pear: genus of plants. Would a pear sink in water?",
+        "solution": "false"
+    },
+    {
+        "id": 207,
+        "problem": "United States Capitol: seat of the United States Congress. Is the United States Capitol located near the White House?",
+        "solution": "true"
+    },
+    {
+        "id": 208,
+        "problem": "Billionaire: person who has a net worth of at least one billion (1,000,000,000) units of a given currency. Would a 900,000 pound net worth person be an American billionaire if they exchange currency June 2020?",
+        "solution": "true"
+    },
+    {
+        "id": 209,
+        "problem": "Portuguese Empire: Global empire centered in Portugal. Did Columbus obtain his funding from the rulers of the Portugese Empire?",
+        "solution": "false"
+    },
+    {
+        "id": 210,
+        "problem": "Glutamic acid: amino acid. Does Masaharu Morimoto rely on glutamic acid?",
+        "solution": "true"
+    },
+    {
+        "id": 211,
+        "problem": "Petroleum: Naturally occurring hydrocarbon liquid found underground. Can petroleum jelly be used as fuel in a car?",
+        "solution": "false"
+    },
+    {
+        "id": 212,
+        "problem": "Ashland, Oregon: City in Oregon, United States. Is 2018 Ashland, Oregon population inadequate to be a hypothetical military division?",
+        "solution": "false"
+    },
+    {
+        "id": 213,
+        "problem": "Portuguese Colonial War: 1961\u20131974 armed conflicts in Africa between Portugal and independence movements. Did any country in Portuguese Colonial War share Switzerlands role in WWII?",
+        "solution": "true"
+    },
+    {
+        "id": 214,
+        "problem": "Lil Wayne: American rapper, record executive and actor from Louisiana. Lil Wayne similar real name rapper has over quadruple Wayne's Grammy awards?",
+        "solution": "true"
+    },
+    {
+        "id": 215,
+        "problem": "Joker (character): Fictional character in the DC Universe. Was the Joker an enemy of the Avengers?",
+        "solution": "false"
+    },
+    {
+        "id": 216,
+        "problem": "Naruto: Japanese manga and anime series. Would the historic Hattori Hanz\u014d admire Naruto?",
+        "solution": "false"
+    },
+    {
+        "id": 217,
+        "problem": "Pig Latin: secret language game. Is it impossible for pigs to use pig latin?",
+        "solution": "true"
+    },
+    {
+        "id": 218,
+        "problem": "Acetylene: chemical compound. Does welding with acetylene simulate the temperature of a star?",
+        "solution": "true"
+    },
+    {
+        "id": 219,
+        "problem": "Tsar: title given to a male monarch in Russia, Bulgaria and Serbia. Would a duke hypothetically be subservient to a Tsar?",
+        "solution": "true"
+    },
+    {
+        "id": 220,
+        "problem": "Heart: organ for the circulation of blood in animal circulatory systems. Is a jellyfish safe from atherosclerosis?",
+        "solution": "true"
+    },
+    {
+        "id": 221,
+        "problem": "Telescope: Optical instrument that makes distant objects appear magnified. Can telescopes hear noise?",
+        "solution": "false"
+    },
+    {
+        "id": 222,
+        "problem": "Sloth: tree dwelling animal noted for slowness. Do moths that live on sloths have family dinners?",
+        "solution": "false"
+    },
+    {
+        "id": 223,
+        "problem": "QWERTY: keyboard layout where the first line is \"QWERTYUIOP\". Can the majority of vowels be typed on the first line of a QWERTY keyboard?",
+        "solution": "true"
+    },
+    {
+        "id": 224,
+        "problem": "Linus Torvalds: Creator and lead developer of Linux kernel. Does Linus Torvalds make money off of DirectX?",
+        "solution": "false"
+    },
+    {
+        "id": 225,
+        "problem": "Daytona 500: Auto race held in Daytona, Florida, United States. Can E6000 cure before a hoverboard finishes the Daytona 500? ",
+        "solution": "true"
+    },
+    {
+        "id": 226,
+        "problem": "Bugs Bunny: Warner Bros. cartoon character. Can you find Bugs Bunny at Space Mountain?",
+        "solution": "false"
+    },
+    {
+        "id": 227,
+        "problem": "Eve: Biblical figure. Was Eve involved in an incestuous relationship?",
+        "solution": "true"
+    },
+    {
+        "id": 228,
+        "problem": "Days of Our Lives: American daytime soap opera. Is a thousand dollars per Days of Our Lives episodes preferred to other soaps?",
+        "solution": "false"
+    },
+    {
+        "id": 229,
+        "problem": "Miami: City in Florida, United States. Would it be common to find a penguin in Miami?",
+        "solution": "false"
+    },
+    {
+        "id": 230,
+        "problem": "Olive: Species of plant. Would Bugs Bunny harm an olive tree in the real world?",
+        "solution": "true"
+    },
+    {
+        "id": 231,
+        "problem": "Menthol: chemical compound. Is Menthol associated with Thanksgiving?",
+        "solution": "false"
+    },
+    {
+        "id": 232,
+        "problem": "Lionel Richie: American singer-songwriter, musician, record producer and actor. Does  Lionel Richie believe in holistic medicine?",
+        "solution": "true"
+    },
+    {
+        "id": 233,
+        "problem": "Durian: genus of plants. Would Columbus have discovered Durian trees during his 1492 expedition?",
+        "solution": "false"
+    },
+    {
+        "id": 234,
+        "problem": "Rick and Morty: Animated sitcom. Could Rich and Morty be triggered for children of alcoholics?",
+        "solution": "true"
+    },
+    {
+        "id": 235,
+        "problem": "Mongoose: family of mammals. Did mongoose come from later period than rhinos?",
+        "solution": "true"
+    },
+    {
+        "id": 236,
+        "problem": "Sirius: Brightest star in the night sky. Is Sirius part of a constellation of an animal?",
+        "solution": "true"
+    },
+    {
+        "id": 237,
+        "problem": "Ice: water frozen into the solid state. Is there a popular Disney character made from living ice?",
+        "solution": "true"
+    },
+    {
+        "id": 238,
+        "problem": "Goofy: Disney cartoon character. Would Goofy hypothetically enjoy Nylabone?",
+        "solution": "true"
+    },
+    {
+        "id": 239,
+        "problem": "Wednesday: Day of the week. Will Communion be denied to Wednesday name origin followers?",
+        "solution": "true"
+    },
+    {
+        "id": 240,
+        "problem": "Scottish people: ethnic inhabitants of Scotland. Does the Pixar film Brave feature Scottish people?",
+        "solution": "true"
+    },
+    {
+        "id": 241,
+        "problem": "Torso: the central part of the living body. Will the torso be safe from blows to the largest and smallest bones in body?",
+        "solution": "true"
+    },
+    {
+        "id": 242,
+        "problem": "Snake: limbless, scaly, elongate reptile. Can a snake swallow an M60 Patton?",
+        "solution": "false"
+    },
+    {
+        "id": 243,
+        "problem": "Lorem ipsum: Placeholder text used in publishing and graphic design. Should a finished website have lorem ipsum paragraphs?",
+        "solution": "false"
+    },
+    {
+        "id": 244,
+        "problem": "Colitis: inflammation of the colon or the large intestine. Is it best to avoid kola nuts with colitis?",
+        "solution": "true"
+    },
+    {
+        "id": 245,
+        "problem": "Swastika: a geometrical figure and an ancient religious icon in the cultures of Eurasia and 20th-century symbol of Nazism. Are swastikas used in the most common religion in India?",
+        "solution": "true"
+    },
+    {
+        "id": 246,
+        "problem": "Bengal cat: Breed of cat. Can a Bengal cat survive eating only pancakes?",
+        "solution": "false"
+    },
+    {
+        "id": 247,
+        "problem": "German Shepherd: Dog breed. Would Robert Wadlow tower over a German Shepherd?",
+        "solution": "true"
+    },
+    {
+        "id": 248,
+        "problem": "Iggy Pop: American rock singer-songwriter, musician, and actor. Was Iggy Pop named after his father?",
+        "solution": "true"
+    },
+    {
+        "id": 249,
+        "problem": "Charlemagne: King of the Franks, King of Italy, and Holy Roman Emperor. Would Temujin hypothetically be jealous of Charlemagne's conquests?",
+        "solution": "false"
+    },
+    {
+        "id": 250,
+        "problem": "History of art: history of human creation of works for aesthetic, communicative, or expressive purposes. Can the history of art be learned by an amoeba?",
+        "solution": "false"
+    },
+    {
+        "id": 251,
+        "problem": "Argon: Chemical element with atomic number 18. Can you chew argon?",
+        "solution": "false"
+    },
+    {
+        "id": 252,
+        "problem": "Red Sea: Arm of the Indian Ocean between Arabia and Africa. Does the Red Sea have biblical significance? ",
+        "solution": "true"
+    },
+    {
+        "id": 253,
+        "problem": "Nicole Kidman: Australian-American actress and film producer. Is Nicole Kidman ideal choice to play Psylocke based on height and weight?",
+        "solution": "true"
+    },
+    {
+        "id": 254,
+        "problem": "Jack Black: American actor, comedian, musician, music producer and youtuber.. Is Jack Black unlikely to compete with Bear McCreary for an award?",
+        "solution": "true"
+    },
+    {
+        "id": 255,
+        "problem": "Yeti: Folkloric ape-like creature from Asia. Would a Yeti be likely to have prehensile limbs?",
+        "solution": "true"
+    },
+    {
+        "id": 256,
+        "problem": "The Hobbit: Fantasy novel by J. R. R. Tolkien. Can The Hobbit be read in its entirety in four minutes?",
+        "solution": "true"
+    },
+    {
+        "id": 257,
+        "problem": "United States Air Force: Air and space warfare branch of the United States Armed Forces. Would a member of the United States Air Force get a discount at Dunkin Donuts?",
+        "solution": "true"
+    },
+    {
+        "id": 258,
+        "problem": "United Nations Conference on Trade and Development: organization. Could Edward Snowden have visited the headquarters of United Nations Conference on Trade and Development?",
+        "solution": "true"
+    },
+    {
+        "id": 259,
+        "problem": "Prime number: Integer greater than 1 that has no positive integer divisors other than itself and 1. Would an actuary be confused about what prime numbers are?",
+        "solution": "false"
+    },
+    {
+        "id": 260,
+        "problem": "Cream: Dairy product. Would Kylee Jenner ask for no cream in her coffee?",
+        "solution": "true"
+    },
+    {
+        "id": 261,
+        "problem": "Brazilian jiu-jitsu: martial art focusing on grappling and ground fighting, originally based on Kodokan judo newaza taught by Japanese judoka, that developed independently in Brazil from experimentation and adaptation by Carlos and H\u00e9lio Gracie, Luiz Fran\u00e7a, et al.. Could a white belt defeat Jon Jones in a Brazilian jiu-jitsu match?",
+        "solution": "false"
+    },
+    {
+        "id": 262,
+        "problem": "Royal Observatory, Greenwich: observatory in Greenwich, London, UK. In geometry terms, is the Royal Observatory in Greenwich similar to a yield sign?",
+        "solution": "false"
+    },
+    {
+        "id": 263,
+        "problem": "Birdwatching: hobby. Would a birdwatcher pursue their hobby at a Philadelphia Eagles game?",
+        "solution": "false"
+    },
+    {
+        "id": 264,
+        "problem": "Lie: intentionally false statement to a person or group made by another person or group who knows it is not wholly the truth. Is it okay to lie after taking an oath in a court of law?",
+        "solution": "false"
+    },
+    {
+        "id": 265,
+        "problem": "Hound: dog type. Was animal in You're a Good Sport, Charlie Brown, hypothetically a hound?",
+        "solution": "true"
+    },
+    {
+        "id": 266,
+        "problem": "Jujutsu: Japanese martial art. Are all limbs required for jujutsu?",
+        "solution": "false"
+    },
+    {
+        "id": 267,
+        "problem": "Monk: member of a monastic religious order. Are monks forbidden from engaging in warfare?",
+        "solution": "false"
+    },
+    {
+        "id": 268,
+        "problem": "Ahura Mazda: highest deity of Zoroastrianism. Does Ahura Mazda have a rivalry with Zeus?",
+        "solution": "false"
+    },
+    {
+        "id": 269,
+        "problem": "Cookie Monster: character from the television series Sesame Street. Is Cookie Monster's diet Paleo friendly?",
+        "solution": "false"
+    },
+    {
+        "id": 270,
+        "problem": "Goldfish: freshwater fish, common in aquariums. Are goldfish more difficult to care for than isopods?",
+        "solution": "true"
+    },
+    {
+        "id": 271,
+        "problem": "Peach: species of fruit tree (for the fruit use Q13411121). Will you see peach blossoms and Andromeda at the same time?",
+        "solution": "false"
+    },
+    {
+        "id": 272,
+        "problem": "Diarrhea: Loose or liquid bowel movements. Can too many oranges cause diarrhea?",
+        "solution": "true"
+    },
+    {
+        "id": 273,
+        "problem": "National Diet: legislature of Japan. Can Viper Room concert hypothetically be held at National Diet building?",
+        "solution": "true"
+    },
+    {
+        "id": 274,
+        "problem": "Baptism: Christian rite of admission and adoption, almost invariably with the use of water. Was Alexander the Great baptized?",
+        "solution": "false"
+    },
+    {
+        "id": 275,
+        "problem": "Stone Cold Steve Austin: American professional wrestler. Did Stone Cold Steve Austin wrestle in three different centuries?",
+        "solution": "false"
+    },
+    {
+        "id": 276,
+        "problem": "Samsung Galaxy S4: Android smartphone. Would General Zod prefer an iPhone over a Samsung Galaxy S4?",
+        "solution": "false"
+    },
+    {
+        "id": 277,
+        "problem": "Golden Gate Bridge: suspension bridge on the San Francisco Bay. Do depressed people travel to the Golden Gate Bridge often?",
+        "solution": "true"
+    },
+    {
+        "id": 278,
+        "problem": "Butler: male domestic worker in charge of all the male household staff. Do most middle class families have butlers?",
+        "solution": "false"
+    },
+    {
+        "id": 279,
+        "problem": "Middle Ages: Period of European history from the 5th to the 15th century. Did eggs need to be kept cold in the middle ages?",
+        "solution": "false"
+    },
+    {
+        "id": 280,
+        "problem": "Fair trade: form of trade. Can you buy a fair trade laptop?",
+        "solution": "false"
+    },
+    {
+        "id": 281,
+        "problem": "March: third month in the Julian and Gregorian calendars. Does March begin on the same day of the week as February during leap years?",
+        "solution": "false"
+    },
+    {
+        "id": 282,
+        "problem": "Gladiator: combatant who entertained audiences in the Roman Republic and Roman Empire. Could a Gladiator's weapon crush a diamond?",
+        "solution": "false"
+    },
+    {
+        "id": 283,
+        "problem": "Brussels sprout: vegetable. Are Brussels sprout particularly good for adrenal fatigue?",
+        "solution": "true"
+    },
+    {
+        "id": 284,
+        "problem": "John the Baptist: 1st-century Jewish preacher and later Christian saint. Would John the Baptist be invited to a hypothetical cephalophore reunion in heaven?",
+        "solution": "false"
+    },
+    {
+        "id": 285,
+        "problem": "Eddie Murphy: American stand-up comedian and actor. Could Eddie Murphy dial 911 in a car as a young child?",
+        "solution": "false"
+    },
+    {
+        "id": 286,
+        "problem": "Boolean algebra: Algebra involving variables containing only \"true\" and \"false\" (or 1 and 0) as values. Could boolean algebra be described as binary?",
+        "solution": "true"
+    },
+    {
+        "id": 287,
+        "problem": "Secretary: occupation. Is the US Secretary of State similar to an administrative secretary of an office?",
+        "solution": "false"
+    },
+    {
+        "id": 288,
+        "problem": "USB: Industry standard. Is 500GB USB device enough to save 10 hours of Netflix shows a day?",
+        "solution": "false"
+    },
+    {
+        "id": 289,
+        "problem": "Compact disc: Optical disc for storage and playback of digital audio. Did John Lennon listen to Compact discs?",
+        "solution": "false"
+    },
+    {
+        "id": 290,
+        "problem": "Pottery: Craft of making objects from clay. Are all types of pottery safe to cook in?",
+        "solution": "false"
+    },
+    {
+        "id": 291,
+        "problem": "Flag of the United States: National flag. Would someone with leukophobia enjoy looking at the Flag of the United States?",
+        "solution": "false"
+    },
+    {
+        "id": 292,
+        "problem": "Maritime pilot: mariner who manoeuvres ships through dangerous or congested waters. Can COVID-19 spread to maritime pilots?",
+        "solution": "true"
+    },
+    {
+        "id": 293,
+        "problem": "Pan (god): Ancient Greek god of the wilds, shepherds, and flocks. Is Pan a symbol of virtue and virginity in women?",
+        "solution": "false"
+    },
+    {
+        "id": 294,
+        "problem": "Rand Paul: American politician, ophthalmologist, and United States Senator from Kentucky. Can a New Yorker get their eyes checked by Rand Paul legally?",
+        "solution": "false"
+    },
+    {
+        "id": 295,
+        "problem": "Subway (restaurant): American fast food chain. Has the Subway restaurant franchise had any connections with child abusers?",
+        "solution": "true"
+    },
+    {
+        "id": 296,
+        "problem": "Wool: Textile fibre from the hair of sheep or other mammals. Can a Sphynx cat be used for wool?",
+        "solution": "false"
+    },
+    {
+        "id": 297,
+        "problem": "Olive: Species of plant. Would you find olives at a heladeria?",
+        "solution": "false"
+    },
+    {
+        "id": 298,
+        "problem": "Mail carrier: employee of the post office or postal service, who delivers mail to residences and businesses. Is unanimously elected president's birthday a break for mail carriers?",
+        "solution": "true"
+    },
+    {
+        "id": 299,
+        "problem": "Pope Alexander VI: Pope of the Catholic Church 1492\u20131503. Were any of despised Pope Alexander VI's descendants canonized?",
+        "solution": "true"
+    },
+    {
+        "id": 300,
+        "problem": "Tower of London: A historic castle on the north bank of the River Thames in central London. Would Robert Stack have been interested in Tower of London during 1400s for his 14 season show?",
+        "solution": "true"
+    },
+    {
+        "id": 301,
+        "problem": "Call of Duty: First-person shooter video game franchise. Will Conan the Barbarian hypothetically last a short time inside of Call of Duty?",
+        "solution": "true"
+    },
+    {
+        "id": 302,
+        "problem": "Leadership: ability of an individual or organization to guide other individuals, teams, or entire organizations. Is Steve Carell's character on The Office portrayed as one with tremendous leadership skills?",
+        "solution": "false"
+    },
+    {
+        "id": 303,
+        "problem": "Karachi: Megacity in Sindh, Pakistan. Are you likely to find a crucifix in Karachi?",
+        "solution": "false"
+    },
+    {
+        "id": 304,
+        "problem": "Wednesday: Day of the week. Does New Year's Day always occur on a Wednesday?",
+        "solution": "false"
+    },
+    {
+        "id": 305,
+        "problem": "Bengal cat: Breed of cat. Could a Bengal cat hypothetically best Javier Sotomayor's record?",
+        "solution": "true"
+    },
+    {
+        "id": 306,
+        "problem": "Donatello: Italian painter and sculptor. Did Donatello use a smartphone?",
+        "solution": "false"
+    },
+    {
+        "id": 307,
+        "problem": "Grey seal: species of seal. Can a grey seal swim in the same water as the subject of Moby Dick?",
+        "solution": "true"
+    },
+    {
+        "id": 308,
+        "problem": "Mickey Mouse: Disney cartoon character. Did Mickey Mouse appear in a cartoon with Bugs Bunny in 1930?",
+        "solution": "false"
+    },
+    {
+        "id": 309,
+        "problem": "Courage: quality of mind or spirit that enables a person to face difficulty, danger, or pain. Would an anxious person benefit from receiving courage from the Wizard of Oz?",
+        "solution": "false"
+    },
+    {
+        "id": 310,
+        "problem": "Snow leopard: species of mammal. Can a snow leopard swim?",
+        "solution": "true"
+    },
+    {
+        "id": 311,
+        "problem": "Saddam Hussein: Iraqi politician and President. Did Saddam Hussein witness the inauguration of Donald Trump?",
+        "solution": "false"
+    },
+    {
+        "id": 312,
+        "problem": "Cream: Dairy product. Does store bought milk have cream at the top?",
+        "solution": "false"
+    },
+    {
+        "id": 313,
+        "problem": "3D printing: Additive process used to make a three-dimensional object. Do you need a large room if you want to get into 3D printing?",
+        "solution": "false"
+    },
+    {
+        "id": 314,
+        "problem": "Taco Bell: American fast-food chain. Does the Taco Bell kitchen contain cinnamon?",
+        "solution": "true"
+    },
+    {
+        "id": 315,
+        "problem": "Onion: vegetable. Can chemicals in onion help create a thermonuclear bomb?",
+        "solution": "true"
+    },
+    {
+        "id": 316,
+        "problem": "Soy milk: Beverage made from soybeans. Would Cardi B. benefit from soy milk?",
+        "solution": "true"
+    },
+    {
+        "id": 317,
+        "problem": "Jumping spider: family of arachnids. Would a jumping spider need over half a dozen contact lenses?",
+        "solution": "true"
+    },
+    {
+        "id": 318,
+        "problem": "Ancient Greece: Civilization belonging to an early period of Greek history. Were number of states in Ancient Greece underwhelming compared to US states in 1900?",
+        "solution": "false"
+    },
+    {
+        "id": 319,
+        "problem": "Horror fiction: genre of fiction. Is Edgar Allan Poe obscure in the world of horror fiction?",
+        "solution": "false"
+    },
+    {
+        "id": 320,
+        "problem": "Breast cancer: cancer that originates in the mammary gland. Is someone more likely to survive having breast cancer in Japan than in Sweden?",
+        "solution": "false"
+    },
+    {
+        "id": 321,
+        "problem": "Pride: inwardly directed emotion that carries two common meanings. Would a Catholic priest commend someone's pride?",
+        "solution": "false"
+    },
+    {
+        "id": 322,
+        "problem": "Chlorophyll: group of chemical compounds. For Hostas to look their best, do they need lots of chlorophyll?",
+        "solution": "true"
+    },
+    {
+        "id": 323,
+        "problem": "Dr. Seuss: American children's writer and illustrator. Was Dr. Seuss a liar?",
+        "solution": "true"
+    },
+    {
+        "id": 324,
+        "problem": "Albany, Georgia: City in Georgia, United States. Will the Albany in Georgia reach a hundred thousand occupants before the one in New York?",
+        "solution": "false"
+    },
+    {
+        "id": 325,
+        "problem": "Anchovy: Family of fishes. Do more anchovy live in colder temperature waters than warmer?",
+        "solution": "false"
+    },
+    {
+        "id": 326,
+        "problem": "Rupert Murdoch: Australian-born American media mogul. Does Rupert Murdoch's alma mater have more history than the USA?",
+        "solution": "true"
+    },
+    {
+        "id": 327,
+        "problem": "Latino: A group of people in the United States with ties to Latin America. Is blonde hair green eyed Sara Paxton considered a Latino?",
+        "solution": "true"
+    },
+    {
+        "id": 328,
+        "problem": "French toast: bread soaked in beaten eggs and then fried. Can a goat be used for one of the ingredients in French toast?",
+        "solution": "true"
+    },
+    {
+        "id": 329,
+        "problem": "Farmer: person that works in agriculture. Do you need a farmer to make a circuit board?",
+        "solution": "false"
+    },
+    {
+        "id": 330,
+        "problem": "Boolean algebra: Algebra involving variables containing only \"true\" and \"false\" (or 1 and 0) as values. Does coding rely on Boolean algebra characters?",
+        "solution": "true"
+    },
+    {
+        "id": 331,
+        "problem": "Wednesday: Day of the week. Does the anatomy of a camel lend itself to jokes on Wednesdays?",
+        "solution": "true"
+    },
+    {
+        "id": 332,
+        "problem": "United States Secretary of State: U.S. cabinet member and head of the U.S. State Department. Does the United States Secretary of State answer the phones for the White House?",
+        "solution": "false"
+    },
+    {
+        "id": 333,
+        "problem": "Superhero fiction: Fiction genre. Was Superhero fiction invented in the digital format?",
+        "solution": "false"
+    },
+    {
+        "id": 334,
+        "problem": "D: letter in the Latin alphabet. Is the letter D influenced by the shape of ancient doors?",
+        "solution": "true"
+    },
+    {
+        "id": 335,
+        "problem": "Ancient Greece: Civilization belonging to an early period of Greek history. Did Polar Bears roam around in Ancient Greece?",
+        "solution": "false"
+    },
+    {
+        "id": 336,
+        "problem": "Swallow: family of birds. In a hypothetical race between a Swallow and an American Woodcock, would the Swallow win?",
+        "solution": "true"
+    },
+    {
+        "id": 337,
+        "problem": "Al Capone: American gangster and businessman. Did Al Capone carry a smartphone?",
+        "solution": "false"
+    },
+    {
+        "id": 338,
+        "problem": "Bing (search engine): Web search engine from Microsoft. Do Bing (search engine) searches earn the searcher more than competitors do?",
+        "solution": "true"
+    },
+    {
+        "id": 339,
+        "problem": "Gothenburg: City in V\u00e4sterg\u00f6tland and Bohusl\u00e4n, Sweden. Could the Toyota Stadium sit a tenth of the population of Gotheburg?",
+        "solution": "false"
+    },
+    {
+        "id": 340,
+        "problem": "Television: Telecommunication medium for transmitting and receiving moving images. Did Gandhi watch the television show Bonanza?",
+        "solution": "false"
+    },
+    {
+        "id": 341,
+        "problem": "Viscosity: Resistance of a fluid to shear deformation. Do people with swallowing disorders need high viscosity drinks?",
+        "solution": "true"
+    },
+    {
+        "id": 342,
+        "problem": "Vietnamese people: ethnic group originally from northern Vietnam. Are the Vietnamese people a great untapped resource for NBA players?",
+        "solution": "false"
+    },
+    {
+        "id": 343,
+        "problem": "Mental disorder: Distressing thought or behavior pattern. Are there mental disorders you can hide?",
+        "solution": "true"
+    },
+    {
+        "id": 344,
+        "problem": "Butter: dairy product. Would toast for a vegan have margarine instead of butter?",
+        "solution": "true"
+    },
+    {
+        "id": 345,
+        "problem": "Jujutsu: Japanese martial art. Could a Jujutsu expert hypothetically defeat a Janissary?",
+        "solution": "false"
+    },
+    {
+        "id": 346,
+        "problem": "Holy Land: Term used by Jews, Christians, and Muslims to describe the Land of Israel and Palestine. Do worshipers of Shiva make a pilgrimage to the Holy Land?",
+        "solution": "false"
+    },
+    {
+        "id": 347,
+        "problem": "Hanging: execution or suicide method involving suspension of a person by a ligature. Do bodies movie during hanging?",
+        "solution": "true"
+    },
+    {
+        "id": 348,
+        "problem": "ABBA: Swedish pop group. Does ABBA have similar gender configuration to The Mamas & The Papas?",
+        "solution": "true"
+    },
+    {
+        "id": 349,
+        "problem": "Byzantine calendar: The calendar used by the Eastern Orthodox Church from c. 691 to 1728. Did Ivan the Terrible use the Byzantine calendar?",
+        "solution": "true"
+    },
+    {
+        "id": 350,
+        "problem": "Abortion: Intentionally ending pregnancy. Is there any absolute way to prevent abortion?",
+        "solution": "false"
+    },
+    {
+        "id": 351,
+        "problem": "Dual-energy X-ray absorptiometry: diagnostic test for bone mineral density testing. Would dual-energy X-ray absorptiometry be useful if performed on a crab?",
+        "solution": "false"
+    },
+    {
+        "id": 352,
+        "problem": "Snoop Dogg: American rapper. Was Snoop Dogg's debut studio album released on the weekend?",
+        "solution": "false"
+    },
+    {
+        "id": 353,
+        "problem": "1800: Year. Is number of different US President's in 1800s a lucky number in Hong Kong?",
+        "solution": "false"
+    },
+    {
+        "id": 354,
+        "problem": "Intel: American semiconductor chip manufacturer. Would a silicon shortage be bad for Intel's sales?",
+        "solution": "true"
+    },
+    {
+        "id": 355,
+        "problem": "Snowdon: highest mountain in Wales. Would Snowdon mountain be a piece of cake for Tenzing Norgay?",
+        "solution": "true"
+    },
+    {
+        "id": 356,
+        "problem": "QWERTY: keyboard layout where the first line is \"QWERTYUIOP\". Can monkeys use QWERTY keyboards?",
+        "solution": "true"
+    },
+    {
+        "id": 357,
+        "problem": "Spider wasp: family of insects. Do spider wasps have eight legs?",
+        "solution": "false"
+    },
+    {
+        "id": 358,
+        "problem": "Construction worker: tradesman, labourer, or professional employed in the physical construction of the built environment. Is a construction worker required to build a portfolio?",
+        "solution": "false"
+    },
+    {
+        "id": 359,
+        "problem": "Toyota Prius: Hybrid electric automobile. Could someone have arrived at Wrestlemania X in a Toyota Prius?",
+        "solution": "false"
+    },
+    {
+        "id": 360,
+        "problem": "Nickel: Chemical element with atomic number 28. Is nickel dominant material in US 2020 nickels?",
+        "solution": "false"
+    },
+    {
+        "id": 361,
+        "problem": "Asiana Airlines: airline in South Korea. Can Harry Potter book a flight on Asiana Airlines?",
+        "solution": "false"
+    },
+    {
+        "id": 362,
+        "problem": "Disco: music genre. Is ABBA's 1970's genre still relevant today?",
+        "solution": "true"
+    },
+    {
+        "id": 363,
+        "problem": "Brewing: production of beer. Should Peter Griffin be an expert at the craft of brewing?",
+        "solution": "true"
+    },
+    {
+        "id": 364,
+        "problem": "Chick-fil-A: American fast food chain. Would a vegetarian be able to eat something at Chick-fil-A?",
+        "solution": "true"
+    },
+    {
+        "id": 365,
+        "problem": "Kane (wrestler): American professional wrestler, actor, businessman, and politician. Have any murderers outlasted Kane's Royal Rumble record?",
+        "solution": "true"
+    },
+    {
+        "id": 366,
+        "problem": "Dragon Ball: Japanese media franchise. Does Dragon Ball shows and movies fall short of Friday 13th number of projects?",
+        "solution": "true"
+    },
+    {
+        "id": 367,
+        "problem": "Winter: one of the Earth's four temperate seasons, occurring between autumn and spring. Is winter solstice in Northern Hemisphere closer to July than in Southern Hemisphere? ",
+        "solution": "false"
+    },
+    {
+        "id": 368,
+        "problem": "Vice President of the United States: Second highest executive office in United States. Was the first Vice President of the United States an Ottoman descendant?",
+        "solution": "false"
+    },
+    {
+        "id": 369,
+        "problem": "Bumblebee: genus of insects. Are aggressive bumblebees suicidal?",
+        "solution": "false"
+    },
+    {
+        "id": 370,
+        "problem": "Marco Rubio: United States Senator from Florida. Could Marco Rubio ride the Candymonium roller coaster at Hershey Park?",
+        "solution": "true"
+    },
+    {
+        "id": 371,
+        "problem": "Pancake: Thin, round cake made of eggs, milk and flour. Are pancakes a bad snack for cats?",
+        "solution": "true"
+    },
+    {
+        "id": 372,
+        "problem": "Mayor: head of municipal government such as a town or city. Are Mayors safe from harm from the federal government?",
+        "solution": "false"
+    },
+    {
+        "id": 373,
+        "problem": "Mount Sharp: mountain on Mars. Are human footprints absent from Mount Sharp?",
+        "solution": "true"
+    },
+    {
+        "id": 374,
+        "problem": "Snow White: fairy tale. Can all of Snow White's dwarfs play a game of 7 Wonders simultaneously?",
+        "solution": "true"
+    },
+    {
+        "id": 375,
+        "problem": "Eighth Amendment to the United States Constitution: prohibits cruel and unusual punishment and excessive bail. Does the Eighth Amendment to the United States Constitution protect freedom of speech?",
+        "solution": "false"
+    },
+    {
+        "id": 376,
+        "problem": "Bing (search engine): Web search engine from Microsoft. Can I hold Bing in a basket?",
+        "solution": "false"
+    },
+    {
+        "id": 377,
+        "problem": "Swiss Guard: Military of Vatican City. Would Swiss Guard defeat the Marines?",
+        "solution": "false"
+    },
+    {
+        "id": 378,
+        "problem": "Van Morrison: Northern Irish singer-songwriter and musician. Does title of Van Morrison's most played song apply to a minority of women worldwide?",
+        "solution": "false"
+    },
+    {
+        "id": 379,
+        "problem": "Diarrhea: Loose or liquid bowel movements. Do people take laxatives because they enjoy diarrhea?",
+        "solution": "false"
+    },
+    {
+        "id": 380,
+        "problem": "Tomato: Edible berry of the tomato plant, originating in South America. Do you need both hot and cold water to peel a tomato?",
+        "solution": "true"
+    },
+    {
+        "id": 381,
+        "problem": "Skull: bony structure that forms the skeleton of head in most vertebrates. Can an adult human skull hypothetically pass through the birth canal?",
+        "solution": "true"
+    },
+    {
+        "id": 382,
+        "problem": "The Dark Knight (film): 2008 film directed by Christopher Nolan. Would The Dark Knight be appropriate for a preschool class?",
+        "solution": "false"
+    },
+    {
+        "id": 383,
+        "problem": "Surgery: Medical specialty. Can surgery prevent an existential crisis?",
+        "solution": "false"
+    },
+    {
+        "id": 384,
+        "problem": "Black pepper: species of plant. Are ground bell peppers the main ingredient of black pepper?",
+        "solution": "false"
+    },
+    {
+        "id": 385,
+        "problem": "John Muir: Scottish-born American naturalist and author. Would John Muir not likely have a vitamin D deficiency?",
+        "solution": "true"
+    },
+    {
+        "id": 386,
+        "problem": "Elizabeth II: Queen of the United Kingdom and the other Commonwealth realms. Does Elizabeth II reign over the Balearic Islands?",
+        "solution": "false"
+    },
+    {
+        "id": 387,
+        "problem": "Water skiing: surface water sport. Is Morocco an ideal location for water skiing?",
+        "solution": "false"
+    },
+    {
+        "id": 388,
+        "problem": "Emu: Large flightless bird endemic to Australia. Can an emu chase a bogan?",
+        "solution": "true"
+    },
+    {
+        "id": 389,
+        "problem": "Phobos (moon): natural satellite of Mars. Is Phobos (moon) name origin similar to Roman god Pavor?",
+        "solution": "true"
+    },
+    {
+        "id": 390,
+        "problem": "Cannabis (drug): psychoactive drug from the Cannabis plant. Has cannabis been a big influence in rap music genre?",
+        "solution": "true"
+    },
+    {
+        "id": 391,
+        "problem": "Thanksgiving (United States): holiday celebrated in the United States on the fourth Thursday in November. Is Thanksgiving sometimes considered a day of mourning?",
+        "solution": "true"
+    },
+    {
+        "id": 392,
+        "problem": "Zoology: Study of the animal kingdom. Is zoology unconcerned with strigoi?",
+        "solution": "true"
+    },
+    {
+        "id": 393,
+        "problem": "Kane (wrestler): American professional wrestler, actor, businessman, and politician. Can Kane challenge Joe Biden in this year's primaries?",
+        "solution": "false"
+    },
+    {
+        "id": 394,
+        "problem": "Citrus: genus of fruit-bearing plants (source of fruit such as lemons and oranges). Can citrus grow in Ulaanbaatar?",
+        "solution": "false"
+    },
+    {
+        "id": 395,
+        "problem": "Psychic: person who claims to use extrasensory perception to identify information hidden from the normal senses. Would a psychic who admits to hot reading be trustworthy?",
+        "solution": "false"
+    },
+    {
+        "id": 396,
+        "problem": "Chuck Norris: American martial artist, actor, film producer and screenwriter. Will Chuck Norris be a nonagenarian by time next leap year after 2020 happens?",
+        "solution": "false"
+    },
+    {
+        "id": 397,
+        "problem": "Cucumber: species of plant. Is growing seedless cucumber good for a gardener with entomophobia?",
+        "solution": "true"
+    },
+    {
+        "id": 398,
+        "problem": "Viscosity: Resistance of a fluid to shear deformation. Does water have viscosity?",
+        "solution": "false"
+    },
+    {
+        "id": 399,
+        "problem": "Great Pyramid of Giza: Largest pyramid in the Giza Necropolis, Egypt. Is Great Pyramid of Giza the last wonder of its kind?",
+        "solution": "true"
+    },
+    {
+        "id": 400,
+        "problem": "Koala: An arboreal herbivorous marsupial native to Australia.. Would a nickel fit inside a koala pouch?",
+        "solution": "true"
+    },
+    {
+        "id": 401,
+        "problem": "U.S. Route 1: highway in the United States. Is US route 1 dominated by historically red states?",
+        "solution": "false"
+    },
+    {
+        "id": 402,
+        "problem": "Cactus: Family of mostly succulent plants, adapted to dry environments.  Is cactus fruit an important menu item for a restaurant based on Cuauht\u00e9moc?",
+        "solution": "true"
+    },
+    {
+        "id": 403,
+        "problem": "Giraffe: Tall African ungulate. Do giraffes require special facilities at zoos?",
+        "solution": "true"
+    },
+    {
+        "id": 404,
+        "problem": "Intellectual disability: Generalized neurodevelopmental disorder. Is dyslexia the most common intellectual disability in US?",
+        "solution": "false"
+    },
+    {
+        "id": 405,
+        "problem": "PlayStation 4: Sony's eighth-generation home video game console. Did Bill Gates help to develop the PlayStation 4?",
+        "solution": "false"
+    },
+    {
+        "id": 406,
+        "problem": "Starbucks: American multinational coffee company. Would menu at Chinese Starbucks be familiar to an American?",
+        "solution": "false"
+    },
+    {
+        "id": 407,
+        "problem": "Amtrak: Intercity rail operator in the United States. Would three newborn kittens fit on a standard Amtrak coach seat?",
+        "solution": "true"
+    },
+    {
+        "id": 408,
+        "problem": "Moustache: Facial hair grown on the upper lip. Is it common for women to have moustaches?",
+        "solution": "false"
+    },
+    {
+        "id": 409,
+        "problem": "Snickers: brand name chocolate bar made by Mars, Incorporated. Is it wise to feed a Snickers bar to a poodle?",
+        "solution": "false"
+    },
+    {
+        "id": 410,
+        "problem": "Forbidden City: Art museum, Imperial Palace, Historic site in Beijing, China. Is the Forbidden City host to a wooden rollercoaster?",
+        "solution": "false"
+    },
+    {
+        "id": 411,
+        "problem": "Presidency of Bill Clinton: 1993\u20132001 U.S. presidential administration. Did the Presidency of Bill Clinton conclude with his impeachment?",
+        "solution": "false"
+    },
+    {
+        "id": 412,
+        "problem": "Kobe: Designated city in Kansai, Japan. Is Kobe's famous animal product used in a BLT?",
+        "solution": "false"
+    },
+    {
+        "id": 413,
+        "problem": "Reformation: Schism within the Christian Church in the 16th century. Would a tool used for Martin Luther's Reformation opening salvo aid in a crucifixion?",
+        "solution": "true"
+    },
+    {
+        "id": 414,
+        "problem": "Kinetic energy: Energy in motion Or Object In Motion. Does taking ukemi halt kinetic energy?",
+        "solution": "false"
+    },
+    {
+        "id": 415,
+        "problem": "2010 United Kingdom general election: election of members to the House of Commons in 2010. Did John Kerry run in the 2010 United Kingdom general election?",
+        "solution": "false"
+    },
+    {
+        "id": 416,
+        "problem": "Elizabeth II: Queen of the United Kingdom and the other Commonwealth realms. Was Elizabeth II the Queen during the Persian Gulf War?",
+        "solution": "true"
+    },
+    {
+        "id": 417,
+        "problem": "The Hague: City and municipality in South Holland, Netherlands. Does Abdulqawi Yusuf go to the Hague on a typical work day?",
+        "solution": "true"
+    },
+    {
+        "id": 418,
+        "problem": "Tony Bennett: American singer. Could ancient Tony Bennett have a baby in 2020?",
+        "solution": "true"
+    },
+    {
+        "id": 419,
+        "problem": "Tenth Amendment to the United States Constitution: says powers not Constitutionally granted to the Federal Government belong to States or the People. Was the tenth Amendment to the Constitution written using Pitman shorthand?",
+        "solution": "false"
+    },
+    {
+        "id": 420,
+        "problem": "Ronda Rousey: American professional wrestler, actress, author, mixed martial artist and judoka. Will Ronda Rousey hypothetically defeat X-Men's Colossus in a fight?",
+        "solution": "false"
+    },
+    {
+        "id": 421,
+        "problem": "Doctor Strange: Superhero appearing in Marvel Comics publications and related media. Did Doctor Strange creators also make Batman?",
+        "solution": "false"
+    },
+    {
+        "id": 422,
+        "problem": "Disco: music genre. Did the Beatles write any music in the Disco genre?",
+        "solution": "false"
+    },
+    {
+        "id": 423,
+        "problem": "Saltwater crocodile: species of reptile. Would you take a photo of a Saltwater crocodile in Memphis?",
+        "solution": "false"
+    },
+    {
+        "id": 424,
+        "problem": "Chicago \"L\": rapid transit system in Chicago, Illinois, operated by the CTA. Would the fastest tortoise win a race against a Chicago \"L\"?",
+        "solution": "false"
+    },
+    {
+        "id": 425,
+        "problem": "Alice's Adventures in Wonderland: book by Lewis Carroll. Would a Jehovah's witness approve of Alice's Adventures in Wonderland?",
+        "solution": "false"
+    },
+    {
+        "id": 426,
+        "problem": "Pan (god): Ancient Greek god of the wilds, shepherds, and flocks. Does the Boy Who Cried Wolf hypothetically have reason to pray to Pan?",
+        "solution": "true"
+    },
+    {
+        "id": 427,
+        "problem": "Mercedes-Benz: automobile brand of Daimler AG. Was Mercedes-Benz associated with the Nazis?",
+        "solution": "true"
+    },
+    {
+        "id": 428,
+        "problem": "Slot machine: Casino gambling machine. Do any video games about the end of civilization have slot machines?",
+        "solution": "true"
+    },
+    {
+        "id": 429,
+        "problem": "Justin Bieber: Canadian singer-songwriter and actor. Did U.S. soldiers listen to Justin Bieber's Believe album during the Battle of Baghdad?",
+        "solution": "false"
+    },
+    {
+        "id": 430,
+        "problem": "Islamophobia: Fear, hatred of, or prejudice against the Islamic religion or Muslims generally,. Is Islamophobia against Cyprus majority religion misdirected?",
+        "solution": "true"
+    },
+    {
+        "id": 431,
+        "problem": "Pi: Ratio of the circumference of a circle to its diameter. Can every digit in Pi be memorized?",
+        "solution": "false"
+    },
+    {
+        "id": 432,
+        "problem": "YMCA: Worldwide organization founded in 1844 on principles of muscular Christianity. Can you get Raclette in YMCA headquarters city?",
+        "solution": "true"
+    },
+    {
+        "id": 433,
+        "problem": "Eggplant: plant species Solanum melongena. Is eggplant deadly to most atopic individuals? ",
+        "solution": "false"
+    },
+    {
+        "id": 434,
+        "problem": "Amtrak: Intercity rail operator in the United States. Does Amtrak run from NYC directly to the Moai location?",
+        "solution": "false"
+    },
+    {
+        "id": 435,
+        "problem": "Minor League Baseball: hierarchy of professional baseball leagues affiliated with Major League Baseball. Were weather phenomena avoided when naming minor league baseball teams?",
+        "solution": "false"
+    },
+    {
+        "id": 436,
+        "problem": "Unicode: Character encoding standard. Did Malcolm X use Unicode?",
+        "solution": "false"
+    },
+    {
+        "id": 437,
+        "problem": "Voyager 2: Space probe and the second-farthest man-made object from Earth. Could a Hwasong-15 missile hypothetically reach Voyager 2?",
+        "solution": "false"
+    },
+    {
+        "id": 438,
+        "problem": "Allosaurus: Genus of large theropod dinosaur. Is Oculudentavis more dangerous than Allosaurus?",
+        "solution": "false"
+    },
+    {
+        "id": 439,
+        "problem": "Southern United States: Cultural region of the United States. Can you hunt Iberian wolves in the Southern United States?",
+        "solution": "false"
+    },
+    {
+        "id": 440,
+        "problem": "Eleventh grade: educational year. Is eleventh grade required to get a driver's licence?",
+        "solution": "false"
+    },
+    {
+        "id": 441,
+        "problem": "Bengal fox: species of mammal. Could Ryan Crouser throw a bengal fox with ease?",
+        "solution": "true"
+    },
+    {
+        "id": 442,
+        "problem": "Swan: large water bird. Would a Nike shoebox be too small to fit a swan in?",
+        "solution": "true"
+    },
+    {
+        "id": 443,
+        "problem": "Guitarist: person who plays the guitar. Do guitarist's have fingers that can handle pain better than average?",
+        "solution": "true"
+    },
+    {
+        "id": 444,
+        "problem": "United Airlines: Airline in the United States. Does United Airlines have a perfect operation record?",
+        "solution": "false"
+    },
+    {
+        "id": 445,
+        "problem": "Toyota Hilux: Series of light commercial vehicles produced by the Japanese car-manufacturer Toyota.. Can the Toyota Hilux tip the scales against Mr. Ed?",
+        "solution": "true"
+    },
+    {
+        "id": 446,
+        "problem": "Sea shanty: work song sung to accompany labor on board large merchant sailing vessels. Does Jack Sparrow know any sea shantys?",
+        "solution": "true"
+    },
+    {
+        "id": 447,
+        "problem": "Adrenaline: hormone, neurotransmitter and medication. Epinephrine is normally produced by both the adrenal glands and certain neurons. Can cancer cause excess adrenaline production?",
+        "solution": "true"
+    },
+    {
+        "id": 448,
+        "problem": "Blue: A primary colour between purple and green. Is the most expensive color in the world Blue?",
+        "solution": "true"
+    },
+    {
+        "id": 449,
+        "problem": "Chlorine: Chemical element with atomic number 17. Does chlorine inhibit photosynthesis?",
+        "solution": "true"
+    },
+    {
+        "id": 450,
+        "problem": "Wehrmacht: unified armed forces of Germany from 1935 to 1945. Did the Wehrmacht affect the outcome of the War to End All Wars?",
+        "solution": "false"
+    },
+    {
+        "id": 451,
+        "problem": "Coen brothers: American filmmakers. Did the Coen brothers ever collaborate with the Brothers Grimm?",
+        "solution": "false"
+    },
+    {
+        "id": 452,
+        "problem": "Vulcan (mythology): Ancient Roman god of fire, volcanoes, and metalworking. Does the Roman god Vulcan have a Greek equivalent?",
+        "solution": "true"
+    },
+    {
+        "id": 453,
+        "problem": "Messiah (Handel): Oratorio by Handel. Would Bruce Gandy be an odd choice for Messiah (Handel)?",
+        "solution": "true"
+    },
+    {
+        "id": 454,
+        "problem": "Spanish\u2013American War: Conflict in 1898 between Spain and the United States. Did US President during Spanish-American War suffer similar demise to Abraham Lincoln?",
+        "solution": "true"
+    },
+    {
+        "id": 455,
+        "problem": "Darth Vader: fictional character in the Star Wars franchise. Could Darth Vader hypothetically catch the Coronavirus?",
+        "solution": "false"
+    },
+    {
+        "id": 456,
+        "problem": "The Powerpuff Girls: American animated television series. In most Mennonite homes, would children know of The Powerpuff Girls?",
+        "solution": "false"
+    },
+    {
+        "id": 457,
+        "problem": "Force: Any action that tends to maintain or alter the motion of an object. Can a cheetah generate enough force to topple Big Show?",
+        "solution": "true"
+    },
+    {
+        "id": 458,
+        "problem": "Alfa Romeo: Italian automotive manufacturer. Would an Alfa Romeo vehicle fit inside a barn?",
+        "solution": "true"
+    },
+    {
+        "id": 459,
+        "problem": "Pancreas: A glandular organ that plays a role in the digestive and endocrine systems of vertebrates.. Can pancreas removal cause bankruptcy?",
+        "solution": "true"
+    },
+    {
+        "id": 460,
+        "problem": "Napoleonic Wars: Series of early 19th century European wars. Was a nuclear bomb used in the Napoleonic Wars?",
+        "solution": "false"
+    },
+    {
+        "id": 461,
+        "problem": "Wonder Woman (2017 film): American superhero film directed by Patty Jenkins. Is a Boeing 737 cost covered by Wonder Woman (2017 film) box office receipts?",
+        "solution": "true"
+    },
+    {
+        "id": 462,
+        "problem": "Breast cancer: cancer that originates in the mammary gland. Is breast cancer associated with a ribbon?",
+        "solution": "true"
+    },
+    {
+        "id": 463,
+        "problem": "Thesis: document submitted in support of candidature for an academic degree. Would a thesis paper be unusual to assign to kindergartners? ",
+        "solution": "true"
+    },
+    {
+        "id": 464,
+        "problem": "Leopard cat: Small wild cat. Are Leopard cats in less dire straits than Bornean Orangutan?",
+        "solution": "true"
+    },
+    {
+        "id": 465,
+        "problem": "Elon Musk: American industrialist and investor. Has Elon Musk's hairline changed?",
+        "solution": "true"
+    },
+    {
+        "id": 466,
+        "problem": "Reza Shah: Shah of Iran, Founder of the Imperial state of iran. Could Reza Shah be related to Queen Elizabeth I?",
+        "solution": "false"
+    },
+    {
+        "id": 467,
+        "problem": "Samsung: South Korean multinational conglomerate. Is Samsung accountable to shareholders?",
+        "solution": "true"
+    },
+    {
+        "id": 468,
+        "problem": "Bob Marley: Jamaican singer-songwriter. Is sunscreen unhelpful for the condition that killed Bob Marley?",
+        "solution": "true"
+    },
+    {
+        "id": 469,
+        "problem": "Cornwall: County of England. Was John George Bice's birthplace near Cornwall?",
+        "solution": "true"
+    },
+    {
+        "id": 470,
+        "problem": "Bull shark: Species of fish. Does bull shark bite hurt worse than crocodile bite?",
+        "solution": "false"
+    },
+    {
+        "id": 471,
+        "problem": "EastEnders: British soap opera. Is it possible to binge entire EastEnders series without water?",
+        "solution": "false"
+    },
+    {
+        "id": 472,
+        "problem": "United Airlines: Airline in the United States. Are there tearjerkers about United Airlines flights?",
+        "solution": "true"
+    },
+    {
+        "id": 473,
+        "problem": "Serfdom: status of peasants under feudalism. Did Japanese serfdom have higher status than English counterpart?",
+        "solution": "true"
+    },
+    {
+        "id": 474,
+        "problem": "Mongoose: family of mammals. Does a mongoose have natural camouflage for desert?",
+        "solution": "true"
+    },
+    {
+        "id": 475,
+        "problem": "Kelly Clarkson: American singer-songwriter, actress, and television personality. Would Kelly Clarkson's voice shake glass?",
+        "solution": "true"
+    },
+    {
+        "id": 476,
+        "problem": "Guitarist: person who plays the guitar. Do guitarists need both hands to play?",
+        "solution": "true"
+    },
+    {
+        "id": 477,
+        "problem": "Rice pudding: Dish made from rice mixed with water or milk. Is most store bought rice pudding made with brown rice?",
+        "solution": "false"
+    },
+    {
+        "id": 478,
+        "problem": "Cucumber: species of plant. Are all cucumbers the same texture?",
+        "solution": "false"
+    },
+    {
+        "id": 479,
+        "problem": "Goldstone Deep Space Communications Complex: United States historic place. Do the telescopes at Goldstone Deep Space Communications Complex work the night shift?",
+        "solution": "true"
+    },
+    {
+        "id": 480,
+        "problem": "Scrabble: board game with words. Does monster name in West African Folklore that witches send into villages set Scrabble record?",
+        "solution": "false"
+    },
+    {
+        "id": 481,
+        "problem": "French people: People from France. Can a student from Smithtown's Cleary School understand the speech of a French person?",
+        "solution": "false"
+    },
+    {
+        "id": 482,
+        "problem": "Waiting staff: staff serving in restaurant or private homes. Are there some countries where waiting staff need no tip?",
+        "solution": "true"
+    },
+    {
+        "id": 483,
+        "problem": "ABBA: Swedish pop group. Could ABBA play a mixed doubles tennis game against each other?",
+        "solution": "true"
+    },
+    {
+        "id": 484,
+        "problem": "Groundhog Day: Traditional method of weather prediction. At Christmastime, do some films remind us that groundhog day is approaching?",
+        "solution": "true"
+    },
+    {
+        "id": 485,
+        "problem": "Taco Bell: American fast-food chain. Can you purchase a dish with injera at Taco Bell?",
+        "solution": "false"
+    },
+    {
+        "id": 486,
+        "problem": "Judge: official who presides over court proceedings. Would an Orthodox Presbyterian object to 1700s judge's attire?",
+        "solution": "true"
+    },
+    {
+        "id": 487,
+        "problem": "Klingon: Fictional species in Star Trek. Did Klingons appear in the movie The Last Jedi?",
+        "solution": "false"
+    },
+    {
+        "id": 488,
+        "problem": "Pea: species of plant. Does Soylent use Pea for their source of protein? ",
+        "solution": "false"
+    },
+    {
+        "id": 489,
+        "problem": "March: third month in the Julian and Gregorian calendars. Is March named after Jupiter's son in Roman mythology?",
+        "solution": "true"
+    },
+    {
+        "id": 490,
+        "problem": "Abstract art: Art with a degree of independence from visual references in the world. Can photography be considered abstract art?",
+        "solution": "false"
+    },
+    {
+        "id": 491,
+        "problem": "Amtrak: Intercity rail operator in the United States. Does Amtrak operate four wheel vehicles?",
+        "solution": "true"
+    },
+    {
+        "id": 492,
+        "problem": "Crane (bird): family of birds. Can crane slamdunk?",
+        "solution": "false"
+    },
+    {
+        "id": 493,
+        "problem": "Richard III of England: 15th-century King of England. Was Richard III ruler of Adelaide?",
+        "solution": "false"
+    },
+    {
+        "id": 494,
+        "problem": "Snow leopard: species of mammal. Can a snow leopard eat twice its own body weight?",
+        "solution": "true"
+    },
+    {
+        "id": 495,
+        "problem": "Chives: edible species of plant. Could chives be mistaken for grass?",
+        "solution": "true"
+    },
+    {
+        "id": 496,
+        "problem": "September: ninth month in the Julian and Gregorian calendars. Could you brew beer from start to finish in the month of September?",
+        "solution": "false"
+    },
+    {
+        "id": 497,
+        "problem": "Fair trade: form of trade. Did Medieval English lords engage in fair trade with peasants?",
+        "solution": "false"
+    },
+    {
+        "id": 498,
+        "problem": "Sonnet: form of poetry with fourteen lines; by the thirteenth century it signified a poem of fourteen lines that follows a strict rhyme scheme and specific structure. Can Jabberwocky be considered a sonnet?",
+        "solution": "false"
+    },
+    {
+        "id": 499,
+        "problem": "Pharmacy: academic discipline studying preparation and dispensation of medicinal. Is ID required to get all medications from all pharmacies?",
+        "solution": "false"
+    },
+    {
+        "id": 500,
+        "problem": "The Jackson 5: American pop music family group. Was The Jackson 5 bigger family band than The Isley Brothers?",
+        "solution": "true"
+    },
+    {
+        "id": 501,
+        "problem": "Egyptian pyramids: Ancient pyramid-shaped masonry structures located in Egypt. Do the Egyptian pyramids look the same from outside as they did when new?",
+        "solution": "false"
+    },
+    {
+        "id": 502,
+        "problem": "Markhor: species of mammal. Could a markhor give birth three times in a single year?",
+        "solution": "false"
+    },
+    {
+        "id": 503,
+        "problem": "James Bond: Media franchise about a British spy. Do the James Bond and Doctor Who series have a similarity in format?",
+        "solution": "true"
+    },
+    {
+        "id": 504,
+        "problem": "Gray whale: species of mammal. Would a Gray Whale fit easily in an above ground pool?",
+        "solution": "false"
+    },
+    {
+        "id": 505,
+        "problem": "Jackfruit: species of plant. Can jackfruit be used as a weapon?",
+        "solution": "true"
+    },
+    {
+        "id": 506,
+        "problem": "Bucharest: Capital of Romania. Is Bucharest located south of Egypt?",
+        "solution": "false"
+    },
+    {
+        "id": 507,
+        "problem": "Menthol: chemical compound. Does menthol make cigarettes less addictive?",
+        "solution": "false"
+    },
+    {
+        "id": 508,
+        "problem": "San Diego County, California: County in California, United States. Is San Diego County the home of a Shamu?",
+        "solution": "true"
+    },
+    {
+        "id": 509,
+        "problem": "Water skiing: surface water sport. Can you go water skiing on Venus?",
+        "solution": "false"
+    },
+    {
+        "id": 510,
+        "problem": "Mona Lisa: Painting by Leonardo da Vinci. Is the Mona Lisa in the same museum as the Venus de Milo?",
+        "solution": "true"
+    },
+    {
+        "id": 511,
+        "problem": "Gettysburg Battlefield: site of the Battle of Gettysburg during the American Civil War. Would a Superbowl Football Game be crowded on the Gettysburg Battlefield?",
+        "solution": "false"
+    },
+    {
+        "id": 512,
+        "problem": "Darth Vader: fictional character in the Star Wars franchise. Can Darth Vader hypothetically outdunk Bill Walton without using The Force?",
+        "solution": "false"
+    },
+    {
+        "id": 513,
+        "problem": "Porsche: automotive brand manufacturing subsidiary of Volkswagen. Could a Porsche 992 Turbo S defeat Usain Bolt in a 100 meter sprint?",
+        "solution": "true"
+    },
+    {
+        "id": 514,
+        "problem": "Society: Social group involved in persistent social interaction. In American society, will a bachelor's degree often include a leap year?",
+        "solution": "true"
+    },
+    {
+        "id": 515,
+        "problem": "Chocolate brownie: A square, baked, chocolate dessert. Should children be kept from \"special brownies\"?",
+        "solution": "true"
+    },
+    {
+        "id": 516,
+        "problem": "Lactobacillus: genus of bacteria. Is overfeeding Lactobacillus unwise for people without dental insurance?",
+        "solution": "true"
+    },
+    {
+        "id": 517,
+        "problem": "Snoop Dogg: American rapper. Did Snoop Dogg refuse to make music with rival gang members?",
+        "solution": "false"
+    },
+    {
+        "id": 518,
+        "problem": "Palm Beach, Florida: Town in Florida, United States. Could Palm Beach be held in the palm of your hand?",
+        "solution": "false"
+    },
+    {
+        "id": 519,
+        "problem": "Keyboard layout: any specific mechanical, visual, or functional arrangement of the keys of a keyboard or typewriter. Could someone with fine motor control issues benefit from an altered keyboard layout?",
+        "solution": "true"
+    },
+    {
+        "id": 520,
+        "problem": "Ivan the Terrible: Grand Prince of Moscow and 1st Tsar of Russia. Did Ivan the Terrible's father and grandfather have nicer nicknames?",
+        "solution": "true"
+    },
+    {
+        "id": 521,
+        "problem": "Great Depression: 20th-century worldwide economic depression. Could all the unemployed people due to 1933 Great Depression fit in Tiger Stadium?",
+        "solution": "false"
+    },
+    {
+        "id": 522,
+        "problem": "Presidency of Richard Nixon: American cabinet. Would the high school class of 2010 have lived through the Presidency of Richard Nixon?",
+        "solution": "false"
+    },
+    {
+        "id": 523,
+        "problem": "Polymath: Individual whose knowledge spans a significant number of subjects. Would Tony Stark be considered a polymath?",
+        "solution": "true"
+    },
+    {
+        "id": 524,
+        "problem": "Emulator: system that emulates a real system such that the behavior closely resembles the behavior of the real system. Are classic nintendo games for emulator legal?",
+        "solution": "false"
+    },
+    {
+        "id": 525,
+        "problem": "Guitarist: person who plays the guitar. Does being good at guitar hero make you a good guitarist?",
+        "solution": "false"
+    },
+    {
+        "id": 526,
+        "problem": "Very Large Telescope: telescope in the Atacama Desert, Chile. Can the Very Large Telescope observe the largest mountain on Earth?",
+        "solution": "false"
+    },
+    {
+        "id": 527,
+        "problem": "Himalayas: Mountain range in Asia. Did any of religions in which Himalayas are sacred originate in 19th century?",
+        "solution": "false"
+    },
+    {
+        "id": 528,
+        "problem": "Marco Polo: Italian explorer and merchant noted for travel to central and eastern Asia. Do you often hear Marco Polo's name shouted near water?",
+        "solution": "true"
+    },
+    {
+        "id": 529,
+        "problem": "Rick and Morty: Animated sitcom. Can you watch Rick and Morty in Mariana Trench?",
+        "solution": "true"
+    },
+    {
+        "id": 530,
+        "problem": "Durian: genus of plants. Are Durian fruits an olfactory delight?",
+        "solution": "false"
+    },
+    {
+        "id": 531,
+        "problem": "White: color. Can paresthesia be caused by a white pigment?",
+        "solution": "true"
+    },
+    {
+        "id": 532,
+        "problem": "Bob Marley: Jamaican singer-songwriter. Can you find Bob Marley's face in most smoke shops?",
+        "solution": "true"
+    },
+    {
+        "id": 533,
+        "problem": "Sunday: day of the week. Is Christmas always celebrated on a Sunday?",
+        "solution": "false"
+    },
+    {
+        "id": 534,
+        "problem": "The CW: American broadcast television network. Did Supernatural break 2001 CW debuting shows seasons record?",
+        "solution": "true"
+    },
+    {
+        "id": 535,
+        "problem": "HIV: Human retrovirus, cause of AIDS. Would fans of Jonathan Larson be unaware of HIV?",
+        "solution": "false"
+    },
+    {
+        "id": 536,
+        "problem": "Athena: ancient Greek goddess of wisdom and war. Is Freya a combination of Athena and Aphrodite?",
+        "solution": "true"
+    },
+    {
+        "id": 537,
+        "problem": "Ethiopian cuisine: Culinary traditions of Ethiopia. Is shrimp prevalent in Ethiopian cuisine?",
+        "solution": "false"
+    },
+    {
+        "id": 538,
+        "problem": "Harvey Milk: American politician who became a martyr in the gay community. Could a cow produce Harvey Milk?",
+        "solution": "false"
+    },
+    {
+        "id": 539,
+        "problem": "Tokyo Tower: observation tower. Did Tokyo Tower designers appreciate Stephen Sauvestre?",
+        "solution": "true"
+    },
+    {
+        "id": 540,
+        "problem": "Wednesday: Day of the week. Are all Wednesdays in a year enough to read Bible 15 times?",
+        "solution": "true"
+    },
+    {
+        "id": 541,
+        "problem": "United Airlines: Airline in the United States. Was United Airlines blameless in worst crash in history?",
+        "solution": "true"
+    },
+    {
+        "id": 542,
+        "problem": "John Key: 38th Prime Minister of New Zealand. Could John Key issue an executive order in the USA?",
+        "solution": "false"
+    },
+    {
+        "id": 543,
+        "problem": "Stanford University: Private research university in Stanford, California. Was John Gall from same city as Stanford University?",
+        "solution": "true"
+    },
+    {
+        "id": 544,
+        "problem": "Drum: type of musical instrument of the percussion family. Would a cattle farmer be useful to a drum maker?",
+        "solution": "true"
+    },
+    {
+        "id": 545,
+        "problem": "Jerry Seinfeld: American comedian and actor. Did Jerry Seinfeld have reason to cheer in 1986?",
+        "solution": "true"
+    },
+    {
+        "id": 546,
+        "problem": "The Matrix: 1999 science fiction action film directed by the Wachowskis. Will Gremlins sequels tie number of Matrix sequels?",
+        "solution": "true"
+    },
+    {
+        "id": 547,
+        "problem": "Ivan the Terrible: Grand Prince of Moscow and 1st Tsar of Russia. Has Ivan the Terrible flown to Europe?",
+        "solution": "false"
+    },
+    {
+        "id": 548,
+        "problem": "Lenovo: Chinese multinational technology company. Could a monolingual American read Lenovo's native name?",
+        "solution": "false"
+    },
+    {
+        "id": 549,
+        "problem": "Astronaut: Person who commands, pilots, or serves as a crew member of a spacecraft. Has every astronaut survived their space journey?",
+        "solution": "false"
+    },
+    {
+        "id": 550,
+        "problem": "Reiki: Pseudoscientific healing technique. Can Reiki be stored in a bottle?",
+        "solution": "false"
+    },
+    {
+        "id": 551,
+        "problem": "Aldi: Germany-based supermarket chain. Should you bring your own bags to Aldi?",
+        "solution": "true"
+    },
+    {
+        "id": 552,
+        "problem": "Noah's Ark: the vessel in the Genesis flood narrative. WIll Noah's Ark hypothetically sail through flooded Lincoln Tunnel?",
+        "solution": "false"
+    },
+    {
+        "id": 553,
+        "problem": "Supreme Court of Canada: highest court of Canada. Can the Supreme Court of Canada fight a Lucha trios match?",
+        "solution": "true"
+    },
+    {
+        "id": 554,
+        "problem": "Dessert: A course that concludes a meal; usually sweet. Is dessert eaten before breakfast?",
+        "solution": "false"
+    },
+    {
+        "id": 555,
+        "problem": "Depression (mood): state of low mood and fatigue. Would a Monoamine Oxidase candy bar cheer up a depressed friend?",
+        "solution": "false"
+    },
+    {
+        "id": 556,
+        "problem": "Sarah: Biblical character. Did Methuselah live at least 800 years as long as Sarah?",
+        "solution": "true"
+    },
+    {
+        "id": 557,
+        "problem": "Pearl Harbor: Harbor on the island of Oahu, Hawaii. Is Pearl Harbor the mythical home of a shark goddess?",
+        "solution": "true"
+    },
+    {
+        "id": 558,
+        "problem": "Autumn: one of the Earth's four temperate seasons, occurring between summer and winter. Is Autumn a good time to collect bear pelts in US?",
+        "solution": "false"
+    },
+    {
+        "id": 559,
+        "problem": "French Defence: Chess opening. Can French Defence initial move defend against four move checkmate?",
+        "solution": "false"
+    },
+    {
+        "id": 560,
+        "problem": "Parachuting: action sport of exiting an aircraft and returning to Earth using a parachute. Can parachuting amateurs ignore hurricane force winds bulletins?",
+        "solution": "false"
+    },
+    {
+        "id": 561,
+        "problem": "Parsifal: opera in three acts by Richard Wagner. Was the subject of Parsifal taken from British folklore?",
+        "solution": "true"
+    },
+    {
+        "id": 562,
+        "problem": "Ku Klux Klan: American white supremacy group. Would the Ku Klux Klan welcome Opal Tometi into their group?",
+        "solution": "false"
+    },
+    {
+        "id": 563,
+        "problem": "Sloth: tree dwelling animal noted for slowness. Will a sloth explode if it's not upside down?",
+        "solution": "false"
+    },
+    {
+        "id": 564,
+        "problem": "Clown: A comic performer often for children's entertainment. Would Stephen King fans be likely to own an image of a clown?",
+        "solution": "true"
+    },
+    {
+        "id": 565,
+        "problem": "Eid al-Fitr: Islamic holiday that marks the end of Ramadan. Is Eid al-Fitr holiday inappropriate to watch entire US Office?",
+        "solution": "true"
+    },
+    {
+        "id": 566,
+        "problem": "Amazon (company): American electronic commerce and cloud computing company. Could one Amazon share ever buy twenty year Netflix subscription?",
+        "solution": "true"
+    },
+    {
+        "id": 567,
+        "problem": "Biochemistry: study of chemical processes in living organisms. Does Biochemistry study gluons?",
+        "solution": "false"
+    },
+    {
+        "id": 568,
+        "problem": "Homelessness: circumstance when people desire a permanent dwelling but do not have one. Does Antarctica have a lot of problems relating to homelessness?",
+        "solution": "false"
+    },
+    {
+        "id": 569,
+        "problem": "Marlboro (cigarette): cigarette brand. Are the colors on Marlboro package found on French flag?",
+        "solution": "false"
+    },
+    {
+        "id": 570,
+        "problem": "Judo: modern martial art, combat and Olympic sport. Do silicone suits make judo difficult?",
+        "solution": "true"
+    },
+    {
+        "id": 571,
+        "problem": "The Great Gatsby: 1925 novel by F. Scott Fitzgerald. When Hugh Jackman was a teacher, would he have taught The Great Gatsby?",
+        "solution": "false"
+    },
+    {
+        "id": 572,
+        "problem": "Pi: Ratio of the circumference of a circle to its diameter. Was Pi an acceptable number of children in 1980s China?",
+        "solution": "false"
+    },
+    {
+        "id": 573,
+        "problem": "Mona Lisa: Painting by Leonardo da Vinci. After viewing the Mona Lisa, could you get lunch nearby on foot?",
+        "solution": "true"
+    },
+    {
+        "id": 574,
+        "problem": "Spinal cord: long, thin, tubular structure made up of nervous tissue. Would a hedgehog avoid animals without a spinal cord?",
+        "solution": "false"
+    },
+    {
+        "id": 575,
+        "problem": "Martin Luther: Saxon priest, monk and theologian, seminal figure in Protestant Reformation. Did Martin Luther believe in Satan?",
+        "solution": "true"
+    },
+    {
+        "id": 576,
+        "problem": "Strawberry: edible fruit. Can a strawberry get worms similar to dogs?",
+        "solution": "true"
+    },
+    {
+        "id": 577,
+        "problem": "1960: Year. Were there footprints on the moon in 1960?",
+        "solution": "false"
+    },
+    {
+        "id": 578,
+        "problem": "Moli\u00e8re: 17th-century French playwright and actor. Was Moliere Queen Margot's ill fated lover?",
+        "solution": "false"
+    },
+    {
+        "id": 579,
+        "problem": "PayPal: Online financial services company based in San Jose, California. Would it be unusual to use paypal for drug deals?",
+        "solution": "true"
+    },
+    {
+        "id": 580,
+        "problem": "Reproduction: Biological process by which new organisms are generated from one or more parent organisms. Is it true that gay male couples cannot naturally reproduce?",
+        "solution": "false"
+    },
+    {
+        "id": 581,
+        "problem": "Ludacris: American rapper and actor. Does Ludacris have Greek heritage?",
+        "solution": "true"
+    },
+    {
+        "id": 582,
+        "problem": "Winemaking: the production of wine, starting with the selection of the fruit, its fermentation into alcohol, and the bottling of the finished liquid. Do people remember Lucille Ball's winemaking as successful?",
+        "solution": "false"
+    },
+    {
+        "id": 583,
+        "problem": "Sand cat: Small wild cat. Do sand cats avoid eating all of the prey of eels?",
+        "solution": "false"
+    },
+    {
+        "id": 584,
+        "problem": "Harry Potter and the Philosopher's Stone: 1997 fantasy novel by J. K. Rowling. Did children read Harry Potter and the Philosopher's Stone during the Albanian Civil War?",
+        "solution": "true"
+    },
+    {
+        "id": 585,
+        "problem": "Onion: vegetable. Would a blooming onion be possible with a shallot?",
+        "solution": "false"
+    },
+    {
+        "id": 586,
+        "problem": "Plastic: material of a wide range of synthetic or semi-synthetic organic solids. Do beeswax alternatives to cling wrap use plsatic?",
+        "solution": "false"
+    },
+    {
+        "id": 587,
+        "problem": "Reproduction: Biological process by which new organisms are generated from one or more parent organisms. Are those incapable of reproduction incapable of parenthood?",
+        "solution": "false"
+    },
+    {
+        "id": 588,
+        "problem": "Menthol: chemical compound. Is menthol associated with Christmas?",
+        "solution": "true"
+    },
+    {
+        "id": 589,
+        "problem": "Kurt Cobain: American singer, composer, and musician. Did Kurt Cobain's music genre survive after his death?",
+        "solution": "true"
+    },
+    {
+        "id": 590,
+        "problem": "DARPA: Agency of the U.S. Department of Defense responsible for the development of new technologies. Did DARPA influence Albert Einstein? ",
+        "solution": "false"
+    },
+    {
+        "id": 591,
+        "problem": "Uppsala: Place in Uppland, Sweden. Can the city of Miami fit inside Uppsala?",
+        "solution": "false"
+    },
+    {
+        "id": 592,
+        "problem": "Apollo: God in Greek mythology. Could all of the famous Apollo's hypothetically defeat all of the famous D'Artagnan's?",
+        "solution": "true"
+    },
+    {
+        "id": 593,
+        "problem": "The Matrix: 1999 science fiction action film directed by the Wachowskis. Was Harry Potter a better investment than The Matrix for Warner Bros.?",
+        "solution": "true"
+    },
+    {
+        "id": 594,
+        "problem": "Martyr: person who suffers persecution and death for advocating, refusing to renounce, and/or refusing to advocate a belief or cause, usually a religious one. Can a martyr saint have been excommunicated?",
+        "solution": "true"
+    },
+    {
+        "id": 595,
+        "problem": "Osama bin Laden: Co-founder of al-Qaeda. Does Osama bin Laden put a wafer on his tongue every Sunday?",
+        "solution": "false"
+    },
+    {
+        "id": 596,
+        "problem": "Billionaire: person who has a net worth of at least one billion (1,000,000,000) units of a given currency. Is Cambodia too expensive for 2020 richest billionaire to own?",
+        "solution": "false"
+    },
+    {
+        "id": 597,
+        "problem": "Martin Luther: Saxon priest, monk and theologian, seminal figure in Protestant Reformation. If Martin Luther did one theses a day would he run out in half a year?",
+        "solution": "true"
+    },
+    {
+        "id": 598,
+        "problem": "Selfie: Photographic self-portrait. Are selfies more dangerous than plague in modern times?",
+        "solution": "true"
+    },
+    {
+        "id": 599,
+        "problem": "Marco Rubio: United States Senator from Florida. Does Marco Rubio have a close relationship with Allah?",
+        "solution": "false"
+    },
+    {
+        "id": 600,
+        "problem": "Hair: protein filament that grows from follicles found in the dermis, or skin. Do skeletons have hair?",
+        "solution": "false"
+    },
+    {
+        "id": 601,
+        "problem": "Alfa Romeo: Italian automotive manufacturer. Can you order an Alfa Romeo at Starbucks?",
+        "solution": "false"
+    },
+    {
+        "id": 602,
+        "problem": "Supreme Court of the United States: Highest court in the United States. Do members of the Supreme Court of the United States have longer terms than most senators?",
+        "solution": "true"
+    },
+    {
+        "id": 603,
+        "problem": "Olive oil: liquid fat extracted by pressing olives. Can olive oil kill rabies?",
+        "solution": "false"
+    },
+    {
+        "id": 604,
+        "problem": "Horseradish: species of plant. Does horseradish have a fetlock?",
+        "solution": "false"
+    },
+    {
+        "id": 605,
+        "problem": "University of Pittsburgh: American state-related research university located in Pittsburgh, Pennsylvania. Is University of Pittsburgh easier to enter than FBI?",
+        "solution": "true"
+    },
+    {
+        "id": 606,
+        "problem": "Eiffel Tower: Tower located on the Champ de Mars in Paris, France. Was the Eiffel tower used as a symbol of the French Revolution?",
+        "solution": "false"
+    },
+    {
+        "id": 607,
+        "problem": "Stork: family of birds. Do storks need golden toads to survive?",
+        "solution": "false"
+    },
+    {
+        "id": 608,
+        "problem": "Naruto: Japanese manga and anime series. Could you watch Naruto and Puzzle Place on the same channel?",
+        "solution": "false"
+    },
+    {
+        "id": 609,
+        "problem": "Astronomer: Scientist who studies celestial bodies. Does Nintendo's link ever see an astronomer?",
+        "solution": "true"
+    },
+    {
+        "id": 610,
+        "problem": "QR code: trademark for a type of matrix barcode. Do you have to put on glasses to read a QR code?",
+        "solution": "false"
+    },
+    {
+        "id": 611,
+        "problem": "The Atlantic: Magazine and multi-platform publisher based in Washington, D.C.. Could you read The Atlantic magazine during the Games of the XXII Olympiad?",
+        "solution": "true"
+    },
+    {
+        "id": 612,
+        "problem": "Simon Cowell: English reality television judge, television producer and music executive. Can Simon Cowell vote for the next Supreme Court judge?",
+        "solution": "false"
+    },
+    {
+        "id": 613,
+        "problem": "Game (hunting): animal hunted for sport or for food. Would a customer be happy if their grocery store meat tasted like game?",
+        "solution": "false"
+    },
+    {
+        "id": 614,
+        "problem": "Alice in Wonderland (1951 film): 1951 American animated musical fantasy film produced by Walt Disney Productions. Does Disney's Alice in Wonderland involve the celebration of a holiday?",
+        "solution": "true"
+    },
+    {
+        "id": 615,
+        "problem": "Family of Barack Obama: List of members of the family of Barack Obama. Can Family of Barack Obama ride comfortably in 2020 Jaguar F Type?",
+        "solution": "false"
+    },
+    {
+        "id": 616,
+        "problem": "Joker (character): Fictional character in the DC Universe. Is the Joker in a healthy romantic relationship?",
+        "solution": "false"
+    },
+    {
+        "id": 617,
+        "problem": "Spice Girls: British girl group. Tata Hexa can accomodate every Spice Girl?",
+        "solution": "true"
+    },
+    {
+        "id": 618,
+        "problem": "Copper: Chemical element with atomic number 29. Would a fungal life-form be threatened by a pigment from copper?",
+        "solution": "true"
+    },
+    {
+        "id": 619,
+        "problem": "Futurama: American animated sitcom for the Fox Broadcasting Company and Comedy Central. Will Futurama surpass the number of episodes of The Simpsons by the end of 2020?",
+        "solution": "false"
+    },
+    {
+        "id": 620,
+        "problem": "Marxism: Economic and sociopolitical worldview based on the works of Karl Marx. Are right wing Amreicans opposed to marxism?",
+        "solution": "true"
+    },
+    {
+        "id": 621,
+        "problem": "Wednesday: Day of the week. Did Wednesday have something to do with Thor?",
+        "solution": "true"
+    },
+    {
+        "id": 622,
+        "problem": "Julia Roberts: American actress and producer. Did Julia Roberts practice blast beats as a child?",
+        "solution": "false"
+    },
+    {
+        "id": 623,
+        "problem": "Kidney: internal organ in most animals, including vertebrates and some invertebrates. Can a quarter fit inside of a human kidney?",
+        "solution": "true"
+    },
+    {
+        "id": 624,
+        "problem": "Fraktur: Typeface. Does Fraktur have a sordid history?",
+        "solution": "true"
+    },
+    {
+        "id": 625,
+        "problem": "Memory: information stored in the mind, or the mental processes involved in receiving, storing, and retrieving this information. Do quadragenarian's have little memory capacity?",
+        "solution": "false"
+    },
+    {
+        "id": 626,
+        "problem": "Chives: edible species of plant. Are there any chives hypothetically good for battling vampires?",
+        "solution": "true"
+    },
+    {
+        "id": 627,
+        "problem": "Cheshire: County of England. Do citizens of Cheshire sing La Marseillaise?",
+        "solution": "false"
+    },
+    {
+        "id": 628,
+        "problem": "Tony Bennett: American singer. Did Tony Bennett have more children than he had wives?",
+        "solution": "true"
+    },
+    {
+        "id": 629,
+        "problem": "Al-Farabi: Philosopher in 10th century Central Asia. Did Al-Farabi ever meet Mohammed?",
+        "solution": "false"
+    },
+    {
+        "id": 630,
+        "problem": "Oceanography: The study of the physical and biological aspects of the ocean. Does an individual oceanographer study many sciences?",
+        "solution": "true"
+    },
+    {
+        "id": 631,
+        "problem": "Evander Holyfield: American boxer. Did Mike Tyson do something very different than McGruff's slogan to Evander Holyfield in 1997?",
+        "solution": "false"
+    },
+    {
+        "id": 632,
+        "problem": "Spaghetti: Type of pasta. Is it unusual to eat spaghetti without a fork?",
+        "solution": "true"
+    },
+    {
+        "id": 633,
+        "problem": "Christmas Eve: Evening or entire day before Christmas Day. Would a Bulgarian priest eat a four-course meal on Christmas Eve?",
+        "solution": "false"
+    },
+    {
+        "id": 634,
+        "problem": "United States Secretary of State: U.S. cabinet member and head of the U.S. State Department. Can United States Secretary of State do crimes in U.K. without being arrested?",
+        "solution": "true"
+    },
+    {
+        "id": 635,
+        "problem": "Thesis: document submitted in support of candidature for an academic degree. Could R. Kelly write a college thesis?",
+        "solution": "false"
+    },
+    {
+        "id": 636,
+        "problem": "Johnny Carson: American talk show host and comedian. Could Johnny Carson's children fill out a water polo team?",
+        "solution": "false"
+    },
+    {
+        "id": 637,
+        "problem": "Potato: plant species producing the tuber used as a staple food. Can Tame Impala's studio band play a proper game of Hot Potato?",
+        "solution": "false"
+    },
+    {
+        "id": 638,
+        "problem": "Tonsillitis: Inflammation of the tonsils. Can fish get Tonsillitis?",
+        "solution": "false"
+    },
+    {
+        "id": 639,
+        "problem": "Goblin shark: Deep-sea shark. Can a Goblin shark hypothetically ride a bike if it had limbs?",
+        "solution": "false"
+    },
+    {
+        "id": 640,
+        "problem": "Euphoria: mental and emotional condition in which a person experiences intense feelings of well-being, elation, happiness and excitement. Is euphoria associated with drug addiction?",
+        "solution": "true"
+    },
+    {
+        "id": 641,
+        "problem": "Fair trade: form of trade. Is the United States the largest exporter of Fair Trade products?",
+        "solution": "false"
+    },
+    {
+        "id": 642,
+        "problem": "Baptism: Christian rite of admission and adoption, almost invariably with the use of water. Can Immersion Baptism lead to a death like Jeff Buckley's?",
+        "solution": "true"
+    },
+    {
+        "id": 643,
+        "problem": "Nepalese Civil War: civil war in Nepal between 1996 and 2006. Did the Nepalese Civil War take place near India?",
+        "solution": "true"
+    },
+    {
+        "id": 644,
+        "problem": "Northern fur seal: The largest fur seal in the northern hemisphere. Is a northern fur seal needing emergency surgery in July likely a safe anesthesia candidate?",
+        "solution": "true"
+    },
+    {
+        "id": 645,
+        "problem": "Easter: Major Christian festival celebrating the resurrection of Jesus. Does Adam Sandler skip celebrating Easter?",
+        "solution": "true"
+    },
+    {
+        "id": 646,
+        "problem": "Space Race: Competition between the USSR and the USA to explore space. Did Al Unser Jr. win the Space Race?",
+        "solution": "false"
+    },
+    {
+        "id": 647,
+        "problem": "Aldi: Germany-based supermarket chain. Are Aldi's foods discounted due to being out of date?",
+        "solution": "false"
+    },
+    {
+        "id": 648,
+        "problem": "Prussia: state in Central Europe between 1525\u20131947. Was the Euro used in Prussia?",
+        "solution": "false"
+    },
+    {
+        "id": 649,
+        "problem": "The Doctor (Doctor Who): fictional character from Doctor Who. Does The Doctor keep his ship in his childhood home?",
+        "solution": "false"
+    },
+    {
+        "id": 650,
+        "problem": "Blues: Musical form and music genre. Were Depeche Mode heavily influenced by blues music?",
+        "solution": "false"
+    },
+    {
+        "id": 651,
+        "problem": "Michael Crichton: American author, screenwriter, film director. Was Michael Crichton ever in danger of flunking out of Harvard as an undergraduate?",
+        "solution": "false"
+    },
+    {
+        "id": 652,
+        "problem": "Benjamin Franklin: American polymath and a Founding Father of the United States. Is Benjamin Franklin a prime candidate to have his statues removed by Black Lives Matter movement?",
+        "solution": "true"
+    },
+    {
+        "id": 653,
+        "problem": "Dosa: Thin pancakes originating from South India. Would lumberjacks get full after eating three dosa?",
+        "solution": "false"
+    },
+    {
+        "id": 654,
+        "problem": "Mongols: ethnic group of central Asia. Would a packed Wembley stadium be likely to have a descendant of the Mongols inside?",
+        "solution": "true"
+    },
+    {
+        "id": 655,
+        "problem": "Kangaroo: \u0441ommon name of family of marsupials. Do Australians ride Kangaroos to work?",
+        "solution": "false"
+    },
+    {
+        "id": 656,
+        "problem": "Argon: Chemical element with atomic number 18. Is Argon near Neon on the periodic table of elements?",
+        "solution": "true"
+    },
+    {
+        "id": 657,
+        "problem": "Pope Alexander VI: Pope of the Catholic Church 1492\u20131503. Was Pope Alexander VI's origin country least represented in papal history?",
+        "solution": "false"
+    },
+    {
+        "id": 658,
+        "problem": "Ten Commandments: Set of biblical principles relating to ethics and worship, which play a fundamental role in the Abrahamic religions. Were the Ten commandments the part of the bible that Jewish people do not believe in?",
+        "solution": "false"
+    },
+    {
+        "id": 659,
+        "problem": "Reality: Sum or aggregate of all that is real or existent. Could Plato have agreed with the beliefs of Jainism?",
+        "solution": "true"
+    },
+    {
+        "id": 660,
+        "problem": "Ice: water frozen into the solid state. Did Ice make people rich?",
+        "solution": "true"
+    },
+    {
+        "id": 661,
+        "problem": "Sophist: Specific kind of teacher in both Ancient Greece and in the Roman Empire. Would a sophist use an \u00e9p\u00e9e?",
+        "solution": "false"
+    },
+    {
+        "id": 662,
+        "problem": "Panic of 1907: three-week financial crisis in the United States. Was the father of social security system serving in the white house during the Panic of 1907?",
+        "solution": "false"
+    },
+    {
+        "id": 663,
+        "problem": "CT scan: medical imaging procedure which uses X-rays to produce cross-sectional images. Would an uninsured person be more likely than an insured person to decline a CT scan?",
+        "solution": "true"
+    },
+    {
+        "id": 664,
+        "problem": "Wolverine: Species of the family Mustelidae. Would a Wolverine and a Lynx be hard to tell apart?",
+        "solution": "false"
+    },
+    {
+        "id": 665,
+        "problem": "Hornet: Genus of eusocial wasp. Do hornets provide meaningful data for oceanographers?",
+        "solution": "false"
+    },
+    {
+        "id": 666,
+        "problem": "Prophet: person claiming to speak for divine beings. Did the leader of Heaven's Gate consider himself a prophet?",
+        "solution": "true"
+    },
+    {
+        "id": 667,
+        "problem": "Subway (restaurant): American fast food chain. Was Subway involved in a pedophilia scandal?",
+        "solution": "true"
+    },
+    {
+        "id": 668,
+        "problem": "Amy Winehouse: English singer and songwriter. Did Amy Winehouse always perform live perfectly?",
+        "solution": "false"
+    },
+    {
+        "id": 669,
+        "problem": "Achilles: Greek mythological hero. Was Achilles a direct descendent of Gaia?",
+        "solution": "true"
+    },
+    {
+        "id": 670,
+        "problem": "Eric Clapton: English musician, singer, songwriter, and guitarist. Did Eric Clapton have similar taste in women to one of the Beatles?",
+        "solution": "true"
+    },
+    {
+        "id": 671,
+        "problem": "Sony: Japanese multinational conglomerate corporation. Did Sony definitively win the video game war against Sega?",
+        "solution": "true"
+    },
+    {
+        "id": 672,
+        "problem": "Alice's Adventures in Wonderland: book by Lewis Carroll. Did Alice's Adventures in Wonderland inspire Macbeth?",
+        "solution": "false"
+    },
+    {
+        "id": 673,
+        "problem": "Jerry Seinfeld: American comedian and actor. Does Jerry Seinfeld hang out at the Budweiser Party Deck?",
+        "solution": "false"
+    },
+    {
+        "id": 674,
+        "problem": "Rabbi: teacher of Torah in Judaism. Would a rabbi worship martyrs Ranavalona I killed?",
+        "solution": "false"
+    },
+    {
+        "id": 675,
+        "problem": "Parent: father or mother. Does a person need to be a parent to become a grandparent?",
+        "solution": "true"
+    },
+    {
+        "id": 676,
+        "problem": "Banana: edible fruit. Were plants crucial for The King of Rock'n Roll's snack with bananas?",
+        "solution": "true"
+    },
+    {
+        "id": 677,
+        "problem": "Uniting Church in Australia: christian denomination. Was Muhammed a member of the Uniting Church in Australia?",
+        "solution": "false"
+    },
+    {
+        "id": 678,
+        "problem": "Carrot: Root vegetable, usually orange in color. Are raw carrots better for maximizing vitamin A intake?",
+        "solution": "false"
+    },
+    {
+        "id": 679,
+        "problem": "Equator: Intersection of a sphere's surface with the plane perpendicular to the sphere's axis of rotation and midway between the poles. Is most coffee produced South of the Equator?",
+        "solution": "true"
+    },
+    {
+        "id": 680,
+        "problem": "Go (game): Abstract strategy board game for two players. Did origin dynasty of Go precede Jia Sidao?",
+        "solution": "true"
+    },
+    {
+        "id": 681,
+        "problem": "Brazilian Navy: Naval warfare branch of Brazil's military forces. Could modern Brazilian Navy have hypothetically turned the tide in Battle of Actium?",
+        "solution": "true"
+    },
+    {
+        "id": 682,
+        "problem": "Othello: play by Shakespeare. Would Othello be Shakespeare's play to buy Scheherazade most time with king?",
+        "solution": "false"
+    },
+    {
+        "id": 683,
+        "problem": "Confederate States Army: Southern army in American Civil War. Are there Americans still enlisted in the Confederate States Army?",
+        "solution": "false"
+    },
+    {
+        "id": 684,
+        "problem": "Numerology: any study of the purported divine, mystical or other special relationship between a number and some coinciding observed (or perceived) events. Has numerology helped shape hotel layouts?",
+        "solution": "true"
+    },
+    {
+        "id": 685,
+        "problem": "Supreme Court of the United States: Highest court in the United States. Has a neanderthal ever served on the Supreme Court of the United States?",
+        "solution": "false"
+    },
+    {
+        "id": 686,
+        "problem": "Celery: species of plant. Could you make the kitchen 'holy trinity' without celery?",
+        "solution": "false"
+    }
+]

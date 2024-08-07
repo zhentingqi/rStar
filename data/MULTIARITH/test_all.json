@@ -1,0 +1,902 @@
+[
+    {
+        "problem": " Paige had 11 songs on her mp3 player. If she deleted 9 old songs from it and then added 8 new songs, how many songs does she have on her mp3 player? ",
+        "solution": "10",
+        "id": 0
+    },
+    {
+        "problem": " There were 39 girls and 4 boys trying out for the schools basketball team. If only 26 of them got called back, how many students didn't make the cut? ",
+        "solution": "17",
+        "id": 1
+    },
+    {
+        "problem": " Faye had 34 coloring books. If she gave away 3 of them, but then bought 48 more, how many would she have total? ",
+        "solution": "79",
+        "id": 2
+    },
+    {
+        "problem": " The school cafeteria had 23 apples. If they used 20 to make lunch for the students and then bought 6 more, how many apples would they have? ",
+        "solution": "9",
+        "id": 3
+    },
+    {
+        "problem": " In a video game, each enemy defeated gives you 9 points. If a level has 11 enemies total and you destroy all but 3 of them, how many points would you earn? ",
+        "solution": "72",
+        "id": 4
+    },
+    {
+        "problem": " Megan earned 8 points for each bag of cans she recycled. If she had 14 bags, but didn't recycle 5 of them, how many points would she have earned? ",
+        "solution": "72",
+        "id": 5
+    },
+    {
+        "problem": " April's discount flowers was having a sale where each rose was 4 dollars. If April started with 13 roses and had 4 roses left, how much money did she earn? ",
+        "solution": "36",
+        "id": 6
+    },
+    {
+        "problem": " Ned had to wash 9 short sleeve shirts and 21 long sleeve shirts before school. If he had only washed 29 of them by the time school started, how many did he not wash? ",
+        "solution": "1",
+        "id": 7
+    },
+    {
+        "problem": " A company invited 47 people to a luncheon, but 7 of them didn't show up. If the tables they had held 5 people each, how many tables do they need? ",
+        "solution": "8",
+        "id": 8
+    },
+    {
+        "problem": " Tom had 5 books. If he sold 4 of them and used the money he earned to buy 38 new books, how many books would Tom have? ",
+        "solution": "39",
+        "id": 9
+    },
+    {
+        "problem": " For a birthday party Jerry bought 41 regular sodas and 22 diet sodas. If his fridge would only hold 9 on each shelf, how many shelves would he fill up? ",
+        "solution": "7",
+        "id": 10
+    },
+    {
+        "problem": " For Halloween Debby and her sister combined the candy they received. Debby had 32 pieces of candy while her sister had 42. If they ate 35 pieces the first night, how many pieces do they have left? ",
+        "solution": "39",
+        "id": 11
+    },
+    {
+        "problem": " Emily was planting vegetables in her garden. She started with 41 seeds and planted 29 of them in the big garden and in each of her small gardens put 4 seeds each. How many small gardens did Emily have? ",
+        "solution": "3",
+        "id": 12
+    },
+    {
+        "problem": " For Halloween Emily received 5 pieces of candy from neighbors and 13 pieces from her older sister. If she only ate 9 pieces a day, how long would the candy last her? ",
+        "solution": "2",
+        "id": 13
+    },
+    {
+        "problem": " Mike is at the library helping put away books. There are 82 book to put away total but a librarian takes 10 of them and leaves Mike with the rest. If he can fit 9 books on a shelf, how many shelves will he need? ",
+        "solution": "8",
+        "id": 14
+    },
+    {
+        "problem": " While on vacation, Nancy took 49 pictures at the zoo and 8 at the museum. If she later deleted 38 of the pictures, how many pictures from her vacation did she still have? ",
+        "solution": "19",
+        "id": 15
+    },
+    {
+        "problem": " A new building needed 14 windows. The builder had already installed 8 of them. If it takes 8 hours to install each window, how long will it take him to install the rest? ",
+        "solution": "48",
+        "id": 16
+    },
+    {
+        "problem": " A store had 40 oranges in a bin. If they threw away 25 of the old ones and put 21 new ones in the bin how many would be in the bin? ",
+        "solution": "36",
+        "id": 17
+    },
+    {
+        "problem": " At lunch a waiter had 7 customers and 5 of them didn't leave a tip. If he got $3 each from the ones who did tip, how much money did he earn? ",
+        "solution": "6",
+        "id": 18
+    },
+    {
+        "problem": " For Halloween Faye scored 47 pieces of candy. She ate 25 pieces the first night and then her sister gave her 40 more pieces. How many pieces of candy does Faye have now? ",
+        "solution": "62",
+        "id": 19
+    },
+    {
+        "problem": " A group of 4 friends went into a restaurant. The chef already had 9 chicken wings cooked but cooked 7 more for the group. If they each got the same amount how many would each person get? ",
+        "solution": "4",
+        "id": 20
+    },
+    {
+        "problem": " John earned 8 dollars for each lawn he mowed. If he had 15 lawns to mow, but forgot to mow 7 of them, how much money did he actually earn? ",
+        "solution": "64",
+        "id": 21
+    },
+    {
+        "problem": " A pet shelter had 5 puppies when another 35 were brought in. If 8 puppies a day are adopted, how long would it take for all of them to be adopted? ",
+        "solution": "5",
+        "id": 22
+    },
+    {
+        "problem": " A new building needed 9 windows. The builder had already installed 6 of them. If it takes 6 hours to install each window, how long will it take him to install the rest? ",
+        "solution": "18",
+        "id": 23
+    },
+    {
+        "problem": " A teacher had 34 worksheets to grade. If she graded 7, but then another 36 were turned in, how many worksheets would she have to grade? ",
+        "solution": "63",
+        "id": 24
+    },
+    {
+        "problem": " While playing at the arcade, Frank won 33 tickets playing 'whack a mole' and 9 tickets playing 'skee ball'. If he was trying to buy candy that cost 6 tickets a piece, how many could he buy? ",
+        "solution": "7",
+        "id": 25
+    },
+    {
+        "problem": " At a restaurant each adult meal costs $7 and kids eat free. If a group of 13 people came in and 9 were kids, how much would it cost for the group to eat? ",
+        "solution": "28",
+        "id": 26
+    },
+    {
+        "problem": " Paige had 43 math problems and 12 science problems for homework. If she finished 44 of the problems at school, how many problems did she have to do for homework? ",
+        "solution": "11",
+        "id": 27
+    },
+    {
+        "problem": " Rachel was playing a video game where she scores 9 points for each treasure she finds. If she found 5 treasures on the first level and 2 on the second, what would her score be? ",
+        "solution": "63",
+        "id": 28
+    },
+    {
+        "problem": " A waiter at 'The Greasy Spoon' restaurant had 26 customers to wait on. During the lunch rush he added another 27 customers. If 27 of the customers didn't leave him a tip, how many customers did leave a tip? ",
+        "solution": "26",
+        "id": 29
+    },
+    {
+        "problem": " A toy store had 17 giant stuffed bears in stock when they got another shipment with 10 bears in it. The put the bears onto shelves with 9 on each shelf. How many shelves did they use? ",
+        "solution": "3",
+        "id": 30
+    },
+    {
+        "problem": " Gwen was organizing her book case making sure each of the shelves had exactly 4 books on it. If she had 5 shelves of mystery books and 3 shelves of picture books, how many books did she have total? ",
+        "solution": "32",
+        "id": 31
+    },
+    {
+        "problem": " Wendy uploaded 79 pictures to Facebook. She put 44 pics into one album and put the rest into 5 different albums. How many pictures were in each album? ",
+        "solution": "7",
+        "id": 32
+    },
+    {
+        "problem": " The schools debate team had 5 boys and 40 girls on it. If they were split into groups of 9 how many groups could they make? ",
+        "solution": "5",
+        "id": 33
+    },
+    {
+        "problem": " April's discount flowers was having a sale where each rose was 7 dollars. If April started with 9 roses and had 4 roses left, how much money did she earn? ",
+        "solution": "35",
+        "id": 34
+    },
+    {
+        "problem": " A trivia team had 11 members total, but during a game 6 members didn't show up. If each member that did show up scored 9 points, how many points were scored total? ",
+        "solution": "45",
+        "id": 35
+    },
+    {
+        "problem": " A pet store had 13 siamese cats and 5 house cats. During a sale they sold 10 cats. How many cats do they have left? ",
+        "solution": "8",
+        "id": 36
+    },
+    {
+        "problem": " Victor was working as a sacker at a grocery store where he made 6 dollars an hour. On Monday he worked 5 hours and on Tuesday he worked 5 hours. How much money did Victor make in those two days? ",
+        "solution": "60",
+        "id": 37
+    },
+    {
+        "problem": " Megan baked 71 cupcakes for her school's bake sale. If her brother, Todd, ate 43 of them how many packages could she make if she put 7 cupcake in each package? ",
+        "solution": "4",
+        "id": 38
+    },
+    {
+        "problem": " There were 2 friends playing a video game online when 2 more players joined the game. If each player had 6 lives, how many lives did they have total? ",
+        "solution": "24",
+        "id": 39
+    },
+    {
+        "problem": " Sam had 10 socks. If he threw away 3 old ones that didn't fit and bought 36 new ones, how many socks would he have? ",
+        "solution": "43",
+        "id": 40
+    },
+    {
+        "problem": " Wendy picked 103 flowers for her friend\u2019s wedding. She was making bouquets with 8 flowers in each one. If 47 of the flowers wilted before the wedding, how many bouquets could she still make? ",
+        "solution": "7",
+        "id": 41
+    },
+    {
+        "problem": " Adam had 48 books. If he sold 19 of them and used the money he earned to buy 38 new books, how many books would Adam have? ",
+        "solution": "67",
+        "id": 42
+    },
+    {
+        "problem": " Nancy's class is going on a field trip to the zoo. If each van can hold 5 people and there are 12 students and 3 adults going, how many vans will they need? ",
+        "solution": "3",
+        "id": 43
+    },
+    {
+        "problem": " For a birthday party Tom bought 4 regular sodas and 52 diet sodas. If his fridge would only hold 7 on each shelf, how many shelves would he fill up? ",
+        "solution": "8",
+        "id": 44
+    },
+    {
+        "problem": " The school cafeteria had 38 apples. If they used 20 to make lunch for the students and then bought 28 more, how many apples would they have? ",
+        "solution": "46",
+        "id": 45
+    },
+    {
+        "problem": " Luke was helping the cafeteria workers pick up lunch trays, but he could only carry 4 trays at a time. If he had to pick up 20 trays from one table and 16 trays from another, how many trips will he make? ",
+        "solution": "9",
+        "id": 46
+    },
+    {
+        "problem": " The cafeteria had 96 apples. For lunch they handed out 42 to students and decided to use the rest to make pies. If each pie takes 6 apples, how many pies could they make? ",
+        "solution": "9",
+        "id": 47
+    },
+    {
+        "problem": " Henry had 3 action figures, but needed 8 total for a complete collection. If each one costs $6, how much money would he need to finish his collection? ",
+        "solution": "30",
+        "id": 48
+    },
+    {
+        "problem": " Frank had saved up 3 dollars. If he received another 37 dollars for his allowance, how many 8 dollar toys could he buy? ",
+        "solution": "5",
+        "id": 49
+    },
+    {
+        "problem": " Vanessa and her mom were picking carrots from their garden. Vanessa picked 17 and her mother picked 14. If only 24 of the carrots were good, how many bad carrots did they have? ",
+        "solution": "7",
+        "id": 50
+    },
+    {
+        "problem": " At a company picnic 23 managers and 7 employees decided to start a game of volleyball. If they split into 6 teams how many people would be on each team? ",
+        "solution": "5",
+        "id": 51
+    },
+    {
+        "problem": " Tiffany baked 8 brownies, but needed 17 total for her party. If she used 8 cups of flour on each one, how much cups of flour does she still need? ",
+        "solution": "72",
+        "id": 52
+    },
+    {
+        "problem": " Carol and her mom were picking carrots from their garden. Carol picked 29 and her mother picked 16. If only 38 of the carrots were good, how many bad carrots did they have? ",
+        "solution": "7",
+        "id": 53
+    },
+    {
+        "problem": " A worksheet had 7 problems on it. If a teacher had 17 worksheets to grade and had already graded 8 of them, how many more problems does she have to grade? ",
+        "solution": "63",
+        "id": 54
+    },
+    {
+        "problem": " There were 8 friends playing a video game online when 2 more players joined the game. If each player had 6 lives, how many lives did they have total? ",
+        "solution": "60",
+        "id": 55
+    },
+    {
+        "problem": " At the arcade Cody won 49 tickets. If he spent 25 tickets on a beanie and later won 6 more tickets, how many would he have? ",
+        "solution": "30",
+        "id": 56
+    },
+    {
+        "problem": " For Halloween Bianca received 78 pieces of candy. She ate 30 pieces then placed the rest into piles with 8 in each pile. How many piles could she make? ",
+        "solution": "6",
+        "id": 57
+    },
+    {
+        "problem": " There were 5 friends playing a video game online when 2 more players joined the game. If each player had 8 lives, how many lives did they have total? ",
+        "solution": "56",
+        "id": 58
+    },
+    {
+        "problem": " At a restaurant each adult meal costs $8 and kids eat free. If a group of 11 people came in and 2 were kids, how much would it cost for the group to eat? ",
+        "solution": "72",
+        "id": 59
+    },
+    {
+        "problem": " Roger had 25 books. If he sold 21 of them and used the money he earned to buy 30 new books, how many books would Roger have? ",
+        "solution": "34",
+        "id": 60
+    },
+    {
+        "problem": " Wendy was playing a video game and had 10 lives. In a hard part of the game she lost 6 lives. If she got 37 more lives in the next level, how many lives would she have? ",
+        "solution": "41",
+        "id": 61
+    },
+    {
+        "problem": " Frank made 19 dollars mowing lawns over the summer. If he spent 11 dollars buying new mower blades, how many 2 dollar games could he buy with the money he had left? ",
+        "solution": "4",
+        "id": 62
+    },
+    {
+        "problem": " There school's baseball team had 48 new players and 6 returning players. If the coach put them into groups with 6 players in each group, how many groups would there be? ",
+        "solution": "9",
+        "id": 63
+    },
+    {
+        "problem": " Nancy had 80 files on her computer. She deleted 31 of them and put the rest into folders with 7 files in each one. How many folders did Nancy end up with? ",
+        "solution": "7",
+        "id": 64
+    },
+    {
+        "problem": " Luke was selling his old games. He started out with 39 but sold 19 of them. He packed the rest up putting 4 games into each box. How many boxes did he have to use? ",
+        "solution": "5",
+        "id": 65
+    },
+    {
+        "problem": " There are 65 students trying out for the school's trivia teams. If 17 of them didn't get picked for the team and the rest were put into 8 groups, how many students would be in each group? ",
+        "solution": "6",
+        "id": 66
+    },
+    {
+        "problem": " Isabel uploaded 25 pictures to Facebook. She put 10 pics into one album and put the rest into 5 different albums. How many pictures were in each album? ",
+        "solution": "3",
+        "id": 67
+    },
+    {
+        "problem": " Mike made 14 dollars mowing lawns and 26 dollars weed eating. If he only spent 5 dollar a week, how long would the money last him? ",
+        "solution": "8",
+        "id": 68
+    },
+    {
+        "problem": " Vanessa had 16 music files and 48 video files on her flash drive. If she deleted 30 of the files, how many files were still on her flash drive? ",
+        "solution": "34",
+        "id": 69
+    },
+    {
+        "problem": " Dave had to wash 9 short sleeve shirts and 27 long sleeve shirts before school. If he had only washed 20 of them by the time school started, how many did he not wash? ",
+        "solution": "16",
+        "id": 70
+    },
+    {
+        "problem": " A chef needs to cook 9 potatoes. He has already cooked 7. If each potato takes 3 minutes to cook, how long will it take him to cook the rest? ",
+        "solution": "6",
+        "id": 71
+    },
+    {
+        "problem": " While on vacation, Gwen took 41 pictures at the zoo and 29 at the museum. If she later deleted 15 of the pictures, how many pictures from her vacation did she still have? ",
+        "solution": "55",
+        "id": 72
+    },
+    {
+        "problem": " A pet shelter had 2 puppies when another 34 were brought in. If 4 puppies a day are adopted, how long would it take for all of them to be adopted? ",
+        "solution": "9",
+        "id": 73
+    },
+    {
+        "problem": " Will had 59 pieces of clothing to wash. He put 32 of them in one load, but decided to split the rest into 9 equal loads. How many pieces of clothing could go in each of the small loads? ",
+        "solution": "3",
+        "id": 74
+    },
+    {
+        "problem": " Adam bought 2 boxes of chocolate candy and 5 boxes of caramel candy. If each box has 4 pieces inside it, how much candy did he have total? ",
+        "solution": "28",
+        "id": 75
+    },
+    {
+        "problem": " April's discount flowers was having a sale where each flower was 6 dollars. If Katie bought 5 roses and 5 daisies, how much did she spend? ",
+        "solution": "60",
+        "id": 76
+    },
+    {
+        "problem": " At the schools book fair Victor bought 32 adventure books and 37 mystery books. If 16 of the books were used, how many new books did he buy? ",
+        "solution": "53",
+        "id": 77
+    },
+    {
+        "problem": " Maria picked 48 carrots from her garden. If she threw out 11 of them and then picked 15 more the next day, how many carrots would she have total? ",
+        "solution": "52",
+        "id": 78
+    },
+    {
+        "problem": " A florist had 50 roses. If she sold 15 of them and then later picked 21 more, how many roses would she have? ",
+        "solution": "56",
+        "id": 79
+    },
+    {
+        "problem": " Isabel had 2 pages of math homework and 4 pages of reading homework. If each page had 5 problems on it, how many problems did she have to complete total? ",
+        "solution": "30",
+        "id": 80
+    },
+    {
+        "problem": " There were 4 friends playing a video game online when 5 more players joined the game. If each player had 3 lives, how many lives did they have total? ",
+        "solution": "27",
+        "id": 81
+    },
+    {
+        "problem": " Kaleb had 12 dollars. If he spent 8 bucks on a new game, how many 2 dollar toys could he buy with the money he had left? ",
+        "solution": "2",
+        "id": 82
+    },
+    {
+        "problem": " Katie had 7 pages of math homework and 3 pages of reading homework. If each page had 9 problems on it, how many problems did she have to complete total? ",
+        "solution": "90",
+        "id": 83
+    },
+    {
+        "problem": " While shopping for music online, Janet bought 6 country albums and 2 pop albums. Each album came with a lyric sheet and had 9 songs. How many songs did Janet buy total? ",
+        "solution": "72",
+        "id": 84
+    },
+    {
+        "problem": " Jerry made 14 dollars mowing lawns and 31 dollars weed eating. If he only spent 5 dollar a week, how long would the money last him? ",
+        "solution": "9",
+        "id": 85
+    },
+    {
+        "problem": " Adam had 33 books. If he sold 11 of them and used the money he earned to buy 23 new books, how many books would Adam have? ",
+        "solution": "45",
+        "id": 86
+    },
+    {
+        "problem": " Kaleb was collecting cans for recycling. On Saturday he filled 5 bags up and on Sunday he filled 5 more bags. If each bag had 4 cans in it, how many cans did he pick up total? ",
+        "solution": "40",
+        "id": 87
+    },
+    {
+        "problem": " Nancy was organizing her book case making sure each of the shelves had exactly 6 books on it. If she had 2 shelves of mystery books and 6 shelves of picture books, how many books did she have total? ",
+        "solution": "48",
+        "id": 88
+    },
+    {
+        "problem": " Paul had saved up 3 dollars. If he received another 7 dollars for his allowance, how many 5 dollar toys could he buy? ",
+        "solution": "2",
+        "id": 89
+    },
+    {
+        "problem": " Wendy was playing a video game and had 43 lives. In a hard part of the game she lost 8 lives. If she got 39 more lives in the next level, how many lives would she have? ",
+        "solution": "74",
+        "id": 90
+    },
+    {
+        "problem": " Katie had 85 files on her computer. She deleted 40 of them and put the rest into folders with 5 files in each one. How many folders did Katie end up with? ",
+        "solution": "9",
+        "id": 91
+    },
+    {
+        "problem": " Will was working as a sacker at a grocery store where he made 8 dollars an hour. On Monday he worked 8 hours and on Tuesday he worked 2 hours. How much money did Will make in those two days? ",
+        "solution": "80",
+        "id": 92
+    },
+    {
+        "problem": " For the school bake sale Carol made 19 cupcakes. If she sold 6 of them and then made 27 more, how many cupcakes would she have? ",
+        "solution": "40",
+        "id": 93
+    },
+    {
+        "problem": " A trivia team had 14 members total, but during a game 7 members didn't show up. If each member that did show up scored 5 points, how many points were scored total? ",
+        "solution": "35",
+        "id": 94
+    },
+    {
+        "problem": " A trivia team had 5 members total, but during a game 2 members didn't show up. If each member that did show up scored 6 points, how many points were scored total? ",
+        "solution": "18",
+        "id": 95
+    },
+    {
+        "problem": " Oliver is at the library helping put away books. There are 46 book to put away total but a librarian takes 10 of them and leaves Oliver with the rest. If he can fit 4 books on a shelf, how many shelves will he need? ",
+        "solution": "9",
+        "id": 96
+    },
+    {
+        "problem": " Luke was putting his spare change into piles. He had 5 piles of quarters and 5 piles of dimes. If each pile had 3 coins in it, how many coins did he have total? ",
+        "solution": "30",
+        "id": 97
+    },
+    {
+        "problem": " Gwen and her friends were recycling paper for their class. For every 3 pounds they recycled they earned one point. If Gwen recycled 5 pounds and her friends recycled 13 pounds, how many points did they earn? ",
+        "solution": "6",
+        "id": 98
+    },
+    {
+        "problem": " Haley's favorite band was holding a concert where tickets were 4 dollars each. Haley bought 3 tickets for herself and her friends and 5 extra tickets in case anyone else wanted to go. How much did she spend? ",
+        "solution": "32",
+        "id": 99
+    },
+    {
+        "problem": " George had 30 dollars. For his birthday he got 16 more dollars but spent 38 on a new game. How much money does he have now? ",
+        "solution": "8",
+        "id": 100
+    },
+    {
+        "problem": " A pet store has 4 bird cages. If each cage has 8 parrots and 2 parakeets in it, how many birds does the pet store have total? ",
+        "solution": "40",
+        "id": 101
+    },
+    {
+        "problem": " Kaleb bought 14 boxes of chocolate candy and gave 5 to his little brother. If each box has 6 pieces inside it, how many pieces did Kaleb still have? ",
+        "solution": "54",
+        "id": 102
+    },
+    {
+        "problem": " Robin uploaded 31 pictures from her phone and 5 from her camera to facebook. If she sorted the pics into 9 different albums with the same amount of pics in each album, how many pictures were in each of the albums? ",
+        "solution": "4",
+        "id": 103
+    },
+    {
+        "problem": " Mike made 69 dollars mowing lawns over the summer. If he spent 24 dollars buying new mower blades, how many 5 dollar games could he buy with the money he had left? ",
+        "solution": "9",
+        "id": 104
+    },
+    {
+        "problem": " Maria bought 2 new chairs and 2 new tables for her house. If she spent 8 minutes on each piece furniture putting it together, how many minutes did it take her to finish? ",
+        "solution": "32",
+        "id": 105
+    },
+    {
+        "problem": " While on vacation, Rachel took 6 pictures at the zoo and 9 at the museum. If she later deleted 11 of the pictures, how many pictures from her vacation did she still have? ",
+        "solution": "4",
+        "id": 106
+    },
+    {
+        "problem": " Maria was making baggies of cookies with 8 cookies in each bag. If she had 5 chocolate chip cookies and 19 oatmeal cookies, how many baggies could she make? ",
+        "solution": "3",
+        "id": 107
+    },
+    {
+        "problem": " April's discount flowers was having a sale where each flower was 3 dollars. If Zoe bought 8 roses and 2 daisies, how much did she spend? ",
+        "solution": "30",
+        "id": 108
+    },
+    {
+        "problem": " Bianca was organizing her book case making sure each of the shelves had exactly 8 books on it. If she had 5 shelves of mystery books and 4 shelves of picture books, how many books did she have total? ",
+        "solution": "72",
+        "id": 109
+    },
+    {
+        "problem": " John was organizing his baseball cards in a binder with 3 on each page. If he had 8 new cards and 16 old cards to put in the binder, how many pages would he use? ",
+        "solution": "8",
+        "id": 110
+    },
+    {
+        "problem": " Isabel baked 3 brownies, but needed 5 total for her party. If she used 5 cups of flour on each one, how much cups of flour does she still need? ",
+        "solution": "10",
+        "id": 111
+    },
+    {
+        "problem": " For the school bake sale Maria made 19 cupcakes. If she sold 5 of them and then made 10 more, how many cupcakes would she have? ",
+        "solution": "24",
+        "id": 112
+    },
+    {
+        "problem": " Tom bought 40 tickets at the state fair. He spent 28 tickets at the 'dunk a clown' booth and decided to use the rest on rides. If each ride cost 4 tickets, how many rides could he go on? ",
+        "solution": "3",
+        "id": 113
+    },
+    {
+        "problem": " In fourth grade there were 31 students at the start of the year. During the year 5 students left and 11 new students came to school. How many students were in fourth grade at the end? ",
+        "solution": "37",
+        "id": 114
+    },
+    {
+        "problem": " While shopping, Maria bought 35 green towels and 21 white towels. If she gave her mother 34 of them, how many towels did Maria end up with? ",
+        "solution": "22",
+        "id": 115
+    },
+    {
+        "problem": " While playing a trivia game, Adam answered 8 questions correct in the first half and 2 questions correct in the second half. If each question was worth 8 points, what was his final score? ",
+        "solution": "80",
+        "id": 116
+    },
+    {
+        "problem": " Paul was collecting cans for recycling. On Saturday he filled 6 bags up and on Sunday he filled 3 more bags. If each bag had 8 cans in it, how many cans did he pick up total? ",
+        "solution": "72",
+        "id": 117
+    },
+    {
+        "problem": " Bianca and her friends were recycling paper for their class. For every 3 pounds they recycled they earned one point. If Bianca recycled 24 pounds and her friends recycled 3 pounds, how many points did they earn? ",
+        "solution": "9",
+        "id": 118
+    },
+    {
+        "problem": " A group of 3 friends went into a restaurant. The chef already had 8 chicken wings cooked but cooked 10 more for the group. If they each got the same amount how many would each person get? ",
+        "solution": "6",
+        "id": 119
+    },
+    {
+        "problem": " John had 33 socks. If he threw away 19 old ones that didn't fit and bought 13 new ones, how many socks would he have? ",
+        "solution": "27",
+        "id": 120
+    },
+    {
+        "problem": " There school's baseball team had 2 new players and 6 returning players. If the coach put them into groups with 4 players in each group, how many groups would there be? ",
+        "solution": "2",
+        "id": 121
+    },
+    {
+        "problem": " A painter needed to paint 6 rooms in a building. Each room takes 5 hours to paint. If he already painted 2 rooms, how much longer will he take to paint the rest? ",
+        "solution": "20",
+        "id": 122
+    },
+    {
+        "problem": " A waiter had 22 customers in his section. If 14 of them left and the rest of his tables had 4 people at each table, how many tables did he have? ",
+        "solution": "2",
+        "id": 123
+    },
+    {
+        "problem": " Roger had 120 pieces of clothing to wash. He put 48 of them in one load, but decided to split the rest into 9 equal loads. How many pieces of clothing could go in each of the small loads? ",
+        "solution": "8",
+        "id": 124
+    },
+    {
+        "problem": " In fourth grade there were 10 students at the start of the year. During the year 4 students left and 42 new students came to school. How many students were in fourth grade at the end? ",
+        "solution": "48",
+        "id": 125
+    },
+    {
+        "problem": " Roger is at the library helping put away books. There are 14 book to put away total but a librarian takes 2 of them and leaves Roger with the rest. If he can fit 3 books on a shelf, how many shelves will he need? ",
+        "solution": "4",
+        "id": 126
+    },
+    {
+        "problem": " Bianca picked 39 tulips and 49 roses to make flower bouquets. If she only used 81 of the flowers though, how many extra flowers did Bianca pick? ",
+        "solution": "7",
+        "id": 127
+    },
+    {
+        "problem": " Emily bought 4 new chairs and 2 new tables for her house. If she spent 8 minutes on each piece furniture putting it together, how many minutes did it take her to finish? ",
+        "solution": "48",
+        "id": 128
+    },
+    {
+        "problem": " A pet store has 6 bird cages. If each cage has 2 parrots and 7 parakeets in it, how many birds does the pet store have total? ",
+        "solution": "54",
+        "id": 129
+    },
+    {
+        "problem": " Dave had to wash 9 short sleeve shirts and 27 long sleeve shirts before school. If he had only washed 20 of them by the time school started, how many did he not wash? ",
+        "solution": "16",
+        "id": 130
+    },
+    {
+        "problem": " While on vacation, Haley took 50 pictures at the zoo and 8 at the museum. If she later deleted 38 of the pictures, how many pictures from her vacation did she still have? ",
+        "solution": "20",
+        "id": 131
+    },
+    {
+        "problem": " A florist had 5 roses. If she sold 3 of them and then later picked 34 more, how many roses would she have? ",
+        "solution": "36",
+        "id": 132
+    },
+    {
+        "problem": " For a birthday party Cody bought 4 regular sodas and 44 diet sodas. If his fridge would only hold 6 on each shelf, how many shelves would he fill up? ",
+        "solution": "8",
+        "id": 133
+    },
+    {
+        "problem": " The schools debate team had 26 boys and 46 girls on it. If they were split into groups of 9 how many groups could they make? ",
+        "solution": "8",
+        "id": 134
+    },
+    {
+        "problem": " The school cafeteria ordered 6 red apples and 15 green apples for students lunches. But, if only 5 students wanted fruit, how many extra did the cafeteria end up with? ",
+        "solution": "16",
+        "id": 135
+    },
+    {
+        "problem": " At a company picnic 9 managers and 15 employees decided to start a game of volleyball. If they split into 8 teams how many people would be on each team? ",
+        "solution": "3",
+        "id": 136
+    },
+    {
+        "problem": " A book store had 4 books in the bargin bin. If they sold 3 books, but then put 10 more in the bin, how many books would be in the bin? ",
+        "solution": "11",
+        "id": 137
+    },
+    {
+        "problem": " Mike made 42 dollars mowing lawns over the summer. If he spent 10 dollars buying new mower blades, how many 8 dollar games could he buy with the money he had left? ",
+        "solution": "4",
+        "id": 138
+    },
+    {
+        "problem": " A chef needs to cook 13 potatoes. He has already cooked 5. If each potato takes 6 minutes to cook, how long will it take him to cook the rest? ",
+        "solution": "48",
+        "id": 139
+    },
+    {
+        "problem": " Paige had 43 math problems and 12 science problems for homework. If she finished 44 of the problems at school, how many problems did she have to do for homework? ",
+        "solution": "11",
+        "id": 140
+    },
+    {
+        "problem": " April's discount flowers was having a sale where each flower was 8 dollars. If Vanessa bought 3 roses and 3 daisies, how much did she spend? ",
+        "solution": "48",
+        "id": 141
+    },
+    {
+        "problem": " Olivia uploaded 5 pictures from her phone and 35 from her camera to facebook. If she sorted the pics into 8 different albums with the same amount of pics in each album, how many pictures were in each of the albums? ",
+        "solution": "5",
+        "id": 142
+    },
+    {
+        "problem": " Robin was making baggies of cookies with 6 cookies in each bag. If she had 23 chocolate chip cookies and 25 oatmeal cookies, how many baggies could she make? ",
+        "solution": "8",
+        "id": 143
+    },
+    {
+        "problem": " Cody had 45 dollars. For his birthday he got 9 more dollars but spent 19 on a new game. How much money does he have now? ",
+        "solution": "35",
+        "id": 144
+    },
+    {
+        "problem": " Wendy uploaded 22 pictures from her phone and 2 from her camera to facebook. If she sorted the pics into 4 different albums with the same amount of pics in each album, how many pictures were in each of the albums? ",
+        "solution": "6",
+        "id": 145
+    },
+    {
+        "problem": " For Halloween Katie and her sister combined the candy they received. Katie had 8 pieces of candy while her sister had 23. If they ate 8 pieces the first night, how many pieces do they have left? ",
+        "solution": "23",
+        "id": 146
+    },
+    {
+        "problem": " A pet store had 88 puppies. In one day they sold 34 of them and put the rest into cages with 6 in each cage. How many cages did they use? ",
+        "solution": "9",
+        "id": 147
+    },
+    {
+        "problem": " Jerry was helping the cafeteria workers pick up lunch trays, but he could only carry 8 trays at a time. If he had to pick up 9 trays from one table and 7 trays from another, how many trips will he make? ",
+        "solution": "2",
+        "id": 148
+    },
+    {
+        "problem": " Faye was playing a video game where she scores 7 points for each treasure she finds. If she found 2 treasures on the first level and 6 on the second, what would her score be? ",
+        "solution": "56",
+        "id": 149
+    },
+    {
+        "problem": " Megan picked 19 carrots from her garden. If she threw out 4 of them and then picked 46 more the next day, how many carrots would she have total? ",
+        "solution": "61",
+        "id": 150
+    },
+    {
+        "problem": " Wendy had 82 files on her computer. She deleted 37 of them and put the rest into folders with 5 files in each one. How many folders did Wendy end up with? ",
+        "solution": "9",
+        "id": 151
+    },
+    {
+        "problem": " There school's baseball team had 12 new players and 44 returning players. If the coach put them into groups with 8 players in each group, how many groups would there be? ",
+        "solution": "7",
+        "id": 152
+    },
+    {
+        "problem": " Will made 104 dollars mowing lawns over the summer. If he spent 41 dollars buying new mower blades, how many 9 dollar games could he buy with the money he had left? ",
+        "solution": "7",
+        "id": 153
+    },
+    {
+        "problem": " Nancy picked 12 carrots from her garden. If she threw out 2 of them and then picked 21 more the next day, how many carrots would she have total? ",
+        "solution": "31",
+        "id": 154
+    },
+    {
+        "problem": " Roger had 16 dollars. For his birthday he got 28 more dollars but spent 25 on a new game. How much money does he have now? ",
+        "solution": "19",
+        "id": 155
+    },
+    {
+        "problem": " Sam was collecting cans for recycling. On Saturday he filled 3 bags up and on Sunday he filled 4 more bags. If each bag had 9 cans in it, how many cans did he pick up total? ",
+        "solution": "63",
+        "id": 156
+    },
+    {
+        "problem": " A worksheet had 4 problems on it. If a teacher had 16 worksheets to grade and had already graded 8 of them, how many more problems does she have to grade? ",
+        "solution": "32",
+        "id": 157
+    },
+    {
+        "problem": " Paige was unboxing some of her old winter clothes. She found 6 boxes of clothing and inside each box there were 5 scarves and 5 mittens. How many pieces of winter clothing did Paige have total? ",
+        "solution": "60",
+        "id": 158
+    },
+    {
+        "problem": " A chef needs to cook 12 potatoes. He has already cooked 6. If each potato takes 6 minutes to cook, how long will it take him to cook the rest? ",
+        "solution": "36",
+        "id": 159
+    },
+    {
+        "problem": " Luke was selling his old games. He started out with 57 but sold 39 of them. He packed the rest up putting 2 games into each box. How many boxes did he have to use? ",
+        "solution": "9",
+        "id": 160
+    },
+    {
+        "problem": " April's discount flowers was having a sale where each flower was 3 dollars. If Emily bought 2 roses and 2 daisies, how much did she spend? ",
+        "solution": "12",
+        "id": 161
+    },
+    {
+        "problem": " A pet store had 13 puppies. In one day they sold 7 of them and put the rest into cages with 2 in each cage. How many cages did they use? ",
+        "solution": "3",
+        "id": 162
+    },
+    {
+        "problem": " Faye and her mom were picking carrots from their garden. Faye picked 23 and her mother picked 5. If only 12 of the carrots were good, how many bad carrots did they have? ",
+        "solution": "16",
+        "id": 163
+    },
+    {
+        "problem": " Isabel picked 66 flowers for her friend\u2019s wedding. She was making bouquets with 8 flowers in each one. If 10 of the flowers wilted before the wedding, how many bouquets could she still make? ",
+        "solution": "7",
+        "id": 164
+    },
+    {
+        "problem": " At the town carnival Oliver rode the ferris wheel 5 times and the bumper cars 4 times. If each ride cost 7 tickets, how many tickets did he use? ",
+        "solution": "63",
+        "id": 165
+    },
+    {
+        "problem": " Wendy bought 4 new chairs and 4 new tables for her house. If she spent 6 minutes on each piece furniture putting it together, how many minutes did it take her to finish? ",
+        "solution": "48",
+        "id": 166
+    },
+    {
+        "problem": " Ned was trying to expand his game collection. He bought 50 games from a friend and bought 27 more at a garage sale. If 74 of the games didn't work, how many good games did he end up with? ",
+        "solution": "3",
+        "id": 167
+    },
+    {
+        "problem": " A pet store had 38 siamese cats and 25 house cats. During a sale they sold 45 cats. How many cats do they have left? ",
+        "solution": "18",
+        "id": 168
+    },
+    {
+        "problem": " Carol was playing a trivia game. In the first round she scored 17 points and in the second round she scored 6 points. In the last round she lost 16 points. How many points did she have at the end of the game? ",
+        "solution": "7",
+        "id": 169
+    },
+    {
+        "problem": " Dave bought 12 boxes of chocolate candy and gave 5 to his little brother. If each box has 3 pieces inside it, how many pieces did Dave still have? ",
+        "solution": "21",
+        "id": 170
+    },
+    {
+        "problem": " A waiter at 'The Greasy Spoon' restaurant had 39 customers to wait on. During the lunch rush he added another 12 customers. If 49 of the customers didn't leave him a tip, how many customers did leave a tip? ",
+        "solution": "2",
+        "id": 171
+    },
+    {
+        "problem": " The cafeteria had 50 apples. For lunch they handed out 5 to students and decided to use the rest to make pies. If each pie takes 5 apples, how many pies could they make? ",
+        "solution": "9",
+        "id": 172
+    },
+    {
+        "problem": " Oliver had 33 dollars in January. By March he had spent 4 dollars. If he got another 32 dollars from his mom, how much money would he have? ",
+        "solution": "61",
+        "id": 173
+    },
+    {
+        "problem": " The school cafeteria had 14 apples. If they used 13 to make lunch for the students and then bought 49 more, how many apples would they have? ",
+        "solution": "50",
+        "id": 174
+    },
+    {
+        "problem": " While playing a trivia game, Frank answered 3 questions correct in the first half and 2 questions correct in the second half. If each question was worth 3 points, what was his final score? ",
+        "solution": "15",
+        "id": 175
+    },
+    {
+        "problem": " Zoe was unboxing some of her old winter clothes. She found 8 boxes of clothing and inside each box there were 4 scarves and 6 mittens. How many pieces of winter clothing did Zoe have total? ",
+        "solution": "80",
+        "id": 176
+    },
+    {
+        "problem": " Frank and his friend were buying trick decks from the magic shop for 7 dollars each. How much did they spend if Frank bought 3 decks and his friend bought 2 decks? ",
+        "solution": "35",
+        "id": 177
+    },
+    {
+        "problem": " Sam had to wash 40 short sleeve shirts and 23 long sleeve shirts before school. If he had only washed 29 of them by the time school started, how many did he not wash? ",
+        "solution": "34",
+        "id": 178
+    },
+    {
+        "problem": " A waiter had 47 customers to wait on. If 41 customers left and he got another 20 customers, how many customers would he have? ",
+        "solution": "26",
+        "id": 179
+    }
+]
