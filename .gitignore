@@ -1,0 +1,6 @@
+**/__pycache__
+**/.DS_Store
+tmp
+**/nohup.out
+**/out
+**/keys
