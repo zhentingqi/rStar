@@ -1127,13 +1127,13 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
             if args.api == "debug":
                 best_solution, chosen_node, all_solution_nodes, all_solutions = "Debug: I don't know!", None, [], []
             else:
-                _, best_solution, _, chosen_node, all_solution_nodes = find_best_solution(root_node, generator.evaluator, enable_potential_score=args.enable_potential_score)
-                # _, best_solution, _, chosen_node, all_solution_nodes, all_solutions = stochastic_find_best_solution(root_node,
-                #                                                                             generator.evaluator,
-                #                                                                             enable_potential_score=args.enable_potential_score,
-                #                                                                             answer_selection_metric=args.answer_selection_metric,
-                #                                                                             answer_selection_mode=args.answer_selection_mode,
-                #                                                                             topk=args.topk)
+                # _, best_solution, _, chosen_node, all_solution_nodes = find_best_solution(root_node, generator.evaluator, enable_potential_score=args.enable_potential_score)
+                _, best_solution, _, chosen_node, all_solution_nodes, all_solutions = stochastic_find_best_solution(root_node,
+                                                                                            generator.evaluator,
+                                                                                            enable_potential_score=args.enable_potential_score,
+                                                                                            answer_selection_metric=args.answer_selection_metric,
+                                                                                            answer_selection_mode=args.answer_selection_mode,
+                                                                                            topk=args.topk)
                 model_solutions.append(best_solution)
                 model_all_solutions.append(all_solutions)
         else:
