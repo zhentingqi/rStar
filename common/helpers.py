@@ -24,7 +24,7 @@ def fix_seeds(seed):
 
 def setup_model_parallel() -> Tuple[int, int]:
     from fairscale.nn.model_parallel.initialize import initialize_model_parallel
-    
+
     local_rank = int(os.environ.get("LOCAL_RANK", -1))
     world_size = int(os.environ.get("WORLD_SIZE", -1))
 
@@ -57,7 +57,7 @@ def read_txt(file_path):
 
 def regex_calibrate(output_text: str):
     """
-    use regex to extract_answer_from_response the mathematic equation and use python to correct answer 
+    use regex to extract_answer_from_response the mathematic equation and use python to correct answer
     """
     equation_regex = r"([\d\.\%\/\*\+\-\$\s]+) = ([\d\.\$\s]+)(?=[A-Za-z,.;!?]|\b)"
 
@@ -122,7 +122,7 @@ def data_reader(args):
           choice = "Answer Choices:" + choice
           questions.append(json_res["question"].strip() + " " + choice)
           answers.append(json_res["correct"])
-  
+
     elif args.dataset_name == "gsm8k":
       with open(dataset_path) as f:
         lines = f.readlines()
@@ -130,7 +130,7 @@ def data_reader(args):
           json_res = decoder.raw_decode(line)[0]
           questions.append(json_res["question"].strip())
           answers.append(json_res["answer"].split("#### ")[-1])
-  
+
     elif args.dataset_name == "commonsensqa":
       with open(dataset_path) as f:
         lines = f.readlines()
@@ -155,7 +155,7 @@ def data_reader(args):
               a = a[:-2]
           questions.append(q)
           answers.append(a)
-        
+
     elif args.dataset_name == "strategyqa":
       with open(dataset_path) as f:
         json_data = json.load(f)["examples"]
@@ -168,7 +168,7 @@ def data_reader(args):
               a = "no"
           questions.append(q)
           answers.append(a)
-        
+
     elif args.dataset_name == "svamp":
       with open(dataset_path) as f:
         json_data = json.load(f)
@@ -179,7 +179,7 @@ def data_reader(args):
                 a = a[:-2]
             questions.append(q)
             answers.append(a)
-            
+
     elif args.dataset_name in ("bigbench_date", "object_tracking"):
       with open(dataset_path) as f:
         json_data = json.load(f)
@@ -212,8 +212,8 @@ def data_reader(args):
                   #a = key
           q = q + " " + choice
           questions.append(q)
-          answers.append(a)            
-          
+          answers.append(a)
+
     elif args.dataset_name in ("coin_flip", "last_letters"):
       with open(dataset_path) as f:
         json_data = json.load(f)
@@ -223,20 +223,20 @@ def data_reader(args):
           a = line["answer"]
           questions.append(q)
           answers.append(a)
-        
+
     else:
         raise ValueError("dataset is not properly defined ...")
-    
+
     q_len_list = []
     for q in questions:
         q_len_list.append(len(q.split(" ")))
     q_len_mean = mean(q_len_list)
-    
+
     if args.verbose:
         print("dataset : {}".format(args.dataset_name))
         print("data size : {}".format(len(answers)))
         print("average num of words for each sample : {}".format(q_len_mean))
-    
+
     return questions, answers
 
 # Create dataset object before dataloader ...
@@ -245,10 +245,10 @@ class MyDataset(Dataset):
         super().__init__()
         self.questions, self.answers = data_reader(args)
         self.len = len(self.questions)
-        
+
     def __len__(self):
         return self.len
-    
+
     def __getitem__(self, index):
         input = self.questions[index]
         output = self.answers[index]
@@ -266,14 +266,14 @@ def setup_data_loader(args):
         random.seed(worker_seed)
     g = torch.Generator()
     g.manual_seed(worker_seed)
-    
+
     dataloader_num_workers = multiprocessing.cpu_count()
     dataloader_num_workers = min(dataloader_num_workers, args.max_num_worker)
     if args.verbose:
         print("dataloader_num_workers: " + str(dataloader_num_workers))
-    
+
     dataset = MyDataset(args)
-    
+
     dataloader = torch.utils.data.DataLoader(dataset,
                   shuffle=False,
                   batch_size=1,
@@ -292,7 +292,7 @@ def answer_cleansing(args, pred):
 
     if args.method in ("few_shot", "few_shot_cot"):
         preds = pred.split('The answer is')
-        answer_flag = True if len(preds) > 1 else False 
+        answer_flag = True if len(preds) > 1 else False
         if answer_flag:
             # Pick first answer with flag
             pred = preds[1]
@@ -301,7 +301,7 @@ def answer_cleansing(args, pred):
             pred = preds[-1]
     else:
         preds = pred.split('\nTherefore, the answer (arabic numerals) is')
-        answer_flag = True if len(preds) > 1 else False 
+        answer_flag = True if len(preds) > 1 else False
         if answer_flag:
             # Pick first answer with flag
             pred = preds[1]
@@ -346,27 +346,12 @@ def answer_cleansing(args, pred):
             pred = pred[0]
         else:
             raise ValueError("method is not properly defined ...")
-    
+
     # (For arithmetic tasks) if a word ends with period, it will be omitted ...
     if pred != "" and pred[-1] == ".":
             pred = pred[:-1]
-    
+
     if args.verbose:
         print("pred_after : " + pred)
-    
+
     return pred, model_response
-
-
-def is_number(s):    
-    try:      
-        float(s)        
-        return True    
-    except ValueError:  
-        pass  
-    try:        
-        import unicodedata  
-        unicodedata.numeric(s) 
-        return True    
-    except (TypeError, ValueError):        
-        pass    
-        return False

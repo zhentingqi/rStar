@@ -1,8 +1,6 @@
 import torch
 from transformers import (
     GenerationConfig,
-    LlamaForCausalLM,
-    LlamaTokenizer,
     AutoModelForCausalLM,
     AutoTokenizer,
 )
@@ -12,14 +10,14 @@ import numpy as np
 
 
 def load_HF_model(ckpt) -> tuple:
-    tokenizer = LlamaTokenizer.from_pretrained(ckpt)
+    tokenizer = AutoTokenizer.from_pretrained(ckpt)
     model = AutoModelForCausalLM.from_pretrained(
         ckpt,
         load_in_8bit=False,
         torch_dtype=torch.float16,
         device_map="auto",
         trust_remote_code=True,
-    )  # fix zwq
+    )
     return tokenizer, model
 
 

@@ -23,14 +23,14 @@ from sympy.parsing.latex import parse_latex
 
 def has_numbers(input_string: str) -> bool:
     """
-    Checks if a string contains a number. 
+    Checks if a string contains a number.
     """
     return any(char.isdigit() for char in input_string)
 
 
 def has_structure(input_string: str) -> bool:
     """
-    Checks if a string contains structured content. 
+    Checks if a string contains structured content.
     """
     if "(" in input_string or ")" in input_string or "[" in input_string or "]" in input_string or "\\" in input_string or "<" in input_string or ">" in input_string or "," in input_string or 'x' in input_string or 'y' in input_string or 'z' in input_string:
         return True
@@ -51,7 +51,7 @@ def sympy_parse(input_string: str) -> Any:
 
 def symbolic_equal(a: str, b: str) -> Union[bool, None]:
     """
-    Check if two strings are symbolic equal. 
+    Check if two strings are symbolic equal.
     """
     a = sympy_parse(a)
     b = sympy_parse(b)
@@ -78,7 +78,7 @@ def symbolic_equal(a: str, b: str) -> Union[bool, None]:
 
 def convert_to_int(input_string: str) -> Union[int, None]:
     """
-    Try to convert a string into int. Return `None` if an error occurs. 
+    Try to convert a string into int. Return `None` if an error occurs.
     """
     try:
         float_s = float(input_string)
@@ -94,7 +94,7 @@ def convert_to_int(input_string: str) -> Union[int, None]:
 
 def convert_to_float(input_string: str) -> Union[float, None]:
     """
-    Try to convert a string into float. Return `None` if an error occurs. 
+    Try to convert a string into float. Return `None` if an error occurs.
     """
     try:
         float_s = float(input_string)
@@ -105,7 +105,7 @@ def convert_to_float(input_string: str) -> Union[float, None]:
 
 def numerical_equal(a: str, b: str) -> Union[bool, None]:
     """
-    Check if two strings are numerical equal. 
+    Check if two strings are numerical equal.
     """
     a_int = convert_to_int(a)
     b_int = convert_to_int(b)
@@ -143,7 +143,7 @@ def literal_check(model_generated_answer: str, ground_truth: str) -> Union[bool,
 
 def number_check(model_generated_answer: str, ground_truth: str) -> None:
     """
-    Check if two strings have the same mathematical meaning. 
+    Check if two strings have the same mathematical meaning.
     """
     if "," in model_generated_answer or "," in ground_truth:
         return None
@@ -166,17 +166,17 @@ def number_check(model_generated_answer: str, ground_truth: str) -> None:
 def latex_answer_check(model_output, gt_answer, split=None, extract_policy: str="flex", eval_policy: str="aggressive"):
     assert gt_answer is not None
     assert len(gt_answer) > 0
-    
+
     if model_output is None or model_output == "":
         return False
-    
+
     # Step 1: Extract answer from response
     if split is not None:
         model_output = extract_answer(model_output, split, extract_policy = extract_policy)
-        
+
     if model_output is None or model_output == "":
         return False
-    
+
     # Step 2: Remove boxes and perform literal check
     # Compare strings character by character after simple processing including remove $%.
     # First we remove the boxes in the string but keeps the content
@@ -191,8 +191,8 @@ def latex_answer_check(model_output, gt_answer, split=None, extract_policy: str=
         return literal_check_result
 
     # Step 3: Attempt to parse -- single
-    # Treat a string as a single number/extract a single number from a string and then compare. 
-    # 
+    # Treat a string as a single number/extract a single number from a string and then compare.
+    #
     # If we can accept a few mistakes, we try to extract numbers from the answers and compare them
     if eval_policy == "aggressive":
         # We wan't to use raw model_output to keep the $$
@@ -216,7 +216,7 @@ def latex_answer_check(model_output, gt_answer, split=None, extract_policy: str=
         if len(model_ans_num_lst) == 1 and len(gt_num_lst) == 1 and \
             not has_structure(model_output.replace(model_ans_num_lst[0], "")) and \
             not has_structure(gt_answer.replace(gt_num_lst[0], "")):
-            
+
             model_num = remove_prefix_and_suffix(remove_boxes_keep_content(remove_text_box_only(model_ans_num_lst[0])))
             gt_num = remove_prefix_and_suffix(remove_boxes_keep_content(remove_text_box_only(gt_num_lst[0])))
             parse_result = number_check(model_num, gt_num)  #! problematic

@@ -3,7 +3,6 @@ import re
 import math
 from typing import Dict, Tuple
 from colorama import Fore, Style
-import numpy as np
 import math
 from eval_src import Evaluator
 
@@ -16,12 +15,12 @@ class Node_Type(Enum):
     SUBQUESTION = "SUBQUESTION"
     RE_SUBANSWER = "RE_SUBANSWER"
     TOT_STEP = "TOT_STEP"
-    
-    
+
+
 class GeneratorError(Exception):
     def __init__(self, source, io_input, io_output_list) -> None:
         super().__init__()
-        
+
         self.source = source
         self.io_input = io_input
         self.io_output_list = io_output_list
@@ -52,44 +51,44 @@ def reach_terminal_subquestion(subquestion: str, user_question: str):
 
 def reach_terminal_tot_step(tot_step: str):
     assert tot_step is not None
-    
+
     return "answer is" in tot_step.lower()
 
 
 def print_tree_from_root(mcts_searcher, rollout_id, root_node, chosen_node=None, file=None):
     color_print = False if file else True
-    
+
     def my_print(text):
         if file:
             file.write(text + "\n")
         else:
             print(text)
-    
+
     def print_tree(parent_node, node, file, rollout_id):
         to_print = ""
-        
+
         num_indent = 4
         dash = "-" * num_indent * node.depth
         space = " " * num_indent * node.depth
-        
+
         attributes = f"Q: {round(mcts_searcher.Q[node], 2)}" + "; " + f"N: {mcts_searcher.N[node]}" + "; "
         attributes += f"V: {round(node.node_value, 2)}" if node.node_value is not None else "V: None"
-            
+
         uct_value = "UCT: " + str(round(mcts_searcher._compute_uct(parent_node=parent_node, node=node, rollout_id=rollout_id), 2))
         attributes += "; " + uct_value
-        
+
         solution_marker = "(T) " if node.is_valid_solution_node() else ""
 
         node_info = "[" + solution_marker + node.__str__() + ": " + attributes + "]"
         if chosen_node and node == chosen_node:
             node_info = "[" + node_info + "]"
         node_info += " "
-        
+
         if color_print and node.is_valid_solution_node():
             node_details = Fore.RED + Style.BRIGHT + node_info + Fore.RESET + Style.RESET_ALL
         else:
             node_details = node_info
-        
+
         if node.node_type is Node_Type.USER_QUESTION:
             gt = node.expected_answer.replace("\n", " ")
             node_details += f"User: {node.user_question}" + "\n" + space + " " * len(node_info) + f"Ground truth: {gt}"
@@ -103,14 +102,14 @@ def print_tree_from_root(mcts_searcher, rollout_id, root_node, chosen_node=None,
             node_details += f"Re-Ans: {node.re_subanswer}"
         elif node.node_type is Node_Type.TOT_STEP:
             node_details += f"ToT: {node.tot_step}"
-        
+
         to_print += dash + node_details
-        
+
         my_print(to_print)
-        
+
         for child in node.children:
             print_tree(node, child, file, rollout_id)
-            
+
         if node.depth == 0:
             my_print("\n" + "=" * 50 + "\n")
 
@@ -120,14 +119,14 @@ def print_tree_from_root(mcts_searcher, rollout_id, root_node, chosen_node=None,
 def concat_subqs_and_subas(solution_trace: Dict[int, Dict[str, str]], question_index: int) -> Tuple[str, int]:
     """Return: concatenated subqs and suba, next subquestion id"""
     solution_trace_str = ""
-    
+
     for subquestion_id, solution_step in solution_trace.items():
         if subquestion_id == 0:
             continue
-        
+
         assert subquestion_id > 0
         assert "subquestion" in solution_step.keys() and "subanswer" in solution_step.keys()
-        
+
         solution_trace_str += f"Question {question_index}." + str(subquestion_id) + ": " + solution_step["subquestion"]
         solution_trace_str += "\n"
         solution_trace_str += f"Answer {question_index}." + str(subquestion_id) + ": " + solution_step["subanswer"]["text"]
@@ -185,14 +184,14 @@ def concat_subqs_subas_as_tot_steps(solution_trace: Dict[int, Dict[str, str]]) -
             "tot_step": {}
         }
     },
-    
+
     Expected output:
         subqs_subas_as_tot_steps_str:
-        
+
             Step 1: The ducks lay 16 eggs per day.
             Step 2: Janet eats 3 eggs for breakfast and uses 4 eggs for baking muffins. That's a total of 3 + 4 = 7 eggs.
             Step 3: Since the ducks lay 16 eggs per day and Janet eats/use 7 eggs, she has 16 - 7 = 9 eggs left to sell at the market. Each egg is sold for $2, so she makes 9 * 2 = 18 dollars.
-    
+
         next_tot_step_id: 4
     """
     subqs_subas_as_tot_steps_str = ""
@@ -218,7 +217,7 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
     final_step_str = ""
     end_node_type = None
     reward_value = 0.0
-    
+
     for item_idx, (subq_id, solution_step) in enumerate(solution_trace.items()):
         if item_idx == 0:
             if len(solution_step["tot_step"]) == 0 and "direct_answer" in solution_step.keys():
@@ -334,11 +333,11 @@ def concat_solution_trace(solution_trace: Dict[int, Dict[str, str]]):
                 break
             else:
                 import pdb; pdb.set_trace()
-                
-    
+
+
     solution_trace_str = solution_trace_str.replace("Let's think step by step. ", "")
     solution_trace_str = "Let's think step by step. " + solution_trace_str
-    
+
     return solution_trace_str.strip(), final_step_str.strip(), end_node_type, min(0, reward_value) + 1
 
 
@@ -359,7 +358,7 @@ def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
     solution_trace_str = ["Let's think step by step."]
     final_step_str = ""
     end_node_type = None
-    
+
     for item_idx, (subq_id, solution_step) in enumerate(solution_trace.items()):
         if item_idx == 0:
             assert len(solution_step["tot_step"]) == 0
@@ -437,7 +436,7 @@ def concat_subq_suba_trace(solution_trace: Dict[int, Dict[str, str]]):
                 break
             else:
                 import pdb; pdb.set_trace()
-    
+
     return solution_trace_str, final_step_str.strip(), end_node_type
 
 
@@ -460,7 +459,7 @@ def mask_solution_trace(solution_trace_str: str, num_return: int, left_boundary:
         prefix_part_num_words = math.ceil(tot_len * prefix_part_ratio)
         prefix_part_str = " ".join(words_in_solution_trace[:prefix_part_num_words])
         masked_solution_traces.append(prefix_part_str)
-        
+
     return masked_solution_traces
 
 
@@ -472,7 +471,7 @@ def mask_subq_suba_trace(solution_trace_str: list, num_return: int, evaluator: E
     else:
         assert num_return > 1
     # TODO: num_return > 1
-    
+
     # Mask the solution trace string from least to most
     masked_solution_traces = []
     for i in range(1, len(solution_trace_str)):
@@ -492,22 +491,22 @@ def mask_subq_suba_trace(solution_trace_str: list, num_return: int, evaluator: E
 def make_hint(solution_trace: Dict[int, Dict[str, str]], node_type: Node_Type, new_subq=None, new_suba=None, new_tot_step=None) -> str:
     if node_type in [Node_Type.SUBQUESTION, Node_Type.RE_SUBANSWER]:
         hint = ""
-        
+
         for subquestion_id, solution_step in solution_trace.items():
             if subquestion_id == 0:
                 continue
-            
+
             assert subquestion_id > 0
             assert "subquestion" in solution_step.keys() and "subanswer" in solution_step.keys()
-            
+
             hint += f"Hint " + str(subquestion_id) + ": " + solution_step["subquestion"]
             hint += " "
             hint += solution_step["subanswer"]["text"]
             hint += "\n"
-            
+
         if new_subq is not None and new_suba is not None:
             hint += f"Hint {len(solution_trace)}: " + new_subq + " " + new_suba
-            
+
         hint = hint.strip("\n")
     elif node_type is Node_Type.TOT_STEP:
         hint = "Hint: "
@@ -516,10 +515,10 @@ def make_hint(solution_trace: Dict[int, Dict[str, str]], node_type: Node_Type, n
         assert last_tuple_recording["tot_step"]
         for step_id, step_text in last_tuple_recording["tot_step"].items():
             hint += step_text + " "
-        
+
         if new_tot_step is not None:
             hint += new_tot_step
-            
+
         hint = hint.strip(" ")
     else:
         raise ValueError(f"Invalid node type: {node_type}.")
@@ -531,33 +530,33 @@ def make_response_prefix(solution_trace: Dict[int, Dict[str, str]], node_type: N
     if node_type in [Node_Type.SUBQUESTION, Node_Type.RE_SUBANSWER]:
         response_prefix = ""
         answer_marker = "The answer is"     #todo: hard code "The answer is"
-        
+
         for subquestion_id, solution_step in solution_trace.items():
             if subquestion_id == 0:
                 continue
-            
+
             assert subquestion_id > 0
             assert "subquestion" in solution_step.keys() and "subanswer" in solution_step.keys()
-            
+
             response_prefix += solution_step["subanswer"]["text"].split(answer_marker)[0]
             response_prefix += " "
-            
+
         if new_subq is not None and new_suba is not None:
             response_prefix += new_suba.split(answer_marker)[0]
-            
+
         response_prefix = response_prefix.strip(" ")
     elif node_type is Node_Type.TOT_STEP:
         response_prefix = ""
-        
+
         last_tuple = list(solution_trace.items())[-1]
         last_tuple_recording = last_tuple[1]
         if "tot_step" in last_tuple_recording.keys():
             for step_id, step_text in last_tuple_recording["tot_step"].items():
                 response_prefix += step_text + " "
-        
+
         if new_tot_step is not None:
             response_prefix += new_tot_step
-            
+
         response_prefix = response_prefix.strip(" ")
     elif node_type is None and solution_trace is None:
         response_prefix = ""
@@ -570,7 +569,7 @@ def make_response_prefix(solution_trace: Dict[int, Dict[str, str]], node_type: N
 
 def find_valid_solution_nodes(root_node):
     valid_solution_nodes = []
-    
+
     def recursion(node):
         if node.is_valid_solution_node():
             valid_solution_nodes.append(node)
@@ -583,10 +582,10 @@ def find_valid_solution_nodes(root_node):
             recursion(child)
 
     recursion(root_node)
-    
+
     return valid_solution_nodes
 
-    
+
 def find_best_solution(root_node, evaluator, enable_potential_score=False):
     #todo: what strategy do we use to select best node?
     """The function finds the best solution from the solution nodes in the MCTS tree.
@@ -596,7 +595,7 @@ def find_best_solution(root_node, evaluator, enable_potential_score=False):
 
     if len(solution_nodes) == 0:
         return None, None
-    
+
     def extract_solution_from_node(node):
         if node.node_type is Node_Type.SUBQUESTION:
             return node.subanswer
@@ -604,23 +603,23 @@ def find_best_solution(root_node, evaluator, enable_potential_score=False):
             return node.direct_answer
         else:
             return None
-    
+
     solutions = [extract_solution_from_node(node) for node in solution_nodes]
-    
+
     def calculate_potential_score_for_solution_node(node):
         model_answer = evaluator.extract_answer_from_model_completion(extract_solution_from_node(node))
         potential_answers_history = node.potential_answers_history    # {depth -> [potential answers]}
         assert potential_answers_history[node.depth] is None
-        
+
         potential_score = 1
         for depth, depth_potential_answers in potential_answers_history.items():
             if depth < node.depth:
                 depth_score = sum(evaluator.check_answers_equiv(dpa, model_answer) for dpa in depth_potential_answers) / len(depth_potential_answers)
                 potential_score *= depth_score
-        
+
         node.set_potential_score(potential_score)
         return potential_score
-    
+
     prior_weights = [calculate_potential_score_for_solution_node(node) for node in solution_nodes] if enable_potential_score else None
     top_answer, top_completion, top_completion_id, top_confidence = evaluator.find_most_confident_answer(solutions, prior_weights)
     return top_answer, top_completion, top_confidence, solution_nodes[top_completion_id], solution_nodes
@@ -642,7 +641,7 @@ def stochastic_find_best_solution(
 
     if len(solution_nodes) == 0:
         return None, None
-    
+
     def extract_solution_from_node(node):
         if node.node_type is Node_Type.SUBQUESTION:
             return node.subanswer
@@ -650,25 +649,25 @@ def stochastic_find_best_solution(
             return node.direct_answer
         else:
             return None
-    
+
     solutions = [extract_solution_from_node(node) for node in solution_nodes]
-    
+
     def calculate_potential_score_for_solution_node(node):
         model_answer = evaluator.extract_answer_from_model_completion(extract_solution_from_node(node))
         potential_answers_history = node.potential_answers_history    # {depth -> [potential answers]}
         assert potential_answers_history[node.depth] is None
-        
+
         potential_score = 1
         for depth, depth_potential_answers in potential_answers_history.items():
             if depth < node.depth:
                 depth_score = sum(evaluator.check_answers_equiv(dpa, model_answer) for dpa in depth_potential_answers) / len(depth_potential_answers)
                 potential_score *= depth_score
-        
+
         node.set_potential_score(potential_score)
         return potential_score
-    
+
     prior_weights = [calculate_potential_score_for_solution_node(node) for node in solution_nodes] if enable_potential_score else None
-    top_answer, top_completion, top_completion_id, top_confidence = evaluator.stochastic_find_most_confident_answer(completions = solutions, 
+    top_answer, top_completion, top_completion_id, top_confidence = evaluator.stochastic_find_most_confident_answer(completions = solutions,
                                                                                                              answer_selection_metric = answer_selection_metric,
                                                                                                              answer_selection_mode = answer_selection_mode,
                                                                                                              topk = topk,

@@ -240,7 +240,7 @@ def remove_equals(input_string):
     return input_string
 
 
-def add_prefix_to_filename(path, prefix):  
+def add_prefix_to_filename(path, prefix):
     dirname, filename = os.path.split(path)
     new_filename = prefix + "_" + filename
     new_path = os.path.join(dirname, new_filename)

@@ -65,7 +65,7 @@ def compare_numbers(number_1, number_2):
     return math.isclose(number_1, number_2, rel_tol=1e-3)
 
 def simple_answer_check(model_generated_answer, ground_truth, extract_policy, eval_policy, split):
-    
+
     model_generated_answer = extract_answer(model_generated_answer, split=split, extract_policy=extract_policy)
     if model_generated_answer is None:
         return False

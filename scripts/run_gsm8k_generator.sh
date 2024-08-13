@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=0 python run_src/ours/run_ours.py \
+CUDA_VISIBLE_DEVICES=0 python run_src/run_rstar.py \
     --mode run \
     --method ours \
     --dataset_name GSM8K \

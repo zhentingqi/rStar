@@ -5,7 +5,7 @@ Question: There are 15 trees in the grove. Grove workers will plant trees in the
 Choice 1: There are 15 trees originally.
 Choice 2: There are originally 3 cars.
 Choice 3: There are 20 trees originally.
-Response: Choice 1 logically follows the progression of the problem: recognizing the original amount. However, Choice 2 involves irrelevant information (3 cars) and Choice 3 contains incorrect information (20 trees). Therefore, the best choice is 1. 
+Response: Choice 1 logically follows the progression of the problem: recognizing the original amount. However, Choice 2 involves irrelevant information (3 cars) and Choice 3 contains incorrect information (20 trees). Therefore, the best choice is 1.
 
 Question: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
 Choice 1: Start with 3 cars. 2 more cars arrive, making it 3 + 2 = 5.

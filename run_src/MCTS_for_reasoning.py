@@ -15,7 +15,7 @@ from models.IO_System import IO_System
 from common.helpers import read_txt, read_json
 from eval_src.Evaluator import Evaluator, GSM8KEvaluator
 from MCTS_backbone import MCTS_Searcher, MCTS_Node
-from ours_helpers import (
+from run_src.rstar_helpers import (
     Node_Type,
     GeneratorError,
     reach_terminal_subquestion,
@@ -44,12 +44,12 @@ class Generator:
     def __init__(self, args, tokenizer, model, evaluator: Evaluator) -> None:
         self.io = IO_System(args, tokenizer, model)
         self.evaluator = evaluator
-        
+
         self.num_subquestions = args.num_subquestions
         self.num_tot_steps = args.num_tot_steps
         self.num_votes = args.num_votes
         self.max_tokens = args.max_tokens
-        
+
         self.mcts_reward_mode = args.mcts_reward_mode
         self.mcts_num_last_votes = args.mcts_num_last_votes
 
@@ -60,7 +60,7 @@ class Generator:
         self.decompose_prompt = read_txt(args.decompose_prompt_path)
         self.fewshot_cot_prompt = read_txt(args.fewshot_cot_prompt_path)
         self.fewshot_cot_config = read_json(args.fewshot_cot_config_path)
-        
+
         if args.enable_tot or args.only_enable_tot:
             self.fewshot_tot_prompt = read_txt(args.fewshot_tot_prompt_path)
             self.fewshot_tot_config = read_json(args.fewshot_tot_config_path)
@@ -70,7 +70,7 @@ class Generator:
             self.decompose_prompt_rephrased = read_txt(args.decompose_prompt_rephrased_path)
             self.fewshot_cot_prompt_rephrased = read_txt(args.fewshot_cot_prompt_rephrased_path)
             self.fewshot_tot_prompt_rephrased = read_txt(args.fewshot_tot_prompt_rephrased_path)
-        
+
         self.enable_cache = args.enable_cache
         if args.enable_cache:
             '''template:
@@ -83,14 +83,14 @@ class Generator:
             }
             '''
             self.reasoning_cache = {}
-            
+
         self.enable_potential_score = args.enable_potential_score
         self.enable_self_evaluation = args.enable_self_evaluation
-        
+
         if self.enable_self_evaluation:
             self.evaluation_cot_prompt = read_txt(args.evaluation_cot_dir)
             self.evaluation_decompose_prompt = read_txt(args.evaluation_decompose_dir)
-    
+
     def _extract_from_cache(self, subquestion_list: List[str]):
         high_score_questions = []
         selected_answers = []
@@ -102,7 +102,7 @@ class Generator:
 
         for subquestion in subquestion_list:
             best_match = process.extractOne(subquestion, self.reasoning_cache.keys(), scorer=fuzz.ratio)
-            
+
             if best_match:
                 best_question, best_score = best_match[0], best_match[1]
                 similarity = best_score / 100
@@ -124,7 +124,7 @@ class Generator:
 
         return {
             "high_score_questions": high_score_questions,
-            "selected_answers": selected_answers, # most likely answer corresponding to each subquestion 
+            "selected_answers": selected_answers, # most likely answer corresponding to each subquestion
             "values": values,
             "low_score_questions": low_score_questions,
             "low_score_values": low_score_values,
@@ -134,7 +134,7 @@ class Generator:
 
     def _get_most_likely_answer(self, io_output_list: List[str]) -> Tuple[str, float]:
         assert len(io_output_list) > 0
-        
+
         if len(io_output_list) == 1:
             most_confident_answer_full_completion = io_output_list[0]
             confidence = 1
@@ -143,7 +143,7 @@ class Generator:
                 self.evaluator.find_most_confident_answer(io_output_list)
             )
             assert confidence > 0
-            
+
         return most_confident_answer_full_completion, confidence
 
     def _fewshot_cot_answer_question(self, question: str, paraphrased: bool, num_return: int, hint: str = None):
@@ -158,7 +158,7 @@ class Generator:
         )
         cleaned_io_output_list = [io_output.strip() for io_output in io_output_list]  #! cleaning
         return io_input, cleaned_io_output_list
-        
+
     def generate_direct_answers(self, user_question: str, paraphrased: bool, hint: str):
         direct_answer_list, value_list = [], []
 
@@ -170,7 +170,7 @@ class Generator:
         io_input, cleaned_io_output_list = self._fewshot_cot_answer_question(
             question=user_question, paraphrased=paraphrased, num_return=num_return, hint=hint
         )
-        
+
         try:
             most_likely_answer, likelihood = self._get_most_likely_answer(cleaned_io_output_list)
         except Exception as e:
@@ -243,7 +243,7 @@ class Generator:
                 f"Answer {self.question_index}.{next_subquestion_id}: ",
             ],
         )
-        
+
         # subquestion_list = [io_output.split("?")[0] + "?" for io_output in io_output_list]  # cleaning, you might wanna modify this
         subquestion_list = [o.strip() for o in io_output_list]
         if self.enable_self_evaluation:
@@ -263,8 +263,8 @@ class Generator:
                                                         f"Answer {self.question_index}.{next_subquestion_id}",
                                                         f"Answer {self.question_index}.{next_subquestion_id}:",
                                                         f"Answer {self.question_index}.{next_subquestion_id}: ",
-                                                    ]     
-                                                ) 
+                                                    ]
+                                                )
             for i, evaluation_result in enumerate(evaluation_results):
                 cnt = 0
                 for result in evaluation_result:
@@ -272,13 +272,13 @@ class Generator:
                         cnt += 1
                 evaluation_scores.append(
                     (cnt+1) / (1+len(evaluation_result))
-                )    
-        
+                )
+
         if self.enable_cache:
             reasoning_cache = self._extract_from_cache(subquestion_list)
             """Dict format:
             {
-                "selected_answers": selected_answers, 
+                "selected_answers": selected_answers,
                 "values": values,
                 "high_score_questions": high_score_questions,
                 "low_score_questions": low_score_questions,
@@ -310,7 +310,7 @@ class Generator:
                 + f"Answer {self.question_index}.{next_subquestion_id}:"
             )
             io_input_list.append(io_input)
-            
+
         if self.mcts_reward_mode == "path_average":
             num_return = self.num_votes
         elif self.mcts_reward_mode == "last_only":
@@ -318,7 +318,7 @@ class Generator:
                 num_return = self.mcts_num_last_votes
             else:
                 num_return = self.num_votes
-        
+
         io_output_list = self.io.generate(
             io_input_list,
             max_tokens=512,
@@ -330,7 +330,7 @@ class Generator:
             ],
         )
         cleaned_io_output_list = [[io_output.strip() for io_output in io_output_group] for io_output_group in io_output_list]
-        
+
         if self.enable_cache:
             cleaned_io_output_list_low_score = cleaned_io_output_list[:len(low_score_questions)]
             for i, (low_score_question, low_score_question_cleaned_io_output_list) in enumerate(zip(low_score_questions, cleaned_io_output_list_low_score)):
@@ -345,13 +345,13 @@ class Generator:
                     )
                 subanswer_list.append(most_likely_answer)
                 value_list.append(likelihood)
-                
+
                 self.reasoning_cache[low_score_question] = {
                     "score": likelihood,
                     "answer_list": candidates,
                     "selected_answer": most_likely_answer
                 }
-            
+
             cleaned_io_output_list_unmatched = cleaned_io_output_list[len(low_score_questions):]
             for i, (unmatched_question, unmatched_question_cleaned_io_output_list) in enumerate(zip(unmatched_questions, cleaned_io_output_list_unmatched)):
                 candidates = unmatched_question_cleaned_io_output_list
@@ -365,13 +365,13 @@ class Generator:
                     )
                 subanswer_list.append(most_likely_answer)
                 value_list.append(likelihood)
-                
+
                 self.reasoning_cache[unmatched_question] = {
                     "score": likelihood,
                     "answer_list": candidates,
                     "selected_answer": most_likely_answer
                 }
-                
+
             subquestion_list = high_score_questions + low_score_questions + unmatched_questions
             subanswer_list = selected_answers + subanswer_list
             value_list = values + value_list
@@ -392,7 +392,7 @@ class Generator:
                     value_list.append(likelihood)
 
         assert len(subquestion_list) == len(subanswer_list) == len(value_list)
-        
+
         #! generate potential answer to the user question
         potential_answers_list: List[List[str]] = []
         if self.enable_potential_score:
@@ -446,7 +446,7 @@ class Generator:
             )
         re_subanswer_list.append(most_likely_answer)
         value_list.append(likelihood)
-        
+
         #! generate potential answer to the user question
         potential_answers_list: List[List[str]] = []
         if self.enable_potential_score:
@@ -480,7 +480,7 @@ class Generator:
         )[0]
         io_output = "Given a list of conditions, please answer the question. Condition 1: " + io_output
         rephrased_user_question_list.append(io_output)
-        
+
         #! generate potential answer to the user question
         potential_answers_list: List[List[str]] = []    # essentially direct answer list
         if self.enable_potential_score:
@@ -496,9 +496,9 @@ class Generator:
             )
         else:
             potential_answers_list = [None] * len(rephrased_user_question_list)
-            
+
         return rephrased_user_question_list, potential_answers_list
-    
+
     def generate_tot_step(self, user_question: str, solution_trace: Dict[int, Dict[str, str]], paraphrased: bool, parent_is_subquestion: bool):
         tot_step_list = []
         if parent_is_subquestion:
@@ -517,7 +517,7 @@ class Generator:
             model_input=io_input, max_tokens=256, num_return=self.num_tot_steps, stop_tokens=["\n", "\n\n"]
         )
         tot_step_list = [io_output.strip() for io_output in io_output_list]
-        
+
         #! generate potential answer to the user question
         potential_answers_list: List[List[str]] = []    # essentially direct answer list
         if self.enable_potential_score:
@@ -536,19 +536,19 @@ class Generator:
                 )
         else:
             potential_answers_list = [None] * len(tot_step_list)
-        
+
         return tot_step_list, potential_answers_list
 
 
 class Reasoning_MCTS_Node(MCTS_Node):
     def __init__(
         self,
-        
+
         parent: "Reasoning_MCTS_Node",
         depth: int,
         node_type: Node_Type,
         verbose: bool = False,
-        
+
         # --- For instantiating root node ---
         node_value: float = None,
         generator: Generator = None,
@@ -561,31 +561,31 @@ class Reasoning_MCTS_Node(MCTS_Node):
         only_enable_subquestion: bool = None,
         only_enable_tot: bool = None,
         # -----------------------------------
-        
+
         # --- For instantiating REPHRASED_USER_QUESTION node ---
         rephrased_user_question: str = None,
         # ------------------------------------------------------
-        
+
         expected_answer: str = None,
-        
+
         # --- For instantiating DIRECT_ANSWER node ---
         direct_answer: str = None,
         # --------------------------------------------
-        
+
         # --- For instantiating SUBQUESTION node ---
         subquestion: str = None,
         subanswer: str = None,
         is_new_subquestion: bool = None,
         # ------------------------------------------
-        
+
         # --- For instantiating RE_SUBANSWER node ---
         re_subanswer: str = None,
         # -------------------------------------------
-        
+
         # --- For instantiating TOT_STEP node ---
         tot_step: str = None,
         # ---------------------------------------
-        
+
         # --- For node selection (not in sanity checks yet) ---
         enable_potential_score: bool = None,
         potential_answers: List[str] = None,
@@ -806,7 +806,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
                 self.subquestion_counter = parent.subquestion_counter + 1
             else:
                 self.subquestion_counter = parent.subquestion_counter
-        
+
         #! record number of tot steps till now
         if parent is None:  # root
             self.tot_step_counter = 0
@@ -828,7 +828,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
         else:
             assert self.node_type is not Node_Type.USER_QUESTION
             self.solution_trace = deepcopy(parent.solution_trace)
-            
+
             if node_type is Node_Type.REPHRASED_USER_QUESTION:
                 self.solution_trace[0]["user_question"] = rephrased_user_question
             elif node_type is Node_Type.DIRECT_ANSWER:
@@ -871,7 +871,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
                 assert self.node_type is not Node_Type.USER_QUESTION
                 self.potential_answers_history = deepcopy(parent.potential_answers_history)
                 self.potential_answers_history[self.depth] = potential_answers
-        
+
     def __str__(self) -> str:
         type2str = {
             Node_Type.USER_QUESTION: "U",
@@ -886,17 +886,17 @@ class Reasoning_MCTS_Node(MCTS_Node):
     def _create_children(self):
         def do_action_generate_direct_answers():
             verbose_print(f"---- Generating direct answers for node {self.id}...", self.verbose)
-            
+
             #! ACTION: generate direct answer for the user question (w/ or w/o hint)
             if (
-                self.node_type is not Node_Type.USER_QUESTION and 
-                self.node_type is not Node_Type.REPHRASED_USER_QUESTION and 
+                self.node_type is not Node_Type.USER_QUESTION and
+                self.node_type is not Node_Type.REPHRASED_USER_QUESTION and
                 self.enable_hinted_direct_answer
             ):
                 hint = make_hint(self.solution_trace, self.node_type)
             else:
                 hint = None
-                
+
             (direct_answer_list, value_list) = self.generator.generate_direct_answers(
                 user_question=self.user_question, paraphrased=self.paraphrased, hint=hint
             )
@@ -915,7 +915,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_subquestions():
             verbose_print(f"---- Generating subquestions for node {self.id}...", self.verbose)
-            
+
             #! ACTION: generate new subquestions
             (subquestion_list, subanswer_list, value_list, potential_answers_list) = self.generator.generate_subquestions(
                 user_question=self.user_question,
@@ -941,7 +941,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_re_subanswers():
             verbose_print(f"---- Generating re-subanswers for node {self.id}...", self.verbose)
-            
+
             #! ACTION: re-generate subanswers for the previous subquestion
             (re_subanswer_list, value_list, potential_answers_list) = self.generator.generate_re_subanswers(
                 user_question=self.user_question,
@@ -964,7 +964,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
 
         def do_action_generate_rephrased_user_question():
             verbose_print(f"---- Generating rephrased user question for node {self.id}...", self.verbose)
-            
+
             #! ACTION: generate paraphrased question for the root question
             rephrased_user_question_list, potential_answers_list = self.generator.generate_rephrased_user_question(
                 user_question=self.user_question
@@ -979,10 +979,10 @@ class Reasoning_MCTS_Node(MCTS_Node):
                         potential_answers=deepcopy(potential_answers),
                     )
                 )
-                
+
         def do_action_generate_tot_step(parent_is_subquestion=False):
             verbose_print(f"---- Generating tot steps for node {self.id}...", self.verbose)
-            
+
             #! ACTION: generate TOT step
             tot_step_list, potential_answers_list = self.generator.generate_tot_step(user_question=self.user_question, solution_trace=self.solution_trace, paraphrased=self.paraphrased, parent_is_subquestion=parent_is_subquestion)
             for tot_step, potential_answers in zip(tot_step_list, potential_answers_list):
@@ -1038,10 +1038,10 @@ class Reasoning_MCTS_Node(MCTS_Node):
             elif self.node_type is Node_Type.TOT_STEP:
                 do_action_generate_tot_step()
                 do_action_generate_direct_answers()
-                
+
         assert self.children
         return self.children
-    
+
     def is_valid_leaf_node(self):
         #! a valid solution can only be in SUBQUESTION type or DIRECT_ANSWER type
         return (
@@ -1055,7 +1055,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
         ) or (
             self.node_type is Node_Type.TOT_STEP and reach_terminal_tot_step(self.tot_step)
         ) or self.node_type is Node_Type.DIRECT_ANSWER
-        
+
     def set_potential_score(self, score: float):
         self.potential_score = score
 
@@ -1079,14 +1079,14 @@ class Reasoning_MCTS_Node(MCTS_Node):
                 return self.node_value
             else:
                 return 0
-    
+
     def skip_backprop(self):
         return self.node_type is Node_Type.USER_QUESTION or self.node_type is Node_Type.REPHRASED_USER_QUESTION
 
 
 def search_for_answers(args, user_question: str, question_id: int, gt_answer: str, generator: Generator):
     verbose_print(f"********************* Searching for answers to question {question_id} ********************* ", args.verbose)
-    
+
     #! build an MCTS searcher
     mcts_searcher = MCTS_Searcher(
         exploration_weight=args.mcts_exploration_weight,
@@ -1122,7 +1122,7 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
     for i in (pbar := trange(args.num_rollouts, disable=True, position=0)):
         rollout_node = mcts_searcher.do_rollout(root_node, i)
         model_rollout_nodes.append(rollout_node)
-        
+
         if not args.disable_answer_selection:
             if args.api == "debug":
                 best_solution, chosen_node, all_solution_nodes, all_solutions = "Debug: I don't know!", None, [], []
@@ -1139,7 +1139,7 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
         else:
             chosen_node = None
             all_solution_nodes = find_valid_solution_nodes(root_node)
-        
+
         if args.save_tree:
             with open(
                 os.path.join(
@@ -1154,7 +1154,7 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
                     chosen_node=chosen_node,
                     file=f,
                 )
-            
+
         # #! record traces per rollout
         # js = [
         #     {
@@ -1166,7 +1166,7 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
         # with open(os.path.join(args.answer_sheets_dir, f"Question {question_id:04d} - Rollout {i} Solutions.json"), "w") as f:
         #     json.dump(js, f)
 
-    #! record final traces 
+    #! record final traces
     js = [
         {
             "trace": node.solution_trace,
@@ -1191,5 +1191,5 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
         js = [node.potential_answers_history for node in all_solution_nodes]
         with open(os.path.join(args.answer_sheets_dir, f"Question {question_id:04d} - Potentials.json"), "w") as f:
             json.dump(js, f)
-    
+
     return model_solutions, i, model_all_solutions

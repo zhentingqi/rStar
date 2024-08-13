@@ -10,17 +10,32 @@ from fuzzywuzzy import fuzz, process
 class Evaluator:
     def __init__(self) -> None:
         self.answer_marker = "answer is"
-    
+
+    def _is_number(self, s) -> Tuple[bool, str]:
+        try:
+            res = float(s)
+            return True, str(res)
+        except:
+            pass
+        try:
+            import unicodedata
+
+            res = unicodedata.numeric(s)
+            return True, str(res)
+        except:
+            pass
+        return False, None
+
     def validate_completion(self, completion: str) -> bool:
         if self.answer_marker.lower() in completion.lower():
             return True
-    
+
         return False
 
     def isolate_answer(self, text: str):
         if text is None:
             return None
-        
+
         assert isinstance(text, str)
         text = text.lower()
         split_ans = text.split(self.answer_marker.lower())
@@ -238,21 +253,6 @@ class GSM8KEvaluator(Evaluator):
     def __init__(self) -> None:
         super().__init__()
 
-    def _is_number(self, s) -> Tuple[bool, str]:
-        try:
-            res = float(s)
-            return True, str(res)
-        except:
-            pass
-        try:
-            import unicodedata
-
-            res = unicodedata.numeric(s)
-            return True, str(res)
-        except:
-            pass
-        return False, None
-
     def check_answers_equiv(self, answer_a: str, answer_b: str):
         """Judge whether two answers are equivalent."""
         is_number_a, number_a = self._is_number(answer_a)
@@ -272,9 +272,9 @@ class GSM8KEvaluator(Evaluator):
         """Extract the answer from the model completion."""
         if completion is None:
             return None
-        
+
         assert isinstance(completion, str)
-        
+
         preds = completion
         preds = preds.split(self.answer_marker)
         answer_flag = True if len(preds) > 1 else False
@@ -305,8 +305,8 @@ class GSM8KEvaluator(Evaluator):
             return None
 
 
-class MULTIARITHEvaluator(GSM8KEvaluator):
-    pass
+GSM8KHARDEvaluator = GSM8KEvaluator
+MULTIARITHEvaluator = GSM8KEvaluator
 
 
 class MATHEvaluator(Evaluator):
@@ -319,10 +319,10 @@ class MATHEvaluator(Evaluator):
 
         if answer_a == "" or answer_b == "":
             return False
-        
+
         answer_a = answer_a.strip()
         answer_b = answer_b.strip()
-        
+
         if answer_a.lower() == answer_b.lower():
             return True
 
@@ -378,30 +378,73 @@ class MATHEvaluator(Evaluator):
         return answer_split
 
 
-class FOLIOEvaluator(Evaluator):
+class SVAMPEvaluator(Evaluator):
+    def __init__(self) -> None:
+        super().__init__()
+
+    def check_answers_equiv(self, answer_a: str, answer_b: str):
+        """Judge whether two answers are equivalent."""
+        is_number_a, number_a = self._is_number(answer_a)
+        is_number_b, number_b = self._is_number(answer_b)
+        if is_number_a and is_number_b:
+            correct = number_a == number_b
+        else:
+            correct = False
+
+        return correct
+
+    def extract_answer_from_gold_solution(self, solution: str):
+        """Extract the answer from the gold solution."""
+        return solution.strip()
+
+    def extract_answer_from_model_completion(self, completion: str):
+        """Extract the answer from the model completion."""
+        if completion is None:
+            return None
+
+        assert isinstance(completion, str)
+
+        preds = completion
+        preds = preds.split(self.answer_marker)
+        answer_flag = True if len(preds) > 1 else False
+        if answer_flag:
+            pred = preds[1]
+        else:
+            pred = preds[-1]
+
+        pred = pred.replace(",", "")
+        pred = [s for s in re.findall(r"-?\d+\.?\d*", pred)]
+
+        if len(pred) == 0:
+            return None
+        else:
+            if answer_flag:
+                pred = pred[0]
+            else:
+                pred = pred[-1]
+
+        if pred != "" and pred[-1] == ".":
+            pred = pred[:-1]
+
+        pred = pred.replace(",", "").replace("\n", "")
+        is_number, pred = self._is_number(pred)
+        if is_number:
+            return pred
+        else:
+            return None
+
+
+class STGEvaluator(Evaluator):
     def __init__(self) -> None:
         super().__init__()
 
     def _format_answer(self, answer: str):
-        answer = answer.lower()
-        
-        # if answer in ["proved", "true", "yes", "correct", "positive", "affirmative", "right", "1", "t", "y"]:
-        #     return "true"
-        # elif answer in ["disproved", "false", "no", "incorrect", "negative", "wrong", "0", "f", "n"]:
-        #     return "false"
-        # elif answer in ["unknown", "uncertain", "not sure", "not known", "not certain", "not sure"]:
-        #     return "unknown"
-        # else:
-        #     return answer
-        
-        if any(answer.startswith(s) for s in ["proved", "true", "yes", "correct", "positive", "affirmative", "right", "1", "t", "y"]):
+        if answer.lower() in ["proved", "true", "yes", "correct", "positive", "affirmative", "right", "1", "t", "y"]:
             return "true"
-        elif any(answer.startswith(s) for s in ["disproved", "false", "no", "incorrect", "negative", "wrong", "0", "f", "n"]):
+        elif answer.lower() in ["disproved", "false", "no", "incorrect", "negative", "wrong", "0", "f", "n"]:
             return "false"
-        elif any(answer.startswith(s) for s in ["unknown", "uncertain", "not sure", "not known", "not certain", "not sure"]):
-            return "unknown"
         else:
-            return answer
+            return answer.lower()
 
     def check_answers_equiv(self, answer_a: str, answer_b: str):
         if answer_a is None or answer_b is None:
@@ -432,109 +475,3 @@ class FOLIOEvaluator(Evaluator):
             return None
 
         return self._format_answer(answer)
-
-
-class BGQAEvaluator(FOLIOEvaluator):
-    def __init__(self) -> None:
-        super().__init__()
-
-
-class LOGIQAEvaluator(Evaluator):
-    def __init__(self) -> None:
-        super().__init__()
-
-    def _format_answer(self, answer: str):
-        assert isinstance(answer, str)
-
-        if answer.lower() in ["a", "a)", "(a)"]:
-            return "a"
-        elif answer.lower() in ["b", "b)", "(b)"]:
-            return "b"
-        elif answer.lower() in ["c", "c)", "(c)"]:
-            return "c"
-        elif answer.lower() in ["d", "d)", "(d)"]:
-            return "d"
-        else:
-            return answer.lower()
-
-    def check_answers_equiv(self, answer_a: str, answer_b: str):
-        if answer_a is None or answer_b is None:
-            return False
-
-        return self._format_answer(answer_a) == self._format_answer(answer_b)
-
-    def extract_answer_from_gold_solution(self, solution: str):
-        if solution is None:
-            return None
-
-        return self._format_answer(solution)
-
-    def extract_answer_from_model_completion(self, completion: str):
-        answer_split = self.isolate_answer(completion)  # note that it is lower case a-d
-        try:
-            if "a" in answer_split:
-                assert not any([choice in answer_split for choice in ["b", "c", "d"]])
-                return "a"
-            elif "b" in answer_split:
-                assert not any([choice in answer_split for choice in ["a", "c", "d"]])
-                return "b"
-            elif "c" in answer_split:
-                assert not any([choice in answer_split for choice in ["a", "b", "d"]])
-                return "c"
-            elif "d" in answer_split:
-                assert not any([choice in answer_split for choice in ["a", "b", "c"]])
-                return "d"
-            else:
-                raise ValueError
-        except:
-            return None
-
-
-class MMLUSTEMEvaluator(Evaluator):
-    def __init__(self) -> None:
-        super().__init__()
-
-    def check_answers_equiv(self, answer_a: str, answer_b: str):
-        return answer_a.upper() == answer_b.upper()
-
-    def extract_answer_from_gold_solution(self, solution: str):
-        return solution
-
-    def extract_answer_from_model_completion(self, completion: str):
-        preds = completion
-        preds = preds.split(self.answer_marker)
-        answer_flag = True if len(preds) > 1 else False
-        if answer_flag:
-            pred = preds[1]
-        else:
-            pred = preds[-1]
-
-        pred = re.findall(r"A|B|C|D|E|F", pred)
-
-        if len(pred) == 0:
-            return "C"
-        else:
-            if answer_flag:
-                pred = pred[0]
-            else:
-                pred = pred[-1]
-
-        if pred != "" and pred[-1] == ".":
-            pred = pred[:-1]
-
-        if pred:
-            return pred
-        else:
-            return "C"
-
-
-if __name__ == "__main__":
-    folio_evaluator = FOLIOEvaluator()
-
-    model_completion_1 = "Let's think step by step. We have \[ det(A^2) = (det(A))^2 \geq 0,\] hence II holds. III is false: as a counterexample take a diagonal matrix with -1 and 1 on the diagonal. Then $A^2$ is the identity matrix. The answer is Czech."
-    model_answer_1 = folio_evaluator.extract_answer_from_model_completion(model_completion_1)
-    model_completion_2 = "Let's think step by step. We have \[ det(A^2) = (det(A))^2 \geq 0,\] hence II holds. III is false: as a counterexample take a diagonal matrix with -1 and 1 on the diagonal. Then $A^2$ is the identity matrix. The answer is czeche."
-    model_answer_2 = folio_evaluator.extract_answer_from_model_completion(model_completion_2)
-    correctness = folio_evaluator.check_answers_equiv(model_answer_1, model_answer_2)
-
-    print(correctness)  # True

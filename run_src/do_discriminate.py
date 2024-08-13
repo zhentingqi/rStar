@@ -3,11 +3,10 @@ import sys, re
 sys.path.append(".")
 
 from common.helpers import fix_seeds, read_json, read_txt
-from eval_src.Evaluator import GSM8KEvaluator, MATHEvaluator, FOLIOEvaluator, LOGIQAEvaluator, MULTIARITHEvaluator
-from run_src.ours.ours_helpers import concat_solution_trace, concat_subq_suba_trace, concat_rap_solution_trace, mask_solution_trace, mask_subq_suba_trace, Node_Type
+from eval_src.Evaluator import *
+from run_src.rstar_helpers import concat_solution_trace, concat_subq_suba_trace, concat_rap_solution_trace, mask_solution_trace, mask_subq_suba_trace, Node_Type
 from models.vLLM_API import load_vLLM_model, generate_with_vLLM_model
 from models.OpenAI_API import generate_with_OpenAI_model
-from vllm.distributed.parallel_state import destroy_model_parallel
 
 from tqdm import tqdm
 import os, json, time, wandb, random, gc, torch
@@ -35,7 +34,7 @@ class Candidate:
 
     def __str__(self):
         return f"Candidate {self.id}: {self.final_answer}"
-    
+
     def to_dict(self):
         return {
             "solution_trace": self.solution_trace,
@@ -44,7 +43,7 @@ class Candidate:
             "final_answer": self.final_answer,
             "id": self.id
         }
-        
+
     @classmethod
     def from_dict(cls, data):
         return cls(
@@ -54,8 +53,8 @@ class Candidate:
             final_answer=data["final_answer"],
             id=data["id"]
         )
-        
-        
+
+
 def group_completions_by_answer(completions: list[str], evaluator):
     answer2completions = {}
     for c in completions:
@@ -73,7 +72,7 @@ def group_completions_by_answer(completions: list[str], evaluator):
     answer2cnt = {ans: len(comps) for ans, comps in answer2completions.items()}
 
     return answer2completions, answer2confidence, answer2cnt
-        
+
 
 def group_candidates_by_answer(candidates: list[Candidate], evaluator, criteria="freq"):
     """Return answer2candidates, answer2confidence, answer2cnt."""
@@ -113,18 +112,18 @@ class Discriminator:
     def __init__(self, args, evaluator):
         self.args = args
         self.evaluator = evaluator
-        
+
         self.fewshot_config = read_json(args.fewshot_config_path)
         self.fewshot_template = self.fewshot_config["prompt_template"]
         self.stop_tokens = self.fewshot_config["stop_tokens"]
-        
+
         self.fewshot_prompt = read_txt(args.fewshot_prompt_path)
         self.fewshot_prompt2 = read_txt("./prompts/GSM8K/fewshot_cot/fewshot_cot_prompt_parse_subq.txt")
 
     def _filter_none(self, candidates: list[Candidate]) -> list[Candidate]:
         candidates = [c for c in candidates if c.final_answer is not None]
         return candidates
-    
+
     def _filter_long(self, candidates: list[Candidate]) -> list[Candidate]:
         candidates = [c for c in candidates if len(c.final_answer) <= 100]
         return candidates
@@ -132,7 +131,7 @@ class Discriminator:
     def _filter_reasoning_consistency(self, gen_model, problem: str, candidates: list[Candidate], aux={}) -> list[Candidate]:
         problem_id = aux["problem_id"]
         file_idx = aux["file_idx"]
-        
+
         prompt_template = self.fewshot_template
         fewshot_examples = self.fewshot_prompt
         fewshot_examples2 = self.fewshot_prompt2
@@ -142,16 +141,16 @@ class Discriminator:
         gen_input_list = []
         ground_truth_list = []
         c_completion_num_list = []
-        for c in candidates:    
+        for c in candidates:
             if c.c_type == "default":
-                for masked_solution_trace in c.masked_solution_trace_list:  
+                for masked_solution_trace in c.masked_solution_trace_list:
                     for _ in range(self.args.rc_n_completions):
                         gen_input_list.append(
                             prompt_template.format(examples=fewshot_examples, instruction=problem) + masked_solution_trace
                         )
                         ground_truth_list.append(c.final_answer)
             else:
-                for masked_solution_trace in c.masked_solution_trace_list: 
+                for masked_solution_trace in c.masked_solution_trace_list:
                     if masked_solution_trace[0].endswith("Now we can answer the question:"):
                         match = re.match('.*((Calculate|calculate|how|How|what|What|Find|find|True or false).*)$', problem)
                         overall_question = match[1].strip() if match else problem.strip()
@@ -165,7 +164,7 @@ class Discriminator:
         """gen_input_list:
         [c1_mask1, c1_mask2, ..., c2_mask1, c2_mask2, ..., ......, ct_mask1, ct_mask2, ...]
         """
-        
+
         # Manually split into batches
         batch_size = self.args.max_num_seqs // self.args.rc_n_completions // 2
         gen_output_list = []
@@ -174,7 +173,7 @@ class Discriminator:
             sub_gen_input_list = gen_input_list[start_idx:end_idx]
             sub_gen_output_list = self._gen_func(gen_model=gen_model, gen_input=sub_gen_input_list, temperature=self.args.rc_temperature, n=1, max_tokens=512, stop_tokens=stop_tokens + ["\n"])
             gen_output_list.extend(sub_gen_output_list)
-        
+
         with open(os.path.join(self.args.discriminate_results_dir, f"problem-{problem_id}.json"), "w") as f:
             js = {
                 "problem_id": problem_id,
@@ -182,11 +181,11 @@ class Discriminator:
                 "gen_output_list": gen_output_list
             }
             json.dump(js, f)
-        
+
         """gen_output_list:
         [[c1_mask1_o1, c1_mask1_o2, ...], [c1_mask2_o1, c1_mask2_o2, ...], ..., [ct_mask1_o1, ct_mask1_o2, ...], [ct_mask2_o1, ct_mask2_o2, ...], ...]
         """
-        
+
         if all(isinstance(item, list) for item in gen_output_list):
             completion_list = []
             for n_completions in gen_output_list:
@@ -197,11 +196,11 @@ class Discriminator:
         elif all(isinstance(item, str) for item in gen_output_list):
             completion_list = gen_output_list
             candidate_group_size = self.args.num_masked_solution_traces
-            
+
         answer_list = [
             self.evaluator.extract_answer_from_model_completion(completion) for completion in completion_list
         ]
-        
+
         count = 0
         completion_group_list = []
         answer_group_list = []
@@ -212,9 +211,9 @@ class Discriminator:
             gt_group_list.append(ground_truth_list[count : count + num])
             count += num
         assert count == len(completion_list) == len(answer_list)
-        
+
         consistent_candidates = []
-        
+
         for c, completion_group, answer_group, gt_answer in zip(candidates, completion_group_list, answer_group_list, gt_group_list):
             candidate_group_size = len(c.masked_solution_trace_list)
             num_consistent = 0
@@ -440,7 +439,7 @@ Solution 1 clearly identifies that Miroslav Venhoda, a Czech choral conductor, p
     def _gen_func(self, gen_model, gen_input, temperature: float, n: int=1, max_tokens: int = 768, stop_tokens=None):
         if temperature == 0.0:
             n = 1
-        
+
         if self.args.api == "vllm":
             response = generate_with_vLLM_model(
                 model=gen_model, input=gen_input, temperature=temperature, n=n, max_tokens=max_tokens, stop=stop_tokens
@@ -475,7 +474,7 @@ Solution 1 clearly identifies that Miroslav Venhoda, a Czech choral conductor, p
                     return [o.text for o in response[0].outputs]
                 elif isinstance(gen_input, list):
                     return [[o.text for o in r.outputs] for r in response]
-        
+
         elif self.args.api == "together":
             raise NotImplementedError
             if isinstance(gen_input, str):
@@ -491,7 +490,7 @@ Solution 1 clearly identifies that Miroslav Venhoda, a Czech choral conductor, p
         _, filtered_answer2confidence, filtered_answer2cnt = group_candidates_by_answer(filtered_candidates, self.evaluator, self.args.rc_criteria)
         print(f"==> Confidence: {filtered_answer2confidence}")
         _, _, unfiltered_answer2cnt = group_candidates_by_answer(unfiltered_candidates, self.evaluator, self.args.rc_criteria)
-        
+
         filtered_answer2survival_rate = {}
         for filtered_ans in filtered_answer2cnt.keys():
             has_existed = False
@@ -502,9 +501,9 @@ Solution 1 clearly identifies that Miroslav Venhoda, a Czech choral conductor, p
                     break
             if not has_existed:
                 filtered_answer2survival_rate[filtered_ans] = 0.0
-        
+
         print(f"==> Survival rates: {filtered_answer2survival_rate}")
-        
+
         filtered_answer2score = {}
         for filtered_ans in filtered_answer2confidence.keys():
             has_existed = False
@@ -515,14 +514,14 @@ Solution 1 clearly identifies that Miroslav Venhoda, a Czech choral conductor, p
                     break
             if not has_existed:
                 filtered_answer2score[filtered_ans] = 0.0
-        
+
         print(f"==> Scores: {filtered_answer2score}")
-        
+
         return filtered_answer2score
 
     def _find_winner_naive(self, candidates: list[Candidate], gt_answer: str = None) -> Candidate:
         print(f"==> Find most confident from: {[c.final_answer for c in candidates]}")
-        
+
         if len(candidates) == 0:
             winner = None
             print(f"==> Winner answer: None")
@@ -538,7 +537,7 @@ Solution 1 clearly identifies that Miroslav Venhoda, a Czech choral conductor, p
             most_confident_answer = max(answer2confidence.keys(), key=lambda x: answer2confidence[x])
             winner = answer2candidates[most_confident_answer][0]
             print(f"==> Winner answer: {most_confident_answer}\n")
-        
+
         return winner
 
     def _find_winner_filtered(self, unfiltered_candidates: list[Candidate], filtered_candidates: list[Candidate], gt_answer: str = None) -> Candidate:
@@ -573,7 +572,7 @@ class MajorityVoteDiscriminator(Discriminator):
         self.tokenizer, self.model = None, None
         if self.args.api == "vllm":
             self.tokenizer, self.model = load_vLLM_model(args.model_ckpt, args.seed, max_num_seqs=args.max_num_seqs)
-                        
+
     def select(self, problem: str, candidates: list[Candidate], gt_answer: str = None, aux={}) -> Candidate:
         print(f"==> Ground truth answer: {gt_answer}")
 
@@ -598,9 +597,9 @@ class MajorityVoteDiscriminator(Discriminator):
 
 def main():
     parser = ArgumentParser()
-    
+
     parser.add_argument("--generator", type=str, default="ours", choices=["ours", "fewshot_cot", "rap"])
-    
+
     parser.add_argument("--note", type=str, default="default")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--api", type=str, default="vllm")
@@ -609,18 +608,18 @@ def main():
     parser.add_argument("--root_dir", type=str, required=True)
     parser.add_argument("--prompt_dir", type=str, required=True)
     parser.add_argument("--dataset_name", type=str, required=True)
-    
+
     parser.add_argument("--disable_save", action="store_true")
     parser.add_argument("--resume", type=str, default=None)
-    
+
     parser.add_argument("--threshold", type=float, default=0.999)
-    
+
     # vLLM
     parser.add_argument("--max_num_seqs", type=int, default=256)
-    
+
     # For multi-choice
     parser.add_argument("--multi_choice_prompt_type", type=str, default=None, choices=["fewshot", "instruct"])
-    
+
     # For reasoning consistency
     parser.add_argument("--mask_left_boundary", type=float, default=0.2)
     parser.add_argument("--mask_right_boundary", type=float, default=0.5)
@@ -633,26 +632,26 @@ def main():
     parser.add_argument("--add_terminal_trace", action="store_true")
     parser.add_argument("--special_parse_subq", action="store_true")
     parser.add_argument("--rc_criteria", type=str, default="freq")
-    
+
     # For multi-discriminator
     parser.add_argument("--enable_multi_discriminator", action="store_true")
     parser.add_argument("--run_number", type=int, default=None)
     parser.add_argument("--partner_model_ckpt", type=str, default=None)
-    
+
     # For caching
     parser.add_argument("--cache_root", type=str, default="cache")
     parser.add_argument("--cache_id", type=str, default="default")
-    
+
     # For rollout
     parser.add_argument("--cutoff_rollout", type=int, default=-1)
     parser.add_argument("--start_idx", type=int, default=-1)
     parser.add_argument("--end_idx", type=int, default=-1)
-    
+
     args = parser.parse_args()
-    
+
     if args.method == 'baseline':
         args.threshold = 0
-    
+
     args.cache_dir = os.path.join(args.cache_root, args.cache_id)
     os.makedirs(args.cache_dir, exist_ok=True)
     args.cache_file = os.path.join(args.cache_dir, f"main_discriminator_cache.json")
@@ -665,10 +664,10 @@ def main():
                 json.dump(vars(args), f, indent=4)
         elif args.run_number == 2:
             assert os.path.exists(args.cache_file), f"Cache file not found: {args.cache_file}"
-    
+
     args.fewshot_config_path = os.path.join(args.prompt_dir, args.dataset_name, "fewshot_cot", "fewshot_cot_config.json")
     args.fewshot_prompt_path = os.path.join(args.prompt_dir, args.dataset_name, "fewshot_cot", "fewshot_cot_prompt.txt")
-    
+
     fix_seeds(args.seed)
     print(args)
 
@@ -677,16 +676,16 @@ def main():
         exp_id = args.resume
     else:
         exp_id = f"dis_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}---{args.note}"
-    
+
     discriminate_out_dir = os.path.join(args.root_dir, exp_id)
     if not args.disable_save:
         os.makedirs(discriminate_out_dir, exist_ok=True)
     args.discriminate_results_dir = os.path.join(discriminate_out_dir, "results")
     if not args.disable_save:
         os.makedirs(args.discriminate_results_dir, exist_ok=True)
-    
+
     recording_file = os.path.join(discriminate_out_dir, "recording.json")
-    
+
     recording = vars(args)
 
     evaluator = eval(f"{args.dataset_name}Evaluator()")
@@ -720,7 +719,7 @@ def main():
         answer_sheet_json_files = [
             os.path.join(answer_sheets_dir, f) for f in os.listdir(answer_sheets_dir) if f.endswith(".json")
         ]
-    
+
     num_correct, num_correct_majvote, num_correct_limit, num_tested = 0, 0, 0, 0
     terminal_trace_is_valid = True
     with tqdm(total=len(answer_sheet_json_files), disable=True) as pbar:
@@ -748,14 +747,14 @@ def main():
                     answer_js = read_json(answer_js_file)
                 except:
                     continue
-                
+
                 try:
                     problem = answer_js["problem"]
                     # assert problem_id == answer_js["id"]
                     gold_answer = answer_js["gold_answer"]
                 except:
                     pass
-                
+
                 if args.generator == "ours":
                     if args.add_solution_trace:
                         solutions_js = read_json(answer_js_file.replace("Answer", "Final Solutions"))
@@ -871,7 +870,7 @@ def main():
                             print("You are very confident. Skipping...")
                         else:
                             discriminator.cache_main_discriminator_filter_results(candidates, problem, gold_answer, file_idx)
-                            
+
                     pbar.set_description(
                         f"File {file_idx} processed by main discriminator",
                         refresh=True,
@@ -915,7 +914,7 @@ def main():
                     info = f"Acc: {num_correct / num_tested:.4f}; Majority vote acc: {num_correct_majvote / num_tested:.4f}; Limit acc: {num_correct_limit / num_tested:.4f}"
                     print(info)
                     pbar.set_description(info, refresh=True)
-                
+
             pbar.update(1)
     #! --------------------------------------------------------
 
@@ -936,13 +935,13 @@ def main():
             "limit_accuracy": num_correct_limit / num_tested,
             "avg_num_candidates": total_num_candidates / num_tested,
         })
-        
+
         print(f"Recording: \n{recording}")
-        
+
         if not args.disable_save:
             with open(recording_file, "w") as f:
                 json.dump(recording, f, indent=4)
-                
+
 
 if __name__ == "__main__":
     main()

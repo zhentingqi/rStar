@@ -15,11 +15,11 @@ except:
 
 class IO_System:
     """Input/Output system"""
-    
+
     def __init__(self, args, tokenizer, model) -> None:
         self.api = args.api
         if self.api == "together":
-            assert tokenizer is None and model is None  
+            assert tokenizer is None and model is None
         elif self.api == "gpt3.5-turbo":
             assert tokenizer is None and isinstance(model, str)
         self.model_ckpt = args.model_ckpt
@@ -28,17 +28,17 @@ class IO_System:
         self.top_p = args.top_p
         self.tokenizer = tokenizer
         self.model = model
-        
+
         self.call_counter = 0
         self.token_counter = 0
-    
+
     def generate(self, model_input, max_tokens: int, num_return: int, stop_tokens):
         if isinstance(model_input, str):
             if self.api == 'vllm':
                 vllm_response = generate_with_vLLM_model(
                                 self.model,
                                 input=model_input,
-                                temperature=self.temperature, 
+                                temperature=self.temperature,
                                 top_p=self.top_p,
                                 top_k=self.top_k,
                                 n=num_return,
@@ -71,7 +71,7 @@ class IO_System:
                 vllm_response = generate_with_vLLM_model(
                                 self.model,
                                 input=model_input,
-                                temperature=self.temperature, 
+                                temperature=self.temperature,
                                 top_p=self.top_p,
                                 top_k=self.top_k,
                                 n=num_return,
@@ -101,5 +101,5 @@ class IO_System:
                 io_output_list = [["Debug: The answer is generated with debug mode, 233." for _ in range(num_return)] for _ in model_input]
             else:
                 raise NotImplementedError(f"API {self.api} is not implemented.")
-            
+
         return io_output_list

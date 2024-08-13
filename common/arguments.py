@@ -5,28 +5,28 @@ from datetime import datetime
 
 def get_parser():
     parser = ArgumentParser()
-    
+
     parser.add_argument("--note", type=str, default="debug")
-    
+
     allowed_modes = ["run", "eval"]
     parser.add_argument("--mode", type=str, choices=allowed_modes, required=True, help=f"Mode to use: Choose from {allowed_modes}.")
     allowed_apis = ["together", "huggingface", "llama", "vllm", "debug", "gpt3.5-turbo"]
-    parser.add_argument("--api", type=str, choices=allowed_apis, default="vllm", help=f"API to use: Choose from {allowed_apis}.")    
+    parser.add_argument("--api", type=str, choices=allowed_apis, default="vllm", help=f"API to use: Choose from {allowed_apis}.")
     allowed_methods = ["fewshot_cot", "ours", "zeroshot_cot"]
     parser.add_argument("--method", type=str, choices=allowed_methods, required=True, help=f"Method to use: Choose from {allowed_methods}.")
-    
+
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--verbose", action='store_true')
-    
+
     #! WandB settings
     parser.add_argument("--wandb_mode", type=str, default="disabled", choices=["disabled", "online"])
-    
+
     #! LLM settings
     parser.add_argument("--model_ckpt", required=True)
-    
+
     parser.add_argument("--model_parallel", action='store_true')
     parser.add_argument("--half_precision", action='store_true')
-    
+
     parser.add_argument('--max_tokens', type=int,
                         default=1024, help='max_tokens')
     parser.add_argument('--temperature', type=float,
@@ -38,10 +38,10 @@ def get_parser():
     parser.add_argument("--max_num_worker", type=int, default=3, help="maximum number of workers for dataloader")
     parser.add_argument("--test_batch_size", type=int, default=1)  # batch_size
     parser.add_argument("--tensor_parallel_size", type=int, default=1)  # tensor_parallel_size
-    
+
     #! prompt settings
     parser.add_argument("--prompts_root", default="prompts")
-    
+
     #! dataset settings
     parser.add_argument("--data_root", default="data")
     allowed_dataset_names = ["MATH", "GSM8K", "FOLIO", "LOGIQA", "MMLUSTEM", "BGQA", "MULTIARITH"]
@@ -49,11 +49,11 @@ def get_parser():
     parser.add_argument("--test_json_filename", type=str, default="test_all")
     parser.add_argument("--start_idx", type=int, default=0, help="Start index of test questions (inclusive)")
     parser.add_argument("--end_idx", type=int, default=math.inf, help="End index of test questions (inclusive))")
-    
+
     #! outputs settings
     parser.add_argument("--run_outputs_root", type=str, default="run_outputs")
     parser.add_argument("--eval_outputs_root", type=str, default="eval_outputs")
-    
+
     return parser
 
 
@@ -73,10 +73,10 @@ def post_process_args(args):
         os.makedirs(args.eval_outputs_dir, exist_ok=True)
     else:
         raise ValueError(f"Invalid mode: {args.mode}")
-    
+
     args.answer_sheets_dir = os.path.join(args.run_outputs_dir, "answer_sheets")
     os.makedirs(args.answer_sheets_dir, exist_ok=True)
-    
+
     # Check GPU
     num_gpus = torch.cuda.device_count()
     cuda_devices = [torch.cuda.get_device_name(i) for i in range(num_gpus)]
@@ -85,13 +85,13 @@ def post_process_args(args):
     args.cuda_1 = cuda_devices[1] if len(cuda_devices) > 1 else None
     args.cuda_2 = cuda_devices[2] if len(cuda_devices) > 2 else None
     args.cuda_3 = cuda_devices[3] if len(cuda_devices) > 3 else None
-    
+
     if len(cuda_devices) == 1:
         if args.cuda_0 == "NVIDIA A100-SXM4-40GB" and not args.half_precision:
             print("Warning! A100-SXM4-40GB is used, but half_precision is not enabled.")
-            
+
     return args
-    
+
 
 def save_args(args):
     # Save args as json

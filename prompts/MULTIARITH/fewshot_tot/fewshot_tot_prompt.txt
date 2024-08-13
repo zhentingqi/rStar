@@ -5,7 +5,7 @@ There are 15 trees in the grove. Grove workers will plant trees in the grove tod
 Let's think step by step.
 Step 1: Identify the initial number of trees. The problem states there are 15 trees in the grove.
 Step 2: Identify the final number of trees. The problem states there will be 21 trees after the workers are done planting.
-Step 3: Subtract the initial number of trees from the final number of trees to find out how many trees were planted. 
+Step 3: Subtract the initial number of trees from the final number of trees to find out how many trees were planted.
 Step 4: Therefore, the grove workers planted 21 (final number of trees) - 15 (initial number of trees) = 6 trees today.
 Step 5: The answer is 6.
 

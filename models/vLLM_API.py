@@ -1,30 +1,15 @@
 from vllm import LLM, SamplingParams
-from transformers import (
-    GenerationConfig,
-    LlamaForCausalLM,
-    LlamaTokenizer,
-    AutoModelForCausalLM,
-    AutoTokenizer,
-)
+from transformers import AutoTokenizer
 import numpy as np
 import math
-import concurrent
-from concurrent.futures import ThreadPoolExecutor
 
 
 def load_vLLM_model(model_ckpt, seed, tensor_parallel_size=1, half_precision=False, max_num_seqs=256):
-    # if "llama" in model_ckpt.lower():
-    #     tokenizer = LlamaTokenizer.from_pretrained(model_ckpt)
-    # else:
-    #     tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
-        
     tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 
     if half_precision:
-        # llm = LLM(model=model_ckpt, dtype="half", tensor_parallel_size=tensor_parallel_size, seed=seed, trust_remote_code=True, max_num_seqs=max_num_seqs, swap_space=16)
         llm = LLM(model=model_ckpt, dtype="half", tensor_parallel_size=tensor_parallel_size, seed=seed, trust_remote_code=True, max_num_seqs=max_num_seqs, swap_space=16)
     else:
-        # llm = LLM(model=model_ckpt, tensor_parallel_size=tensor_parallel_size, seed=seed, trust_remote_code=True, max_num_seqs=max_num_seqs, swap_space=16)
         llm = LLM(model=model_ckpt, tensor_parallel_size=tensor_parallel_size, seed=seed, trust_remote_code=True, max_num_seqs=max_num_seqs, swap_space=16)
 
     return tokenizer, llm

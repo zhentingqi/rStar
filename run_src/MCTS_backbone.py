@@ -26,16 +26,16 @@ class MCTS_Node(ABC):
     """
     def __init__(self) -> None:
         super().__init__()
-        
+
         global node_cnt
         self.id = node_cnt
         node_cnt += 1
-        
+
         self.rollout_id = None
-    
+
     def set_rollout_id(self, rollout_id: int):
         self.rollout_id = rollout_id
-    
+
     @abstractmethod
     def find_children(self, rollout_id: int):
         "All possible successors of this board state"
@@ -50,35 +50,35 @@ class MCTS_Node(ABC):
     def calculate_reward(self):
         "Assumes `self` is terminal node. 1=win, 0=loss, .5=tie, etc"
         raise NotImplementedError
-    
+
     @abstractmethod
     def skip_backprop(self):
         "If True, the reward of this node will not be accumulated in the backpropagation step."
         raise NotImplementedError
-    
-    
+
+
 class MCTS_Searcher:
     "Monte Carlo tree searcher. First rollout the tree then choose a move."
 
     def __init__(self, exploration_weight: float, weight_scheduler: str, num_rollouts: int, discount: float, reward_mode: str, verbose: bool = False):
         self.Q: Dict[MCTS_Node, float] = defaultdict(lambda : 0.0)  # total reward of each node
-        self.N: Dict[MCTS_Node, int] = defaultdict(lambda : 0)  # total visit count for each node 
+        self.N: Dict[MCTS_Node, int] = defaultdict(lambda : 0)  # total visit count for each node
         self.parent2children: Dict[MCTS_Node, List[MCTS_Node]] = dict()  # children of each node
-        
+
         #! explored = expanded + simulated, i.e. has seen terminal at least once, i.e. we can calculate its UCT value, i.e. has Q and N
-        self.explored_nodes = set()  
-        
+        self.explored_nodes = set()
+
         self.exploration_weight = exploration_weight
         self.weight_scheduler = weight_scheduler
         self.num_rollouts = num_rollouts
         self.discount = discount
         self.reward_mode = reward_mode
-        
+
         self.verbose = verbose
-        
+
         global node_cnt
         node_cnt = 0
-        
+
     def do_rollout(self, root_node: MCTS_Node, rollout_id: int):
         "Make the tree one layer better. (Train for one iteration.)"
         verbose_print("==> Selecting a node...", self.verbose)
@@ -94,7 +94,7 @@ class MCTS_Searcher:
             return path_2[-1]
         except:
             return path_1[-1]
-            
+
 
     def _select(self, node: MCTS_Node, rollout_id: int) -> List[MCTS_Node]:
         "Find an unexplored descendent of `node`"
@@ -114,17 +114,17 @@ class MCTS_Searcher:
                 return path
 
             # case 3: a node has children and all children have been explored, then select one child and go to the next layer
-            node = self._uct_select(node, rollout_id)  
+            node = self._uct_select(node, rollout_id)
 
     def _expand(self, node: MCTS_Node, rollout_id: int):
         "Update the `children` dict with the children of `node`"
         if node in self.explored_nodes:
             return  # already expanded
-        
+
         if node.is_terminal():
             self.explored_nodes.add(node)
             return  # terminal node is non-expandable
-        
+
         self.parent2children[node] = node.find_children(rollout_id)
 
     def _simulate(self, node: MCTS_Node, rollout_id: int) -> List[MCTS_Node]:
@@ -135,10 +135,10 @@ class MCTS_Searcher:
             if cur_node.is_terminal():
                 self.explored_nodes.add(node)
                 return path
-            
+
             if cur_node not in self.parent2children.keys():
                 self.parent2children[cur_node] = cur_node.find_children(rollout_id)
-                
+
             cur_node = random.choice(self.parent2children[cur_node])    # randomly select a child
             path.append(cur_node)
 
