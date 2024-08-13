@@ -165,8 +165,6 @@ if __name__ == "__main__":
     parser.add_argument("--modify_prompts_for_rephrasing", action="store_true")
     parser.add_argument("--disable_a5", action="store_true")
 
-    
-
     #! -------------------------- Used for selecting answer --------------------------
     parser.add_argument("--enable_potential_score", action="store_true")
     parser.add_argument("--disable_answer_selection", action="store_true")

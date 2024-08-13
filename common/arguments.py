@@ -8,8 +8,6 @@ def get_parser():
 
     parser.add_argument("--note", type=str, default="debug")
 
-    allowed_modes = ["run", "eval"]
-    parser.add_argument("--mode", type=str, choices=allowed_modes, required=True, help=f"Mode to use: Choose from {allowed_modes}.")
     allowed_apis = ["together", "huggingface", "llama", "vllm", "debug", "gpt3.5-turbo"]
     parser.add_argument("--api", type=str, choices=allowed_apis, default="vllm", help=f"API to use: Choose from {allowed_apis}.")
 
