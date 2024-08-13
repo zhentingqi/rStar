@@ -12,8 +12,6 @@ def get_parser():
     parser.add_argument("--mode", type=str, choices=allowed_modes, required=True, help=f"Mode to use: Choose from {allowed_modes}.")
     allowed_apis = ["together", "huggingface", "llama", "vllm", "debug", "gpt3.5-turbo"]
     parser.add_argument("--api", type=str, choices=allowed_apis, default="vllm", help=f"API to use: Choose from {allowed_apis}.")
-    allowed_methods = ["fewshot_cot", "ours", "zeroshot_cot"]
-    parser.add_argument("--method", type=str, choices=allowed_methods, required=True, help=f"Method to use: Choose from {allowed_methods}.")
 
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--verbose", action='store_true')
@@ -44,7 +42,7 @@ def get_parser():
 
     #! dataset settings
     parser.add_argument("--data_root", default="data")
-    allowed_dataset_names = ["MATH", "GSM8K", "FOLIO", "LOGIQA", "MMLUSTEM", "BGQA", "MULTIARITH"]
+    allowed_dataset_names = ["MATH", "GSM8K", "GSM8KHARD", "STG", "SVAMP", "MULTIARITH"]
     parser.add_argument("--dataset_name", required=True, choices=allowed_dataset_names, help=f"Test dataset name: Choose from {allowed_dataset_names}.")
     parser.add_argument("--test_json_filename", type=str, default="test_all")
     parser.add_argument("--start_idx", type=int, default=0, help="Start index of test questions (inclusive)")
@@ -63,12 +61,12 @@ def post_process_args(args):
     model_name = args.model_ckpt.split("/")[-1]
     if args.mode == "run":
         args.run_outputs_dir = os.path.join(
-            args.run_outputs_root, args.method, args.dataset_name, model_name, f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix
+            args.run_outputs_root, args.dataset_name, model_name, f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix
         )
         os.makedirs(args.run_outputs_dir, exist_ok=True)
     elif args.mode == "eval":
         args.eval_outputs_dir = os.path.join(
-            args.eval_outputs_root, args.method, args.dataset_name, model_name, f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix
+            args.eval_outputs_root, args.dataset_name, model_name, f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix
         )
         os.makedirs(args.eval_outputs_dir, exist_ok=True)
     else:

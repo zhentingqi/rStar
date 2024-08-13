@@ -111,7 +111,7 @@ class Evaluator:
                 confidence,
             )
 
-    def stochastic_select_answer(self, completion2score, answer2completions, completions, answer_selection_mode, topk):
+    def stochastic_select_answer(self, completion2score, answer2completions, completions):
         answer2score = {}
         answer_counts = {}
         for completion, score in completion2score.items():
@@ -126,23 +126,14 @@ class Evaluator:
         for answer in answer2score:
             answer2score[answer] /= answer_counts[answer]
 
-        if answer_selection_mode == "topk":
-            top_answers = sorted(answer2score.items(), key=lambda x: x[1], reverse=True)[:topk]
-            answers, scores = zip(*top_answers)
-            total_score = sum(scores)
-            try:
-                probabilities = [score / total_score for score in scores]
-                selected_answer = random.choices(answers, weights=probabilities, k=1)[0]
-            except:
-                selected_answer = random.choices(answers, k=1)[0]
-        elif answer_selection_mode == "adaptive":
-            threshold = 0.3
-            top_answer = max(answer2score, key=answer2score.get)
-            if answer2score[top_answer] / sum(answer2score.values()) >= threshold:
-                selected_answer = top_answer
-            else:
-                answers = list(answer2score.keys())
-                selected_answer = random.choice(answers)
+        top_answers = sorted(answer2score.items(), key=lambda x: x[1], reverse=True)[:1]
+        answers, scores = zip(*top_answers)
+        total_score = sum(scores)
+        try:
+            probabilities = [score / total_score for score in scores]
+            selected_answer = random.choices(answers, weights=probabilities, k=1)[0]
+        except:
+            selected_answer = random.choices(answers, k=1)[0]
 
         most_confident_completion = answer2completions[selected_answer][0]
         completion_index = completions.index(most_confident_completion)
@@ -164,49 +155,24 @@ class Evaluator:
             completion2score[comp] = score
         return completion2score
 
-    def stochastic_select_response(self, completion2score, completions, answer_selection_mode, topk):
-        if answer_selection_mode == "topk":
-            sorted_completions = sorted(completion2score.items(), key=lambda x: x[1], reverse=True)[:topk]
-            completions, scores = zip(*sorted_completions)
-            total_score = sum(scores)
-            try:
-                probabilities = [score / total_score for score in scores]
-                sampled_completion = random.choices(completions, weights=probabilities, k=1)[0]
-            except:
-                sampled_completion = random.choices(completions, k=1)[0]
-            confidence = completion2score[sampled_completion]
-            most_confident_answer = self.extract_answer_from_model_completion(sampled_completion)
-            id_of_most_confident = completions.index(sampled_completion)
-            return most_confident_answer, sampled_completion, id_of_most_confident, confidence
-
-        elif answer_selection_mode == "adaptive":
-            top_score = max(completion2score.values())
-            total_score = sum(completion2score.values())
-            score_ratio = top_score / total_score
-
-            if score_ratio >= 0.3:
-                most_confident_completion = max(completion2score, key=completion2score.get)
-                confidence = completion2score[most_confident_completion]
-                most_confident_answer = self.extract_answer_from_model_creation(most_confident_completion)
-                id_of_most_confident = list(completion2score.keys()).index(most_confident_completion)
-            else:
-                possible_completions = list(completion2score.keys())
-                sampled_completion = random.choice(possible_completions)
-                confidence = completion2score[sampled_completion]
-                most_confident_answer = self.extract_answer_from_model_completion(sampled_completion)
-                id_of_most_confident = possible_completions.index(sampled_completion)
-
-            return most_confident_answer, sampled_completion, id_of_most_confident, confidence
-
-        else:
-            raise NotImplementedError("The selection mode provided is not implemented.")
+    def stochastic_select_response(self, completion2score, completions):
+        sorted_completions = sorted(completion2score.items(), key=lambda x: x[1], reverse=True)[:1]
+        completions, scores = zip(*sorted_completions)
+        total_score = sum(scores)
+        try:
+            probabilities = [score / total_score for score in scores]
+            sampled_completion = random.choices(completions, weights=probabilities, k=1)[0]
+        except:
+            sampled_completion = random.choices(completions, k=1)[0]
+        confidence = completion2score[sampled_completion]
+        most_confident_answer = self.extract_answer_from_model_completion(sampled_completion)
+        id_of_most_confident = completions.index(sampled_completion)
+        return most_confident_answer, sampled_completion, id_of_most_confident, confidence
+        
 
     def stochastic_find_most_confident_answer(
         self,
         completions: List[str],
-        answer_selection_metric: str,
-        answer_selection_mode: str,
-        topk,
         prior_weights: List[float] = None,
     ):
 
@@ -226,18 +192,10 @@ class Evaluator:
 
         completion2score = self.stochastic_calculate_completion_scores(prior_weights, answer2completions)
 
-        if answer_selection_metric == "select_answer":
-            most_confident_answer, sampled_completion, id_of_most_confident, confidence = self.stochastic_select_answer(
-                completion2score, answer2completions, completions, answer_selection_mode, topk
-            )
-            return most_confident_answer, sampled_completion, id_of_most_confident, confidence
-        elif answer_selection_metric == "select_response":
-            most_confident_answer, sampled_completion, id_of_most_confident, confidence = self.stochastic_select_response(
-                completion2score, completions, answer_selection_mode, topk
-            )
-            return most_confident_answer, sampled_completion, id_of_most_confident, confidence
-        else:
-            raise NotImplementedError
+        most_confident_answer, sampled_completion, id_of_most_confident, confidence = self.stochastic_select_response(
+            completion2score, completions
+        )
+        return most_confident_answer, sampled_completion, id_of_most_confident, confidence
 
     def check_answers_equiv(self, answer_a: str, answer_b: str):
         raise NotImplementedError
@@ -264,8 +222,10 @@ class GSM8KEvaluator(Evaluator):
 
         return correct
 
-    def extract_answer_from_gold_solution(self, solution: str):
+    def extract_answer_from_gold_solution(self, solution: str | float):
         """Extract the answer from the gold solution."""
+        if isinstance(solution, float):
+            return str(solution)
         return solution.split("#### ")[-1].strip()
 
     def extract_answer_from_model_completion(self, completion: str):
@@ -393,8 +353,10 @@ class SVAMPEvaluator(Evaluator):
 
         return correct
 
-    def extract_answer_from_gold_solution(self, solution: str):
+    def extract_answer_from_gold_solution(self, solution: str | float):
         """Extract the answer from the gold solution."""
+        if isinstance(solution, float):
+            return str(solution)
         return solution.strip()
 
     def extract_answer_from_model_completion(self, completion: str):

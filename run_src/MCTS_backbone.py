@@ -60,7 +60,7 @@ class MCTS_Node(ABC):
 class MCTS_Searcher:
     "Monte Carlo tree searcher. First rollout the tree then choose a move."
 
-    def __init__(self, exploration_weight: float, weight_scheduler: str, num_rollouts: int, discount: float, reward_mode: str, verbose: bool = False):
+    def __init__(self, exploration_weight: float, weight_scheduler: str, num_rollouts: int, discount: float, verbose: bool = False):
         self.Q: Dict[MCTS_Node, float] = defaultdict(lambda : 0.0)  # total reward of each node
         self.N: Dict[MCTS_Node, int] = defaultdict(lambda : 0)  # total visit count for each node
         self.parent2children: Dict[MCTS_Node, List[MCTS_Node]] = dict()  # children of each node
@@ -72,7 +72,6 @@ class MCTS_Searcher:
         self.weight_scheduler = weight_scheduler
         self.num_rollouts = num_rollouts
         self.discount = discount
-        self.reward_mode = reward_mode
 
         self.verbose = verbose
 
@@ -144,24 +143,12 @@ class MCTS_Searcher:
 
     def _backpropagate(self, path: List[MCTS_Node]):
         "Send the reward back up to the ancestors of the leaf"
-        if self.reward_mode == "path_average":
-            coeff = 0 #? original setting is 1, why???
-            total_reward = 0.0
-            for node in reversed(path):
-                if not node.skip_backprop():
-                    total_reward = total_reward * self.discount + node.calculate_reward(mode="path_average")
-                    coeff = coeff * self.discount + 1
-                avg_reward = total_reward / coeff
-                self.Q[node] += avg_reward
-                self.N[node] += 1
-                self.explored_nodes.add(node)
-        elif self.reward_mode == "last_only":
-            leaf = path[-1]
-            reward = leaf.calculate_reward(mode="last_only")
-            for node in reversed(path):
-                self.Q[node] += reward
-                self.N[node] += 1
-                self.explored_nodes.add(node)
+        leaf = path[-1]
+        reward = leaf.calculate_reward()
+        for node in reversed(path):
+            self.Q[node] += reward
+            self.N[node] += 1
+            self.explored_nodes.add(node)
 
     def _get_weight(self, rollout_id: int):
         # start with exploration weight, end with 0.1 * exploration weight

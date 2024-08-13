@@ -1,13 +1,8 @@
-CUDA_VISIBLE_DEVICES=0 python run_src/run_rstar.py \
+CUDA_VISIBLE_DEVICES=0 python run_src/do_generate.py \
     --mode run \
-    --method ours \
     --dataset_name GSM8K \
     --test_json_filename test_all \
-    --mcts_reward_mode last_only \
-    --enable_tot \
-    --model_ckpt /path/to/model \
+    --model_ckpt mistralai/Mistral-7B-v0.1 \
     --note default \
-    --answer_selection_metric select_response \
-    --answer_selection_mode topk \
-    --topk 1 \
-    --num_rollouts 16
+    --num_rollouts 16 \
+    --end_idx 1

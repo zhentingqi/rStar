@@ -784,7 +784,7 @@ def main():
                                     solution_trace_dic[solution_trace]["final_step"] = final_step
                             else:
                                 solution_trace_dic[solution_trace] = {"freq": 1, "reward": reward, "final_step": final_step}
-                            if args.special_parse_subq and len(trace) > 1 and len(trace[str(len(trace)-1)]["tot_step"]) == 0:
+                            if args.special_parse_subq and len(trace) > 1 and len(trace[str(len(trace)-1)]["ost_step"]) == 0:
                                 subq_suba_dic, _, _ = concat_subq_suba_trace(trace)
                                 solution_trace_dic[solution_trace]["subq_suba_dic"] = subq_suba_dic
                     if args.add_terminal_trace and terminal_trace_is_valid:
@@ -798,7 +798,7 @@ def main():
                                     solution_trace_dic[solution_trace]["final_step"] = final_step
                             else:
                                 solution_trace_dic[solution_trace] = {"freq": 1, "reward": reward, "final_step": final_step}
-                            if args.special_parse_subq and len(trace) > 1 and len(trace[str(len(trace)-1)]["tot_step"]) == 0:
+                            if args.special_parse_subq and len(trace) > 1 and len(trace[str(len(trace)-1)]["ost_step"]) == 0:
                                 subq_suba_dic, _, _ = concat_subq_suba_trace(trace)
                                 solution_trace_dic[solution_trace]["subq_suba_dic"] = subq_suba_dic
                     for solution_trace in solution_trace_dic.keys():
