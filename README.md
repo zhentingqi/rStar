@@ -77,3 +77,18 @@ Extensive experiments across five SLMs demonstrate rStar can effectively solve d
 <p align="center">
   <img src="assets/result.png" width="600px">
 </p>
+
+
+## Citation
+
+If you find that rStar helps your research, please consider citing it:
+```
+@misc{qi2024mutual,
+    title={Mutual Reasoning Makes Smaller LLMs Stronger Problem-Solvers},
+    author={Zhenting Qi and Mingyuan Ma and Jiahang Xu and Li Lyna Zhang and Fan Yang and Mao Yang},
+    year={2024},
+    eprint={2408.06195},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+```
