@@ -37,20 +37,20 @@ def setup_model_parallel() -> Tuple[int, int]:
 
 def read_json(file_path):
     assert str(file_path).endswith(".json")
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data
 
 
 def save_json(js_obj, file_path):
     assert str(file_path).endswith(".json")
-    with open(file_path, 'w', encoding='utf-8') as f:
+    with open(file_path, "w", encoding="utf-8") as f:
         json.dump(js_obj, f, indent=4)
 
 
 def read_txt(file_path):
     assert str(file_path).endswith(".txt")
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         data = f.read()
     return data
 
@@ -62,10 +62,10 @@ def regex_calibrate(output_text: str):
     equation_regex = r"([\d\.\%\/\*\+\-\$\s]+) = ([\d\.\$\s]+)(?=[A-Za-z,.;!?]|\b)"
 
     def evaluate_expression(expression):
-        cleaned_expression = re.sub(r'\s+\.', '.', expression)
-        cleaned_expression = re.sub(r'\.\s+', '.', cleaned_expression)
-        cleaned_expression = cleaned_expression.replace(' x ', ' * ').replace('$', '').replace('%', '/100')
-        cleaned_expression = re.sub(r'\s+', '', cleaned_expression)
+        cleaned_expression = re.sub(r"\s+\.", ".", expression)
+        cleaned_expression = re.sub(r"\.\s+", ".", cleaned_expression)
+        cleaned_expression = cleaned_expression.replace(" x ", " * ").replace("$", "").replace("%", "/100")
+        cleaned_expression = re.sub(r"\s+", "", cleaned_expression)
         try:
             return eval(cleaned_expression, {}, {})
         except Exception:
@@ -74,11 +74,11 @@ def regex_calibrate(output_text: str):
     def handle_units(match):
         expression, current_answer = match.groups()
         unit = re.findall(r"[\$\$\$]", current_answer)
-        unit = unit[0] if unit else ''
+        unit = unit[0] if unit else ""
         correct_answer = evaluate_expression(expression)
         if correct_answer is None:
             return match.group(0)
-        if '.' in current_answer or correct_answer % 1 != 0:
+        if "." in current_answer or correct_answer % 1 != 0:
             correct_answer = f"{correct_answer:.6f}"
         else:
             correct_answer = int(correct_answer)
@@ -92,6 +92,7 @@ def regex_calibrate(output_text: str):
 
     return calibrated_text
 
+
 # https://review-of-my-life.blogspot.com/2017/11/python-dict-shuffle.html
 def shuffleDict(d):
     keys = list(d.keys())
@@ -101,7 +102,7 @@ def shuffleDict(d):
     [(key, d[key]) for key in keys]
     random.shuffle(keys)
     keys = [(key, d[key]) for key in keys]
-    #keys = d(keys)
+    # keys = d(keys)
     return dict(keys)
 
 
@@ -113,116 +114,116 @@ def data_reader(args):
     dataset_path = os.path.join(args.data_root, args.dataset_name, "test.jsonl")
 
     if args.dataset_name == "aqua":
-      with open(dataset_path) as f:
-        lines = f.readlines()
-        for line in lines:
-          json_res = decoder.raw_decode(line)[0]
-          choice = "(" + "(".join(json_res["options"])
-          choice = choice.replace("(", " (").replace(")", ") ")
-          choice = "Answer Choices:" + choice
-          questions.append(json_res["question"].strip() + " " + choice)
-          answers.append(json_res["correct"])
+        with open(dataset_path) as f:
+            lines = f.readlines()
+            for line in lines:
+                json_res = decoder.raw_decode(line)[0]
+                choice = "(" + "(".join(json_res["options"])
+                choice = choice.replace("(", " (").replace(")", ") ")
+                choice = "Answer Choices:" + choice
+                questions.append(json_res["question"].strip() + " " + choice)
+                answers.append(json_res["correct"])
 
     elif args.dataset_name == "gsm8k":
-      with open(dataset_path) as f:
-        lines = f.readlines()
-        for line in lines:
-          json_res = decoder.raw_decode(line)[0]
-          questions.append(json_res["question"].strip())
-          answers.append(json_res["answer"].split("#### ")[-1])
+        with open(dataset_path) as f:
+            lines = f.readlines()
+            for line in lines:
+                json_res = decoder.raw_decode(line)[0]
+                questions.append(json_res["question"].strip())
+                answers.append(json_res["answer"].split("#### ")[-1])
 
     elif args.dataset_name == "commonsensqa":
-      with open(dataset_path) as f:
-        lines = f.readlines()
-        for line in lines:
-          json_res = decoder.raw_decode(line)[0]
-          choice = "Answer Choices:"
-          for c in json_res["question"]["choices"]:
-              choice += " ("
-              choice += c["label"]
-              choice += ") "
-              choice += c["text"]
-          questions.append(json_res["question"]["stem"].strip() + " " + choice)
-          answers.append(json_res["answerKey"])
+        with open(dataset_path) as f:
+            lines = f.readlines()
+            for line in lines:
+                json_res = decoder.raw_decode(line)[0]
+                choice = "Answer Choices:"
+                for c in json_res["question"]["choices"]:
+                    choice += " ("
+                    choice += c["label"]
+                    choice += ") "
+                    choice += c["text"]
+                questions.append(json_res["question"]["stem"].strip() + " " + choice)
+                answers.append(json_res["answerKey"])
 
     elif args.dataset_name in ("addsub", "multiarith", "singleeq"):
-      with open(dataset_path) as f:
-        json_data = json.load(f)
-        for line in json_data:
-          q = line["sQuestion"].strip()
-          a = str(line["lSolutions"][0])
-          if a[-2:] == ".0":
-              a = a[:-2]
-          questions.append(q)
-          answers.append(a)
+        with open(dataset_path) as f:
+            json_data = json.load(f)
+            for line in json_data:
+                q = line["sQuestion"].strip()
+                a = str(line["lSolutions"][0])
+                if a[-2:] == ".0":
+                    a = a[:-2]
+                questions.append(q)
+                answers.append(a)
 
     elif args.dataset_name == "strategyqa":
-      with open(dataset_path) as f:
-        json_data = json.load(f)["examples"]
-        for line in json_data:
-          q = line["input"].strip()
-          a = int(line["target_scores"]["Yes"])
-          if a == 1:
-              a = "yes"
-          else:
-              a = "no"
-          questions.append(q)
-          answers.append(a)
+        with open(dataset_path) as f:
+            json_data = json.load(f)["examples"]
+            for line in json_data:
+                q = line["input"].strip()
+                a = int(line["target_scores"]["Yes"])
+                if a == 1:
+                    a = "yes"
+                else:
+                    a = "no"
+                questions.append(q)
+                answers.append(a)
 
     elif args.dataset_name == "svamp":
-      with open(dataset_path) as f:
-        json_data = json.load(f)
-        for line in json_data:
-            q = line["Body"].strip() + " " + line["Question"].strip()
-            a = str(line["Answer"])
-            if a[-2:] == ".0":
-                a = a[:-2]
-            questions.append(q)
-            answers.append(a)
+        with open(dataset_path) as f:
+            json_data = json.load(f)
+            for line in json_data:
+                q = line["Body"].strip() + " " + line["Question"].strip()
+                a = str(line["Answer"])
+                if a[-2:] == ".0":
+                    a = a[:-2]
+                questions.append(q)
+                answers.append(a)
 
     elif args.dataset_name in ("bigbench_date", "object_tracking"):
-      with open(dataset_path) as f:
-        json_data = json.load(f)
-        json_data = json_data["examples"]
-        if args.dataset_name == "bigbench_date":
-            choice_index = ['A','B','C','D','E','F']
-        elif args.dataset_name in ("object_tracking"):
-            choice_index = ['A','B','C']
-        else:
-            raise ValueError("dataset is not properly defined ...")
-        for line in json_data:
-          q = line["input"].strip()
-          if args.dataset_name == "bigbench_date":
-              choice = "Answer Choices:"
-              # Randomly shuffle the answer choice dictionary because the original answer is always A ...
-              choice_dic = shuffleDict(line["target_scores"])
-          elif args.dataset_name == "object_tracking":
-              choice = "\nWhich choice is true ? Answer Choices:"
-              choice_dic = line["target_scores"]
-          else:
-              raise ValueError("dataset is not properly defined ...")
-          for i, key_value in enumerate(choice_dic.items()):
-              key, value = key_value
-              choice += " ("
-              choice += choice_index[i]
-              choice += ") "
-              choice += key
-              if value == 1:
-                  a = choice_index[i]
-                  #a = key
-          q = q + " " + choice
-          questions.append(q)
-          answers.append(a)
+        with open(dataset_path) as f:
+            json_data = json.load(f)
+            json_data = json_data["examples"]
+            if args.dataset_name == "bigbench_date":
+                choice_index = ["A", "B", "C", "D", "E", "F"]
+            elif args.dataset_name in ("object_tracking"):
+                choice_index = ["A", "B", "C"]
+            else:
+                raise ValueError("dataset is not properly defined ...")
+            for line in json_data:
+                q = line["input"].strip()
+                if args.dataset_name == "bigbench_date":
+                    choice = "Answer Choices:"
+                    # Randomly shuffle the answer choice dictionary because the original answer is always A ...
+                    choice_dic = shuffleDict(line["target_scores"])
+                elif args.dataset_name == "object_tracking":
+                    choice = "\nWhich choice is true ? Answer Choices:"
+                    choice_dic = line["target_scores"]
+                else:
+                    raise ValueError("dataset is not properly defined ...")
+                for i, key_value in enumerate(choice_dic.items()):
+                    key, value = key_value
+                    choice += " ("
+                    choice += choice_index[i]
+                    choice += ") "
+                    choice += key
+                    if value == 1:
+                        a = choice_index[i]
+                        # a = key
+                q = q + " " + choice
+                questions.append(q)
+                answers.append(a)
 
     elif args.dataset_name in ("coin_flip", "last_letters"):
-      with open(dataset_path) as f:
-        json_data = json.load(f)
-        json_data = json_data["examples"]
-        for line in json_data:
-          q = line["question"]
-          a = line["answer"]
-          questions.append(q)
-          answers.append(a)
+        with open(dataset_path) as f:
+            json_data = json.load(f)
+            json_data = json_data["examples"]
+            for line in json_data:
+                q = line["question"]
+                a = line["answer"]
+                questions.append(q)
+                answers.append(a)
 
     else:
         raise ValueError("dataset is not properly defined ...")
@@ -239,6 +240,7 @@ def data_reader(args):
 
     return questions, answers
 
+
 # Create dataset object before dataloader ...
 class MyDataset(Dataset):
     def __init__(self, args):
@@ -254,6 +256,7 @@ class MyDataset(Dataset):
         output = self.answers[index]
         return input, output
 
+
 def setup_data_loader(args):
     # fix randomness of dataloader to ensure reproducibility
     # https://pytorch.org/docs/stable/notes/randomness.html
@@ -261,9 +264,11 @@ def setup_data_loader(args):
     worker_seed = torch.initial_seed() % 2**32
     if args.verbose:
         print("worker_seed : {}".format(worker_seed))
+
     def seed_worker(worker_id):
         np.random.seed(worker_seed)
         random.seed(worker_seed)
+
     g = torch.Generator()
     g.manual_seed(worker_seed)
 
@@ -274,13 +279,15 @@ def setup_data_loader(args):
 
     dataset = MyDataset(args)
 
-    dataloader = torch.utils.data.DataLoader(dataset,
-                  shuffle=False,
-                  batch_size=1,
-                  drop_last=False,
-                  num_workers=dataloader_num_workers,
-                  worker_init_fn=seed_worker,
-                  generator=g,
-                  pin_memory=True)
+    dataloader = torch.utils.data.DataLoader(
+        dataset,
+        shuffle=False,
+        batch_size=1,
+        drop_last=False,
+        num_workers=dataloader_num_workers,
+        worker_init_fn=seed_worker,
+        generator=g,
+        pin_memory=True,
+    )
 
     return dataloader

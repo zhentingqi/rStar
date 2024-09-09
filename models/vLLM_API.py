@@ -8,9 +8,24 @@ def load_vLLM_model(model_ckpt, seed, tensor_parallel_size=1, half_precision=Fal
     tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 
     if half_precision:
-        llm = LLM(model=model_ckpt, dtype="half", tensor_parallel_size=tensor_parallel_size, seed=seed, trust_remote_code=True, max_num_seqs=max_num_seqs, swap_space=16)
+        llm = LLM(
+            model=model_ckpt,
+            dtype="half",
+            tensor_parallel_size=tensor_parallel_size,
+            seed=seed,
+            trust_remote_code=True,
+            max_num_seqs=max_num_seqs,
+            swap_space=16,
+        )
     else:
-        llm = LLM(model=model_ckpt, tensor_parallel_size=tensor_parallel_size, seed=seed, trust_remote_code=True, max_num_seqs=max_num_seqs, swap_space=16)
+        llm = LLM(
+            model=model_ckpt,
+            tensor_parallel_size=tensor_parallel_size,
+            seed=seed,
+            trust_remote_code=True,
+            max_num_seqs=max_num_seqs,
+            swap_space=16,
+        )
 
     return tokenizer, llm
 

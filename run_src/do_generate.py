@@ -27,12 +27,15 @@ def main(args):
     tokenizer, model = None, None
     if args.api == "huggingface":
         from models.HuggingFace_API import load_HF_model
+
         tokenizer, model = load_HF_model(args.model_ckpt)
     elif args.api == "vllm":
         from models.vLLM_API import load_vLLM_model
+
         tokenizer, model = load_vLLM_model(args.model_ckpt, args.seed, args.tensor_parallel_size, args.half_precision)
     elif args.api == "gpt3.5-turbo":
         from models.OpenAI_API import load_OpenAI_model
+
         tokenizer, model = load_OpenAI_model(args.model_ckpt)
     generator = Generator(args, tokenizer, model, evaluator)
 
@@ -146,7 +149,9 @@ if __name__ == "__main__":
     parser = get_parser()
 
     parser.add_argument("--num_rollouts", type=int, default=15)
-    parser.add_argument("--num_subquestions", type=int, default=3, help="Number of trials for proposing the next subquestion")
+    parser.add_argument(
+        "--num_subquestions", type=int, default=3, help="Number of trials for proposing the next subquestion"
+    )
     parser.add_argument("--num_votes", type=int, default=10)
     parser.add_argument("--max_depth_allowed", type=int, default=5)
 

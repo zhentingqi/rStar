@@ -6,9 +6,9 @@ import concurrent.futures
 from openai import AzureOpenAI
 
 client = AzureOpenAI(
-    api_version="2023-12-01-preview",
-    azure_endpoint=os.environ.get('AZURE_OPENAI_ENDPOINT', ''),
-    api_key=os.environ.get('AZURE_OPENAI_API_KEY', ''),
+    api_version="",
+    azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT", ""),
+    api_key=os.environ.get("AZURE_OPENAI_API_KEY", ""),
 )
 
 max_threads = 32
@@ -71,8 +71,16 @@ def generate_n_with_OpenAI_model(
 ):
     preds = []
     with concurrent.futures.ProcessPoolExecutor(max_workers=max_threads) as executor:
-        futures = [executor.submit(generate_with_OpenAI_model, prompt, model_ckpt, max_tokens, temperature, top_k, top_p, stop) for _ in range(n)]
-        for i, future in tqdm(enumerate(concurrent.futures.as_completed(futures)), total=len(futures), desc='running evaluate', disable=disable_tqdm):
+        futures = [
+            executor.submit(generate_with_OpenAI_model, prompt, model_ckpt, max_tokens, temperature, top_k, top_p, stop)
+            for _ in range(n)
+        ]
+        for i, future in tqdm(
+            enumerate(concurrent.futures.as_completed(futures)),
+            total=len(futures),
+            desc="running evaluate",
+            disable=disable_tqdm,
+        ):
             ans = future.result()
             preds.append(ans)
     return preds

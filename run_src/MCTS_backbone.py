@@ -4,6 +4,7 @@ Luke Harold Miles, July 2019, Public Domain Dedication
 See also https://en.wikipedia.org/wiki/Monte_Carlo_tree_search
 https://gist.github.com/qpwo/c538c6f73727e254fdc7fab81024f6e1
 """
+
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from typing import Dict, List
@@ -24,6 +25,7 @@ class MCTS_Node(ABC):
     MCTS works by constructing a tree of these Nodes.
     Could be e.g. a chess or checkers board state.
     """
+
     def __init__(self) -> None:
         super().__init__()
 
@@ -60,9 +62,16 @@ class MCTS_Node(ABC):
 class MCTS_Searcher:
     "Monte Carlo tree searcher. First rollout the tree then choose a move."
 
-    def __init__(self, exploration_weight: float, weight_scheduler: str, num_rollouts: int, discount: float, verbose: bool = False):
-        self.Q: Dict[MCTS_Node, float] = defaultdict(lambda : 0.0)  # total reward of each node
-        self.N: Dict[MCTS_Node, int] = defaultdict(lambda : 0)  # total visit count for each node
+    def __init__(
+        self,
+        exploration_weight: float,
+        weight_scheduler: str,
+        num_rollouts: int,
+        discount: float,
+        verbose: bool = False,
+    ):
+        self.Q: Dict[MCTS_Node, float] = defaultdict(lambda: 0.0)  # total reward of each node
+        self.N: Dict[MCTS_Node, int] = defaultdict(lambda: 0)  # total visit count for each node
         self.parent2children: Dict[MCTS_Node, List[MCTS_Node]] = dict()  # children of each node
 
         #! explored = expanded + simulated, i.e. has seen terminal at least once, i.e. we can calculate its UCT value, i.e. has Q and N
@@ -93,7 +102,6 @@ class MCTS_Searcher:
             return path_2[-1]
         except:
             return path_1[-1]
-
 
     def _select(self, node: MCTS_Node, rollout_id: int) -> List[MCTS_Node]:
         "Find an unexplored descendent of `node`"
@@ -138,7 +146,7 @@ class MCTS_Searcher:
             if cur_node not in self.parent2children.keys():
                 self.parent2children[cur_node] = cur_node.find_children(rollout_id)
 
-            cur_node = random.choice(self.parent2children[cur_node])    # randomly select a child
+            cur_node = random.choice(self.parent2children[cur_node])  # randomly select a child
             path.append(cur_node)
 
     def _backpropagate(self, path: List[MCTS_Node]):
@@ -165,16 +173,17 @@ class MCTS_Searcher:
         # All children of the node should already be expanded
         assert all(n in self.explored_nodes for n in self.parent2children[node])
 
-        return max(self.parent2children[node], key=lambda n: self._compute_uct(parent_node=node, node=n, rollout_id=rollout_id))
+        return max(
+            self.parent2children[node], key=lambda n: self._compute_uct(parent_node=node, node=n, rollout_id=rollout_id)
+        )
 
     def _compute_uct(self, parent_node: MCTS_Node, node: MCTS_Node, rollout_id: int):
         "Upper confidence bound for trees"
-        if parent_node is None: # invalid UCT: the node is the root
+        if parent_node is None:  # invalid UCT: the node is the root
             return 666
         else:
-            if self.N[node] == 0:   # invalid UCT: the node has not been explored yet
+            if self.N[node] == 0:  # invalid UCT: the node has not been explored yet
                 return 999
             else:
                 weight = self._get_weight(rollout_id)
-                return self.Q[node] / self.N[node] + \
-                    weight * math.sqrt(math.log(self.N[parent_node]) / self.N[node])
+                return self.Q[node] / self.N[node] + weight * math.sqrt(math.log(self.N[parent_node]) / self.N[node])

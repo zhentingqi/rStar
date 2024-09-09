@@ -21,6 +21,9 @@ First, a target SLM augments the Monte Carlo Tree Search (MCTS) with a rich set 
 
 - Python 3.10
 - CUDA 12
+- newest PyTorch
+- newest `transformers`
+- newest `vllm`
 
 ## Usage
 

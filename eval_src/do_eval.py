@@ -35,7 +35,7 @@ def extract_trace(data_item, num_votes):
     return res
 
 
-def extrace_completions(data_item):
+def extract_completions(data_item):
     res = []
     for item in data_item:
         res.append(data_item[item]["model_solution"])
