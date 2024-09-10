@@ -16,7 +16,17 @@ from datetime import datetime
 
 
 class Candidate:
-    def __init__(self, solution_trace, masked_solution_trace_list, final_step, final_answer, id, freq=1, trace_reward=1., c_type="default"):
+    def __init__(
+        self,
+        solution_trace,
+        masked_solution_trace_list,
+        final_step,
+        final_answer,
+        id,
+        freq=1,
+        trace_reward=1.0,
+        c_type="default",
+    ):
         self.solution_trace = solution_trace
         self.masked_solution_trace_list = masked_solution_trace_list
         self.final_step = final_step
@@ -35,7 +45,7 @@ class Candidate:
             "masked_solution_trace_list": self.masked_solution_trace_list,
             "final_step": self.final_step,
             "final_answer": self.final_answer,
-            "id": self.id
+            "id": self.id,
         }
 
     @classmethod
@@ -45,7 +55,7 @@ class Candidate:
             masked_solution_trace_list=data["masked_solution_trace_list"],
             final_step=data["final_step"],
             final_answer=data["final_answer"],
-            id=data["id"]
+            id=data["id"],
         )
 
 
@@ -74,7 +84,9 @@ def group_candidates_by_answer(candidates: list[Candidate], evaluator, criteria=
             answer2cnt[str(c.final_answer)] += c.freq
 
     assert all(answer2cnt[ans] == len(answer2candidates[ans]) for ans in answer2cnt.keys())
-    assert float(sum([candidate.trace_reward for candidate in candidates])) == float(sum([answer2confidence[ans] for ans in answer2confidence.keys()]))
+    assert float(sum([candidate.trace_reward for candidate in candidates])) == float(
+        sum([answer2confidence[ans] for ans in answer2confidence.keys()])
+    )
 
     candidates_count = sum([candidate.freq for candidate in candidates])
     for ans in answer2confidence.keys():
@@ -102,7 +114,9 @@ class Discriminator:
         candidates = [c for c in candidates if len(c.final_answer) <= 100]
         return candidates
 
-    def _filter_reasoning_consistency(self, gen_model, problem: str, candidates: list[Candidate], aux={}) -> list[Candidate]:
+    def _filter_reasoning_consistency(
+        self, gen_model, problem: str, candidates: list[Candidate], aux={}
+    ) -> list[Candidate]:
         problem_id = aux["problem_id"]
         file_idx = aux["file_idx"]
 
@@ -110,7 +124,11 @@ class Discriminator:
         fewshot_examples = self.fewshot_prompt
         stop_tokens = self.stop_tokens
 
-        assert all(len(c.masked_solution_trace_list) == self.args.num_masked_solution_traces for c in candidates if c.c_type == "default")
+        assert all(
+            len(c.masked_solution_trace_list) == self.args.num_masked_solution_traces
+            for c in candidates
+            if c.c_type == "default"
+        )
         gen_input_list = []
         ground_truth_list = []
         c_completion_num_list = []
@@ -121,7 +139,7 @@ class Discriminator:
                         prompt_template.format(examples=fewshot_examples, instruction=problem) + masked_solution_trace
                     )
                     ground_truth_list.append(c.final_answer)
-            c_completion_num_list.append(len(c.masked_solution_trace_list)*self.args.rc_n_completions)
+            c_completion_num_list.append(len(c.masked_solution_trace_list) * self.args.rc_n_completions)
         """gen_input_list:
         [c1_mask1, c1_mask2, ..., c2_mask1, c2_mask2, ..., ......, ct_mask1, ct_mask2, ...]
         """
@@ -132,15 +150,18 @@ class Discriminator:
         for start_idx in range(0, len(gen_input_list), batch_size):
             end_idx = start_idx + batch_size
             sub_gen_input_list = gen_input_list[start_idx:end_idx]
-            sub_gen_output_list = self._gen_func(gen_model=gen_model, gen_input=sub_gen_input_list, temperature=self.args.rc_temperature, n=1, max_tokens=512, stop_tokens=stop_tokens + ["\n"])
+            sub_gen_output_list = self._gen_func(
+                gen_model=gen_model,
+                gen_input=sub_gen_input_list,
+                temperature=self.args.rc_temperature,
+                n=1,
+                max_tokens=512,
+                stop_tokens=stop_tokens + ["\n"],
+            )
             gen_output_list.extend(sub_gen_output_list)
 
         with open(os.path.join(self.args.discriminate_results_dir, f"problem-{problem_id}.json"), "w") as f:
-            js = {
-                "problem_id": problem_id,
-                "file_idx": file_idx,
-                "gen_output_list": gen_output_list
-            }
+            js = {"problem_id": problem_id, "file_idx": file_idx, "gen_output_list": gen_output_list}
             json.dump(js, f)
 
         """gen_output_list:
@@ -152,7 +173,9 @@ class Discriminator:
             for n_completions in gen_output_list:
                 for completion in n_completions:
                     completion_list.append(completion)
-            assert len(completion_list) == self.args.rc_n_completions * self.args.num_masked_solution_traces * len(candidates)
+            assert len(completion_list) == self.args.rc_n_completions * self.args.num_masked_solution_traces * len(
+                candidates
+            )
             candidate_group_size = self.args.rc_n_completions * self.args.num_masked_solution_traces
         elif all(isinstance(item, str) for item in gen_output_list):
             completion_list = gen_output_list
@@ -175,10 +198,12 @@ class Discriminator:
 
         consistent_candidates = []
 
-        for c, completion_group, answer_group, gt_answer in zip(candidates, completion_group_list, answer_group_list, gt_group_list):
+        for c, completion_group, answer_group, gt_answer in zip(
+            candidates, completion_group_list, answer_group_list, gt_group_list
+        ):
             candidate_group_size = len(c.masked_solution_trace_list)
             num_consistent = 0
-            if self.args.rc_mode == 'maj':
+            if self.args.rc_mode == "maj":
                 answer = self.evaluator.find_most_confident_answer(completion_group)[0]
                 if self.evaluator.check_answers_equiv(gt_answer[-1], answer):
                     consistent_candidates.append(c)
@@ -186,19 +211,19 @@ class Discriminator:
                 for answer, gt_a in zip(answer_group, gt_answer):
                     if self.evaluator.check_answers_equiv(gt_a, answer):
                         num_consistent += 1
-                if self.args.rc_mode == 'loose':
+                if self.args.rc_mode == "loose":
                     if num_consistent > 0:
                         consistent_candidates.append(c)
-                elif self.args.rc_mode == 'mid':
+                elif self.args.rc_mode == "mid":
                     if num_consistent >= candidate_group_size // 2:
                         consistent_candidates.append(c)
-                elif self.args.rc_mode == 'strict':
+                elif self.args.rc_mode == "strict":
                     if num_consistent == candidate_group_size:
                         consistent_candidates.append(c)
 
         return consistent_candidates
 
-    def _gen_func(self, gen_model, gen_input, temperature: float, n: int=1, max_tokens: int = 768, stop_tokens=None):
+    def _gen_func(self, gen_model, gen_input, temperature: float, n: int = 1, max_tokens: int = 768, stop_tokens=None):
         if temperature == 0.0:
             n = 1
 
@@ -217,9 +242,13 @@ class Discriminator:
                 return [[o.text for o in r.outputs] for r in response]
 
     def _calculate_scores(self, unfiltered_candidates: list[Candidate], filtered_candidates: list[Candidate]) -> dict:
-        _, filtered_answer2confidence, filtered_answer2cnt = group_candidates_by_answer(filtered_candidates, self.evaluator, self.args.rc_criteria)
+        _, filtered_answer2confidence, filtered_answer2cnt = group_candidates_by_answer(
+            filtered_candidates, self.evaluator, self.args.rc_criteria
+        )
         print(f"==> Confidence: {filtered_answer2confidence}")
-        _, _, unfiltered_answer2cnt = group_candidates_by_answer(unfiltered_candidates, self.evaluator, self.args.rc_criteria)
+        _, _, unfiltered_answer2cnt = group_candidates_by_answer(
+            unfiltered_candidates, self.evaluator, self.args.rc_criteria
+        )
 
         filtered_answer2survival_rate = {}
         for filtered_ans in filtered_answer2cnt.keys():
@@ -227,7 +256,9 @@ class Discriminator:
             for unfiltered_ans in unfiltered_answer2cnt.keys():
                 if self.evaluator.check_answers_equiv(filtered_ans, unfiltered_ans):
                     has_existed = True
-                    filtered_answer2survival_rate[filtered_ans] = filtered_answer2cnt[filtered_ans] / unfiltered_answer2cnt[unfiltered_ans]
+                    filtered_answer2survival_rate[filtered_ans] = (
+                        filtered_answer2cnt[filtered_ans] / unfiltered_answer2cnt[unfiltered_ans]
+                    )
                     break
             if not has_existed:
                 filtered_answer2survival_rate[filtered_ans] = 0.0
@@ -240,7 +271,9 @@ class Discriminator:
             for unfiltered_ans in unfiltered_answer2cnt.keys():
                 if self.evaluator.check_answers_equiv(filtered_ans, unfiltered_ans):
                     has_existed = True
-                    filtered_answer2score[filtered_ans] = filtered_answer2confidence[filtered_ans] + filtered_answer2survival_rate[filtered_ans]
+                    filtered_answer2score[filtered_ans] = (
+                        filtered_answer2confidence[filtered_ans] + filtered_answer2survival_rate[filtered_ans]
+                    )
                     break
             if not has_existed:
                 filtered_answer2score[filtered_ans] = 0.0
@@ -249,9 +282,13 @@ class Discriminator:
 
         return filtered_answer2score
 
-    def _find_winner_filtered(self, unfiltered_candidates: list[Candidate], filtered_candidates: list[Candidate], gt_answer: str = None) -> Candidate:
+    def _find_winner_filtered(
+        self, unfiltered_candidates: list[Candidate], filtered_candidates: list[Candidate], gt_answer: str = None
+    ) -> Candidate:
         if len(filtered_candidates) == 0:
-            answer2candidates, answer2confidence, _ = group_candidates_by_answer(unfiltered_candidates, self.evaluator, self.args.rc_criteria)
+            answer2candidates, answer2confidence, _ = group_candidates_by_answer(
+                unfiltered_candidates, self.evaluator, self.args.rc_criteria
+            )
             most_confident_answer = max(answer2confidence.keys(), key=lambda x: answer2confidence[x])
             winner = answer2candidates[most_confident_answer][0]
             print(f"==> Winner answer: {most_confident_answer}\n")
@@ -317,7 +354,7 @@ def main():
     parser.add_argument("--mask_left_boundary", type=float, default=0.2)
     parser.add_argument("--mask_right_boundary", type=float, default=0.5)
     parser.add_argument("--num_masked_solution_traces", type=int, default=4)
-    parser.add_argument("--rc_mode", type=str, default='mid', choices=['loose', 'mid', 'strict', "maj"])
+    parser.add_argument("--rc_mode", type=str, default="mid", choices=["loose", "mid", "strict", "maj"])
     parser.add_argument("--rc_temperature", type=float, default=1.0)
     parser.add_argument("--rc_n_completions", type=int, default=1)
     parser.add_argument("--rc_criteria", type=str, default="reward", choices=["freq", "reward"])
@@ -359,16 +396,21 @@ def main():
     ]
     answer_sheet_json_files.sort()
     if args.start_idx > -1 and args.end_idx > -1:
-        answer_sheet_json_files = answer_sheet_json_files[args.start_idx: args.end_idx]
+        answer_sheet_json_files = answer_sheet_json_files[args.start_idx : args.end_idx]
 
     num_correct, num_correct_majvote, num_correct_limit, num_tested = 0, 0, 0, 0
     with tqdm(total=len(answer_sheet_json_files), disable=True) as pbar:
         total_num_candidates = 0
         for file_idx, answer_js_file in enumerate(answer_sheet_json_files):
-            problem_id = int(answer_js_file.split("/")[-1].split(".")[0].replace(" - Answer", "").replace("Question ", ""))
-            if args.resume and os.path.exists(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json")):
+            problem_id = int(
+                answer_js_file.split("/")[-1].split(".")[0].replace(" - Answer", "").replace("Question ", "")
+            )
+            if args.resume and os.path.exists(
+                os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json")
+            ):
                 print(f"\n[Skip file {file_idx}; Total number of files: {len(answer_sheet_json_files)}]\n")
-                with open(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json"), "r") as f: temp_recording = json.load(f)
+                with open(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json"), "r") as f:
+                    temp_recording = json.load(f)
                 correct = temp_recording["correct"]
                 correct_majvote = temp_recording["correct_majvote"]
                 correct_limit = temp_recording["correct_limit"]
@@ -395,19 +437,23 @@ def main():
                 except:
                     pass
 
-                trace_js = read_json(answer_js_file.replace("Answer", "Final Solutions")) + read_json(answer_js_file.replace("Answer", "Rollout Solutions"))
+                trace_js = read_json(answer_js_file.replace("Answer", "Final Solutions")) + read_json(
+                    answer_js_file.replace("Answer", "Rollout Solutions")
+                )
                 if args.cutoff_rollout > -1:
                     trace_js = [s for s in trace_js if s["rollout_id"] <= args.cutoff_rollout]
 
                 # ------ Collect all_candidates, answer2candidates answer2confidence ------
                 all_candidates = []
-                solution_trace_dic = {} # TODO
+                solution_trace_dic = {}  # TODO
                 for id, s in enumerate(trace_js):
                     trace = s["trace"] if "trace" in s else s
                     solution_trace, final_step, _, reward = concat_solution_trace(trace)
                     if solution_trace in solution_trace_dic:
                         solution_trace_dic[solution_trace]["freq"] = solution_trace_dic[solution_trace]["freq"] + 1
-                        solution_trace_dic[solution_trace]["reward"] = solution_trace_dic[solution_trace]["reward"] + reward
+                        solution_trace_dic[solution_trace]["reward"] = (
+                            solution_trace_dic[solution_trace]["reward"] + reward
+                        )
                         if len(solution_trace_dic[solution_trace]["final_step"]) < len(final_step):
                             solution_trace_dic[solution_trace]["final_step"] = final_step
                     else:
@@ -419,14 +465,26 @@ def main():
                     trace_reward = solution_trace_dic[solution_trace]["reward"]
 
                     masked_solution_trace_list = mask_solution_trace(
-                        solution_trace, num_return=args.num_masked_solution_traces,
-                        left_boundary=args.mask_left_boundary, right_boundary=args.mask_right_boundary
+                        solution_trace,
+                        num_return=args.num_masked_solution_traces,
+                        left_boundary=args.mask_left_boundary,
+                        right_boundary=args.mask_right_boundary,
                     )
                     final_answer = evaluator.extract_answer_from_model_completion(final_step)
-                    candidate = Candidate(solution_trace, deepcopy(masked_solution_trace_list), final_step, final_answer, id, trace_freq, trace_reward)
+                    candidate = Candidate(
+                        solution_trace,
+                        deepcopy(masked_solution_trace_list),
+                        final_step,
+                        final_answer,
+                        id,
+                        trace_freq,
+                        trace_reward,
+                    )
                     all_candidates.append(candidate)
 
-                answer2candidates, answer2confidence, _ = group_candidates_by_answer(all_candidates, evaluator, args.rc_criteria)
+                answer2candidates, answer2confidence, _ = group_candidates_by_answer(
+                    all_candidates, evaluator, args.rc_criteria
+                )
                 most_confident_answer = max(answer2candidates.keys(), key=lambda x: answer2confidence[x])
                 highest_confidence = answer2confidence[most_confident_answer]
                 assert highest_confidence > 0
@@ -446,7 +504,12 @@ def main():
                         print("You are very confident. Skipping...")
                         winner_answer = most_confident_answer
                     else:
-                        winner_candidate = discriminator.select(problem, candidates, gt_answer=gold_answer, aux={"file_idx": file_idx, "problem_id": problem_id})
+                        winner_candidate = discriminator.select(
+                            problem,
+                            candidates,
+                            gt_answer=gold_answer,
+                            aux={"file_idx": file_idx, "problem_id": problem_id},
+                        )
                         if winner_candidate is not None:
                             winner_answer = winner_candidate.final_answer
                         else:
@@ -454,18 +517,24 @@ def main():
                 # -------------------------------
                 correct = evaluator.check_answers_equiv(winner_answer, gold_answer)
                 correct_majvote = evaluator.check_answers_equiv(most_confident_answer, gold_answer)
-                correct_limit = 1 if any(evaluator.check_answers_equiv(ans, gold_answer) for ans in answer2candidates.keys()) else 0
+                correct_limit = (
+                    1 if any(evaluator.check_answers_equiv(ans, gold_answer) for ans in answer2candidates.keys()) else 0
+                )
                 print(f"==> Correct: {correct}")
                 try:
-                    with open(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json"), "r") as f: temp_recording = json.load(f)
+                    with open(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json"), "r") as f:
+                        temp_recording = json.load(f)
                 except:
                     temp_recording = {}
-                temp_recording.update({
-                    "correct": correct,
-                    "correct_majvote": correct_majvote,
-                    "correct_limit": correct_limit,
-                })
-                with open(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json"), "w") as f: json.dump(temp_recording, f, indent=4)
+                temp_recording.update(
+                    {
+                        "correct": correct,
+                        "correct_majvote": correct_majvote,
+                        "correct_limit": correct_limit,
+                    }
+                )
+                with open(os.path.join(args.discriminate_results_dir, f"problem-{problem_id}.json"), "w") as f:
+                    json.dump(temp_recording, f, indent=4)
                 num_correct += int(correct)
                 num_correct_majvote += int(correct_majvote)
                 num_correct_limit += int(correct_limit)
@@ -482,16 +551,18 @@ def main():
         f"Accuracy: {num_correct / num_tested:.4f}; Majority vote accuracy: {num_correct_majvote / num_tested:.4f}; Limit accuracy: {num_correct_limit / num_tested:.4f}"
     )
 
-    recording.update({
-        "num_correct": num_correct,
-        "num_correct_majvote": num_correct_majvote,
-        "num_correct_limit": num_correct_limit,
-        "num_tested": num_tested,
-        "accuracy": num_correct / num_tested,
-        "majority_vote_accuracy": num_correct_majvote / num_tested,
-        "limit_accuracy": num_correct_limit / num_tested,
-        "avg_num_candidates": total_num_candidates / num_tested,
-    })
+    recording.update(
+        {
+            "num_correct": num_correct,
+            "num_correct_majvote": num_correct_majvote,
+            "num_correct_limit": num_correct_limit,
+            "num_tested": num_tested,
+            "accuracy": num_correct / num_tested,
+            "majority_vote_accuracy": num_correct_majvote / num_tested,
+            "limit_accuracy": num_correct_limit / num_tested,
+            "avg_num_candidates": total_num_candidates / num_tested,
+        }
+    )
 
     print(f"Recording: \n{recording}")
 

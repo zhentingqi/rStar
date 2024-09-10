@@ -168,7 +168,6 @@ class Evaluator:
         most_confident_answer = self.extract_answer_from_model_completion(sampled_completion)
         id_of_most_confident = completions.index(sampled_completion)
         return most_confident_answer, sampled_completion, id_of_most_confident, confidence
-        
 
     def stochastic_find_most_confident_answer(
         self,
