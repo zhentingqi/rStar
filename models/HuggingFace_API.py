@@ -1,3 +1,5 @@
+# Licensed under the MIT license.
+
 import torch
 from transformers import (
     GenerationConfig,

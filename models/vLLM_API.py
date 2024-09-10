@@ -1,3 +1,5 @@
+# Licensed under the MIT license.
+
 from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
 import numpy as np

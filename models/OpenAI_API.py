@@ -1,3 +1,5 @@
+# Licensed under the MIT license.
+
 import os
 import os
 import time

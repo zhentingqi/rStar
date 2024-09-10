@@ -1,3 +1,5 @@
+# Licensed under the MIT license.
+
 import os, json, torch, math
 from argparse import ArgumentParser
 from datetime import datetime
