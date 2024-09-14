@@ -18,6 +18,9 @@ def get_parser():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--verbose", action="store_true")
 
+    #! mode settings
+    parser.add_argument("--mode", type=str, default="run", choices=["run", "evaluate"])
+
     #! WandB settings
     parser.add_argument("--wandb_mode", type=str, default="disabled", choices=["disabled", "online"])
 
