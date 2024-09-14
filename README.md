@@ -25,6 +25,15 @@ First, a target SLM augments the Monte Carlo Tree Search (MCTS) with a rich set 
 - newest `transformers`
 - newest `vllm`
 
+The following packages are also required:
+!pip install transformers
+!pip install vllm
+!pip install colorama
+!pip install fuzzywuzzy
+!pip install wandb
+
+see exact versions in requirements.txt
+
 ## Usage
 
 ### rStar Generator
