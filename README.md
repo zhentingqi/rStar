@@ -88,3 +88,7 @@ If you find our work helpful, please consider citing it:
     primaryClass={cs.CL}
 }
 ```
+
+## Read More
+
+rStar has been recommended as a key technique in [Awesome LLM Strawberry (OpenAI o1)](https://github.com/hijkzzz/Awesome-LLM-Strawberry). Click and read more relevant paper.
