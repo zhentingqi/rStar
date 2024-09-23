@@ -155,7 +155,7 @@ if __name__ == "__main__":
         "--num_subquestions", type=int, default=3, help="Number of trials for proposing the next subquestion"
     )
     parser.add_argument("--num_votes", type=int, default=10)
-    parser.add_argument("--max_depth_allowed", type=int, default=5)
+    parser.add_argument("--max_depth_allowed", type=int, default=10)
 
     # MCTS
     parser.add_argument("--mcts_discount_factor", type=float, default=1.0)
