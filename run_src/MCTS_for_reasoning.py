@@ -16,7 +16,7 @@ except:
 
 from models.IO_System import IO_System
 from common.utils import read_txt, read_json
-from eval_src.Evaluator import Evaluator, GSM8KEvaluator
+from eval_src.Evaluator import Evaluator
 from MCTS_backbone import MCTS_Searcher, MCTS_Node
 from run_src.rstar_utils import (
     Node_Type,

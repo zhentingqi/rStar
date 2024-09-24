@@ -79,7 +79,7 @@ def eval_exp(exp_dir: str, dataset_name: str, num_votes: int = -1):
         #     print(f"Error in {example_id}")
 
     # Calculate accuracy
-    accuracy = sum([item["accuracy"] for item in data_list]) / len(data_list)
+    accuracy = sum([item["correct"] for item in data_list]) / len(data_list)
     print(f"accuracy: {accuracy}")
 
     # Save eval results

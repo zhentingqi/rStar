@@ -1,0 +1,13 @@
+You are an AI assistant to help me rephrase questions by splitting the question context into conditions. In your rephrased question, remember to fully express the information in the original question.
+
+Original Question: In a sequence, the first term is 2 and each successive term is 3 times the previous term. What is the sum of the first 6 terms of this geometric sequence?
+Rephrased Question: Given a list of conditions, please answer the question. Condition 1: The first term of a sequence is 2. Condition 2: Each successive term is 3 times the previous term. Condition 3: There are a total of 6 terms in the sequence. Question: What is the sum of the first 6 terms of this geometric sequence?
+
+Original Question: Find the remainder when 123456 is divided by 9.
+Rephrased Question: Given a list of conditions, please answer the question. Condition 1: A number 123456 is given. Condition 2: We want to find the remainder when this number is divided by 9. Question: What is the remainder when 123456 is divided by 9?
+
+Original Question: If the sum of two numbers is 20 and their product is 96, what is the sum of their squares?
+Rephrased Question: Given a list of conditions, please answer the question. Condition 1: The sum of two numbers is 20. Condition 2: Their product is 96. Question: What is the sum of their squares?
+
+Original Question: A rectangle has a perimeter of 50 units. If the length of the rectangle is 3 times its width, what is the area of the rectangle?
+Rephrased Question: Given a list of conditions, please answer the question. Condition 1: A rectangle has a perimeter of 50 units. Condition 2: The length of the rectangle is 3 times its width. Question: What is the area of the rectangle?

@@ -1,0 +1,23 @@
+### Instruction:
+What is the area of the region in the coordinate plane defined by\n$| | x | - 1 | + | | y | - 1 | \\le 1$?
+
+### Response:
+Let's think step by step. The region is described by the inequality $ | |x| - 1 | + | |y| - 1 | \leq 1 $, which is symmetric with respect to both the x-axis and y-axis because of the absolute values. First, consider the case where $x \geq 0$ and $y \geq 0$. In this case, the inequality becomes $ (x - 1) + (y - 1) \leq 1 $, which simplifies to $ x + y \leq 3 $. This describes a triangular region in the first quadrant with vertices at $(1, 2)$, $(2, 1)$, and $(1, 1)$. By symmetry, the same triangular region appears in the other three quadrants. Therefore, the total area of the region is four times the area of one of these triangles. The area of one triangle is $ \frac{1}{2} \times 1 \times 1 = \frac{1}{2} $, so the total area is $ 4 \times \frac{1}{2} = 2 $. The answer is: 2.
+
+### Instruction:
+How many nonempty subsets $B$ of $\{0, 1, 2, 3, \cdots, 12\}$ have the property that the number of elements in $B$ is equal to the least element of $B$? For example, $B = \{4, 6, 8, 11\}$ satisfies the condition.
+
+### Response:
+Let's think step by step. Let the least element of $B$ be $k$. Then $B$ must contain exactly $k$ elements, and all elements of $B$ must be at least $k$. The set of possible elements of $B$ is therefore $\{k, k+1, k+2, \dots, 12\}$, which has $13 - k$ elements. We need to choose $k$ elements from this set, and the number of ways to do this is $$\binom{13 - k}{k}.$$ We now sum this over all possible values of $k$. The number of such subsets is $$\sum_{k=1}^{12} \binom{13 - k}{k}.$$ This simplifies to: $$\binom{12}{1} + \binom{11}{2} + \binom{10}{3} + \dots + \binom{1}{12}.$$ The sum of these binomial coefficients is equal to $144$. The answer is: 144.
+
+### Instruction:
+When the roots of the polynomial \n\\[P(x)  = (x-1)^1 (x-2)^2 (x-3)^3 \\cdot \\cdot \\cdot (x-10)^{10}\\]\nare removed from the number line, what remains is the union of $11$ disjoint open intervals. On how many of these intervals is $P(x)$ positive?
+
+### Response:
+Let's think step by step. The polynomial $P(x) = (x-1)^1 (x-2)^2 (x-3)^3 \cdot \cdot \cdot (x-10)^{10}$ has roots at $x = 1, 2, 3, \dots, 10$, with the multiplicity of the root at $x = n$ being $n$. On each interval between consecutive roots, the sign of $P(x)$ alternates depending on the parity of the number of roots crossed. Since $P(x)$ is a polynomial of degree 55 (the sum of the multiplicities of the roots), its leading term is positive for large values of $x$, so $P(x)$ is positive on the interval to the right of $x = 10$. Counting intervals with alternating signs, $P(x)$ is positive on 6 of the 11 intervals. The answer is: 6.
+
+### Instruction:
+You are playing a game. A $2 \times 1$ rectangle covers two adjacent squares (oriented either horizontally or vertically) of a $3 \times 3$ grid of squares, but you are not told which two squares are covered. Your goal is to find at least one square that is covered by the rectangle. A "turn" consists of you guessing a square, after which you are told whether that square is covered by the hidden rectangle. What is the minimum number of turns you need to ensure that at least one of your guessed squares is covered by the rectangle?
+
+### Response:
+Let's think step by step. There are $9$ squares on the $3 \times 3$ grid, and the $2 \times 1$ rectangle can cover $2$ adjacent squares in $12$ different configurations (6 horizontally and 6 vertically). To minimize the number of guesses, consider that after guessing certain key squares, you can eliminate multiple possibilities. By guessing three squares that form a "T" shape in the center of the grid (such as $(1,2), (2,1), (2,2)$), you can guarantee that at least one of these squares will be covered by the rectangle, regardless of its orientation. Thus, the minimum number of guesses needed is 3. The answer is: 3.
