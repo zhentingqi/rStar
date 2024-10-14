@@ -1028,18 +1028,11 @@ def search_for_answers(args, user_question: str, question_id: int, gt_answer: st
         rollout_node = mcts_searcher.do_rollout(root_node, i)
         model_rollout_nodes.append(rollout_node)
 
-        if not args.disable_answer_selection:
-            if args.api == "debug":
-                best_solution, chosen_node, all_solution_nodes, all_solutions = "Debug: I don't know!", None, [], []
-            else:
-                _, best_solution, _, chosen_node, all_solution_nodes, all_solutions = stochastic_find_best_solution(
-                    root_node, generator.evaluator, enable_potential_score=args.enable_potential_score
-                )
-                model_solutions.append(best_solution)
-                model_all_solutions.append(all_solutions)
-        else:
-            chosen_node = None
-            all_solution_nodes = find_valid_solution_nodes(root_node)
+        _, best_solution, _, chosen_node, all_solution_nodes, all_solutions = stochastic_find_best_solution(
+            root_node, generator.evaluator, enable_potential_score=args.enable_potential_score
+        )
+        model_solutions.append(best_solution)
+        model_all_solutions.append(all_solutions)
 
         if args.save_tree:
             with open(

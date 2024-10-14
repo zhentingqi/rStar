@@ -64,24 +64,14 @@ def post_process_args(args):
     # Set up logging
     suffix = "---[" + args.note + "]" if args.note is not None else ""
     model_name = args.model_ckpt.split("/")[-1]
-    if args.mode == "run":
-        args.run_outputs_dir = os.path.join(
-            args.run_outputs_root,
-            args.dataset_name,
-            model_name,
-            f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix,
-        )
-        os.makedirs(args.run_outputs_dir, exist_ok=True)
-    elif args.mode == "eval":
-        args.eval_outputs_dir = os.path.join(
-            args.eval_outputs_root,
-            args.dataset_name,
-            model_name,
-            f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix,
-        )
-        os.makedirs(args.eval_outputs_dir, exist_ok=True)
-    else:
-        raise ValueError(f"Invalid mode: {args.mode}")
+    args.run_outputs_dir = os.path.join(
+        args.run_outputs_root,
+        args.dataset_name,
+        model_name,
+        f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}" + suffix,
+    )
+    os.makedirs(args.run_outputs_dir, exist_ok=True)
+
 
     args.answer_sheets_dir = os.path.join(args.run_outputs_dir, "answer_sheets")
     os.makedirs(args.answer_sheets_dir, exist_ok=True)
@@ -104,9 +94,5 @@ def post_process_args(args):
 
 def save_args(args):
     # Save args as json
-    if args.mode == "run":
-        with open(os.path.join(args.run_outputs_dir, "args.json"), "w") as f:
-            json.dump(vars(args), f, indent=4)
-    elif args.mode == "eval":
-        with open(os.path.join(args.eval_outputs_dir, "args.json"), "w") as f:
-            json.dump(vars(args), f, indent=4)
+    with open(os.path.join(args.run_outputs_dir, "args.json"), "w") as f:
+        json.dump(vars(args), f, indent=4)

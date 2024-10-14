@@ -84,41 +84,10 @@ def main(args):
 
         num_tested += 1
 
-        if not args.disable_answer_selection:
-            assert len(model_solutions) == len(model_all_solutions)
-            for rollout_id, (model_solution, model_all_solution) in enumerate(
-                zip(model_solutions, model_all_solutions)
-            ):
-                model_answer = evaluator.extract_answer_from_model_completion(model_solution)
-                model_all_answers = [evaluator.extract_answer_from_model_completion(a) for a in model_all_solution]
-
-                correct = evaluator.check_answers_equiv(model_answer, gt_answer)
-                correct_limit = any([evaluator.check_answers_equiv(a, gt_answer) for a in model_all_answers])
-
-                if rollout_id == stopping_id:
-                    total_correct += int(correct)
-                    total_correct_limit += int(correct_limit)
-                    js["model_completion"] = model_solution
-                    js["model_answer"] = model_answer
-                    js["model_all_answer"] = model_all_solution
-                js["all_model_completions"][f"rollout_{rollout_id}"] = {
-                    "model_solution": model_solution,
-                    "model_answer": model_answer,
-                    "correct": correct,
-                    "correct_limit": correct_limit,
-                }
-
-            print(f"accuracy: {total_correct/(num_tested):.3f}")
-            print(f"limit accuracy: {total_correct_limit/(num_tested):.3f}")
-
         with open(os.path.join(args.answer_sheets_dir, f"Question {i:04d} - Answer.json"), "w") as f:
             json.dump(js, f)
 
         with open(os.path.join(args.run_outputs_dir, "intermediate_result.txt"), "w") as f:
-            if not args.disable_answer_selection:
-                f.write(f"Num tested: {num_tested}\n")
-                f.write(f"Num correct: {total_correct}\n")
-                f.write(f"Acc: {total_correct/(num_tested)}\n")
             f.write(
                 f"Total calls: {generator.io.call_counter}, Avg calls: {generator.io.call_counter/(num_tested):.2f}\n"
             )
@@ -128,17 +97,11 @@ def main(args):
 
     end_time = time.time()
 
-    if not args.disable_answer_selection:
-        print(f"==> Acc: {total_correct/(num_tested)}")
     print(f"==> Total calls: {generator.io.call_counter}, Avg calls: {generator.io.call_counter/(num_tested):.2f}")
     print(f"==> Total tokens: {generator.io.token_counter}, Avg tokens: {generator.io.token_counter/(num_tested):.2f}")
     print(f"==> Total time: {end_time-start_time:.2f}s, Avg time: {(end_time-start_time)/(num_tested):.2f}s")
 
     with open(os.path.join(args.run_outputs_dir, "final_result.txt"), "w") as f:
-        if not args.disable_answer_selection:
-            f.write(f"Num tested: {num_tested}\n")
-            f.write(f"Num correct: {total_correct}\n")
-            f.write(f"Acc: {total_correct/(num_tested)}\n")
         f.write(f"Total calls: {generator.io.call_counter}, Avg calls: {generator.io.call_counter/(num_tested):.2f}\n")
         f.write(
             f"Total tokens: {generator.io.token_counter}, Avg tokens: {generator.io.token_counter/(num_tested):.2f}\n"
@@ -174,7 +137,6 @@ if __name__ == "__main__":
 
     #! -------------------------- Used for selecting answer --------------------------
     parser.add_argument("--enable_potential_score", action="store_true")
-    parser.add_argument("--disable_answer_selection", action="store_true")
 
     #! -------------------------------------------------------------------------------
 
