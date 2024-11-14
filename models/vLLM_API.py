@@ -60,7 +60,8 @@ def generate_with_vLLM_model(
 
 
 if __name__ == "__main__":
-    model_ckpt = "mistralai/Mistral-7B-v0.1"
+    # model_ckpt = "mistralai/Mistral-7B-v0.1"
+    model_ckpt = "microsoft/Phi-3-mini-4k-instruct"
     tokenizer, model = load_vLLM_model(model_ckpt, seed=42, tensor_parallel_size=1, half_precision=False)
     input = "What is the meaning of life?"
     output = generate_with_vLLM_model(model, input)
