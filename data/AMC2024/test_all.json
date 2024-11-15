@@ -1,0 +1,112 @@
+[
+    {
+        "problem": "What is the value of $9901\\cdot101-99\\cdot10101?$ \n\n$\\textbf{(A)}~2\\qquad\\textbf{(B)}~20\\qquad\\textbf{(C)}~200\\qquad\\textbf{(D)}~202\\qquad\\textbf{(E)}~2020$",
+        "solution": "A",
+        "id": 0
+    },
+    {
+        "problem": "A model used to estimate the time it will take to hike to the top of the mountain on a trail is of the form $T=aL+bG,$ where $a$ and $b$ are constants, $T$ is the time in minutes, $L$ is the length of the trail in miles, and $G$ is the altitude gain in feet. The model estimates that it will take $69$ minutes to hike to the top if a trail is $1.5$ miles long and ascends $800$ feet, as well as if a trail is $1.2$ miles long and ascends $1100$ feet. How many minutes does the model estimate it will take to hike to the top if the trail is $4.2$ miles long and ascends $4000$ feet? \n\n$\\textbf{(A) }240\\qquad\\textbf{(B) }246\\qquad\\textbf{(C) }252\\qquad\\textbf{(D) }258\\qquad\\textbf{(E) }264$",
+        "solution": "B",
+        "id": 1
+    },
+    {
+        "problem": "What is the sum of the digits of the smallest prime that can be written as a sum of $5$ distinct primes? \n\n$\\textbf{(A) }5\\qquad\\textbf{(B) }7\\qquad\\textbf{(C) }9\\qquad\\textbf{(D) }10\\qquad\\textbf{(E) }13$",
+        "solution": "B",
+        "id": 2
+    },
+    {
+        "problem": "The number $2024$ is written as the sum of not necessarily distinct two-digit numbers. What is the least number of two-digit numbers needed to write this sum? \n\n$\\textbf{(A) }20\\qquad\\textbf{(B) }21\\qquad\\textbf{(C) }22\\qquad\\textbf{(D) }23\\qquad\\textbf{(E) }24$",
+        "solution": "B",
+        "id": 3
+    },
+    {
+        "problem": "What is the least value of $n$ such that $n!$ is a multiple of $2024$? \n\n$\\textbf{(A) } 11\\qquad\\textbf{(B) } 21\\qquad\\textbf{(C) } 22\\qquad\\textbf{(D) } 23\\qquad\\textbf{(E) } 253$",
+        "solution": "D",
+        "id": 4
+    },
+    {
+        "problem": "What is the minimum number of successive swaps of adjacent letters in the string $ABCDEF$ that are needed to change the string to $FEDCBA?$ (For example, $3$ swaps are required to change $ABC$ to $CBA;$ one such sequence of swaps is $ABC\\to BAC\\to BCA\\to CBA.$) \n\n$\\textbf{(A)}~6\\qquad\\textbf{(B)}~10\\qquad\\textbf{(C)}~12\\qquad\\textbf{(D)}~15\\qquad\\textbf{(E)}~24$",
+        "solution": "D",
+        "id": 5
+    },
+    {
+        "problem": "The product of three integers is $60$. What is the least possible positive sum of the three integers? \n\n$\\textbf{(A) }2\\qquad\\textbf{(B) }3\\qquad\\textbf{(C) }5\\qquad\\textbf{(D) }6\\qquad\\textbf{(E) }13$",
+        "solution": "B",
+        "id": 6
+    },
+    {
+        "problem": "Amy, Bomani, Charlie, and Daria work in a chocolate factory. On Monday, Amy, Bomani, and Charlie started working at $1:00 PM$ and were able to pack $4$, $3$, and $3$ packages, respectively, every $3$ minutes. At some later time, Daria joined the group, and Daria was able to pack $5$ packages every $4$ minutes. Together, they finished packing $450$ packages at exactly $2:45 PM$. At what time did Daria join the group? \n\n$\\textbf{(A) }1:25\\text{ PM}\\qquad\\textbf{(B) }1:35\\text{ PM}\\qquad\\textbf{(C) }1:45\\text{ PM}\\qquad\\textbf{(D) }1:55\\text{ PM}\\qquad\\textbf{(E) }2:05\\text{ PM}$",
+        "solution": "A",
+        "id": 7
+    },
+    {
+        "problem": "In how many ways can $6$ juniors and $6$ seniors form $3$ disjoint teams of $4$ people so that each team has $2$ juniors and $2$ seniors? \n\n$\\textbf{(A) }720\\qquad\\textbf{(B) }1350\\qquad\\textbf{(C) }2700\\qquad\\textbf{(D) }3280\\qquad\\textbf{(E) }8100$",
+        "solution": "B",
+        "id": 8
+    },
+    {
+        "problem": "Consider the following operation. Given a positive integer $n$, if $n$ is a multiple of $3$, then you replace $n$ by \\( \\frac{n}{3} \\). If $n$ is not a multiple of $3$, then you replace $n$ by $n+10$. Then continue this process. For example, beginning with $n=4$, this procedure gives $4 \\to 14 \\to 24 \\to 8 \\to 18 \\to 6 \\to 2 \\to 12 \\to \\cdots$. Suppose you start with $n=100$. What value results if you perform this operation exactly $100$ times? \n\n$\\textbf{(A) }10\\qquad\\textbf{(B) }20\\qquad\\textbf{(C) }30\\qquad\\textbf{(D) }40\\qquad\\textbf{(E) }50$",
+        "solution": "C",
+        "id": 9
+    },
+    {
+        "problem": "How many ordered pairs of integers $(m, n)$ satisfy $\\sqrt{n^2 - 49} = m$? \n\n$\\textbf{(A)}~1\\qquad\\textbf{(B)}~2\\qquad\\textbf{(C)}~3\\qquad\\textbf{(D)}~4\\qquad\\textbf{(E)}$ Infinitely many",
+        "solution": "D",
+        "id": 10
+    },
+    {
+        "problem": "Two transformations are said to commute if applying the first followed by the second gives the same result as applying the second followed by the first. Consider these four transformations of the coordinate plane: \n\n- a translation $2$ units to the right,\n- a $90^{\\circ}$-rotation counterclockwise about the origin,\n- a reflection across the $x$-axis, and\n- a dilation centered at the origin with scale factor $2.$ \n\nOf the $6$ pairs of distinct transformations from this list, how many commute? \n\n$\\textbf{(A)}~1\\qquad\\textbf{(B)}~2\\qquad\\textbf{(C)}~3\\qquad\\textbf{(D)}~4\\qquad\\textbf{(E)}~5$",
+        "solution": "C",
+        "id": 11
+    },
+    {
+        "problem": "One side of an equilateral triangle of height $24$ lies on line $\\ell$. A circle of radius $12$ is tangent to line $\\ell$ and is externally tangent to the triangle. The area of the region exterior to the triangle and the circle and bounded by the triangle, the circle, and line $\\ell$ can be written as $a \\sqrt{b} - c \\pi$, where $a$, $b$, and $c$ are positive integers and $b$ is not divisible by the square of any prime. What is $a + b + c$? \n\n$\\textbf{(A)}~72\\qquad\\textbf{(B)}~73\\qquad\\textbf{(C)}~74\\qquad\\textbf{(D)}~75\\qquad\\textbf{(E)}~76$",
+        "solution": "D",
+        "id": 12
+    },
+    {
+        "problem": "Let $M$ be the greatest integer such that both $M+1213$ and $M+3773$ are perfect squares. What is the units digit of $M$? \n\n$\\textbf{(A) }1\\qquad\\textbf{(B) }2\\qquad\\textbf{(C) }3\\qquad\\textbf{(D) }6\\qquad\\textbf{(E) }8$",
+        "solution": "E",
+        "id": 13
+    },
+    {
+        "problem": "Two teams are in a best-two-out-of-three playoff: the teams will play at most $3$ games, and the winner of the playoff is the first team to win $2$ games. The first game is played on Team A's home field, and the remaining games are played on Team B's home field. Team A has a $\\frac{2}{3}$ chance of winning at home, and its probability of winning when playing away from home is $p$. Outcomes of the games are independent. The probability that Team A wins the playoff is $\\frac{1}{2}$. Then $p$ can be written in the form $\\frac{1}{2}(m - \\sqrt{n})$, where $m$ and $n$ are positive integers. What is $m + n$? \n\n$\\textbf{(A) } 10 \\qquad \\textbf{(B) } 11 \\qquad \\textbf{(C) } 12 \\qquad \\textbf{(D) } 13 \\qquad \\textbf{(E) } 14$",
+        "solution": "E",
+        "id": 14
+    },
+    {
+        "problem": "There are exactly $K$ positive integers $b$ with $5 \\leq b \\leq 2024$ such that the base-$b$ integer $2024_b$ is divisible by $16$ (where $16$ is in base ten). What is the sum of the digits of $K$? \n\n$\\textbf{(A) }16\\qquad\\textbf{(B) }17\\qquad\\textbf{(C) }18\\qquad\\textbf{(D) }20\\qquad\\textbf{(E) }21$",
+        "solution": "D",
+        "id": 15
+    },
+    {
+        "problem": "The first three terms of a geometric sequence are the integers $a,\\,720,$ and $b,$ where $a<720<b.$ What is the sum of the digits of the least possible value of $b?$ \n\n$\\textbf{(A) } 9 \\qquad \\textbf{(B) } 12 \\qquad \\textbf{(C) } 16 \\qquad \\textbf{(D) } 18 \\qquad \\textbf{(E) } 21$",
+        "solution": "E",
+        "id": 16
+    },
+    {
+        "problem": "Points $P$ and $Q$ are chosen uniformly and independently at random on sides $\\overline {AB}$ and $\\overline{AC},$ respectively, of equilateral triangle $\\triangle ABC.$ Which of the following intervals contains the probability that the area of $\\triangle APQ$ is less than half the area of $\\triangle ABC?$ \n\n$\\textbf{(A) } \\left[\\frac 38, \\frac 12\\right] \\qquad \\textbf{(B) } \\left(\\frac 12, \\frac 23\\right] \\qquad \\textbf{(C) } \\left(\\frac 23, \\frac 34\\right] \\qquad \\textbf{(D) } \\left(\\frac 34, \\frac 78\\right] \\qquad \\textbf{(E) } \\left(\\frac 78, 1\\right]$",
+        "solution": "D",
+        "id": 17
+    },
+    {
+        "problem": "Let $S$ be a subset of $\\{1, 2, 3, \\dots, 2024\\}$ such that the following two conditions hold: \n\nIf $x$ and $y$ are distinct elements of $S$, then $|x-y| > 2$ \n\nIf $x$ and $y$ are distinct odd elements of $S$, then $|x-y| > 6$. \n\nWhat is the maximum possible number of elements in $S$?\n\n$\\textbf{(A) }436 \\qquad \\textbf{(B) }506 \\qquad \\textbf{(C) }608 \\qquad \\textbf{(D) }654 \\qquad \\textbf{(E) }675$",
+        "solution": "C",
+        "id": 18
+    },
+    {
+        "problem": "The numbers, in order, of each row and the numbers, in order, of each column of a $5 \\times 5$ array of integers form an arithmetic progression of length $5{.}$ The numbers in positions $(5, 5), \\,(2,4),\\,(4,3),$ and $(3, 1)$ are $0, 48, 16, and 12$ respectively. What number is in position $(1, 2)?$\n\n$\\textbf{(A) } 19 \\qquad \\textbf{(B) } 24 \\qquad \\textbf{(C) } 29 \\qquad \\textbf{(D) } 34 \\qquad \\textbf{(E) } 39$",
+        "solution": "C",
+        "id": 19
+    },
+    {
+        "problem": "Integers $a$, $b$, and $c$ satisfy $ab + c = 100$, $bc + a = 87$, and $ca + b = 60$. What is $ab + bc + ca$?\n\n$\\textbf{(A) }212 \\qquad \\textbf{(B) }247 \\qquad \\textbf{(C) }258 \\qquad \\textbf{(D) }276 \\qquad \\textbf{(E) }284$",
+        "solution": "D",
+        "id": 20
+    },
+    {
+        "problem": "A bee is moving in three-dimensional space. A fair six-sided die with faces labeled $A^+, A^-, B^+, B^-, C^+,$ and $C^-$ is rolled. Suppose the bee occupies the point $(a,b,c).$ If the die shows $A^+$, then the bee moves to the point $(a+1,b,c)$ and if the die shows $A^-,$ then the bee moves to the point $(a-1,b,c).$ Analogous moves are made with the other four outcomes. Suppose the bee starts at the point $(0,0,0)$ and the die is rolled four times. What is the probability that the bee traverses four distinct edges of some unit cube?\n\n$\\textbf{(A) }\\frac{1}{54}\\qquad\\textbf{(B) }\\frac{7}{54}\\qquad\\textbf{(C) }\\frac{1}{6}\\qquad\\textbf{(D) }\\frac{5}{18}\\qquad\\textbf{(E) }\\frac{2}{5}$",
+        "solution": "B",
+        "id": 21
+    }
+]

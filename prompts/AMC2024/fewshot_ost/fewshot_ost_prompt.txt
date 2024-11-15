@@ -1,0 +1,34 @@
+### Instruction:
+If $A$ and $B$ are vertices of a polyhedron, define the distance $d(A,B)$ to be the minimum number of edges of the polyhedron one must traverse in order to connect $A$ and $B$. For example, if $\\overline{AB}$ is an edge of the polyhedron, then $d(A, B) = 1$, but if $\\overline{AC}$ and $\\overline{CB}$ are edges and $\\overline{AB}$ is not an edge, then $d(A, B) = 2$. Let $Q$, $R$, and $S$ be randomly chosen distinct vertices of a regular icosahedron (regular polyhedron made up of 20 equilateral triangles). What is the probability that $d(Q, R) > d(R, S)$?\n\n$\\textbf{(A) } \\frac{7}{22} \\qquad \\textbf{(B) } \\frac{1}{3} \\qquad \\textbf{(C) } \\frac{3}{8} \\qquad \\textbf{(D) } \\frac{5}{12} \\qquad \\textbf{(E) } \\frac{1}{2}${(A) } \frac{7}{22} \qquad \textbf{(B) } \frac{1}{3} \qquad \textbf{(C) } \frac{3}{8} \qquad \textbf{(D) } \frac{5}{12} \qquad \textbf{(E) } \frac{1}{2}$
+
+### Response:
+Let's think step by step.
+Step 1: An icosahedron is a regular polyhedron with 20 equilateral triangular faces, 12 vertices, and 30 edges. Each vertex is connected to 5 other vertices, meaning the shortest distance $d(A, B)$ between any two vertices $A$ and $B$ depends on the number of edges connecting them along the polyhedron's surface.
+Step 2: In a regular icosahedron, the possible distances between two vertices $A$ and $B$ are $d(A, B) = 1, 2,$ or $3$, corresponding to vertices that are adjacent, two edges apart, or three edges apart, respectively. The maximum distance is 3 because the diameter of an icosahedron (the greatest distance between any two vertices) is 3 edges.
+Step 3: The inequality $d(Q, R) > d(R, S)$ indicates that the shortest path in edges from $Q$ to $R$ is greater than the shortest path from $R$ to $S$. This means that if $d(Q, R) = 2$, then $d(R, S)$ should be 1, and if $d(Q, R) = 3$, then $d(R, S)$ can be either 1 or 2.
+Step 4: For a regular icosahedron: The probability that two randomly chosen vertices are at distance 1 is approximately $\frac{5}{11}$; The probability that two randomly chosen vertices are at distance 2 is approximately $\frac{5}{11}$; The probability that two randomly chosen vertices are at distance 3 is approximately $\frac{1}{11}$.
+Step 5: To calculate the probability that $d(Q, R) > d(R, S)$, we analyze the cases. Case 1: $d(Q, R) = 2$ and $d(R, S) = 1$. The probability for this scenario is $\frac{5}{11} \times \frac{5}{11} = \frac{25}{121}$. Case 2: $d(Q, R) = 3$ and $d(R, S) = 1$ or $d(R, S) = 2$. The probability for this scenario is $\frac{1}{11} \times \frac{10}{11} = \frac{10}{121}$.
+Step 6: Adding these probabilities, we get: $\frac{25}{121} + \frac{10}{121} = \frac{35}{121} = \frac{7}{22}$.
+Step 7: The answer is A.
+
+### Instruction:
+A rhombic dodecahedron is a solid with $12$ congruent rhombus faces. At every vertex, $3$ or $4$ edges meet, depending on the vertex. How many vertices have exactly $3$ edges meet?\n\n$\\textbf{(A) }5\\qquad\\textbf{(B) }6\\qquad\\textbf{(C) }7\\qquad\\textbf{(D) }8\\qquad\\textbf{(E) }9$
+
+### Response:
+Let's think step by step.
+Step 1: A rhombic dodecahedron has $12$ congruent rhombus faces, $14$ vertices, and $24$ edges.
+Step 2: The vertices of a rhombic dodecahedron are such that at some vertices, $3$ edges meet, while at others, $4$ edges meet.
+Step 3: In a rhombic dodecahedron, exactly $6$ vertices have $4$ edges meeting, and $8$ vertices have $3$ edges meeting. This distribution follows the polyhedron's symmetry and structure.
+Step 4: The answer is D.
+
+### Instruction:
+The line segment formed by $A(1, 2)$ and $B(3, 3)$ is rotated to the line segment formed by $A'(3, 1)$ and $B'(4, 3)$ about the point $P(r, s)$. What is $|r-s|$?\n\n$\\textbf{(A) } \\frac{1}{4} \\qquad \\textbf{(B) } \\frac{1}{2} \\qquad \\textbf{(C) } \\frac{3}{4} \\qquad \\textbf{(D) } \\frac{2}{3} \\qquad \\textbf{(E) } 1$
+
+### Response:
+Let's think step by step.
+Step 1: To find the center of rotation $P(r, s)$, we first consider the midpoint between $A$ and $A'$, since $P$ must be equidistant from both $A$ and $A'$ to serve as the rotation center. The midpoint of $A(1, 2)$ and $A'(3, 1)$ is $\left(\frac{1+3}{2}, \frac{2+1}{2}\right) = (2, 1.5)$.
+Step 2: We also need to check if this midpoint $(2, 1.5)$ satisfies the rotation requirement for points $B(3, 3)$ and $B'(4, 3)$. The midpoint of $B$ and $B'$ is $\left(\frac{3+4}{2}, \frac{3+3}{2}\right) = (3.5, 3)$. 
+Step 3: Since these midpoints differ, $P(r, s)$ must lie at the intersection of the perpendicular bisectors of $A \rightarrow A'$ and $B \rightarrow B'$.
+Step 4: Solving for $P(r, s)$ using the perpendicular bisectors of segments $A \rightarrow A'$ and $B \rightarrow B'$, we find that $P$ has coordinates $(2.5, 2.5)$.
+Step 5: Now, we can determine $|r - s|$: $|r - s| = |2.5 - 2.5| = 0$.
+Step 6: The answer is E.

@@ -438,3 +438,51 @@ class STGEvaluator(Evaluator):
             return None
 
         return self._format_answer(answer)
+
+class AMC2024Evaluator(Evaluator):
+    def __init__(self) -> None:
+        super().__init__()
+
+    def _format_answer(self, answer: str):
+        if answer.lower() in ["A", "a","1"]:
+            return "A"
+        elif answer.lower() in ["B", "b","2"]:
+            return "B"
+        elif answer.lower() in ["C", "c","3"]:
+            return "C"
+        elif answer.lower() in ["D", "d","4"]:
+            return "D"
+        elif answer.lower() in ["E", "e","5"]:
+            return "E"
+        else:
+            return answer.upper()
+
+    def check_answers_equiv(self, answer_a: str, answer_b: str):
+        if answer_a is None or answer_b is None:
+            return False
+
+        assert isinstance(answer_a, str) and isinstance(answer_b, str)
+
+        format_answer_a = self._format_answer(answer_a)
+        format_answer_b = self._format_answer(answer_b)
+        return format_answer_a == format_answer_b or fuzz.token_sort_ratio(format_answer_a, format_answer_b) >= 90
+
+    def extract_answer_from_gold_solution(self, solution: str):
+        if solution is None:
+            return None
+
+        assert isinstance(solution, str)
+
+        return self._format_answer(solution)
+
+    def extract_answer_from_model_completion(self, completion: str):
+        if completion is None:
+            return None
+
+        assert isinstance(completion, str)
+
+        answer = self.isolate_answer(completion)
+        if answer is None:
+            return None
+
+        return self._format_answer(answer)
