@@ -102,3 +102,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     eval_exp(args.exp_dir_path, args.dataset_name, num_votes=args.num_votes)
+
+"""
+python eval_src/do_eval.py \
+    --dataset_name AMC2024 \
+    --exp_dir_path /n/home01/minma/rStar/run_outputs/AMC2024/Llama-3.1-8B-Instruct/2024-11-15_16-33-14---[amc] \
+    --num_votes 1
+"""

@@ -1,0 +1,9 @@
+{
+    "id": 0,
+    "problem": "What is the value of $9901\\cdot101-99\\cdot10101?$ \n\n$\\textbf{(A)}~2\\qquad\\textbf{(B)}~20\\qquad\\textbf{(C)}~200\\qquad\\textbf{(D)}~202\\qquad\\textbf{(E)}~2020$",
+    "model_completion": null,
+    "model_answer": null,
+    "all_model_completions": {},
+    "gold_solution": "A",
+    "gold_answer": "A"
+}

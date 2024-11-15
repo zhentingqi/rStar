@@ -188,7 +188,7 @@ class Generator:
         )
         io_output_list = self.io.generate(
             io_input,
-            max_tokens=128,
+            max_tokens=512,
             num_return=self.num_subquestions,
             stop_tokens=[
                 "\n",
@@ -230,8 +230,6 @@ class Generator:
             max_tokens=512,
             num_return=num_return,
             stop_tokens=[
-                "\n",
-                "\n\n",
                 f"Question {self.question_index}.{next_subquestion_id + 1}",
             ],
         )
@@ -268,7 +266,7 @@ class Generator:
                     potential_score_output = self.io.generate(
                         potential_score_input,
                         num_return=self.num_votes,
-                        max_tokens=128,
+                        max_tokens=512,
                         stop_tokens=self.fewshot_cot_config["stop_tokens"],
                     )
                     potential_score_input2 = [
@@ -283,7 +281,7 @@ class Generator:
                     cleaned_io_output_list = self.io.generate(
                         potential_score_input2,
                         num_return=1,
-                        max_tokens=128,
+                        max_tokens=512,
                         stop_tokens=self.fewshot_cot_config["stop_tokens"],
                     )
                     cleaned_io_output_list = [z[0] for z in cleaned_io_output_list]
@@ -341,7 +339,7 @@ class Generator:
                 potential_score_output = self.io.generate(
                     potential_score_input,
                     num_return=self.num_votes,
-                    max_tokens=128,
+                    max_tokens=512,
                     stop_tokens=self.fewshot_cot_config["stop_tokens"],
                 )
                 potential_score_input2 = [
@@ -356,7 +354,7 @@ class Generator:
                 cleaned_io_output_list = self.io.generate(
                     potential_score_input2,
                     num_return=1,
-                    max_tokens=128,
+                    max_tokens=512,
                     stop_tokens=self.fewshot_cot_config["stop_tokens"],
                 )
                 cleaned_io_output_list = [z[0] for z in cleaned_io_output_list]
@@ -387,7 +385,7 @@ class Generator:
             potential_score_output = self.io.generate(
                 potential_score_input,
                 num_return=self.num_votes,
-                max_tokens=128,
+                max_tokens=512,
                 stop_tokens=self.fewshot_cot_config["stop_tokens"],
             )
             potential_score_input2 = [
@@ -400,7 +398,7 @@ class Generator:
                 for z in potential_score_output
             ]
             cleaned_io_output_list = self.io.generate(
-                potential_score_input2, num_return=1, max_tokens=128, stop_tokens=self.fewshot_cot_config["stop_tokens"]
+                potential_score_input2, num_return=1, max_tokens=512, stop_tokens=self.fewshot_cot_config["stop_tokens"]
             )
             cleaned_io_output_list = [z[0] for z in cleaned_io_output_list]
 
@@ -433,7 +431,7 @@ class Generator:
             + f"Step {next_ost_step_id}:"
         )
         io_output_list = self.io.generate(
-            model_input=io_input, max_tokens=256, num_return=self.num_a1_steps, stop_tokens=["\n", "\n\n"]
+            model_input=io_input, max_tokens=512, num_return=self.num_a1_steps, stop_tokens=self.fewshot_ost_config["stop_tokens"]
         )
         ost_step_list = [io_output.strip() for io_output in io_output_list]
 
@@ -448,7 +446,7 @@ class Generator:
                 potential_score_output = self.io.generate(
                     potential_score_input,
                     num_return=self.num_votes,
-                    max_tokens=128,
+                    max_tokens=512,
                     stop_tokens=self.fewshot_cot_config["stop_tokens"],
                 )
                 potential_score_input2 = [
@@ -463,7 +461,7 @@ class Generator:
                 cleaned_io_output_list = self.io.generate(
                     potential_score_input2,
                     num_return=1,
-                    max_tokens=128,
+                    max_tokens=512,
                     stop_tokens=self.fewshot_cot_config["stop_tokens"],
                 )
                 cleaned_io_output_list = [z[0] for z in cleaned_io_output_list]

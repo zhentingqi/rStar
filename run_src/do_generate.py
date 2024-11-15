@@ -71,6 +71,7 @@ def main(args):
         model_solutions, stopping_id, model_all_solutions = search_for_answers(
             args=args, user_question=problem, question_id=i, gt_answer=gt_solution, generator=generator
         )
+
         # except GeneratorError as e:
         #     print(e)
         #     js["generator_error"] = {

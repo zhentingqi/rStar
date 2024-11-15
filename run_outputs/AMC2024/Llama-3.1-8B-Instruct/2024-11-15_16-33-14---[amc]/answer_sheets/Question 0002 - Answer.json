@@ -1,0 +1,1 @@
+{"id": 2, "problem": "What is the sum of the digits of the smallest prime that can be written as a sum of $5$ distinct primes? \n\n$\\textbf{(A) }5\\qquad\\textbf{(B) }7\\qquad\\textbf{(C) }9\\qquad\\textbf{(D) }10\\qquad\\textbf{(E) }13$", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "B", "gold_answer": "B"}

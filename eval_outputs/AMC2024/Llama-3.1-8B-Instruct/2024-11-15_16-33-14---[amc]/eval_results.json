@@ -1,0 +1,37 @@
+[
+    {
+        "correct": false,
+        "predict_answer": "D",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "A",
+        "gold_answer": "D"
+    },
+    {
+        "correct": true,
+        "predict_answer": "A",
+        "gold_answer": "A"
+    },
+    {
+        "correct": true,
+        "predict_answer": "B",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "D",
+        "gold_answer": "B"
+    },
+    {
+        "correct": true,
+        "predict_answer": "D",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "E",
+        "gold_answer": "B"
+    }
+]
