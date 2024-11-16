@@ -25,3 +25,16 @@ Question 2.4: What are the coordinates of $P(r, s)$?
 Answer 2.4: The coordinates of $P(r, s)$ are $r = 2.5$ and $s = 2.5$.
 Question 2.5: Now we can answer the question: What is $|r-s|$ if $P = (2.5, 2.5)$?
 Answer 2.5: Given $P(r, s) = (2.5, 2.5)$, we have $|r - s| = |2.5 - 2.5| = 0$. The answer is E.
+
+Question 3: If $A$ and $B$ are vertices of a polyhedron, define the distance $d(A,B)$ to be the minimum number of edges of the polyhedron one must traverse in order to connect $A$ and $B$. For example, if $\overline{AB}$ is an edge of the polyhedron, then $d(A, B) = 1$, but if $\overline{AC}$ and $\overline{CB}$ are edges and $\overline{AB}$ is not an edge, then $d(A, B) = 2$. Let $Q$, $R$, and $S$ be randomly chosen distinct vertices of a regular icosahedron (regular polyhedron made up of 20 equilateral triangles). What is the probability that $d(Q, R) > d(R, S)$?
+Question 3.1: What are the basic properties of an icosahedron?  
+Answer 3.1: A regular icosahedron has 12 vertices, 30 edges, and each vertex is connected to 5 others. Distances between vertices can be 1, 2, or 3 edges.
+Question 3.2: What does $d(Q, R) > d(R, S)$ mean?  
+Answer 3.2: It means the number of edges connecting $Q$ and $R$ is greater than the number of edges connecting $R$ and $S$.
+Question 3.3: What are the probabilities of each possible distance between two vertices?  
+Answer 3.3: The probability of $d(A, B) = 1$ is $\frac{5}{11}$, $d(A, B) = 2$ is $\frac{5}{11}$, and $d(A, B) = 3$ is $\frac{1}{11}$.
+Question 3.4: How do we calculate the probability of $d(Q, R) > d(R, S)$?  
+Answer 3.4: We consider two cases. First case: $d(Q, R) = 2$ and $d(R, S) = 1$ (probability $\frac{5}{11} \times \frac{5}{11} = \frac{25}{121}$). Second case: $d(Q, R) = 3$ and $d(R, S) = 1$ or $d(R, S) = 2$ (probability $\frac{1}{11} \times \frac{10}{11} = \frac{10}{121}$).  
+Adding these, the total probability is $\frac{25}{121} + \frac{10}{121} = \frac{35}{121} = \frac{7}{22}$.
+Question 3.5: Now we can answer the question: What is the probability that $d(Q, R) > d(R, S)$?  
+Answer 3.5: The probability is $\frac{7}{22}$. The answer is A.

@@ -1,5 +1,5 @@
 {
-    "prompt_template": "You are a math assistant. You must give step-by-step solutions to the user's questions. In the end of your response, a final answer is given in the format of \"The answer is: <ANSWER>.\", where <ANSWER> should be one of A, B, C, D, E.\n\n{examples}\n\n### Instruction:\n{instruction}\n\n### Response:\n",
+    "prompt_template": "You are a math assistant. You must give step-by-step solutions to the user's questions. In the end of your response, a final answer is given in the format of \"The answer is <ANSWER>.\", where <ANSWER> should be one of A, B, C, D, E.\n\n{examples}\n\n### Instruction:\n{instruction}\n\n### Response:\n",
     "stop_tokens": [
         "</s>",
         "Instruction:",

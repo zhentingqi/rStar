@@ -1,0 +1,112 @@
+[
+    {
+        "correct": false,
+        "predict_answer": "C. I HOPE IT IS CORRECT",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "C. I HOPE IT IS CORRECT",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "14. I HOPE IT IS CORRECT",
+        "gold_answer": "E"
+    },
+    {
+        "correct": false,
+        "predict_answer": "B. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "29. I HOPE IT IS CORRECT",
+        "gold_answer": "C"
+    },
+    {
+        "correct": false,
+        "predict_answer": "3. I HOPE IT IS CORRECT",
+        "gold_answer": "C"
+    },
+    {
+        "correct": false,
+        "predict_answer": "E. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "B. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "E. I HOPE IT IS CORRECT",
+        "gold_answer": "C"
+    },
+    {
+        "correct": false,
+        "predict_answer": "E. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "D. I HOPE IT IS CORRECT",
+        "gold_answer": "A"
+    },
+    {
+        "correct": false,
+        "predict_answer": "22. I HOPE IT IS CORRECT",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "D. I HOPE IT IS CORRECT",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "D. I HOPE IT IS CORRECT",
+        "gold_answer": "E"
+    },
+    {
+        "correct": false,
+        "predict_answer": "D. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "219. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "B. I HOPE IT IS CORRECT",
+        "gold_answer": "A"
+    },
+    {
+        "correct": false,
+        "predict_answer": "A. I HOPE IT IS CORRECT",
+        "gold_answer": "D"
+    },
+    {
+        "correct": false,
+        "predict_answer": "C. I HOPE IT IS CORRECT",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "A. I HOPE IT IS CORRECT",
+        "gold_answer": "B"
+    },
+    {
+        "correct": false,
+        "predict_answer": "E. I HOPE IT IS CORRECT",
+        "gold_answer": "C"
+    },
+    {
+        "correct": false,
+        "predict_answer": "E. I HOPE IT IS CORRECT",
+        "gold_answer": "E"
+    }
+]

@@ -106,6 +106,6 @@ if __name__ == "__main__":
 """
 python eval_src/do_eval.py \
     --dataset_name AMC2024 \
-    --exp_dir_path /n/home01/minma/rStar/run_outputs/AMC2024/Llama-3.1-8B-Instruct/2024-11-15_16-33-14---[amc] \
-    --num_votes 1
+    --exp_dir_path /n/home01/minma/rStar/run_outputs/AMC2024/Meta-Llama-3-8B-Instruct/2024-11-15_17-06-53---[amc] \
+    --num_votes 999
 """

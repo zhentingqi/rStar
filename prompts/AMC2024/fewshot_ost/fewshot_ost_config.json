@@ -2,18 +2,10 @@
     "prompt_template": "You are a math assistant. You must provide step-by-step solutions to the user's questions. At the final step, a conclusive answer is given in the format of \"The answer is: <ANSWER>.\", where <ANSWER> should be one of A, B, C, D, E.\n\n{examples}\n\n### Instruction:\n{instruction}\n\n### Response:\nLet's think step by step.\n",
     "stop_tokens": [
         "</s>",
-        "Question:",
-        "Question",
-        "USER:",
-        "USER",
-        "ASSISTANT:",
-        "ASSISTANT",
         "Instruction:",
         "Instruction",
         "Response:",
         "Response",
-        "#",
-        "# ",
         "###",
         "### ",
         "\nStep"

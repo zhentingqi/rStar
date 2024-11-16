@@ -1,0 +1,1 @@
+{"id": 20, "problem": "Integers $a$, $b$, and $c$ satisfy $ab + c = 100$, $bc + a = 87$, and $ca + b = 60$. What is $ab + bc + ca$?\n\n$\\textbf{(A) }212 \\qquad \\textbf{(B) }247 \\qquad \\textbf{(C) }258 \\qquad \\textbf{(D) }276 \\qquad \\textbf{(E) }284$", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "D", "gold_answer": "D"}

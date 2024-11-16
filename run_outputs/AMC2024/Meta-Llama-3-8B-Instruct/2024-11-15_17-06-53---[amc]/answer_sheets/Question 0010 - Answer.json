@@ -1,0 +1,1 @@
+{"id": 10, "problem": "How many ordered pairs of integers $(m, n)$ satisfy $\\sqrt{n^2 - 49} = m$? \n\n$\\textbf{(A)}~1\\qquad\\textbf{(B)}~2\\qquad\\textbf{(C)}~3\\qquad\\textbf{(D)}~4\\qquad\\textbf{(E)}$ Infinitely many", "model_completion": null, "model_answer": null, "all_model_completions": {}, "gold_solution": "D", "gold_answer": "D"}
