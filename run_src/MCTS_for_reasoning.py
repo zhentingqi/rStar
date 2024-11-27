@@ -920,7 +920,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
         elif self.node_type is Node_Type.SUBQUESTION:
             # A1: Propose an one-step thought.
             if not self.disable_a1:
-                do_action_generate_ost_step()
+                do_action_generate_ost_step(parent_is_subquestion=True)
 
             # A2: Propose the remaining thought steps
             do_action_generate_direct_answers()
@@ -933,7 +933,7 @@ class Reasoning_MCTS_Node(MCTS_Node):
         elif self.node_type is Node_Type.RE_SUBANSWER:
             # A1: Propose an one-step thought.
             if not self.disable_a1:
-                do_action_generate_ost_step()
+                do_action_generate_ost_step(parent_is_subquestion=True)
 
             # A2: Propose the remaining thought steps
             do_action_generate_direct_answers()
