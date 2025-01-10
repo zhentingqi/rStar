@@ -5,8 +5,8 @@ This repository contains necessary scripts to run **rStar**'s generator and disc
 > Link to paper: https://huggingface.co/papers/2408.06195, https://arxiv.org/abs/2408.06195 
 
 ## News
-> [01/09/2025] 🚀🚀 Check out our follow-up work [**rStar-Math**](https://arxiv.org/abs/2501.04519)!
-> [10/01/2024] rStar has been recommended as a key technique in [Awesome LLM Strawberry (OpenAI o1)](https://github.com/hijkzzz/Awesome-LLM-Strawberry). Click and read more relevant papers.
+- [01/09/2025] 🚀🚀 Check out our follow-up work [**rStar-Math**](https://arxiv.org/abs/2501.04519)!
+- [10/01/2024] rStar has been recommended as a key technique in [Awesome LLM Strawberry (OpenAI o1)](https://github.com/hijkzzz/Awesome-LLM-Strawberry). Click and read more relevant papers.
 
 ## Intro 
 
