@@ -20,6 +20,11 @@ First, a target SLM augments the Monte Carlo Tree Search (MCTS) with a rich set 
 
 **rStar** decomposes reasoning into solution generation and mutual verification. As for solution generation, we introduce a richer set of human-like reasoning actions that allows for thorough space exploration across diverse reasoning tasks. As for mutual verification, we use another SLM as a discriminator to augment the MCTS process, mutually verifying the correctness of each trajectory with the generator SLM.
 
+An overview of the MCTS process with rStar is shown below:
+<p align="center">
+  <img src="assets/MCTS.pdf">
+</p>
+
 
 ## Prerequisites
 
