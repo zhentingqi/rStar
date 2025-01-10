@@ -22,7 +22,7 @@ First, a target SLM augments the Monte Carlo Tree Search (MCTS) with a rich set 
 
 An overview of the MCTS process with rStar is shown below:
 <p align="center">
-  <img src="assets/MCTS.pdf">
+  <img src="assets/MCTS.jpg">
 </p>
 
 
