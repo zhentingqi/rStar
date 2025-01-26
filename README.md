@@ -35,6 +35,15 @@ An overview of the MCTS process with rStar is shown below:
 - newest `transformers`
 - newest `vllm`
 
+The following packages are also required:
+!pip install transformers
+!pip install vllm
+!pip install colorama
+!pip install fuzzywuzzy
+!pip install wandb
+
+see exact versions in requirements.txt
+
 ## Usage
 
 ### rStar Generator
