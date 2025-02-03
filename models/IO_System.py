@@ -21,6 +21,8 @@ try:
 except:
     pass
 
+import ipdb
+
 class IO_System:
     """Input/Output system"""
 
@@ -134,13 +136,7 @@ class IO_System:
                     stop_strings=stop_tokens,
                     repetition_penalty=1.1, # kept the same as the default value using vllm generation.
                 )
-                def split_list(lst, n):
-                    m = len(lst) // n
-                    return [lst[i*n:(i+1)*n] for i in range(m)]
-                io_output_list = split_list(
-                    tokenizer.batch_decode(hf_response, skip_special_tokens=True),
-                    n=num_return
-                )
+                io_output_list = [tokenizer.batch_decode(o, skip_special_tokens=True) for o in hf_response]
                 self.call_counter += 1
                 self.token_counter += num_tokens
 

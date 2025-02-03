@@ -40,6 +40,7 @@ def generate_with_HF_model(
 
     inputs = tokenizer(input, return_tensors="pt")
     input_ids = inputs["input_ids"].to("cuda")
+    prompt_length = input_ids.shape[-1]
     generation_config = GenerationConfig(
         do_sample=True,
         temperature=temperature,
@@ -62,9 +63,7 @@ def generate_with_HF_model(
             stop_strings=stop,
             repetition_penalty=repetition_penalty,
         )
-    # s = generation_output.sequences[0]
-    # output = [tokenizer.decode(s) for s in generation_output.sequences]
-    return generation_output.sequences
+    return generation_output.sequences[:, prompt_length:]
 
 def batch_generate_with_HF_model(
     tokenizer, 
@@ -80,29 +79,21 @@ def batch_generate_with_HF_model(
     stop=["\n",],
     **kwargs
 ):
-    inputs = tokenizer(input, return_tensors="pt", padding=True, return_special_tokens_mask=True).to("cuda")
-    special_tokens_mask = inputs.pop("special_tokens_mask")
-    # input_ids = inputs["input_ids"].to("cuda")
-    generation_config = GenerationConfig(
-        do_sample=True,
-        temperature=temperature,
-        top_p=top_p,
-        top_k=top_k,
-        num_beams=num_beams,
-        **kwargs,
-    )
-    with torch.no_grad():
-        generation_output = model.generate(
-            **inputs,
+    outputs = [
+        generate_with_HF_model(
             tokenizer=tokenizer,
-            generation_config=generation_config,
-            return_dict_in_generate=True,
-            output_scores=True,
+            model=model,
+            input=i,
+            temperature=temperature,
+            top_p=top_p,
+            top_k=top_k,
+            num_beams=num_beams,
             max_new_tokens=max_new_tokens,
-            do_sample=True,
-            pad_token_id=tokenizer.eos_token_id,
-            num_return_sequences=num_return,
-            stop_strings=stop,
+            num_return=num_return,
+            stop=stop,
             repetition_penalty=repetition_penalty,
-        )
-    return generation_output.sequences, (1-special_tokens_mask).sum()
+            **kwargs,
+        ) for i in input
+    ]
+
+    return outputs, sum([len(o) for o in outputs])
