@@ -16,6 +16,12 @@ try:
 except:
     pass
 
+try:
+    from models.HuggingFace_API import generate_with_HF_model, batch_generate_with_HF_model
+except:
+    pass
+
+import ipdb
 
 class IO_System:
     """Input/Output system"""
@@ -52,6 +58,25 @@ class IO_System:
                 io_output_list = [o.text for o in vllm_response[0].outputs]
                 self.call_counter += 1
                 self.token_counter += sum([len(o.token_ids) for o in vllm_response[0].outputs])
+            elif self.api == 'huggingface':
+                tokenizer = self.tokenizer
+                hf_response = generate_with_HF_model(
+                    tokenizer=tokenizer,
+                    model=self.model,
+                    input=model_input,
+                    temperature=self.temperature,
+                    top_p=self.top_p,
+                    top_k=self.top_k,
+                    num_beams=1,
+                    num_return=num_return,
+                    max_new_tokens=max_tokens,
+                    stop_strings=stop_tokens,
+                    repetition_penalty=1.1, # kept the same as the default value using vllm generation.
+                )
+                io_output_list = [tokenizer.decode(o, skip_special_tokens=True) for o in hf_response]
+                self.call_counter += 1
+                self.token_counter += sum([len(o) for o in hf_response])
+                # ipdb.set_trace()
             elif self.api == "gpt3.5-turbo":
                 gpt_response = generate_n_with_OpenAI_model(
                     prompt=model_input,
@@ -92,6 +117,29 @@ class IO_System:
                         for resp_to_single_input in vllm_response
                     ]
                 )
+            elif self.api == 'huggingface':
+                tokenizer = self.tokenizer
+                # necessary for batch generation.
+                tokenizer.padding_side = "left"
+                tokenizer.pad_token = tokenizer.eos_token
+                # inside the batch_generate_with_HF_model, the input is tokenized and padded and the number of effective tokens is returned.
+                hf_response, num_tokens = batch_generate_with_HF_model(
+                    tokenizer=tokenizer,
+                    model=self.model,
+                    input=model_input,
+                    temperature=self.temperature,
+                    top_p=self.top_p,
+                    top_k=self.top_k,
+                    num_beams=1,
+                    num_return=num_return,
+                    max_new_tokens=max_tokens,
+                    stop_strings=stop_tokens,
+                    repetition_penalty=1.1, # kept the same as the default value using vllm generation.
+                )
+                io_output_list = [tokenizer.batch_decode(o, skip_special_tokens=True) for o in hf_response]
+                self.call_counter += 1
+                self.token_counter += num_tokens
+
             elif self.api == "gpt3.5-turbo":
                 io_output_list = []
                 for input in model_input:
